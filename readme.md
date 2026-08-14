@@ -172,11 +172,16 @@ no patterns, no noise, no decorative gradients.
   exception below). Every icon in the source is an **inline 24×24 SVG**, stroke
   `currentColor`, `stroke-width` 2, round caps and joins — the Lucide drawing
   convention.
-- The exact path data used by QM is copied into `components/core/Icon.jsx`
-  (`QM_ICONS`, 22 glyphs: plus, list, check, x, pencil, sliders, image, lock,
-  message, maximize, highlighter, help, arrowLeft, chevrons, unfold, play, grip,
-  more). **Nothing is re-drawn** and no CDN is required at runtime. Three glyphs
-  are filled — play, grip, more; the rest stroke.
+- The path data used by QM lives in `components/core/Icon.jsx` (`QM_ICONS`, 22
+  glyphs: plus, list, check, x, pencil, sliders, image, lock, message, maximize,
+  highlighter, help, arrowLeft, chevrons, unfold, play, grip, more). **Most are
+  copied from Lucide unchanged, but not all**: `play`, `message`, `chevronUp` and
+  `unfold` have no Lucide ancestor in any release, and `grip` and `more` are
+  Lucide shapes re-drawn filled. `guidelines/brand-iconography.card.html` carries
+  the full 22-row provenance table, key by key — read it before re-pointing
+  `Icon` at `lucide-react`, because those six will change appearance silently.
+  No CDN is required at runtime. Three glyphs are filled — play, grip, more; the
+  rest stroke.
 - **Sizes**: 16 in controls, 15 inline with text, 13 in dense rows, 11–12 inside
   chips. Status meaning belongs to the 8px state glyph (`StateDot`), never to an
   icon.
@@ -201,6 +206,10 @@ woff2 binaries and they will be dropped into `assets/fonts/` with real
 
 ## Index
 
+Read in the order `SKILL.md` gives: this guide → the UI kit → the guidelines →
+the tokens → the components → the surface template. A worked surface answers
+more, sooner, than the rules it was built from.
+
 ### Root
 
 | File | What it is |
@@ -211,6 +220,32 @@ woff2 binaries and they will be dropped into `assets/fonts/` with real
 | `thumbnail.html` | Project tile. |
 | `assets/qm-mark.svg` | The app-bar gradient tile (not a logo). |
 | `assets/icons/README.md` | How QM's glyph set works and how to extend it. |
+
+### UI kit (`ui_kits/story-engine/`) — worked reference implementations
+
+Not a leftover demo: all five surfaces built end to end out of this system's own
+components, and the first place to look before designing a new screen. Each file
+already answers the composition problem its surface poses.
+
+| File | Surface it implements |
+| --- | --- |
+| `WritingRoom.jsx` | The writing room — resume card, three ways in, earlier scenes as rows |
+| `NewScene.jsx` | New scene — the roster picker beside the summary card it feeds |
+| `SceneRoom.jsx` | The scene room — three-column rail, focus mode, the warm in-scene bar |
+| `Compose.jsx` | Compose — equal-width candidate columns, annotate-don't-rank |
+| `Outline.jsx` | The outline — timeline rail, beat tree, four-tab inspector, three densities |
+| `data.jsx` | The fixture content all five share |
+
+`index.html` is a click-through of the set. The kit's own `README.md` says, per
+file, which problems it has already solved and what it deliberately omits.
+
+### Guidelines (`guidelines/`)
+
+22 specimen cards feeding the Design System tab, grouped **Colors** (surfaces,
+accents, state grammar, text ramp, prose ramp, audience temperature, tints,
+dividers), **Type** (serif, sans, mono, roles, floors), **Spacing** (scale,
+radii, control heights, density), **Brand** (mark, interaction states,
+elevation, iconography, voice).
 
 ### Tokens (`tokens/`)
 
@@ -224,7 +259,8 @@ woff2 binaries and they will be dropped into `assets/fonts/` with real
 `Avatar`, `Card`
 **`components/narrative/`** — `EntityToken`, `EraChip`, `AnnotationMark`,
 `RouteChip`, `BeatSpine`, `BeatCard`, `NoteBlock`, `VersionStrip`, `TimelineRow`
-**`components/forms/`** — `Field`, `PromptField`, `SegmentedControl`, `Tabs`, `Picker`
+**`components/forms/`** — `Field`, `TextField`, `TextArea`, `PromptField`,
+`SegmentedControl`, `Tabs`, `Picker`
 **`components/feedback/`** — `Callout`, `ModeBar`, `Refusal`, `SaveStatus`,
 `EmptyState`, `Overlay`
 **`components/navigation/`** — `TopBar`, `PanelHeader`, `StatusBar`
@@ -249,16 +285,13 @@ every screen):
   `BeatCard`, `TimelineRow`, `RouteChip`, `PromptField`, `Callout` — each
   appears verbatim across two or more surfaces in the source; they are extracted,
   not invented.
+- `TextField`, `TextArea` — the one exception to the line above, and invented on
+  purpose. `Field` is the inset well; these are that well with a real `<input>`
+  or `<textarea>` already inside it. Consumers were otherwise rebuilding the
+  control against `Field`'s ring by hand and getting it wrong.
 
-### Guidelines (`guidelines/`)
+### Templates (`templates/qm-surface/`)
 
-22 specimen cards feeding the Design System tab, grouped **Colors** (surfaces,
-accents, state grammar, text ramp, prose ramp, audience temperature, tints,
-dividers), **Type** (serif, sans, mono, roles, floors), **Spacing** (scale,
-radii, control heights, density), **Brand** (mark, interaction states,
-elevation, iconography, voice).
-
-### UI kit (`ui_kits/story-engine/`)
-
-`index.html` — click-through of all five surfaces. See its `README.md` for the
-screen map and deliberate omissions.
+`QmSurface.dc.html` — the page-level shell: app bar, mono status line, timeline
+rail, reading column, inspector. It answers the frame around a surface; the UI
+kit above answers the composition inside it.

@@ -5,6 +5,11 @@ import * as React from 'react';
  * violet diamond = suggested, coral = where you are, cinnabar = conflict.
  */
 export interface StateDotProps {
+  /**
+   * A state outside this union degrades to `neutral` — grey, filled, claiming
+   * nothing. It never falls back to `canon`: an unrecognised state must not be
+   * able to assert canonicity.
+   */
   state?: 'canon' | 'written' | 'proposed' | 'suggested' | 'here' | 'conflict'
         | 'unwritten' | 'unlinked' | 'entity' | 'neutral' | 'private' | 'scene';
   /** 6-9px. 8 is the standard status glyph; 7 inside chips; 9 on timeline rows. */

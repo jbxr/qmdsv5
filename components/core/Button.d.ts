@@ -5,8 +5,8 @@ import * as React from 'react';
  * for anything that reaches the room.
  */
 export interface ButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'style'> {
-  /** primary = gold app action; scene = parchment in-scene action; canon/consult inherit a destination state's accent. */
-  variant?: 'primary' | 'scene' | 'sceneGhost' | 'secondary' | 'quiet' | 'ghost' | 'canon' | 'consult';
+  /** primary = gold app action; scene = parchment in-scene action; canon/consult inherit a destination state's accent; destructive is tinted cinnabar at rest, never filled. */
+  variant?: 'primary' | 'scene' | 'sceneGhost' | 'secondary' | 'quiet' | 'ghost' | 'canon' | 'consult' | 'destructive';
   /** lg 44 · md 36 · sm 34 · xs 32 · xxs 30 · tiny 28 (px height). */
   size?: 'lg' | 'md' | 'sm' | 'xs' | 'xxs' | 'tiny';
   children?: React.ReactNode;

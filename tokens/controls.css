@@ -1,0 +1,11 @@
+/* Native controls sitting in a QM inset well. The reset itself is inline on
+   TextField and TextArea, so a control is correct without this sheet; what lives
+   here is only what an inline style cannot reach — the placeholder, the disabled
+   ramp, the caret and autofill. */
+.qm-control{caret-color:var(--qm-teal)}
+.qm-control::placeholder{color:var(--qm-text-7);opacity:1}
+.qm-control:focus{outline:none}
+.qm-control:disabled{color:var(--qm-text-9);cursor:not-allowed}
+.qm-control:-webkit-autofill,.qm-control:-webkit-autofill:focus{
+-webkit-text-fill-color:var(--qm-text-field);
+-webkit-box-shadow:0 0 0 1000px var(--qm-surface-panel) inset}

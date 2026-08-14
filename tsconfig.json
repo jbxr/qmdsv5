@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    // `bundler` is the only mode that resolves a sibling hand-written
+    // `Foo.d.ts` from `import { Foo } from "./Foo"` with `allowJs` off:
+    // node16/nodenext demand an explicit extension for ESM relative imports.
+    "moduleResolution": "bundler",
+    "allowJs": false,
+    "skipLibCheck": false,
+    "forceConsistentCasingInFileNames": true,
+    "noUncheckedIndexedAccess": true,
+    "types": []
+  },
+  "include": ["components", "types"]
+}

@@ -12,12 +12,14 @@ export interface VersionEntry {
 }
 
 /** The version axis above the prose: revisions and candidates on one strip. */
-export interface VersionStripProps {
+export interface VersionStripProps
+  // `onSelect` reports the chosen version, so the DOM `onSelect` text-selection
+  // handler is traded away — it has no meaning on this strip.
+  extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onSelect'> {
   versions?: VersionEntry[];
   label?: string;
   note?: React.ReactNode;
   onSelect?: (v: VersionEntry, index: number) => void;
-  style?: React.CSSProperties;
 }
 
 export declare function VersionStrip(props: VersionStripProps): JSX.Element;

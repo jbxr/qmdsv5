@@ -9,3 +9,13 @@ One-line: The surface container behind every QM panel, scene card and beat card 
 Notes
 - Radii: 9 for cards, 12 for panels and overlays. Nothing rounder.
 - Shadows are long and low-opacity (`--qm-shadow-card`), never a glow.
+- Card sets only `padding`, `border-radius`, `background`, `border`, `box-shadow`,
+  `cursor` and `transition`. A card **without a rail sets no `position` and no
+  `overflow`**, so your stylesheet can make it `position: fixed`/`absolute`/`sticky`
+  or give it `max-height` + `overflow-y: auto`, and it will work.
+- `rail` is the one exception: any rail but `none` adds `position: relative` and
+  `overflow: hidden`, because the rail is an absolutely-positioned span clipped to
+  the radius. A railed card you also need to position or scroll should be wrapped
+  in your own positioned element rather than positioned directly.
+- The `style` prop is spread last, so it beats every value above — but an inline
+  style is the only thing that can; a `className` rule cannot override one.

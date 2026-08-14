@@ -33,12 +33,17 @@ const VARIANTS = {
   consult: {
     color: 'var(--qm-violet-text-alt)', background: 'transparent',
     border: '1px solid var(--qm-border-violet)'
+  },
+  destructive: {
+    color: 'var(--qm-cinnabar-text)', background: 'var(--qm-tint-cinnabar-soft)',
+    border: '1px solid var(--qm-border-cinnabar)'
   }
 };
 
 /**
  * One filled action per region. `primary` is the gold app action, `scene` the
- * parchment action that reaches the room; everything else is an outline.
+ * parchment action that reaches the room; everything else is an outline —
+ * `destructive` included, which carries cinnabar at rest and never on hover.
  */
 export function Button({
   variant = 'secondary', size = 'sm', children, leadingIcon, trailingIcon,
@@ -68,6 +73,7 @@ export function Button({
   if (variant === 'sceneGhost' && hover && !disabled) base.background = 'rgba(232,220,192,0.12)';
   if (variant === 'canon' && hover && !disabled) { base.background = 'rgba(85,183,166,0.18)'; base.color = 'var(--qm-teal-text-strong)'; }
   if (variant === 'consult' && hover && !disabled) base.background = 'rgba(162,146,242,0.14)';
+  if (variant === 'destructive' && hover && !disabled) { base.background = 'var(--qm-tint-cinnabar)'; base.color = 'var(--qm-cinnabar-text-strong)'; }
   if (down && !disabled) base.boxShadow = 'var(--qm-inset-press)';
   if (disabled) {
     base.color = 'var(--qm-text-9)'; base.background = 'transparent';

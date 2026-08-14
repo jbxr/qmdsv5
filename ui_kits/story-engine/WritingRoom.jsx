@@ -40,7 +40,7 @@ function WritingRoom({ onOpenScene, onNewScene, onNewOutline, onCompose, onOpenO
                   leadingIcon={<Icon name="list" size={15} />} style={{ justifyContent: 'flex-start' }} hint="nothing yet">Start an outline</Button>
                 <div style={{ display: 'flex', gap: 8, marginTop: 2 }}>
                   <Button size="tiny" fullWidth leadingIcon={<Icon name="pencil" size={13} />}>Rename</Button>
-                  <Button size="tiny" fullWidth leadingIcon={<Icon name="x" size={13} />}>Delete</Button>
+                  <Button variant="destructive" size="tiny" fullWidth leadingIcon={<Icon name="x" size={13} />}>Delete</Button>
                 </div>
               </div>
             </div>
