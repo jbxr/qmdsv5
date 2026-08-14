@@ -5,7 +5,9 @@
   "description": "QuantumMateria Story Engine design system — typecheck-only tooling. The design system itself ships as plain .jsx, .d.ts and .css; nothing here compiles or bundles it.",
   "scripts": {
     "typecheck": "tsc --noEmit",
-    "adherence:build": "node scripts/build-adherence.mjs"
+    "adherence:build": "node scripts/build-adherence.mjs",
+    "adherence:check": "node scripts/build-adherence.mjs --check",
+    "cards:viewports": "node scripts/check-card-viewports.mjs"
   },
   "devDependencies": {
     "@types/react": ">=18",

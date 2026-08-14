@@ -1,12 +1,15 @@
 import React from 'react';
 
+// Edges are longhands, never the `border` shorthand: the hover colour has to be
+// swapped in and out, and a colour longhand removed next to a shorthand leaves
+// Chrome resolving border-color to currentColor — the hairline paints in text ink.
 const SURFACES = {
-  panel:    { background: 'var(--qm-surface-panel)', border: '1px solid var(--qm-border-panel)', shadow: 'none' },
-  raised:   { background: 'var(--qm-surface-raised)', border: '1px solid var(--qm-border-panel)', shadow: 'none' },
-  selected: { background: 'var(--qm-card-raised)', border: '1px solid var(--qm-border-structural)', shadow: 'var(--qm-shadow-card)' },
-  beat:     { background: 'var(--qm-beat-raised)', border: '1px solid var(--qm-border-group)', shadow: 'var(--qm-shadow-beat)' },
-  scene:    { background: 'var(--qm-scene-surface)', border: '1px solid var(--qm-scene-border)', shadow: 'none' },
-  quiet:    { background: 'var(--qm-fill-quiet)', border: '1px dashed var(--qm-border-dashed)', shadow: 'none' }
+  panel:    { background: 'var(--qm-surface-panel)', edge: 'solid', border: 'var(--qm-border-panel)', shadow: 'none' },
+  raised:   { background: 'var(--qm-surface-raised)', edge: 'solid', border: 'var(--qm-border-panel)', shadow: 'none' },
+  selected: { background: 'var(--qm-card-raised)', edge: 'solid', border: 'var(--qm-border-structural)', shadow: 'var(--qm-shadow-card)' },
+  beat:     { background: 'var(--qm-beat-raised)', edge: 'solid', border: 'var(--qm-border-group)', shadow: 'var(--qm-shadow-beat)' },
+  scene:    { background: 'var(--qm-scene-surface)', edge: 'solid', border: 'var(--qm-scene-border)', shadow: 'none' },
+  quiet:    { background: 'var(--qm-fill-quiet)', edge: 'dashed', border: 'var(--qm-border-dashed)', shadow: 'none' }
 };
 
 const RAILS = {
@@ -37,8 +40,9 @@ export function Card({
         padding,
         borderRadius: radius === 'panel' ? 'var(--qm-radius-panel)' : 'var(--qm-radius-card)',
         background: hover && surface === 'panel' ? '#171E26' : s.background,
-        border: s.border,
-        borderColor: hover ? 'rgba(255,255,255,0.20)' : undefined,
+        borderWidth: 1,
+        borderStyle: s.edge,
+        borderColor: hover ? 'rgba(255,255,255,0.20)' : s.border,
         boxShadow: s.shadow,
         cursor: hoverable ? 'pointer' : undefined,
         transition: 'background var(--qm-dur-hover) var(--qm-ease), border-color var(--qm-dur-hover) var(--qm-ease)',

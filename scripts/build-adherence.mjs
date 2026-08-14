@@ -20,6 +20,14 @@
  * type alias (`Icon.name: QMIconName`) is enumerated like an inline one, and a
  * prop redeclared over an `Omit`ed DOM member (`TextField.size`, `BeatCard.title`)
  * is read as the component's own rather than as the native attribute.
+ *
+ * It also owns two things it did not use to:
+ *
+ *   - `x-omelette.tokenKinds`, but only where the declared kind is impossible for
+ *     the value in `tokens/*.css`. See `correctTokenKinds`.
+ *   - The diagnosis when the external Design app has rewritten this file. The
+ *     app regenerates it alongside the bundle and its version reverts #16 and
+ *     #11, so `--check` names that cause instead of printing a bare diff (#25).
  */
 import * as fs from 'node:fs';
 import * as path from 'node:path';
@@ -211,6 +219,121 @@ function rulesFor(component) {
   return entries;
 }
 
+/* ----------------------------------------------------------- token kinds -- */
+
+/**
+ * `x-omelette.tokenKinds` labels every custom property color / font / spacing /
+ * radius / shadow / other. The labels are a *role*, not a type: `--qm-text-1` is
+ * a hex colour filed under `font` because it is the colour text is set in, and
+ * re-deriving kinds from values would flatten that distinction across 76 tokens.
+ *
+ * So this does not derive the kind. It only rejects the ones the value makes
+ * impossible — a two-layer box-shadow cannot be a `color` however it is meant —
+ * and rewrites those. Every other entry is left exactly as it was found.
+ *
+ * `--focus-ring` is the case that prompted it: it aliases `--qm-focus-ring`,
+ * which is a shadow, and after #21 a two-layer one.
+ */
+
+const TOKEN_DECLARATION = /(--[\w-]+)\s*:\s*([^;}]+)/g;
+
+/** Every custom property in `tokens/*.css`, later declarations winning. */
+function readTokens() {
+  const dir = path.join(ROOT, 'tokens');
+  const values = new Map();
+  for (const file of fs.readdirSync(dir).sort()) {
+    if (!file.endsWith('.css')) continue;
+    const css = fs.readFileSync(path.join(dir, file), 'utf8').replace(/\/\*[\s\S]*?\*\//g, ' ');
+    for (const [, name, value] of css.matchAll(TOKEN_DECLARATION)) values.set(name, value.trim());
+  }
+  return values;
+}
+
+/** Follows `var(--other)` to the literal the token really carries. */
+function resolve(name, values, seen = new Set()) {
+  const value = values.get(name);
+  if (value === undefined || seen.has(name)) return value;
+  const alias = value.match(/^var\(\s*(--[\w-]+)\s*\)$/);
+  return alias ? resolve(alias[1], values, seen.add(name)) : value;
+}
+
+/** Splits on commas that are not inside `rgba(…)` / `cubic-bezier(…)`. */
+function splitLayers(value) {
+  const layers = [];
+  let depth = 0, current = '';
+  for (const char of value) {
+    if (char === '(') depth++;
+    else if (char === ')') depth--;
+    if (char === ',' && depth === 0) { layers.push(current); current = ''; } else current += char;
+  }
+  return [...layers, current].map((layer) => layer.trim()).filter(Boolean);
+}
+
+const isColor = (v) => /^#[0-9a-f]{3,8}$/i.test(v) || /^(?:rgba?|hsla?)\(/i.test(v)
+  || /gradient\(/i.test(v) || v === 'transparent' || v === 'currentColor';
+const isLength = (v) => /^-?(?:\d*\.)?\d+(?:px|rem|em|%|vh|vw|ch|ex)$/i.test(v) || v === '0';
+const isNumber = (v) => /^-?(?:\d*\.)?\d+$/.test(v);
+const allLengths = (v) => splitLayers(v).every((l) => l.split(/\s+/).every(isLength));
+
+/** `0 0 0 1px rgba(…)`, `inset 2px 0 0 rgba(…)` — offsets plus a colour. */
+const isShadow = (v) => splitLayers(v).every((layer) => {
+  const parts = layer.split(/\s+/).filter(Boolean);
+  return parts.filter(isLength).length >= 2 && (parts.some(isColor) || parts.includes('inset'));
+});
+
+/** Whether a value could plausibly carry the role the kind names. */
+const ADMITS = {
+  color: (v) => isColor(v),
+  // A colour (text ink), a size, a weight, or a family list.
+  font: (v) => isColor(v) || allLengths(v) || isNumber(v) || /[a-z]/i.test(v),
+  spacing: (v) => allLengths(v) || isNumber(v),
+  radius: (v) => allLengths(v) || isNumber(v),
+  shadow: (v) => isShadow(v),
+  other: () => true,
+};
+
+/** What the value can only be, used when the declared kind is impossible. */
+function kindOf(value) {
+  if (isShadow(value)) return 'shadow';
+  if (isColor(value)) return 'color';
+  if (allLengths(value)) return 'spacing';
+  return 'other';
+}
+
+function correctTokenKinds(kinds) {
+  const values = readTokens();
+  const corrections = [];
+  for (const [name, declared] of Object.entries(kinds ?? {})) {
+    const value = resolve(name, values);
+    if (value === undefined) continue;
+    const admits = ADMITS[declared];
+    if (!admits || admits(value)) continue;
+    const corrected = kindOf(value);
+    if (corrected === declared) continue;
+    kinds[name] = corrected;
+    corrections.push({ name, declared, corrected, value });
+  }
+  return corrections;
+}
+
+/* ------------------------------------------------------ the app's version -- */
+
+/**
+ * The Design app writes this file too, whenever the bundle is regenerated, and
+ * its version reintroduces the closed prop allowlists that #11 removed and drops
+ * the `Icon.name` value rule that was the whole of #16. Both are visible in the
+ * committed config, so a stale check can say which generator wrote it rather
+ * than only that the two disagree.
+ */
+function looksAppWritten(config) {
+  const rules = config.rules?.['no-restricted-syntax'] ?? [];
+  const selectors = rules.filter((r) => typeof r === 'object' && typeof r.selector === 'string');
+  const closed = selectors.filter((r) => /JSXIdentifier\[name!=/.test(r.selector)).length;
+  const iconName = selectors.some((r) =>
+    /name\.name='Icon'/.test(r.selector) && /JSXAttribute\[name\.name='name'\]/.test(r.selector));
+  return { closed, iconName, matches: closed > 0 && !iconName };
+}
+
 /* ------------------------------------------------------------------ main -- */
 
 const files = collectDeclarationFiles(path.join(ROOT, 'components'));
@@ -248,20 +371,41 @@ for (const { name } of components) {
 config['x-omelette'].components = Object.fromEntries(
   Object.entries(registry).sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0)));
 
+const corrections = correctTokenKinds(config['x-omelette'].tokenKinds);
+
 const next = JSON.stringify(config, null, 2);
 const current = fs.readFileSync(CONFIG, 'utf8');
+
+/** Names the Design app when its fingerprint is on the file we are replacing. */
+function diagnose() {
+  const { closed, iconName, matches } = looksAppWritten(JSON.parse(current));
+  if (!matches) return;
+  console.error(
+    `\nThe Design app wrote this file. It regenerates _adherence.oxlintrc.json alongside\n` +
+    `_ds_bundle.js, and its version is not this repo's: ${closed} closed prop allowlist(s) are back\n` +
+    `${iconName ? '' : 'and the Icon.name value rule is gone\n'}` +
+    `— reverting #11 and #16. Nothing is wrong with your change.\n\n` +
+    `  Fix: run \`npm run adherence:build\` and commit the result.\n\n` +
+    `Run it after every bundle download; the app does not know that a component extending a\n` +
+    `DOM attributes interface must not get an enumerated prop allowlist.`);
+}
 
 if (process.argv.includes('--check')) {
   if (next !== current) {
     console.error('_adherence.oxlintrc.json is stale. Run `npm run adherence:build` and commit the result.');
+    diagnose();
     process.exit(1);
   }
   console.log(`_adherence.oxlintrc.json is up to date (${components.length} components, ${generated.length} rules).`);
 } else {
+  if (next !== current) diagnose();
   fs.writeFileSync(CONFIG, next);
   const open = components.filter((c) => c.forwardsNative).length;
   console.log(
     `${components.length} components → ${generated.length} rules ` +
     `(${open} forward the native surface and take no allowlist, ${components.length - open} are closed).`);
   if (added.length) console.log(`x-omelette: registered ${added.join(', ')}.`);
+  for (const { name, declared, corrected, value } of corrections) {
+    console.log(`tokenKinds: ${name} ${declared} → ${corrected} (${value})`);
+  }
 }
