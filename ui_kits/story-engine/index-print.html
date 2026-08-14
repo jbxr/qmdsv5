@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>QM Story Engine — print</title>
+<meta name="omelette-print-source" content="v1786655593374836 ui_kits/story-engine/index.html">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>
+doc-page:not(:defined){visibility:hidden}
+*{box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+*{animation-delay:-99s !important;animation-duration:.001s !important;animation-iteration-count:1 !important;animation-fill-mode:both !important;animation-play-state:running !important;transition-duration:0s !important}
+body{margin:0;font-family:var(--qm-font-sans);color:var(--qm-text-3)}
+.page{background:var(--qm-surface-app) !important;padding:0}
+/* Letter-landscape is narrower than the 1440px design width — pull the fixed rails
+   in so the reading column keeps a usable measure. Same specificity as the density
+   scopes in tokens/density.css, declared later, so it wins. */
+[data-qm-density]{--qm-insp-w:312px;--qm-rail-w-live:262px}
+.screen{width:100%;height:100%;display:flex;flex-direction:column;overflow:hidden}
+.plate{flex:none;display:flex;align-items:baseline;gap:12px;padding:9px 18px;background:var(--qm-surface-status);border-bottom:1px solid var(--qm-border-structural)}
+.plate b{font-family:var(--qm-font-mono);font-size:10.5px;letter-spacing:.16em;color:var(--qm-text-7);font-weight:400}
+.plate span{font-size:12.5px;color:var(--qm-text-5)}
+.plate i{margin-left:auto;font-style:normal;font-family:var(--qm-font-mono);font-size:10.5px;color:var(--qm-text-8)}
+.mount{flex:1;min-height:0;overflow:hidden}
+.qm-scroll::-webkit-scrollbar{display:none}
+.qm-scroll{scrollbar-width:none}
+</style>
+</head><body>
+<doc-page size="letter" orientation="landscape">
+  <section class="page" id="p1"></section>
+  <section class="page" id="p2"></section>
+  <section class="page" id="p3"></section>
+  <section class="page" id="p4"></section>
+  <section class="page" id="p5"></section>
+</doc-page>
+<script src="./doc-page.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel" src="./data.jsx"></script>
+<script type="text/babel" src="./WritingRoom.jsx"></script>
+<script type="text/babel" src="./NewScene.jsx"></script>
+<script type="text/babel" src="./SceneRoom.jsx"></script>
+<script type="text/babel" src="./Compose.jsx"></script>
+<script type="text/babel" src="./Outline.jsx"></script>
+<script type="text/babel">
+const PAGES = [
+  ['p1', '01 · WRITING ROOM', 'The front door — resume card, three ways in, earlier scenes.', () => <window.WritingRoom onOpenScene={()=>{}} onNewScene={()=>{}} onNewOutline={()=>{}} onCompose={()=>{}} onOpenOutline={()=>{}} />],
+  ['p2', '02 · NEW SCENE', 'The configurator — the consequence of the form sits beside it.', () => <window.NewScene onBack={()=>{}} onEnter={()=>{}} />],
+  ['p3', '03 · SCENE ROOM', 'Stage rail, prose, the private assistant, and the warm in-scene bar.', () => <window.SceneRoom onExit={()=>{}} />],
+  ['p4', '04 · COMPOSE', 'Generated candidates side by side — annotate, don’t rank.', () => <window.Compose onExit={()=>{}} />],
+  ['p5', '05 · OUTLINE', 'Timeline rail, beat tree, inspector — the densest surface.', () => <window.Outline onExit={()=>{}} />]
+];
+
+function Plate({ label, note, n }) {
+  return (
+    <div className="plate"><b>{label}</b><span>{note}</span><i>QM Story Engine · page {n} of 5</i></div>
+  );
+}
+
+function boot() {
+  if (!window.WritingRoom || !window.Outline) return setTimeout(boot, 60);
+  PAGES.forEach(([id, label, note, render], i) => {
+    ReactDOM.createRoot(document.getElementById(id)).render(
+      <div className="screen">
+        <Plate label={label} note={note} n={i + 1} />
+        <div className="mount">{render()}</div>
+      </div>
+    );
+  });
+}
+boot();
+</script>
+</body></html>

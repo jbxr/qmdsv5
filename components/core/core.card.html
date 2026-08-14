@@ -1,0 +1,54 @@
+<!-- @dsCard group="Components" viewport="700x260" name="Core" subtitle="Buttons, state glyphs, key tokens, avatars, surfaces" -->
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>html,body{margin:0;background:var(--qm-surface-app);font-family:var(--qm-font-sans);color:var(--qm-text-3)}*{box-sizing:border-box}.wrap{padding:16px 18px;display:flex;flex-direction:column;gap:14px}.row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.lbl{font-family:var(--qm-font-mono);font-size:11px;letter-spacing:.14em;color:var(--qm-text-7)}</style>
+</head><body><div id="root"></div>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel">
+const QM = window.QuantumMateriaDesignSystem_488cde;
+const { Button, Icon, StateDot, Kbd, Avatar, Card } = QM;
+function Demo() {
+  return (
+    <div className="wrap">
+      <div className="row">
+        <Button variant="primary" size="md">Save to QM</Button>
+        <Button variant="scene">Advance the scene</Button>
+        <Button variant="secondary">Exit</Button>
+        <Button variant="quiet" leadingIcon={<Icon name="play" size={11} />}>prose · 377 words</Button>
+        <Button variant="canon" leadingIcon={<StateDot state="canon" />}>Make canon</Button>
+        <Button variant="consult" leadingIcon={<StateDot state="suggested" />}>Consult</Button>
+        <Button disabled>Enter the room</Button>
+      </div>
+      <div className="row">
+        <span className="lbl">STATE</span>
+        <span className="row" style={{ gap: 14 }}>
+          {[['canon','canonical'],['proposed','proposed'],['suggested','suggested'],['here','here'],['unwritten','not written'],['conflict','orphaned']].map(([s,l]) => (
+            <span key={s} className="row" style={{ gap: 7, fontSize: 13 }}><StateDot state={s} size={9} />{l}</span>
+          ))}
+        </span>
+      </div>
+      <div className="row">
+        <span className="lbl">KEYS</span>
+        <Kbd>⌘S</Kbd><Kbd>⌥↑</Kbd><Kbd>⌘⌫</Kbd><Kbd>⇧⏎</Kbd><Kbd variant="local">local only</Kbd>
+        <span className="lbl" style={{ marginLeft: 12 }}>ENTITIES</span>
+        <Avatar initials="VN" /><Avatar initials="LS" kind="location" /><Avatar initials="CH" kind="artifact" /><Avatar initials="CB" kind="author" />
+        <span className="lbl" style={{ marginLeft: 12 }}>ICONS</span>
+        <span className="row" style={{ gap: 12, color: 'var(--qm-text-4)' }}>
+          {['plus','list','pencil','x','check','sliders','image','lock','maximize','highlighter','help','grip'].map(n => <Icon key={n} name={n} size={15} />)}
+        </span>
+      </div>
+      <div className="row" style={{ gap: 12, alignItems: 'stretch' }}>
+        <Card surface="panel" padding={12} style={{ flex: 1 }}><div className="lbl">PANEL</div><div style={{ fontSize: 13, marginTop: 6 }}>rails, inspector</div></Card>
+        <Card surface="raised" padding={12} style={{ flex: 1 }}><div className="lbl">RAISED</div><div style={{ fontSize: 13, marginTop: 6 }}>active content</div></Card>
+        <Card surface="selected" rail="parchment" padding={12} style={{ flex: 1 }}><div className="lbl">SELECTED</div><div style={{ fontSize: 13, marginTop: 6 }}>+ state rail</div></Card>
+        <Card surface="scene" padding={12} style={{ flex: 1 }}><div className="lbl" style={{ color: 'var(--qm-scene-meta)' }}>IN SCENE</div><div style={{ fontSize: 13, marginTop: 6, color: 'var(--qm-scene-text)' }}>warm, lit</div></Card>
+      </div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script></body></html>

@@ -1,0 +1,24 @@
+:root{
+/* Serif (Spectral) carries authored narrative. Sans (Plex Sans) carries the app.
+   Mono (Plex Mono) carries chronology, ids, keys and deterministic signals. */
+--qm-type-context-header:26px;--qm-type-context-header-lh:1.35;
+--qm-type-display:34px;--qm-type-display-lh:1.2;
+--qm-type-room-title:40px;--qm-type-room-title-lh:1.15;
+--qm-type-scene-title:30px;--qm-type-scene-title-lh:1.25;
+--qm-type-beat-selected:23px;--qm-type-beat-selected-lh:1.5;
+--qm-type-card-title:24px;--qm-type-card-title-lh:1.3;
+--qm-type-prose:18px;--qm-type-prose-lh:1.65;
+--qm-type-prose-canvas:19px;--qm-type-prose-canvas-lh:1.85;
+--qm-type-prose-turn:16px;--qm-type-prose-turn-lh:1.7;
+--qm-type-note:16.5px;--qm-type-note-lh:1.6;
+--qm-type-body:14.5px;--qm-type-body-lh:1.5;
+--qm-type-row:14px;--qm-type-row-lh:1.5;
+--qm-type-secondary:13.5px;--qm-type-secondary-lh:1.6;
+--qm-type-label:13px;--qm-type-label-lh:1.4;
+--qm-type-module:12.5px;--qm-type-module-lh:1.2;
+--qm-type-mono:12px;--qm-type-mono-lh:1.5;
+--qm-type-mono-chip:11.5px;--qm-type-mono-micro:11px;
+--qm-weight-regular:400;--qm-weight-medium:500;--qm-weight-semibold:600;
+--qm-ls-module:0.16em;--qm-ls-mono:0.14em;--qm-ls-mono-tight:0.08em;--qm-ls-section:0.18em;--qm-ls-year:0.10em;
+/* Persistent size floor: 14px sans body/rows, 12.5px mono chronology & module labels. */
+--qm-size-floor-sans:14px;--qm-size-floor-mono:12.5px}

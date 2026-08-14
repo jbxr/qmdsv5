@@ -1,0 +1,65 @@
+<!-- @dsCard group="Components" viewport="700x360" name="Narrative" subtitle="Entity and era tokens, annotation marks, route chips, beats, versions" -->
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>html,body{margin:0;background:var(--qm-surface-app);font-family:var(--qm-font-sans);color:var(--qm-text-3)}*{box-sizing:border-box}.wrap{padding:16px 18px;display:flex;flex-direction:column;gap:14px}.row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.lbl{font-family:var(--qm-font-mono);font-size:11px;letter-spacing:.14em;color:var(--qm-text-7)}</style>
+</head><body><div id="root"></div>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel">
+const QM = window.QuantumMateriaDesignSystem_488cde;
+const { EntityToken, EraChip, AnnotationMark, RouteChip, BeatSpine, BeatCard, NoteBlock, VersionStrip, TimelineRow, StateDot, Icon, Button } = QM;
+function Demo() {
+  return (
+    <div className="wrap">
+      <div className="row">
+        <EntityToken initials="VN" name="vera" role="Ensign" onDismiss={() => {}} />
+        <EntityToken name="Luna Station" initials="LS" kind="location" />
+        <EraChip>Y−6 D1</EraChip><EraChip kind="timeless">timeless</EraChip><EraChip kind="peek">Y−40</EraChip><EraChip kind="teaching">Y3.100</EraChip>
+        <span style={{ fontFamily: 'var(--qm-font-serif)', fontSize: 16, color: 'var(--qm-prose-3)' }}>
+          <EntityToken variant="inline" name="Sarita Fernandes" /> reads the letter aloud
+        </span>
+      </div>
+      <div className="row">
+        <AnnotationMark>lint 7·5</AnnotationMark>
+        <AnnotationMark>fn 0.9</AnnotationMark>
+        <AnnotationMark tone="advisory" glyph={<StateDot state="proposed" size={6} />}>tell warning</AnnotationMark>
+        <AnnotationMark tone="damaged">tell critical</AnnotationMark>
+        <AnnotationMark tone="damaged">cut mid-clause</AnnotationMark>
+        <AnnotationMark tone="unparsed">lint unparsed</AnnotationMark>
+        <AnnotationMark tone="provenance">soul</AnnotationMark>
+      </div>
+      <div className="row">
+        <RouteChip icon={<Icon name="play" size={11} />}>prose · 377 words</RouteChip>
+        <RouteChip state="invitation" icon={<Icon name="list" size={15} />}>start an outline</RouteChip>
+        <RouteChip state="unknown" icon={<Icon name="list" size={15} />}>outline</RouteChip>
+      </div>
+      <VersionStrip
+        style={{ padding: '10px 0', borderBottom: 'none' }}
+        versions={[{ label: 'this draft', score: '7·5', current: true }, { label: 'rev 3', score: '6·5' }, { label: 'candidate B', origin: 'generated', score: '7·4' }]}
+        note="one axis · compare any two in Compose" />
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, alignItems: 'start' }}>
+        <BeatSpine beats={[
+          { text: 'The corridor light shifts white to orange at 1009', state: 'written' },
+          { text: 'Briggs kneels. The figure does not move', state: 'here' },
+          { text: 'He reads the nameplate: Ensign V. Nakamura', state: 'ahead' }
+        ]} />
+        <div>
+          <BeatCard state="proposed" era="Y−40" entity="Sarita Fernandes"
+            title="The student begins by describing the Artifact as a work of art"
+            directive="without naming it yet"
+            actions={<><Button variant="canon" size="sm" leadingIcon={<StateDot state="canon" />}>Make canon</Button><Button size="sm">Edit here</Button></>} />
+          <NoteBlock>Note — he is describing the Chrysalis.</NoteBlock>
+        </div>
+      </div>
+      <div style={{ paddingLeft: 14 }}>
+        <TimelineRow state="canon" who="VN" title="At the Luna Station Incident, Vera Nakamura is on shift" meta="Luna Station · depth 1" />
+        <TimelineRow state="proposed" selected here who="SF" title="The student begins by describing the Artifact as a work of art" meta="depth 3" />
+      </div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script></body></html>

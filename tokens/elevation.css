@@ -1,0 +1,13 @@
+:root{
+--qm-shadow-shell:0 60px 120px -60px #000;
+--qm-shadow-card:0 24px 50px -34px #000;
+--qm-shadow-beat:0 18px 40px -34px #000;
+--qm-shadow-popover:0 24px 50px -28px #000;
+--qm-shadow-overlay:0 40px 80px -40px #000;
+--qm-shadow-reply:0 30px 60px -30px #000;
+--qm-shadow-gold:0 1px 0 rgba(255,255,255,0.25) inset,0 6px 18px -10px #E2A544;
+--qm-shadow-key:0 1px 0 rgba(0,0,0,0.4);
+--qm-inset-press:inset 0 1px 3px rgba(0,0,0,0.5);
+--qm-inset-quote:inset 2px 0 0 rgba(232,220,192,0.45);
+--qm-focus-ring:0 0 0 2px rgba(85,183,166,0.45);
+--qm-glow-live:0 0 8px #55B7A6;--qm-glow-scene:0 0 10px rgba(232,220,192,0.6);--qm-glow-here:0 0 12px rgba(241,123,84,0.5);--qm-glow-gold-rail:0 0 12px rgba(226,165,68,0.5)}

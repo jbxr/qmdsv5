@@ -1,0 +1,11 @@
+:root{
+/* 4 within a control · 8 between related controls · 16 between groups
+   · 24 between sections · 40 between regions */
+--qm-space-1:4px;--qm-space-2:8px;--qm-space-3:12px;--qm-space-4:16px;--qm-space-5:24px;--qm-space-6:32px;--qm-space-7:40px;
+--qm-gap-control:8px;--qm-gap-group:16px;--qm-gap-section:24px;--qm-gap-region:40px;
+/* Fixed chrome */
+--qm-topbar-h:48px;--qm-topbar-h-tall:56px;--qm-statusbar-h:32px;
+--qm-control-h:34px;--qm-control-h-sm:32px;--qm-control-h-xs:30px;--qm-control-h-xxs:28px;--qm-control-h-lg:44px;--qm-control-h-md:36px;--qm-field-h:38px;--qm-field-h-lg:44px;
+--qm-target-min:28px;
+--qm-rail-w:306px;--qm-inspector-w:404px;--qm-rail-collapsed-w:56px;--qm-stage-w:320px;--qm-chat-w:468px;--qm-beats-w:268px;
+--qm-reading-col:820px;--qm-canvas-col:720px;--qm-focus-col:760px}

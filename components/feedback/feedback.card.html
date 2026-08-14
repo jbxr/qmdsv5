@@ -1,0 +1,49 @@
+<!-- @dsCard group="Components" viewport="700x340" name="Feedback" subtitle="Conflicts, mode bars, refusals, save promises, empty · offline · unknown" -->
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>html,body{margin:0;background:var(--qm-surface-app);font-family:var(--qm-font-sans);color:var(--qm-text-3)}*{box-sizing:border-box}.wrap{padding:16px 18px;display:flex;flex-direction:column;gap:14px}.row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.lbl{font-family:var(--qm-font-mono);font-size:11px;letter-spacing:.14em;color:var(--qm-text-7)}</style>
+</head><body><div id="root"></div>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel">
+const QM = window.QuantumMateriaDesignSystem_488cde;
+const { Callout, ModeBar, Refusal, SaveStatus, EmptyState, Overlay, Icon, Kbd } = QM;
+function Demo() {
+  return (
+    <div className="wrap">
+      <Callout tone="conflict" action={<>Why this matters <Icon name="chevronRight" size={12} style={{ display: 'inline-block' }} /></>}>
+        Marked <strong style={{ fontWeight: 600, color: 'var(--qm-cinnabar-text-strong)' }}>Y−40</strong>, but the room is at <strong style={{ fontWeight: 600, color: 'var(--qm-cinnabar-text-strong)' }}>Y0</strong>.
+      </Callout>
+      <div className="row" style={{ gap: 10, alignItems: 'stretch' }}>
+        <ModeBar mode="linking" style={{ flex: 1 }}>Linking — click a row to bind this event</ModeBar>
+        <ModeBar mode="inspect" exitKey="hold ⌥" style={{ flex: 1 }}>Inspect — click a name to pin its dossier</ModeBar>
+      </div>
+      <ModeBar mode="peek" exitKey="reset">Peeking at Y−40 — the document anchor is Y35.100</ModeBar>
+      <div className="row" style={{ gap: 10, alignItems: 'stretch' }}>
+        <Refusal pressed="⌫" style={{ flex: 1 }}>3 rows sit under this one. <span style={{ color: 'var(--qm-text-6)' }}>Use</span> <span style={{ fontFamily: 'var(--qm-font-mono)', fontSize: 12.5, color: 'var(--qm-text-2)' }}>⌘⌫</span> <span style={{ color: 'var(--qm-text-6)' }}>to delete the subtree.</span></Refusal>
+        <Refusal pressed="⌘S" style={{ flex: 1 }}>Already saved — <span style={{ color: 'var(--qm-text-6)' }}>v1 is write-once. Open a new outline.</span></Refusal>
+      </div>
+      <div className="row" style={{ gap: 10, alignItems: 'stretch' }}>
+        <SaveStatus tag="browser" style={{ flex: 1 }}>Local draft · saved 600 ms ago</SaveStatus>
+        <SaveStatus state="saving" tag="POST" style={{ flex: 1 }}>Saving — 1 document, 9 nodes</SaveStatus>
+        <SaveStatus state="saved" tag="locked" style={{ flex: 1 }}>Saved to QM · write-once</SaveStatus>
+      </div>
+      <div className="row" style={{ gap: 10, alignItems: 'stretch' }}>
+        <EmptyState style={{ flex: 1 }}>The room is quiet. Press ⏎ to let it begin.</EmptyState>
+        <EmptyState kind="offline" style={{ flex: 1 }}>Room offline — writing is unaffected.</EmptyState>
+        <EmptyState kind="unknown" icon={<Icon name="help" size={14} />} style={{ flex: 1 }}><span style={{ color: 'var(--qm-text-emph)' }}>Unknown is not empty.</span> Couldn't read this scene's drafts.</EmptyState>
+      </div>
+      <Overlay width="100%" title="Keyboard contract" footer={<>Rows marked <Kbd variant="local" style={{ height: 20, fontSize: 11 }}>local</Kbd> never leave the browser.</>}>
+        <div style={{ display: 'grid', gridTemplateColumns: '108px 1fr', gap: '10px 16px', fontSize: 14, alignItems: 'center', color: 'var(--qm-text-3)' }}>
+          <span style={{ fontFamily: 'var(--qm-font-mono)', fontSize: 12.5, color: 'var(--qm-text-2)' }}>⏎</span><span>Split the row — new sibling after this one</span>
+          <span style={{ fontFamily: 'var(--qm-font-mono)', fontSize: 12.5, color: 'var(--qm-text-2)' }}>⌥↑ / ⌥↓</span><span>Move among siblings, subtree riding along</span>
+        </div>
+      </Overlay>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script></body></html>

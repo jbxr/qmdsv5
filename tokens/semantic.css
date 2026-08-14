@@ -1,0 +1,13 @@
+:root{
+/* Semantic aliases — prefer these in product code */
+--bg-app:var(--qm-surface-app);--surface-panel:var(--qm-surface-panel);--surface-card:var(--qm-surface-raised);--surface-selected:var(--qm-surface-selected);--surface-inset:var(--qm-fill-inset);
+--surface-in-scene:var(--qm-scene-surface);--surface-private:var(--qm-private-surface);
+--text-strong:var(--qm-text-1);--text-body:var(--qm-text-3);--text-secondary:var(--qm-text-5);--text-meta:var(--qm-text-6);--text-quiet:var(--qm-text-7);--text-disabled:var(--qm-text-9);
+--text-prose:var(--qm-prose-3);--text-prose-strong:var(--qm-prose-1);
+--accent-primary:var(--qm-gold);--accent-primary-fill:var(--qm-gold-fill);--accent-on-primary:var(--qm-on-gold);
+--state-canon:var(--qm-teal);--state-proposed:var(--qm-gold);--state-suggested:var(--qm-violet);--state-here:var(--qm-coral);--state-conflict:var(--qm-cinnabar);--entity-color:var(--qm-blue);
+--focus-ring:var(--qm-focus-ring);--divider:var(--qm-border-list);--divider-group:var(--qm-border-group);--divider-structural:var(--qm-border-structural);
+--radius-control:var(--qm-radius-control);--radius-card:var(--qm-radius-card);--radius-panel:var(--qm-radius-panel)}
+a{color:var(--qm-blue-text);text-decoration:none}
+a:hover{color:#A8DCEA}
+::selection{background:var(--qm-selection)}

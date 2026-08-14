@@ -1,0 +1,6 @@
+# Local agent/tool state
+.memsearch/
+.serena/
+
+# macOS
+.DS_Store

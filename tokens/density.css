@@ -1,0 +1,4 @@
+/* Density is a system transformation, not a button. Set data-qm-density on any subtree. */
+:root,[data-qm-density="comfortable"]{--qm-row-py:12px;--qm-prose-size:18px;--qm-field-size:14.5px;--qm-beat-gap:16px;--qm-col:820px;--qm-insp-w:404px;--qm-rail-w-live:306px;--qm-meta:block /* @kind other */}
+[data-qm-density="compact"]{--qm-row-py:8px;--qm-prose-size:16px;--qm-field-size:13px;--qm-beat-gap:10px;--qm-col:760px;--qm-insp-w:332px;--qm-rail-w-live:282px;--qm-meta:none /* @kind other */}
+[data-qm-density="focus"]{--qm-row-py:12px;--qm-prose-size:19px;--qm-field-size:14.5px;--qm-beat-gap:22px;--qm-col:860px;--qm-insp-w:404px;--qm-rail-w-live:306px;--qm-meta:none /* @kind other */}

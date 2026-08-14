@@ -1,0 +1,41 @@
+:root{
+/* Surfaces — deep graphite, never black. Each step is lit a little more. */
+--qm-surface-app:#0E1217;--qm-surface-panel:#141A21;--qm-surface-shell:#0F141A;--qm-surface-rail:#10161C;--qm-surface-raised:#1B242E;--qm-surface-selected:#232C38;--qm-surface-status:#11171E;
+--qm-surface-app-glow:radial-gradient(1000px 520px at 50% -5%,#1A232D 0%,#10161C 65%);
+--qm-surface-canvas-glow:radial-gradient(900px 520px at 50% 0%,#182029 0%,#10161C 70%);
+--qm-topbar:linear-gradient(180deg,#1A222C,#151C24); /* @kind color */
+--qm-card-raised:linear-gradient(180deg,#232C38,#1A222C); /* @kind color */
+--qm-beat-raised:linear-gradient(180deg,#232C38 0%,#1B242E 100%); /* @kind color */
+/* In-scene (audience = warm, lit) vs private (unlit, cool) */
+--qm-scene-surface:linear-gradient(180deg,#241F18 0%,#1E1A15 100%);--qm-scene-a:#241F18;--qm-scene-b:#1E1A15;--qm-scene-border:rgba(232,220,192,0.20);--qm-scene-border-soft:rgba(232,220,192,0.10);
+--qm-private-surface:#10161C;--qm-private-border:rgba(255,255,255,0.14);
+--qm-consult-surface:#1E1A2A;
+/* Sans text ramp */
+--qm-text-1:#F0F3F7;--qm-text-2:#E4E8EE;--qm-text-3:#C9D1DC;--qm-text-4:#A9B4C2;--qm-text-5:#96A1B0;--qm-text-6:#8B96A5;--qm-text-7:#7C8795;--qm-text-8:#6E7987;--qm-text-9:#5A6472;--qm-text-hairline:#4E5967;--qm-text-faint:#3D4652;
+--qm-text-emph:#C3CBD6;--qm-text-row:#C7D0DC;--qm-text-field:#D8DEE7;
+/* Parchment ramp — authored prose and warm serif material */
+--qm-prose-1:#F5EEE0;--qm-prose-2:#F2EADB;--qm-prose-3:#E7DFD0;--qm-prose-4:#DCD5C7;--qm-prose-5:#C9C2B4;--qm-prose-6:#ECE4D6;
+--qm-scene-text:#E9E0CB;--qm-scene-text-strong:#F5EEE0;--qm-scene-text-dim:#B9AC90;--qm-scene-meta:#9A8F76;--qm-scene-label:#E8DCC0;--qm-scene-ink:#241F18;
+/* Semantic accents. Colour never travels alone — every one is paired with a shape. */
+--qm-gold:#E2A544;--qm-gold-text:#EFD9AF;--qm-gold-dim:#B39A6E;--qm-gold-fill:linear-gradient(180deg,#E6BB6B,#D79C36);--qm-gold-fill-hover:linear-gradient(180deg,#F0C97E,#E2A544);--qm-gold-rail:linear-gradient(180deg,#E6BB6B,#C7862B); /* @kind color */--qm-on-gold:#0E1217;
+--qm-teal:#55B7A6;--qm-teal-text:#9FD8CD;--qm-teal-text-strong:#D7F0EA;--qm-teal-text-quiet:#CFE7E1;--qm-teal-deep:#7FBFB2;
+--qm-blue:#5FA8BC;--qm-blue-text:#8FCADB;--qm-blue-deep:#6FA9BA;
+--qm-violet:#A292F2;--qm-violet-text:#C0AEF5;--qm-violet-text-alt:#B7A7EE;--qm-violet-prose:#E7E1F5;--qm-violet-quiet:#A6A0C4;--qm-violet-dim:#9384CE;
+--qm-coral:#F17B54;--qm-coral-text:#F4A98B;
+--qm-cinnabar:#C4553A;--qm-cinnabar-text:#F0BFB1;--qm-cinnabar-text-strong:#F6D6CB;--qm-cinnabar-dim:#C08A7B;
+--qm-parchment:#E8DCC0;--qm-parchment-fill:linear-gradient(180deg,#EFE6CE,#D3C6A4);--qm-parchment-fill-hover:linear-gradient(180deg,#F7F0DC,#E0D3B2);--qm-parchment-text:#D8CDB2;
+--qm-live:#55B7A6;--qm-mark:linear-gradient(145deg,#4E8FA0,#2C4A5C); /* @kind color */
+/* Accent tints and borders — 12-20% tint, 28-42% border */
+--qm-tint-gold:rgba(226,165,68,0.14);--qm-tint-gold-soft:rgba(226,165,68,0.10);--qm-tint-gold-strong:rgba(226,165,68,0.20);--qm-border-gold:rgba(226,165,68,0.30);
+--qm-tint-teal:rgba(85,183,166,0.14);--qm-tint-teal-soft:rgba(85,183,166,0.08);--qm-border-teal:rgba(85,183,166,0.32);--qm-border-teal-strong:rgba(85,183,166,0.45);
+--qm-tint-blue:rgba(95,168,188,0.14);--qm-tint-blue-soft:rgba(95,168,188,0.12);--qm-border-blue:rgba(95,168,188,0.28);--qm-border-blue-strong:rgba(95,168,188,0.42);
+--qm-tint-violet:rgba(162,146,242,0.12);--qm-tint-violet-soft:rgba(162,146,242,0.09);--qm-border-violet:rgba(162,146,242,0.28);
+--qm-tint-coral:rgba(241,123,84,0.16);--qm-tint-coral-strong:rgba(241,123,84,0.20);--qm-border-coral:rgba(241,123,84,0.30);
+--qm-tint-cinnabar:rgba(196,85,58,0.14);--qm-tint-cinnabar-soft:rgba(196,85,58,0.10);--qm-border-cinnabar:rgba(196,85,58,0.30);
+--qm-tint-parchment:rgba(232,220,192,0.055);--qm-border-parchment:rgba(232,220,192,0.30);
+/* Divider hierarchy — four weights, no more */
+--qm-border-structural:rgba(255,255,255,0.09);--qm-border-panel:rgba(255,255,255,0.08);--qm-border-group:rgba(255,255,255,0.07);--qm-border-list:rgba(255,255,255,0.05);--qm-border-ancestry:rgba(255,255,255,0.12);
+--qm-border-control:rgba(255,255,255,0.11);--qm-border-control-quiet:rgba(255,255,255,0.10);--qm-border-key:rgba(255,255,255,0.13);--qm-border-dashed:rgba(255,255,255,0.16);--qm-border-disabled:rgba(255,255,255,0.06);
+/* Fills */
+--qm-fill-rest:rgba(255,255,255,0.045);--qm-fill-hover:rgba(255,255,255,0.06);--qm-fill-hover-strong:rgba(255,255,255,0.09);--qm-fill-quiet:rgba(255,255,255,0.028);--qm-fill-chip:rgba(255,255,255,0.05);--qm-fill-inset:rgba(0,0,0,0.30);--qm-fill-inset-soft:rgba(0,0,0,0.28);--qm-fill-scrim:rgba(0,0,0,0.60);
+--qm-selection:rgba(226,165,68,0.28)}

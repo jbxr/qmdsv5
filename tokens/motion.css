@@ -1,0 +1,11 @@
+:root{
+--qm-dur-hover:120ms; /* @kind other */
+--qm-dur-overlay:160ms; /* @kind other */
+--qm-dur-max:200ms; /* @kind other */
+--qm-ease:ease-out; /* @kind other */
+--qm-breathe:3.6s; /* @kind other */
+--qm-breathe-fast:1.4s; /* @kind other */
+--qm-refusal-life:4s; /* @kind other */
+}
+@keyframes qmBreathe{0%,100%{opacity:.5}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}

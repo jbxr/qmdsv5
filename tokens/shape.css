@@ -1,0 +1,7 @@
+:root{
+--qm-radius-chip:4px;--qm-radius-key:5px;--qm-radius-control:7px;--qm-radius-card:9px;--qm-radius-callout:8px;--qm-radius-panel:12px;--qm-radius-pill:16px;--qm-radius-round:50%;
+--qm-rail-w-accent:3px;--qm-border-w:1px;--qm-dot-w:1.5px;
+--qm-dot:8px;--qm-dot-lg:9px;--qm-dot-sm:7px;--qm-dot-xs:6px;
+--qm-icon:16px;--qm-icon-sm:15px;--qm-icon-xs:13px;--qm-icon-stroke:1.5;
+--qm-avatar:26px;--qm-avatar-sm:24px;--qm-avatar-xs:22px;--qm-avatar-lg:52px;
+--qm-bubble-you:10px 10px 3px 10px; /* @kind radius */--qm-bubble-them:10px 10px 10px 3px /* @kind radius */}
