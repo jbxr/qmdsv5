@@ -197,6 +197,9 @@
       "BeatCard": {
         "replaces": []
       },
+      "BeatSpine": {
+        "replaces": []
+      },
       "BeatSpineItem": {
         "replaces": []
       },
@@ -239,6 +242,9 @@
       "PanelHeader": {
         "replaces": []
       },
+      "Picker": {
+        "replaces": []
+      },
       "PickerItem": {
         "replaces": []
       },
@@ -255,6 +261,9 @@
         "replaces": []
       },
       "SaveStatus": {
+        "replaces": []
+      },
+      "SegmentedControl": {
         "replaces": []
       },
       "SegmentedOption": {
@@ -282,6 +291,9 @@
         "replaces": []
       },
       "VersionEntry": {
+        "replaces": []
+      },
+      "VersionStrip": {
         "replaces": []
       }
     },

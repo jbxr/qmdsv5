@@ -235,6 +235,19 @@ const existing = config.rules['no-restricted-syntax'];
 const kept = existing.filter((entry) => typeof entry === 'string' || !entry.selector.startsWith('JSXOpeningElement['));
 config.rules['no-restricted-syntax'] = [...kept, ...generated];
 
+// The x-omelette registry is what the tooling recommends from, so a component
+// with rules but no entry here is invisible to it. Add every component we
+// found, preserving any data an existing entry carries. Entries we do not
+// recognise are left alone: this file is also rewritten by the Design app's
+// self-check, which owns names we never see (see #25).
+const registry = (config['x-omelette'] ??= {}).components ??= {};
+const added = [];
+for (const { name } of components) {
+  if (!registry[name]) { registry[name] = { replaces: [] }; added.push(name); }
+}
+config['x-omelette'].components = Object.fromEntries(
+  Object.entries(registry).sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0)));
+
 const next = JSON.stringify(config, null, 2);
 const current = fs.readFileSync(CONFIG, 'utf8');
 
@@ -250,4 +263,5 @@ if (process.argv.includes('--check')) {
   console.log(
     `${components.length} components → ${generated.length} rules ` +
     `(${open} forward the native surface and take no allowlist, ${components.length - open} are closed).`);
+  if (added.length) console.log(`x-omelette: registered ${added.join(', ')}.`);
 }
