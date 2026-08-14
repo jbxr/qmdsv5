@@ -2,14 +2,18 @@
   "name": "qmdsv5",
   "version": "5.0.0",
   "private": true,
-  "description": "QuantumMateria Story Engine design system — typecheck-only tooling. The design system itself ships as plain .jsx, .d.ts and .css; nothing here compiles or bundles it.",
+  "description": "QuantumMateria Story Engine design system — the system ships as plain .jsx, .d.ts and .css. The tooling here typechecks it and compiles the gallery artifacts (_ds_bundle.js, _ds_manifest.json) the cards and UI kits render from.",
   "scripts": {
     "typecheck": "tsc --noEmit",
+    "bundle:build": "node scripts/build-bundle.mjs",
+    "bundle:check": "node scripts/build-bundle.mjs --check",
     "adherence:build": "node scripts/build-adherence.mjs",
     "adherence:check": "node scripts/build-adherence.mjs --check",
     "cards:viewports": "node scripts/check-card-viewports.mjs"
   },
   "devDependencies": {
+    "@babel/core": "7.29.7",
+    "@babel/preset-react": "7.27.1",
     "@types/react": ">=18",
     "typescript": "^5.6.3"
   }
