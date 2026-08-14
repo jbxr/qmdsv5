@@ -1,10 +1,25 @@
-/* Native controls sitting in a QM inset well. The reset itself is inline on
-   TextField and TextArea, so a control is correct without this sheet; what lives
-   here is only what an inline style cannot reach — the placeholder, the disabled
-   ramp, the caret and autofill. */
+/* Native controls sitting in a QM inset well. Everything that shapes the box is
+   inline on TextField and TextArea, so a control is the right size and colour
+   without this sheet; what lives here is what an inline style cannot reach — the
+   placeholder, the disabled ramp, the caret, autofill, and the focus outline,
+   which needs `:focus-visible` to tell a keyboard focus from a pointer one. */
+:root{
+/* Every QM control replaces the browser's own focus indicator, which otherwise
+   paints over --qm-focus-ring. Not with `none`: box-shadow is dropped entirely
+   under forced-colors, so `none` would leave a high-contrast user the one thing
+   worse than the wrong ring — no ring. A transparent outline is invisible here
+   and forced to a system colour there. At 2px with a 1px offset it covers
+   exactly the teal band of --qm-focus-ring, so the two indicators agree. */
+--qm-focus-outline:2px solid transparent; /* @kind other */
+--qm-focus-outline-offset:1px /* @kind other */}
 .qm-control{caret-color:var(--qm-teal)}
 .qm-control::placeholder{color:var(--qm-text-7);opacity:1}
 .qm-control:focus{outline:none}
+/* The well is Field's, and a consumer's own control sits in it — so the outline
+   is claimed by descendant, not by the class only QM's own inputs carry. */
+.qm-control:focus-visible,.qm-well :focus-visible{
+outline:var(--qm-focus-outline,2px solid transparent);
+outline-offset:var(--qm-focus-outline-offset,1px)}
 .qm-control:disabled{color:var(--qm-text-9);cursor:not-allowed}
 .qm-control:-webkit-autofill,.qm-control:-webkit-autofill:focus{
 -webkit-text-fill-color:var(--qm-text-field);

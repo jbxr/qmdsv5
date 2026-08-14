@@ -46,13 +46,18 @@ const VARIANTS = {
  * `destructive` included, which carries cinnabar at rest and never on hover.
  * The focus ring sits outside the border box, so it survives the filled
  * variants, and only on keyboard focus — a pointer press leaves none behind.
+ * It carries a transparent outline of the same size, which displaces the
+ * browser's own indicator here and becomes the whole ring under forced-colors.
  */
 export function Button({
   variant = 'secondary', size = 'sm', children, leadingIcon, trailingIcon,
-  hint, disabled, fullWidth, style, onClick, onFocus, onBlur, ...rest
+  hint, disabled, fullWidth, style, onClick, onFocus, onBlur, onKeyDown, ...rest
 }) {
   const [hover, setHover] = React.useState(false);
   const [down, setDown] = React.useState(false);
+  // `ring` is sampled again on keydown, not only on focus: a button reached by
+  // mouse and then typed at becomes `:focus-visible` where it stands, and a
+  // focus-time sample alone would leave that user the browser's ring, not QM's.
   const [ring, setRing] = React.useState(false);
   const v = VARIANTS[variant] || VARIANTS.secondary;
   const height = H[size] || H.sm;
@@ -81,6 +86,10 @@ export function Button({
     base.boxShadow = [down ? 'var(--qm-inset-press)' : null, ring ? 'var(--qm-focus-ring)' : null]
       .filter(Boolean).join(', ');
   }
+  if (ring) {
+    base.outline = 'var(--qm-focus-outline,2px solid transparent)';
+    base.outlineOffset = 'var(--qm-focus-outline-offset,1px)';
+  }
   if (disabled) {
     base.color = 'var(--qm-text-9)'; base.background = 'transparent';
     base.border = '1px solid var(--qm-border-disabled)';
@@ -94,6 +103,10 @@ export function Button({
       onFocus={(e) => {
         if (!disabled && e.target.matches(':focus-visible')) setRing(true);
         if (onFocus) onFocus(e);
+      }}
+      onKeyDown={(e) => {
+        if (!disabled && e.target.matches(':focus-visible')) setRing(true);
+        if (onKeyDown) onKeyDown(e);
       }}
       onBlur={(e) => { setRing(false); setDown(false); if (onBlur) onBlur(e); }}
       style={{ ...base, ...style }} {...rest}

@@ -21,7 +21,11 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   rail?: 'none' | 'parchment' | 'gold' | 'teal' | 'coral';
   radius?: 'card' | 'panel';
   padding?: number | string;
-  /** Brightens the surface on hover — never introduces semantic colour. */
+  /**
+   * Brightens the surface on hover — never introduces semantic colour.
+   * The edge lifts to `--qm-border-hover` on every surface; only `panel`
+   * also lifts its background, to `--qm-surface-panel-hover`.
+   */
   hoverable?: boolean;
   children?: React.ReactNode;
 }

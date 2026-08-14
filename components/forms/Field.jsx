@@ -1,7 +1,12 @@
 import React from 'react';
 import { Icon } from '../core/Icon.jsx';
 
-/** Inset field. Every input in QM is a dark inset well, never a raised box. */
+/**
+ * Inset field. Every input in QM is a dark inset well, never a raised box.
+ * The well is `qm-well`, which is how whatever a consumer puts in it loses the
+ * browser's focus outline and gains QM's own — the class the control would have
+ * to carry itself is one the consumer does not know to pass.
+ */
 export function Field({
   label, labelFor, hint, value, placeholder, kind = 'text', select, width, size = 'md',
   focused, multiline, disabled, children, style, ...rest
@@ -24,6 +29,7 @@ export function Field({
         </div>
       ) : null}
       <div
+        className="qm-well"
         onFocus={() => setInner(true)}
         onBlur={() => setInner(false)}
         style={{

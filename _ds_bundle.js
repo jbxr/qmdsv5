@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"QuantumMateriaDesignSystem_488cde","components":[{"name":"Avatar","sourcePath":"components/core/Avatar.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"QM_ICONS","sourcePath":"components/core/Icon.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"Kbd","sourcePath":"components/core/Kbd.jsx"},{"name":"StateDot","sourcePath":"components/core/StateDot.jsx"},{"name":"Callout","sourcePath":"components/feedback/Callout.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"ModeBar","sourcePath":"components/feedback/ModeBar.jsx"},{"name":"Overlay","sourcePath":"components/feedback/Overlay.jsx"},{"name":"Refusal","sourcePath":"components/feedback/Refusal.jsx"},{"name":"SaveStatus","sourcePath":"components/feedback/SaveStatus.jsx"},{"name":"Field","sourcePath":"components/forms/Field.jsx"},{"name":"Picker","sourcePath":"components/forms/Picker.jsx"},{"name":"PromptField","sourcePath":"components/forms/PromptField.jsx"},{"name":"PromptTextField","sourcePath":"components/forms/PromptTextField.jsx"},{"name":"SegmentedControl","sourcePath":"components/forms/SegmentedControl.jsx"},{"name":"Tabs","sourcePath":"components/forms/Tabs.jsx"},{"name":"TextArea","sourcePath":"components/forms/TextArea.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"AnnotationMark","sourcePath":"components/narrative/AnnotationMark.jsx"},{"name":"BeatCard","sourcePath":"components/narrative/BeatCard.jsx"},{"name":"BeatSpine","sourcePath":"components/narrative/BeatSpine.jsx"},{"name":"EntityToken","sourcePath":"components/narrative/EntityToken.jsx"},{"name":"EraChip","sourcePath":"components/narrative/EraChip.jsx"},{"name":"NoteBlock","sourcePath":"components/narrative/NoteBlock.jsx"},{"name":"RouteChip","sourcePath":"components/narrative/RouteChip.jsx"},{"name":"TimelineRow","sourcePath":"components/narrative/TimelineRow.jsx"},{"name":"VersionStrip","sourcePath":"components/narrative/VersionStrip.jsx"},{"name":"PanelHeader","sourcePath":"components/navigation/PanelHeader.jsx"},{"name":"StatusBar","sourcePath":"components/navigation/StatusBar.jsx"},{"name":"TopBar","sourcePath":"components/navigation/TopBar.jsx"}],"sourceHashes":{"components/core/Avatar.jsx":"1bd5dba57b46","components/core/Button.jsx":"555e9c4cf507","components/core/Card.jsx":"facdf32752f3","components/core/Icon.jsx":"0ad515408d9b","components/core/Kbd.jsx":"b3b34000dfb0","components/core/StateDot.jsx":"a3fd991e007b","components/feedback/Callout.jsx":"1b782dc94451","components/feedback/EmptyState.jsx":"f68b008bade2","components/feedback/ModeBar.jsx":"973602b22e38","components/feedback/Overlay.jsx":"b615370fb7ed","components/feedback/Refusal.jsx":"3481c28f8b57","components/feedback/SaveStatus.jsx":"adee664c7518","components/forms/Field.jsx":"ea5e62a7a0ac","components/forms/Picker.jsx":"9ccdeb4ca231","components/forms/PromptField.jsx":"3dd0c094d315","components/forms/PromptTextField.jsx":"0928aa9271ef","components/forms/SegmentedControl.jsx":"bc52e1dd5f4d","components/forms/Tabs.jsx":"5bf43d06301e","components/forms/TextArea.jsx":"f869a276de16","components/forms/TextField.jsx":"fe279d3a1d24","components/narrative/AnnotationMark.jsx":"ef3759352e5f","components/narrative/BeatCard.jsx":"e36949ac7061","components/narrative/BeatSpine.jsx":"b3bd113579eb","components/narrative/EntityToken.jsx":"cc0a0dc39c7d","components/narrative/EraChip.jsx":"d91dbb354539","components/narrative/NoteBlock.jsx":"4cfa653d454f","components/narrative/RouteChip.jsx":"46711e6c8608","components/narrative/TimelineRow.jsx":"5e20c52ebea7","components/narrative/VersionStrip.jsx":"3f584141487c","components/navigation/PanelHeader.jsx":"602869534413","components/navigation/StatusBar.jsx":"619e36242c19","components/navigation/TopBar.jsx":"2a8acc0da304","ui_kits/story-engine/Compose.jsx":"0ca07723dda3","ui_kits/story-engine/NewScene.jsx":"2892710023c1","ui_kits/story-engine/Outline.jsx":"5f6ff5685808","ui_kits/story-engine/SceneRoom.jsx":"36a53a8b96c0","ui_kits/story-engine/WritingRoom.jsx":"8f3ba0166dc7","ui_kits/story-engine/data.jsx":"9e2f348a9b25","ui_kits/story-engine/doc-page.js":"371bab66f42d"},"inlinedExternals":[],"unexposedExports":[]} */
+/* @ds-bundle: {"format":4,"namespace":"QuantumMateriaDesignSystem_488cde","components":[{"name":"Avatar","sourcePath":"components/core/Avatar.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"QM_ICONS","sourcePath":"components/core/Icon.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"Kbd","sourcePath":"components/core/Kbd.jsx"},{"name":"StateDot","sourcePath":"components/core/StateDot.jsx"},{"name":"Callout","sourcePath":"components/feedback/Callout.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"ModeBar","sourcePath":"components/feedback/ModeBar.jsx"},{"name":"Overlay","sourcePath":"components/feedback/Overlay.jsx"},{"name":"Refusal","sourcePath":"components/feedback/Refusal.jsx"},{"name":"SaveStatus","sourcePath":"components/feedback/SaveStatus.jsx"},{"name":"Field","sourcePath":"components/forms/Field.jsx"},{"name":"Picker","sourcePath":"components/forms/Picker.jsx"},{"name":"PromptField","sourcePath":"components/forms/PromptField.jsx"},{"name":"PromptTextField","sourcePath":"components/forms/PromptTextField.jsx"},{"name":"SegmentedControl","sourcePath":"components/forms/SegmentedControl.jsx"},{"name":"Tabs","sourcePath":"components/forms/Tabs.jsx"},{"name":"TextArea","sourcePath":"components/forms/TextArea.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"AnnotationMark","sourcePath":"components/narrative/AnnotationMark.jsx"},{"name":"BeatCard","sourcePath":"components/narrative/BeatCard.jsx"},{"name":"BeatSpine","sourcePath":"components/narrative/BeatSpine.jsx"},{"name":"EntityToken","sourcePath":"components/narrative/EntityToken.jsx"},{"name":"EraChip","sourcePath":"components/narrative/EraChip.jsx"},{"name":"NoteBlock","sourcePath":"components/narrative/NoteBlock.jsx"},{"name":"RouteChip","sourcePath":"components/narrative/RouteChip.jsx"},{"name":"TimelineRow","sourcePath":"components/narrative/TimelineRow.jsx"},{"name":"VersionStrip","sourcePath":"components/narrative/VersionStrip.jsx"},{"name":"PanelHeader","sourcePath":"components/navigation/PanelHeader.jsx"},{"name":"StatusBar","sourcePath":"components/navigation/StatusBar.jsx"},{"name":"TopBar","sourcePath":"components/navigation/TopBar.jsx"}],"sourceHashes":{"components/core/Avatar.jsx":"1bd5dba57b46","components/core/Button.jsx":"5e926a6ee4a3","components/core/Card.jsx":"6e48c8e7b24d","components/core/Icon.jsx":"0ad515408d9b","components/core/Kbd.jsx":"b3b34000dfb0","components/core/StateDot.jsx":"a3fd991e007b","components/feedback/Callout.jsx":"1b782dc94451","components/feedback/EmptyState.jsx":"f68b008bade2","components/feedback/ModeBar.jsx":"973602b22e38","components/feedback/Overlay.jsx":"ea3b2392f993","components/feedback/Refusal.jsx":"3481c28f8b57","components/feedback/SaveStatus.jsx":"adee664c7518","components/forms/Field.jsx":"d11a07d68b44","components/forms/Picker.jsx":"9ccdeb4ca231","components/forms/PromptField.jsx":"3dd0c094d315","components/forms/PromptTextField.jsx":"e8fd47ff76e5","components/forms/SegmentedControl.jsx":"bc52e1dd5f4d","components/forms/Tabs.jsx":"5bf43d06301e","components/forms/TextArea.jsx":"40a2eb2b6a36","components/forms/TextField.jsx":"a034068c02e4","components/narrative/AnnotationMark.jsx":"ef3759352e5f","components/narrative/BeatCard.jsx":"e36949ac7061","components/narrative/BeatSpine.jsx":"b3bd113579eb","components/narrative/EntityToken.jsx":"cc0a0dc39c7d","components/narrative/EraChip.jsx":"d91dbb354539","components/narrative/NoteBlock.jsx":"4cfa653d454f","components/narrative/RouteChip.jsx":"46711e6c8608","components/narrative/TimelineRow.jsx":"5e20c52ebea7","components/narrative/VersionStrip.jsx":"3f584141487c","components/navigation/PanelHeader.jsx":"602869534413","components/navigation/StatusBar.jsx":"619e36242c19","components/navigation/TopBar.jsx":"2a8acc0da304","ui_kits/story-engine/Compose.jsx":"0ca07723dda3","ui_kits/story-engine/NewScene.jsx":"2892710023c1","ui_kits/story-engine/Outline.jsx":"de958cb1cff5","ui_kits/story-engine/SceneRoom.jsx":"36a53a8b96c0","ui_kits/story-engine/WritingRoom.jsx":"8f3ba0166dc7","ui_kits/story-engine/data.jsx":"9e2f348a9b25","ui_kits/story-engine/doc-page.js":"371bab66f42d"},"inlinedExternals":[],"unexposedExports":[]} */
 
 (() => {
 
@@ -142,6 +142,8 @@ const VARIANTS = {
  * `destructive` included, which carries cinnabar at rest and never on hover.
  * The focus ring sits outside the border box, so it survives the filled
  * variants, and only on keyboard focus — a pointer press leaves none behind.
+ * It carries a transparent outline of the same size, which displaces the
+ * browser's own indicator here and becomes the whole ring under forced-colors.
  */
 function Button({
   variant = 'secondary',
@@ -156,10 +158,14 @@ function Button({
   onClick,
   onFocus,
   onBlur,
+  onKeyDown,
   ...rest
 }) {
   const [hover, setHover] = React.useState(false);
   const [down, setDown] = React.useState(false);
+  // `ring` is sampled again on keydown, not only on focus: a button reached by
+  // mouse and then typed at becomes `:focus-visible` where it stands, and a
+  // focus-time sample alone would leave that user the browser's ring, not QM's.
   const [ring, setRing] = React.useState(false);
   const v = VARIANTS[variant] || VARIANTS.secondary;
   const height = H[size] || H.sm;
@@ -199,6 +205,10 @@ function Button({
   if (!disabled && (down || ring)) {
     base.boxShadow = [down ? 'var(--qm-inset-press)' : null, ring ? 'var(--qm-focus-ring)' : null].filter(Boolean).join(', ');
   }
+  if (ring) {
+    base.outline = 'var(--qm-focus-outline,2px solid transparent)';
+    base.outlineOffset = 'var(--qm-focus-outline-offset,1px)';
+  }
   if (disabled) {
     base.color = 'var(--qm-text-9)';
     base.background = 'transparent';
@@ -218,6 +228,10 @@ function Button({
     onFocus: e => {
       if (!disabled && e.target.matches(':focus-visible')) setRing(true);
       if (onFocus) onFocus(e);
+    },
+    onKeyDown: e => {
+      if (!disabled && e.target.matches(':focus-visible')) setRing(true);
+      if (onKeyDown) onKeyDown(e);
     },
     onBlur: e => {
       setRing(false);
@@ -284,7 +298,7 @@ const SURFACES = {
   }
 };
 const RAILS = {
-  parchment: 'linear-gradient(180deg,#E8DCC0,#A08E6A)',
+  parchment: 'var(--qm-parchment-rail)',
   gold: 'var(--qm-gold-rail)',
   teal: 'var(--qm-teal)',
   coral: 'var(--qm-coral)',
@@ -315,10 +329,10 @@ function Card({
       overflow: railBg ? 'hidden' : undefined,
       padding,
       borderRadius: radius === 'panel' ? 'var(--qm-radius-panel)' : 'var(--qm-radius-card)',
-      background: hover && surface === 'panel' ? '#171E26' : s.background,
+      background: hover && surface === 'panel' ? 'var(--qm-surface-panel-hover)' : s.background,
       borderWidth: 1,
       borderStyle: s.edge,
-      borderColor: hover ? 'rgba(255,255,255,0.20)' : s.border,
+      borderColor: hover ? 'var(--qm-border-hover)' : s.border,
       boxShadow: s.shadow,
       cursor: hoverable ? 'pointer' : undefined,
       transition: 'background var(--qm-dur-hover) var(--qm-ease), border-color var(--qm-dur-hover) var(--qm-ease)',
@@ -820,11 +834,106 @@ try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 const FOCUSABLE = 'a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])';
 
+/* -- the page, while a modal has it ------------------------------------------
+ * One stack for the whole page rather than a snapshot per instance, because
+ * modals do not have to close in the order they opened. When they don't, an
+ * instance putting back "what I found" restores the *inner* modal's page last —
+ * measurably leaving the whole document inert and unscrollable with nothing on
+ * screen to explain it. The stack is also what makes the top one the top one:
+ * Esc and Tab both ask it who owns the keyboard.
+ */
+
+/** Scrims currently up, oldest first. The last one owns the keyboard. */
+const OPEN = [];
+
+/** The page before the first modal: every `inert` overwritten since, the body's
+ *  own scrolling, and who had the focus. Taken once on the way in, put back once
+ *  on the way out. The opener is held here as well as per-instance, because an
+ *  outer modal closing first leaves the inner one's opener inside a panel that
+ *  is about to be removed — and nothing else remembers where the page came from. */
+let held = null;
+
+/** `inert` is inherited, so an element deep inside a frozen subtree is frozen
+ *  too and cannot take the focus. */
+const frozen = el => !!(el.closest && el.closest('[inert]'));
+const owns = scrimEl => OPEN.length > 0 && OPEN[OPEN.length - 1] === scrimEl;
+const giveBack = el => {
+  const previous = held.inert.get(el);
+  if (previous === null) el.removeAttribute('inert');else el.setAttribute('inert', previous);
+  held.inert.delete(el);
+};
+
+/** The background is the portal's siblings — everything the top modal is not.
+ *  Run on every open and every close, so a modal uncovered by the one above it
+ *  gets its own attribute back rather than a guess at it. */
+function suppressBackground() {
+  const top = OPEN[OPEN.length - 1];
+  for (const el of document.body.children) {
+    if (el === top) {
+      if (held.inert.has(el)) giveBack(el);
+    } else {
+      if (!held.inert.has(el)) held.inert.set(el, el.getAttribute('inert'));
+      el.setAttribute('inert', '');
+    }
+  }
+}
+function hold(scrimEl) {
+  OPEN.push(scrimEl);
+  if (!held) {
+    held = {
+      inert: new Map(),
+      overflow: document.body.style.overflow,
+      paddingRight: document.body.style.paddingRight,
+      opener: document.activeElement,
+      // The background is not a fixed set: a late portal, a second app root or
+      // a toast can be appended to the body while the modal is up, and it would
+      // otherwise stay live and in the accessibility tree behind the scrim.
+      watching: new MutationObserver(() => {
+        if (OPEN.length) suppressBackground();
+      })
+    };
+    held.watching.observe(document.body, {
+      childList: true
+    });
+    // Hiding the overflow takes the scrollbar with it and the page slides
+    // sideways under the scrim, so the gutter is paid back. Its width is
+    // measured, never assumed: 0 on an overlay scrollbar, ~15px on a classic one.
+    const gutter = window.innerWidth - document.documentElement.clientWidth;
+    if (gutter > 0) {
+      const paid = parseFloat(getComputedStyle(document.body).paddingRight) || 0;
+      document.body.style.paddingRight = `${paid + gutter}px`;
+    }
+    document.body.style.overflow = 'hidden';
+  }
+  suppressBackground();
+}
+
+/** Returns the page's original opener once the last modal is down, so the caller
+ *  can hand the focus back to it; null while any modal is still up. */
+function release(scrimEl) {
+  const at = OPEN.indexOf(scrimEl);
+  if (at > -1) OPEN.splice(at, 1);
+  if (!held) return null;
+  if (OPEN.length) {
+    suppressBackground();
+    return null;
+  }
+  const opener = held.opener;
+  held.watching.disconnect();
+  for (const el of [...held.inert.keys()]) giveBack(el);
+  document.body.style.overflow = held.overflow;
+  document.body.style.paddingRight = held.paddingRight;
+  held = null;
+  return opener;
+}
+
 /**
  * Transient surface: radius 12 on the raised surface, 60% scrim.
- * With `scrim` it is a real modal — pinned to the viewport, named, focus moved
- * to the panel and Tab held inside it until it unmounts. Without one it is a
- * popover: it closes on Esc and ✕ and claims nothing else.
+ * With `scrim` it is a real modal — portalled to the body, pinned to the
+ * viewport, named, and holding the page: the background goes `inert`, the body
+ * stops scrolling, focus moves to the panel and Tab stays inside it until it
+ * unmounts. Without one it is a popover: it renders where it is written, closes
+ * on Esc and ✕, and claims nothing else.
  */
 function Overlay({
   title,
@@ -837,28 +946,42 @@ function Overlay({
   ...rest
 }) {
   const panelRef = React.useRef(null);
+  const scrimRef = React.useRef(null);
   const headingId = React.useId();
   const [ring, setRing] = React.useState(false);
   const named = rest['aria-label'] != null || rest['aria-labelledby'] != null;
   React.useEffect(() => {
     if (!onClose) return undefined;
+    // Esc dismisses one thing, and for modals that is the top one: a popover
+    // listens whenever it is up, a modal only while it owns the page.
     const onKey = e => {
-      if (e.key === 'Escape') onClose();
+      if (e.key !== 'Escape') return;
+      if (scrim && !owns(scrimRef.current)) return;
+      onClose();
     };
     document.addEventListener('keydown', onKey);
     return () => document.removeEventListener('keydown', onKey);
-  }, [onClose]);
+  }, [onClose, scrim]);
 
-  // A modal owns the focus for as long as it is up: into the panel — never onto
-  // the first control, which would put a destructive action one ⏎ away — held
-  // there by Tab, and handed back to whatever opened it on the way out.
+  // A modal owns the page for as long as it is up: the background is made
+  // `inert`, the body stops scrolling, and the focus goes into the panel —
+  // never onto the first control, which would put a destructive action one ⏎
+  // away — held there by Tab. One effect, because the order is the contract:
+  // `inert` blurs whatever it swallows, so the opener is read before it, and
+  // handed the focus back after the last attribute is put back.
   React.useEffect(() => {
     if (!scrim) return undefined;
     const opener = document.activeElement;
+
+    // The trap holds the keyboard; only `inert` takes the background out of the
+    // accessibility tree as well, and a virtual cursor reads what the Tab order
+    // no longer reaches.
+    const scrimEl = scrimRef.current;
+    hold(scrimEl);
     if (panelRef.current) panelRef.current.focus();
     const onKey = e => {
       const panelEl = panelRef.current;
-      if (e.key !== 'Tab' || !panelEl) return;
+      if (e.key !== 'Tab' || !panelEl || !owns(scrimEl)) return;
       const stops = panelEl.querySelectorAll(FOCUSABLE);
       const here = document.activeElement;
       if (!stops.length) {
@@ -882,7 +1005,16 @@ function Overlay({
     document.addEventListener('keydown', onKey);
     return () => {
       document.removeEventListener('keydown', onKey);
-      if (opener && opener.focus) opener.focus();
+      // After the `inert` comes off, never before: an opener inside the
+      // background cannot take the focus while the background is still frozen.
+      const pageOpener = release(scrimEl);
+      // Closing out of order breaks the usual answer twice over: an outer modal
+      // leaves its opener still frozen behind the inner one, and the inner one's
+      // opener was inside the outer panel that just went. Fall back to where the
+      // page had the focus before any of this, and only once they are all down.
+      const mine = opener && opener.isConnected && !frozen(opener) ? opener : null;
+      const target = mine || pageOpener;
+      if (target && target.focus) target.focus();
     };
   }, [scrim]);
   const panel = /*#__PURE__*/React.createElement("div", _extends({
@@ -922,6 +1054,9 @@ function Overlay({
     onFocus: e => {
       if (e.target.matches(':focus-visible')) setRing(true);
     },
+    onKeyDown: e => {
+      if (e.target.matches(':focus-visible')) setRing(true);
+    },
     onBlur: () => setRing(false),
     style: {
       width: 28,
@@ -939,7 +1074,8 @@ function Overlay({
       border: '1px solid var(--qm-border-control-quiet)',
       cursor: 'pointer',
       boxShadow: ring ? 'var(--qm-focus-ring)' : undefined,
-      outline: 'none'
+      outline: ring ? 'var(--qm-focus-outline,2px solid transparent)' : undefined,
+      outlineOffset: ring ? 'var(--qm-focus-outline-offset,1px)' : undefined
     }
   }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
     name: "x",
@@ -957,30 +1093,35 @@ function Overlay({
     }
   }, footer) : null);
   if (!scrim) return panel;
-  return (
-    /*#__PURE__*/
-    // `fixed`, not `absolute`: a modal is anchored to what the user is looking
-    // at, not to the top of a document they may have scrolled far past.
-    React.createElement("div", {
-      style: {
-        position: 'fixed',
-        inset: 0,
-        zIndex: 100,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: 'var(--qm-space-5)',
-        background: 'var(--qm-fill-scrim)'
-      },
-      onClick: onClose
-    }, /*#__PURE__*/React.createElement("div", {
-      onClick: e => e.stopPropagation(),
-      style: {
-        maxHeight: '100%',
-        overflowY: 'auto'
-      }
-    }, panel))
-  );
+  const modal =
+  /*#__PURE__*/
+  // `fixed`, not `absolute`: a modal is anchored to what the user is looking
+  // at, not to the top of a document they may have scrolled far past.
+  React.createElement("div", {
+    ref: scrimRef,
+    style: {
+      position: 'fixed',
+      inset: 0,
+      zIndex: 'var(--qm-z-scrim)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: 'var(--qm-space-5)',
+      background: 'var(--qm-fill-scrim)'
+    },
+    onClick: onClose
+  }, /*#__PURE__*/React.createElement("div", {
+    onClick: e => e.stopPropagation(),
+    style: {
+      maxHeight: '100%',
+      overflowY: 'auto'
+    }
+  }, panel));
+  // Only a modal portals, and it portals so that "the background" is a thing
+  // that can be named: the body's other children. A popover stays where it was
+  // written — one portalled out of a modal leaves the scrim's stacking context
+  // and lands behind it.
+  return ReactDOM.createPortal(modal, document.body);
 }
 Object.assign(__ds_scope, { Overlay });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/feedback/Overlay.jsx", error: String((e && e.message) || e) }); }
@@ -1118,7 +1259,12 @@ Object.assign(__ds_scope, { SaveStatus });
 // components/forms/Field.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
-/** Inset field. Every input in QM is a dark inset well, never a raised box. */
+/**
+ * Inset field. Every input in QM is a dark inset well, never a raised box.
+ * The well is `qm-well`, which is how whatever a consumer puts in it loses the
+ * browser's focus outline and gains QM's own — the class the control would have
+ * to carry itself is one the consumer does not know to pass.
+ */
 function Field({
   label,
   labelFor,
@@ -1169,6 +1315,7 @@ function Field({
       color: 'var(--qm-text-6)'
     }
   }, hint) : null) : null, /*#__PURE__*/React.createElement("div", {
+    className: "qm-well",
     onFocus: () => setInner(true),
     onBlur: () => setInner(false),
     style: {
@@ -1389,7 +1536,6 @@ const RESET = {
   WebkitAppearance: 'none',
   background: 'transparent',
   border: 0,
-  outline: 'none',
   padding: 0,
   margin: 0,
   fontFamily: 'inherit',
@@ -1548,7 +1694,6 @@ const RESET = {
   WebkitAppearance: 'none',
   background: 'transparent',
   border: 0,
-  outline: 'none',
   padding: 0,
   margin: 0,
   fontFamily: 'inherit',
@@ -1616,7 +1761,6 @@ const RESET = {
   WebkitAppearance: 'none',
   background: 'transparent',
   border: 0,
-  outline: 'none',
   padding: 0,
   margin: 0,
   fontFamily: 'inherit',
@@ -3241,6 +3385,7 @@ const {
   EraChip,
   EntityToken,
   Field,
+  TextArea,
   Tabs,
   SegmentedControl,
   TimelineRow,
@@ -3882,25 +4027,17 @@ function Outline({
     label: "Target",
     placeholder: "\u2014 none \u2014",
     select: true
-  })), /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontSize: 13,
-      color: 'var(--qm-text-6)',
-      marginBottom: 6
-    }
-  }, "Description"), /*#__PURE__*/React.createElement("div", {
-    style: {
-      padding: '12px 14px',
-      borderRadius: 7,
-      background: 'var(--qm-fill-inset-soft)',
-      border: '1px solid var(--qm-border-control-quiet)',
-      boxShadow: 'var(--qm-focus-ring)',
-      fontFamily: 'var(--qm-font-serif)',
+  })), /*#__PURE__*/React.createElement(TextArea, {
+    label: "Description",
+    kind: "serif",
+    rows: 2,
+    defaultValue: "The student begins by describing the Artifact as a work of art (without naming it yet)",
+    controlStyle: {
       fontSize: 16,
       lineHeight: 1.55,
       color: 'var(--qm-prose-6)'
     }
-  }, "The student begins by describing the Artifact as a work of art (without naming it yet)"), /*#__PURE__*/React.createElement("div", {
+  }), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       alignItems: 'center',

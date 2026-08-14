@@ -3,8 +3,9 @@ import * as React from 'react';
 /**
  * QM action control. One filled button per region: gold for the app, parchment
  * for anything that reaches the room. Every variant draws `--qm-focus-ring`
- * outside its border box on `:focus-visible`; `onFocus`/`onBlur` are called
- * through.
+ * outside its border box on `:focus-visible`, over a transparent
+ * `--qm-focus-outline` that survives forced-colors; `onFocus`/`onBlur`/
+ * `onKeyDown` are called through.
  */
 export interface ButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'style'> {
   /** primary = gold app action; scene = parchment in-scene action; canon/consult inherit a destination state's accent; destructive is tinted cinnabar at rest, never filled. */

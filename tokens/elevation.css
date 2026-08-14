@@ -13,4 +13,18 @@
    border it sits on, then 2px of teal at full strength. Tinted teal borders
    already exist at rest; solid teal does not. */
 --qm-focus-ring:0 0 0 1px rgba(0,0,0,0.9),0 0 0 3px #55B7A6;
---qm-glow-live:0 0 8px #55B7A6;--qm-glow-scene:0 0 10px rgba(232,220,192,0.6);--qm-glow-here:0 0 12px rgba(241,123,84,0.5);--qm-glow-gold-rail:0 0 12px rgba(226,165,68,0.5)}
+--qm-glow-live:0 0 8px #55B7A6;--qm-glow-scene:0 0 10px rgba(232,220,192,0.6);--qm-glow-here:0 0 12px rgba(241,123,84,0.5);--qm-glow-gold-rail:0 0 12px rgba(226,165,68,0.5);
+/* Stacking is elevation seen from the side, so it lives here. QM has exactly two
+   layers and the scale names only those: a popover floats over the content it is
+   anchored to, a scrim covers the page. Nothing in the system is sticky, nothing
+   toasts, and every other absolute element wins on paint order alone — so there
+   is no raised, sticky or toast rung to point at. Add one when a component needs
+   it, not before.
+   The gap between them is not a ranking a popover has to beat. A popover opened
+   inside a modal is a descendant of the scrim, and the scrim is fixed with a
+   z-index of its own, so it is a stacking context: --qm-z-popover resolves
+   against the panel there, never against the 100. Keep popovers inside the
+   context that opened them. One portalled to the body while a modal is up leaves
+   that context and will land behind the scrim. */
+--qm-z-popover:50; /* @kind other */
+--qm-z-scrim:100 /* @kind other */}

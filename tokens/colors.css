@@ -1,6 +1,6 @@
 :root{
 /* Surfaces — deep graphite, never black. Each step is lit a little more. */
---qm-surface-app:#0E1217;--qm-surface-panel:#141A21;--qm-surface-shell:#0F141A;--qm-surface-rail:#10161C;--qm-surface-raised:#1B242E;--qm-surface-selected:#232C38;--qm-surface-status:#11171E;
+--qm-surface-app:#0E1217;--qm-surface-panel:#141A21;--qm-surface-panel-hover:#171E26;--qm-surface-shell:#0F141A;--qm-surface-rail:#10161C;--qm-surface-raised:#1B242E;--qm-surface-selected:#232C38;--qm-surface-status:#11171E;
 --qm-surface-app-glow:radial-gradient(1000px 520px at 50% -5%,#1A232D 0%,#10161C 65%);
 --qm-surface-canvas-glow:radial-gradient(900px 520px at 50% 0%,#182029 0%,#10161C 70%);
 --qm-topbar:linear-gradient(180deg,#1A222C,#151C24); /* @kind color */
@@ -23,7 +23,7 @@
 --qm-violet:#A292F2;--qm-violet-text:#C0AEF5;--qm-violet-text-alt:#B7A7EE;--qm-violet-prose:#E7E1F5;--qm-violet-quiet:#A6A0C4;--qm-violet-dim:#9384CE;
 --qm-coral:#F17B54;--qm-coral-text:#F4A98B;
 --qm-cinnabar:#C4553A;--qm-cinnabar-text:#F0BFB1;--qm-cinnabar-text-strong:#F6D6CB;--qm-cinnabar-dim:#C08A7B;
---qm-parchment:#E8DCC0;--qm-parchment-fill:linear-gradient(180deg,#EFE6CE,#D3C6A4);--qm-parchment-fill-hover:linear-gradient(180deg,#F7F0DC,#E0D3B2);--qm-parchment-text:#D8CDB2;
+--qm-parchment:#E8DCC0;--qm-parchment-fill:linear-gradient(180deg,#EFE6CE,#D3C6A4);--qm-parchment-fill-hover:linear-gradient(180deg,#F7F0DC,#E0D3B2);--qm-parchment-rail:linear-gradient(180deg,#E8DCC0,#A08E6A);--qm-parchment-text:#D8CDB2;
 --qm-live:#55B7A6;--qm-mark:linear-gradient(145deg,#4E8FA0,#2C4A5C); /* @kind color */
 /* Accent tints and borders — 12-20% tint, 28-42% border */
 --qm-tint-gold:rgba(226,165,68,0.14);--qm-tint-gold-soft:rgba(226,165,68,0.10);--qm-tint-gold-strong:rgba(226,165,68,0.20);--qm-border-gold:rgba(226,165,68,0.30);
@@ -35,7 +35,7 @@
 --qm-tint-parchment:rgba(232,220,192,0.055);--qm-border-parchment:rgba(232,220,192,0.30);
 /* Divider hierarchy — four weights, no more */
 --qm-border-structural:rgba(255,255,255,0.09);--qm-border-panel:rgba(255,255,255,0.08);--qm-border-group:rgba(255,255,255,0.07);--qm-border-list:rgba(255,255,255,0.05);--qm-border-ancestry:rgba(255,255,255,0.12);
---qm-border-control:rgba(255,255,255,0.11);--qm-border-control-quiet:rgba(255,255,255,0.10);--qm-border-key:rgba(255,255,255,0.13);--qm-border-dashed:rgba(255,255,255,0.16);--qm-border-disabled:rgba(255,255,255,0.06);
+--qm-border-control:rgba(255,255,255,0.11);--qm-border-control-quiet:rgba(255,255,255,0.10);--qm-border-key:rgba(255,255,255,0.13);--qm-border-dashed:rgba(255,255,255,0.16);--qm-border-disabled:rgba(255,255,255,0.06);--qm-border-hover:rgba(255,255,255,0.20);
 /* Fills */
 --qm-fill-rest:rgba(255,255,255,0.045);--qm-fill-hover:rgba(255,255,255,0.06);--qm-fill-hover-strong:rgba(255,255,255,0.09);--qm-fill-quiet:rgba(255,255,255,0.028);--qm-fill-chip:rgba(255,255,255,0.05);--qm-fill-inset:rgba(0,0,0,0.30);--qm-fill-inset-soft:rgba(0,0,0,0.28);--qm-fill-scrim:rgba(0,0,0,0.60);
 --qm-selection:rgba(226,165,68,0.28)}

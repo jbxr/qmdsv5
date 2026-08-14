@@ -14,6 +14,9 @@ Notes
   **without a rail sets no `position` and no `overflow`**, so your stylesheet can
   make it `position: fixed`/`absolute`/`sticky` or give it `max-height` +
   `overflow-y: auto`, and it will work.
+- `hoverable` lifts the edge to `--qm-border-hover` on every surface; `panel` is
+  the only surface that also lifts its background, to `--qm-surface-panel-hover`.
+  Retheme hover through those two tokens, not through the component.
 - The edge is three longhands, never the `border` shorthand, because `hoverable`
   swaps the colour in and out. A shorthand plus a colour longhand that comes and
   goes leaves Chrome resolving `border-color` to `currentColor`, and the hairline

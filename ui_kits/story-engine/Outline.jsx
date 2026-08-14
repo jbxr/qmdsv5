@@ -1,4 +1,4 @@
-const { Button, Icon, StateDot, Avatar, Card, EraChip, EntityToken, Field, Tabs, SegmentedControl, TimelineRow, BeatCard, NoteBlock, Callout, SaveStatus, PanelHeader, TopBar, StatusBar, Kbd, PromptField } = window.QuantumMateriaDesignSystem_488cde;
+const { Button, Icon, StateDot, Avatar, Card, EraChip, EntityToken, Field, TextArea, Tabs, SegmentedControl, TimelineRow, BeatCard, NoteBlock, Callout, SaveStatus, PanelHeader, TopBar, StatusBar, Kbd, PromptField } = window.QuantumMateriaDesignSystem_488cde;
 
 function Outline({ onExit }) {
   const [density, setDensity] = React.useState('Comfortable');
@@ -162,10 +162,11 @@ function Outline({ onExit }) {
                     <Field label="Subject" placeholder="— none —" select />
                     <Field label="Target" placeholder="— none —" select />
                   </div>
-                  <div style={{ fontSize: 13, color: 'var(--qm-text-6)', marginBottom: 6 }}>Description</div>
-                  <div style={{ padding: '12px 14px', borderRadius: 7, background: 'var(--qm-fill-inset-soft)', border: '1px solid var(--qm-border-control-quiet)', boxShadow: 'var(--qm-focus-ring)', fontFamily: 'var(--qm-font-serif)', fontSize: 16, lineHeight: 1.55, color: 'var(--qm-prose-6)' }}>
-                    The student begins by describing the Artifact as a work of art (without naming it yet)
-                  </div>
+                  <TextArea
+                    label="Description" kind="serif" rows={2}
+                    defaultValue="The student begins by describing the Artifact as a work of art (without naming it yet)"
+                    controlStyle={{ fontSize: 16, lineHeight: 1.55, color: 'var(--qm-prose-6)' }}
+                  />
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 12 }}>
                     <span style={{ fontSize: 13, color: 'var(--qm-text-7)' }}>Draft only until <span style={{ fontFamily: 'var(--qm-font-mono)', color: 'var(--qm-text-4)' }}>⌘S</span></span>
                     <div style={{ display: 'flex', gap: 8 }}>
