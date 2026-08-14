@@ -1,4 +1,4 @@
-<!-- @dsCard group="Components" viewport="700x340" name="Feedback" subtitle="Conflicts, mode bars, refusals, save promises, empty · offline · unknown" -->
+<!-- @dsCard group="Components" viewport="700x790" name="Feedback" subtitle="Conflicts, mode bars, refusals, save promises, empty · offline · unknown, and the modal that guards a delete" -->
 <!DOCTYPE html>
 <html><head><meta charset="utf-8">
 <link rel="stylesheet" href="../../styles.css">
@@ -10,8 +10,12 @@
 <script src="../../_ds_bundle.js"></script>
 <script type="text/babel">
 const QM = window.QuantumMateriaDesignSystem_488cde;
-const { Callout, ModeBar, Refusal, SaveStatus, EmptyState, Overlay, Icon, Kbd } = QM;
+const { Callout, ModeBar, Refusal, SaveStatus, EmptyState, Overlay, Button, Icon, Kbd } = QM;
 function Demo() {
+  // The confirmation opens on demand rather than at rest: a scrim covers the whole
+  // card, and a card whose other seven demos sit under a modal is the exact failure
+  // this specimen sheet is meant to catch.
+  const [confirming, setConfirming] = React.useState(false);
   return (
     <div className="wrap">
       <Callout tone="conflict" action={<>Why this matters <Icon name="chevronRight" size={12} style={{ display: 'inline-block' }} /></>}>
@@ -42,6 +46,36 @@ function Demo() {
           <span style={{ fontFamily: 'var(--qm-font-mono)', fontSize: 12.5, color: 'var(--qm-text-2)' }}>⌥↑ / ⌥↓</span><span>Move among siblings, subtree riding along</span>
         </div>
       </Overlay>
+      <div className="row" style={{ gap: 10 }}>
+        <span className="lbl">CONFIRM</span>
+        <Button variant="destructive" size="tiny" leadingIcon={<Icon name="x" size={13} />} onClick={() => setConfirming(true)}>
+          Delete scene
+        </Button>
+        <span style={{ fontSize: 12.5, color: 'var(--qm-text-7)' }}>
+          destructive actions ask first — scrim, <span style={{ fontFamily: 'var(--qm-font-mono)', fontSize: 12 }}>esc</span>, and focus held inside the panel
+        </span>
+      </div>
+      {confirming && (
+        <Overlay
+          scrim
+          width={420}
+          title="Delete this scene?"
+          onClose={() => setConfirming(false)}
+          footer={
+            <div style={{ display: 'flex', gap: 8, justifyContent: 'flex-end' }}>
+              <Button size="tiny" hint="esc" onClick={() => setConfirming(false)}>Keep it</Button>
+              <Button variant="destructive" size="tiny" leadingIcon={<Icon name="x" size={13} />} onClick={() => setConfirming(false)}>
+                Delete scene
+              </Button>
+            </div>
+          }
+        >
+          <div style={{ fontSize: 14, color: 'var(--qm-text-3)' }}>
+            <strong style={{ fontWeight: 600, color: 'var(--qm-cinnabar-text-strong)' }}>The lamplighter's round</strong> and its 9 beats go with it.
+            <div style={{ marginTop: 8, color: 'var(--qm-text-6)' }}>Saved drafts are write-once, so this one cannot be brought back.</div>
+          </div>
+        </Overlay>
+      )}
     </div>
   );
 }

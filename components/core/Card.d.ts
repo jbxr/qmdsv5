@@ -6,6 +6,10 @@ import * as React from 'react';
  *
  * A card without a rail sets no `position` and no `overflow`, so a consumer
  * stylesheet can position it (fixed, absolute, sticky) and scroll it.
+ *
+ * The edge is written as `border-width` / `border-style` / `border-color`
+ * longhands rather than the `border` shorthand, so the `hoverable` colour swap
+ * cannot leave `border-color` resolving to `currentColor`.
  */
 export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   surface?: 'panel' | 'raised' | 'selected' | 'beat' | 'scene' | 'quiet';

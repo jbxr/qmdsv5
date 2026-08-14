@@ -26,7 +26,7 @@ jobs:
 
       - run: npm ci
 
-      # `--no-save` keeps the working tree clean, so the adherence diff below
+      # `--no-save` keeps the working tree clean, so the adherence check below
       # reports a stale config rather than this install.
       - run: npm i --no-save @types/react@${{ matrix.types-react }}
 
@@ -37,7 +37,33 @@ jobs:
       # shipping a lint rule that disagrees with the types. Generated in both legs
       # because the config reads the props types through the checker: it must not
       # depend on which `@types/react` is installed.
+      #
+      # `--check` rather than a build plus `git diff`: the config is also written
+      # by the external Design app on every bundle regeneration, and only the
+      # generator can recognise that and say so (#25). A bare diff sent the last
+      # person looking for a mistake they had not made.
       - name: adherence config matches the declarations
-        run: |
-          npm run adherence:build
-          git diff --exit-code -- _adherence.oxlintrc.json
+        run: npm run adherence:check
+
+  # Every card carries a hand-written `@dsCard viewport="WxH"`, the gallery renders
+  # it in exactly that box, and nothing used to check it — so an under-declared
+  # height hid content and looked like a shorter card. `guidelines/brand-interaction`
+  # shipped its DESTRUCTIVE section below the fold for two PRs that way (#22).
+  cards:
+    name: card viewports fit their content
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # 22 for the global `WebSocket` the CDP client drives Chrome over. Chrome
+      # itself is preinstalled on the runner image; the script skips with a clear
+      # message rather than failing if it ever is not.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # The cards reach unpkg for React and Google Fonts for Spectral and IBM
+      # Plex, and a height measured in the fallback families is not the height
+      # the gallery lays out. A card whose fonts did not arrive is reported as
+      # not measured, so a CDN blip cannot turn into a red build.
+      - run: npm run cards:viewports
