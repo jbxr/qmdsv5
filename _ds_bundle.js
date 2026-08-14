@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"QuantumMateriaDesignSystem_488cde","components":[{"name":"Avatar","sourcePath":"components/core/Avatar.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"QM_ICONS","sourcePath":"components/core/Icon.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"Kbd","sourcePath":"components/core/Kbd.jsx"},{"name":"StateDot","sourcePath":"components/core/StateDot.jsx"},{"name":"Callout","sourcePath":"components/feedback/Callout.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"ModeBar","sourcePath":"components/feedback/ModeBar.jsx"},{"name":"Overlay","sourcePath":"components/feedback/Overlay.jsx"},{"name":"Refusal","sourcePath":"components/feedback/Refusal.jsx"},{"name":"SaveStatus","sourcePath":"components/feedback/SaveStatus.jsx"},{"name":"Field","sourcePath":"components/forms/Field.jsx"},{"name":"Picker","sourcePath":"components/forms/Picker.jsx"},{"name":"PromptField","sourcePath":"components/forms/PromptField.jsx"},{"name":"SegmentedControl","sourcePath":"components/forms/SegmentedControl.jsx"},{"name":"Tabs","sourcePath":"components/forms/Tabs.jsx"},{"name":"AnnotationMark","sourcePath":"components/narrative/AnnotationMark.jsx"},{"name":"BeatCard","sourcePath":"components/narrative/BeatCard.jsx"},{"name":"BeatSpine","sourcePath":"components/narrative/BeatSpine.jsx"},{"name":"EntityToken","sourcePath":"components/narrative/EntityToken.jsx"},{"name":"EraChip","sourcePath":"components/narrative/EraChip.jsx"},{"name":"NoteBlock","sourcePath":"components/narrative/NoteBlock.jsx"},{"name":"RouteChip","sourcePath":"components/narrative/RouteChip.jsx"},{"name":"TimelineRow","sourcePath":"components/narrative/TimelineRow.jsx"},{"name":"VersionStrip","sourcePath":"components/narrative/VersionStrip.jsx"},{"name":"PanelHeader","sourcePath":"components/navigation/PanelHeader.jsx"},{"name":"StatusBar","sourcePath":"components/navigation/StatusBar.jsx"},{"name":"TopBar","sourcePath":"components/navigation/TopBar.jsx"}],"sourceHashes":{"components/core/Avatar.jsx":"1bd5dba57b46","components/core/Button.jsx":"a581daf27865","components/core/Card.jsx":"f4235a5a76de","components/core/Icon.jsx":"676e03660a55","components/core/Kbd.jsx":"b3b34000dfb0","components/core/StateDot.jsx":"94b3b5cf4e07","components/feedback/Callout.jsx":"1b782dc94451","components/feedback/EmptyState.jsx":"f68b008bade2","components/feedback/ModeBar.jsx":"973602b22e38","components/feedback/Overlay.jsx":"bedd480d669e","components/feedback/Refusal.jsx":"3481c28f8b57","components/feedback/SaveStatus.jsx":"adee664c7518","components/forms/Field.jsx":"1a7fca1878ba","components/forms/Picker.jsx":"9ccdeb4ca231","components/forms/PromptField.jsx":"48b7bdbf06a1","components/forms/SegmentedControl.jsx":"bc52e1dd5f4d","components/forms/Tabs.jsx":"5bf43d06301e","components/narrative/AnnotationMark.jsx":"ef3759352e5f","components/narrative/BeatCard.jsx":"e36949ac7061","components/narrative/BeatSpine.jsx":"519a89bce3cf","components/narrative/EntityToken.jsx":"cc0a0dc39c7d","components/narrative/EraChip.jsx":"d91dbb354539","components/narrative/NoteBlock.jsx":"4cfa653d454f","components/narrative/RouteChip.jsx":"46711e6c8608","components/narrative/TimelineRow.jsx":"500fc99550c0","components/narrative/VersionStrip.jsx":"3f584141487c","components/navigation/PanelHeader.jsx":"602869534413","components/navigation/StatusBar.jsx":"619e36242c19","components/navigation/TopBar.jsx":"2a8acc0da304","ui_kits/story-engine/Compose.jsx":"0ca07723dda3","ui_kits/story-engine/NewScene.jsx":"2892710023c1","ui_kits/story-engine/Outline.jsx":"5f6ff5685808","ui_kits/story-engine/SceneRoom.jsx":"36a53a8b96c0","ui_kits/story-engine/WritingRoom.jsx":"a4d81b82574d","ui_kits/story-engine/data.jsx":"9e2f348a9b25","ui_kits/story-engine/doc-page.js":"371bab66f42d"},"inlinedExternals":[],"unexposedExports":[]} */
+/* @ds-bundle: {"format":4,"namespace":"QuantumMateriaDesignSystem_488cde","components":[{"name":"Avatar","sourcePath":"components/core/Avatar.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"QM_ICONS","sourcePath":"components/core/Icon.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"Kbd","sourcePath":"components/core/Kbd.jsx"},{"name":"StateDot","sourcePath":"components/core/StateDot.jsx"},{"name":"Callout","sourcePath":"components/feedback/Callout.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"ModeBar","sourcePath":"components/feedback/ModeBar.jsx"},{"name":"Overlay","sourcePath":"components/feedback/Overlay.jsx"},{"name":"Refusal","sourcePath":"components/feedback/Refusal.jsx"},{"name":"SaveStatus","sourcePath":"components/feedback/SaveStatus.jsx"},{"name":"Field","sourcePath":"components/forms/Field.jsx"},{"name":"Picker","sourcePath":"components/forms/Picker.jsx"},{"name":"PromptField","sourcePath":"components/forms/PromptField.jsx"},{"name":"PromptTextField","sourcePath":"components/forms/PromptTextField.jsx"},{"name":"SegmentedControl","sourcePath":"components/forms/SegmentedControl.jsx"},{"name":"Tabs","sourcePath":"components/forms/Tabs.jsx"},{"name":"TextArea","sourcePath":"components/forms/TextArea.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"AnnotationMark","sourcePath":"components/narrative/AnnotationMark.jsx"},{"name":"BeatCard","sourcePath":"components/narrative/BeatCard.jsx"},{"name":"BeatSpine","sourcePath":"components/narrative/BeatSpine.jsx"},{"name":"EntityToken","sourcePath":"components/narrative/EntityToken.jsx"},{"name":"EraChip","sourcePath":"components/narrative/EraChip.jsx"},{"name":"NoteBlock","sourcePath":"components/narrative/NoteBlock.jsx"},{"name":"RouteChip","sourcePath":"components/narrative/RouteChip.jsx"},{"name":"TimelineRow","sourcePath":"components/narrative/TimelineRow.jsx"},{"name":"VersionStrip","sourcePath":"components/narrative/VersionStrip.jsx"},{"name":"PanelHeader","sourcePath":"components/navigation/PanelHeader.jsx"},{"name":"StatusBar","sourcePath":"components/navigation/StatusBar.jsx"},{"name":"TopBar","sourcePath":"components/navigation/TopBar.jsx"}],"sourceHashes":{"components/core/Avatar.jsx":"1bd5dba57b46","components/core/Button.jsx":"555e9c4cf507","components/core/Card.jsx":"defc7b5cc5a4","components/core/Icon.jsx":"0ad515408d9b","components/core/Kbd.jsx":"b3b34000dfb0","components/core/StateDot.jsx":"a3fd991e007b","components/feedback/Callout.jsx":"1b782dc94451","components/feedback/EmptyState.jsx":"f68b008bade2","components/feedback/ModeBar.jsx":"973602b22e38","components/feedback/Overlay.jsx":"bedd480d669e","components/feedback/Refusal.jsx":"3481c28f8b57","components/feedback/SaveStatus.jsx":"adee664c7518","components/forms/Field.jsx":"ea5e62a7a0ac","components/forms/Picker.jsx":"9ccdeb4ca231","components/forms/PromptField.jsx":"3dd0c094d315","components/forms/PromptTextField.jsx":"0928aa9271ef","components/forms/SegmentedControl.jsx":"bc52e1dd5f4d","components/forms/Tabs.jsx":"5bf43d06301e","components/forms/TextArea.jsx":"f869a276de16","components/forms/TextField.jsx":"fe279d3a1d24","components/narrative/AnnotationMark.jsx":"ef3759352e5f","components/narrative/BeatCard.jsx":"e36949ac7061","components/narrative/BeatSpine.jsx":"b3bd113579eb","components/narrative/EntityToken.jsx":"cc0a0dc39c7d","components/narrative/EraChip.jsx":"d91dbb354539","components/narrative/NoteBlock.jsx":"4cfa653d454f","components/narrative/RouteChip.jsx":"46711e6c8608","components/narrative/TimelineRow.jsx":"5e20c52ebea7","components/narrative/VersionStrip.jsx":"3f584141487c","components/navigation/PanelHeader.jsx":"602869534413","components/navigation/StatusBar.jsx":"619e36242c19","components/navigation/TopBar.jsx":"2a8acc0da304","ui_kits/story-engine/Compose.jsx":"0ca07723dda3","ui_kits/story-engine/NewScene.jsx":"2892710023c1","ui_kits/story-engine/Outline.jsx":"5f6ff5685808","ui_kits/story-engine/SceneRoom.jsx":"36a53a8b96c0","ui_kits/story-engine/WritingRoom.jsx":"8f3ba0166dc7","ui_kits/story-engine/data.jsx":"9e2f348a9b25","ui_kits/story-engine/doc-page.js":"371bab66f42d"},"inlinedExternals":[],"unexposedExports":[]} */
 
 (() => {
 
@@ -128,12 +128,20 @@ const VARIANTS = {
     color: 'var(--qm-violet-text-alt)',
     background: 'transparent',
     border: '1px solid var(--qm-border-violet)'
+  },
+  destructive: {
+    color: 'var(--qm-cinnabar-text)',
+    background: 'var(--qm-tint-cinnabar-soft)',
+    border: '1px solid var(--qm-border-cinnabar)'
   }
 };
 
 /**
  * One filled action per region. `primary` is the gold app action, `scene` the
- * parchment action that reaches the room; everything else is an outline.
+ * parchment action that reaches the room; everything else is an outline —
+ * `destructive` included, which carries cinnabar at rest and never on hover.
+ * The focus ring sits outside the border box, so it survives the filled
+ * variants, and only on keyboard focus — a pointer press leaves none behind.
  */
 function Button({
   variant = 'secondary',
@@ -146,10 +154,13 @@ function Button({
   fullWidth,
   style,
   onClick,
+  onFocus,
+  onBlur,
   ...rest
 }) {
   const [hover, setHover] = React.useState(false);
   const [down, setDown] = React.useState(false);
+  const [ring, setRing] = React.useState(false);
   const v = VARIANTS[variant] || VARIANTS.secondary;
   const height = H[size] || H.sm;
   const base = {
@@ -181,7 +192,13 @@ function Button({
     base.color = 'var(--qm-teal-text-strong)';
   }
   if (variant === 'consult' && hover && !disabled) base.background = 'rgba(162,146,242,0.14)';
-  if (down && !disabled) base.boxShadow = 'var(--qm-inset-press)';
+  if (variant === 'destructive' && hover && !disabled) {
+    base.background = 'var(--qm-tint-cinnabar)';
+    base.color = 'var(--qm-cinnabar-text-strong)';
+  }
+  if (!disabled && (down || ring)) {
+    base.boxShadow = [down ? 'var(--qm-inset-press)' : null, ring ? 'var(--qm-focus-ring)' : null].filter(Boolean).join(', ');
+  }
   if (disabled) {
     base.color = 'var(--qm-text-9)';
     base.background = 'transparent';
@@ -198,6 +215,15 @@ function Button({
     },
     onMouseDown: () => setDown(true),
     onMouseUp: () => setDown(false),
+    onFocus: e => {
+      if (!disabled && e.target.matches(':focus-visible')) setRing(true);
+      if (onFocus) onFocus(e);
+    },
+    onBlur: e => {
+      setRing(false);
+      setDown(false);
+      if (onBlur) onBlur(e);
+    },
     style: {
       ...base,
       ...style
@@ -274,8 +300,10 @@ function Card({
     onMouseEnter: hoverable ? () => setHover(true) : undefined,
     onMouseLeave: hoverable ? () => setHover(false) : undefined,
     style: {
-      position: 'relative',
-      overflow: 'hidden',
+      // Only a railed card contains and clips its rail; a plain one leaves
+      // position and overflow to the consumer.
+      position: railBg ? 'relative' : undefined,
+      overflow: railBg ? 'hidden' : undefined,
       padding,
       borderRadius: radius === 'panel' ? 'var(--qm-radius-panel)' : 'var(--qm-radius-card)',
       background: hover && surface === 'panel' ? '#171E26' : s.background,
@@ -303,27 +331,36 @@ Object.assign(__ds_scope, { Card });
 // components/core/Icon.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+/**
+ * Path data is copied from lucide (ISC licence, same 24x24 / 2px / round-cap convention) and
+ * inlined so QM carries no runtime icon dependency. Keys annotated below are renames or QM
+ * originals; guidelines/brand-iconography.card.html holds the full key -> lucide-name table.
+ */
 const QM_ICONS = {
   play: {
     fill: true,
     d: '<path d="M7 4l13 8-13 8z"/>'
   },
+  // QM original, filled — not lucide play
   grip: {
     fill: true,
     d: '<circle cx="9" cy="5" r="1.4"/><circle cx="9" cy="12" r="1.4"/><circle cx="9" cy="19" r="1.4"/><circle cx="15" cy="5" r="1.4"/><circle cx="15" cy="12" r="1.4"/><circle cx="15" cy="19" r="1.4"/>'
   },
+  // lucide grip-vertical, filled at r1.4
   more: {
     fill: true,
     d: '<circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/><circle cx="5" cy="12" r="1.5"/>'
   },
+  // lucide ellipsis, filled at r1.5
   list: {
     fill: false,
-    d: '<path d="M3 6h.01"/><path d="M3 12h.01"/><path d="M3 18h.01"/><path d="M8 6h13"/><path d="M8 12h13"/><path d="M8 18h13"/>'
+    d: '<path d="M3 5h.01"/><path d="M3 12h.01"/><path d="M3 19h.01"/><path d="M8 5h13"/><path d="M8 12h13"/><path d="M8 19h13"/>'
   },
   sliders: {
     fill: false,
-    d: '<path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/>'
+    d: '<path d="M19 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/>'
   },
+  // lucide settings-2
   pencil: {
     fill: false,
     d: '<path d="M21.2 6.8a1 1 0 0 0-4-4L3.8 16.2a2 2 0 0 0-.5.8l-1.3 4.4a.5.5 0 0 0 .6.6l4.4-1.3a2 2 0 0 0 .8-.5z"/><path d="m15 5 4 4"/>'
@@ -354,7 +391,7 @@ const QM_ICONS = {
   },
   chevronUp: {
     fill: false,
-    d: '<path d="m7 15 5-5 5 5"/>'
+    d: '<path d="m18 15-6-6-6 6"/>'
   },
   chevronsUpDown: {
     fill: false,
@@ -364,6 +401,7 @@ const QM_ICONS = {
     fill: false,
     d: '<path d="M3 10h14"/><path d="M3 14h14"/><path d="m21 5-3 3-3-3"/><path d="m15 19 3-3 3 3"/>'
   },
+  // QM original — outline rows plus a fold control; intentionally not lucide unfold-vertical
   arrowLeft: {
     fill: false,
     d: '<path d="M19 12H5"/><path d="m12 19-7-7 7-7"/>'
@@ -380,6 +418,7 @@ const QM_ICONS = {
     fill: false,
     d: '<path d="M12 20a8 8 0 1 0-8-8 8 8 0 0 0 1.2 4.2L4 20z"/>'
   },
+  // QM original — not lucide message-circle
   maximize: {
     fill: false,
     d: '<path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/>'
@@ -391,7 +430,7 @@ const QM_ICONS = {
   help: {
     fill: false,
     d: '<circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><path d="M12 17h.01"/>'
-  }
+  } // lucide circle-question-mark
 };
 
 /** Inline 24x24 SVG glyph. QM has no icon font: glyphs are copied path data. */
@@ -537,7 +576,7 @@ function StateDot({
   style,
   ...rest
 }) {
-  const s = STATES[state] || STATES.canon;
+  const s = STATES[state] || STATES.neutral;
   const diamond = s.shape === 'diamond';
   const glows = {
     here: 'var(--qm-glow-here)',
@@ -985,6 +1024,7 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
 /** Inset field. Every input in QM is a dark inset well, never a raised box. */
 function Field({
   label,
+  labelFor,
   hint,
   value,
   placeholder,
@@ -993,14 +1033,21 @@ function Field({
   width,
   size = 'md',
   focused,
+  multiline,
+  disabled,
   children,
   style,
   ...rest
 }) {
+  const [inner, setInner] = React.useState(false);
   const mono = kind === 'mono';
   const serif = kind === 'serif';
   const height = size === 'lg' ? 44 : size === 'sm' ? 36 : 38;
+  const padY = size === 'lg' ? 10 : size === 'sm' ? 6 : 7;
+  const wraps = value == null && placeholder == null;
   const empty = value == null || value === '';
+  const ring = disabled ? false : focused === undefined ? inner : focused;
+  const Label = labelFor ? 'label' : 'span';
   return /*#__PURE__*/React.createElement("div", _extends({
     style: {
       width,
@@ -1013,7 +1060,8 @@ function Field({
       justifyContent: 'space-between',
       marginBottom: 7
     }
-  }, /*#__PURE__*/React.createElement("span", {
+  }, /*#__PURE__*/React.createElement(Label, {
+    htmlFor: labelFor,
     style: {
       fontSize: 'var(--qm-type-label)',
       color: 'var(--qm-text-6)'
@@ -1024,22 +1072,27 @@ function Field({
       color: 'var(--qm-text-6)'
     }
   }, hint) : null) : null, /*#__PURE__*/React.createElement("div", {
+    onFocus: () => setInner(true),
+    onBlur: () => setInner(false),
     style: {
-      height,
+      height: multiline ? undefined : height,
+      minHeight: multiline ? height : undefined,
       display: 'flex',
-      alignItems: 'center',
+      alignItems: multiline ? 'stretch' : 'center',
       gap: 10,
-      padding: '0 12px',
+      padding: multiline ? `${padY}px 12px` : '0 12px',
       borderRadius: 'var(--qm-radius-control)',
       background: 'var(--qm-fill-inset-soft)',
-      border: '1px solid var(--qm-border-control-quiet)',
-      boxShadow: focused ? 'var(--qm-focus-ring)' : undefined,
+      border: `1px solid ${disabled ? 'var(--qm-border-disabled)' : 'var(--qm-border-control-quiet)'}`,
+      boxShadow: ring ? 'var(--qm-focus-ring)' : undefined,
+      transition: 'box-shadow var(--qm-dur-hover) var(--qm-ease)',
       fontFamily: mono ? 'var(--qm-font-mono)' : serif ? 'var(--qm-font-serif)' : 'var(--qm-font-sans)',
       fontSize: serif ? 'var(--qm-type-body)' : 'var(--qm-field-size,14.5px)',
-      color: empty ? 'var(--qm-text-7)' : 'var(--qm-text-field)',
-      cursor: select ? 'pointer' : 'text'
+      lineHeight: multiline ? 'var(--qm-type-body-lh)' : undefined,
+      color: disabled ? 'var(--qm-text-9)' : empty && !wraps ? 'var(--qm-text-7)' : 'var(--qm-text-field)',
+      cursor: disabled ? 'not-allowed' : select ? 'pointer' : 'text'
     }
-  }, /*#__PURE__*/React.createElement("span", {
+  }, wraps ? null : /*#__PURE__*/React.createElement("span", {
     style: {
       flex: 1,
       minWidth: 0,
@@ -1137,6 +1190,25 @@ Object.assign(__ds_scope, { Picker });
 // components/forms/PromptField.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+const AUDIENCE = {
+  private: {
+    border: 'var(--qm-border-control-quiet)',
+    dashed: false
+  },
+  character: {
+    border: 'rgba(162,146,242,0.30)',
+    dashed: false
+  },
+  direction: {
+    border: 'var(--qm-border-dashed)',
+    dashed: true
+  },
+  scene: {
+    border: 'var(--qm-border-parchment)',
+    dashed: false
+  }
+};
+
 /** A line addressed to someone. Who you are talking to is where you are typing. */
 function PromptField({
   placeholder,
@@ -1145,28 +1217,26 @@ function PromptField({
   caret,
   hintKey = '⏎',
   trailing,
+  focused,
+  children,
   style,
+  onFocus,
+  onBlur,
   ...rest
 }) {
-  const A = {
-    private: {
-      border: 'var(--qm-border-control-quiet)',
-      dashed: false
-    },
-    character: {
-      border: 'rgba(162,146,242,0.30)',
-      dashed: false
-    },
-    direction: {
-      border: 'var(--qm-border-dashed)',
-      dashed: true
-    },
-    scene: {
-      border: 'var(--qm-border-parchment)',
-      dashed: false
-    }
-  }[audience];
+  const [inner, setInner] = React.useState(false);
+  const A = AUDIENCE[audience];
+  const wraps = value == null && placeholder == null;
+  const ring = focused === undefined ? inner : focused;
   return /*#__PURE__*/React.createElement("div", _extends({
+    onFocus: e => {
+      setInner(true);
+      if (onFocus) onFocus(e);
+    },
+    onBlur: e => {
+      setInner(false);
+      if (onBlur) onBlur(e);
+    },
     style: {
       display: 'flex',
       alignItems: 'center',
@@ -1176,15 +1246,17 @@ function PromptField({
       borderRadius: 'var(--qm-radius-callout)',
       background: 'var(--qm-fill-inset)',
       border: `1px ${A.dashed ? 'dashed' : 'solid'} ${A.border}`,
+      boxShadow: ring ? 'var(--qm-focus-ring)' : undefined,
+      transition: 'box-shadow var(--qm-dur-hover) var(--qm-ease)',
       fontSize: 'var(--qm-type-row)',
-      color: value ? 'var(--qm-text-3)' : 'var(--qm-text-7)',
+      color: wraps || value ? 'var(--qm-text-3)' : 'var(--qm-text-7)',
       ...style
     }
   }, rest), /*#__PURE__*/React.createElement(__ds_scope.Icon, {
     name: "lock",
     size: 13,
     color: "var(--qm-text-7)"
-  }), /*#__PURE__*/React.createElement("span", {
+  }), wraps ? null : /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("span", {
     style: {
       whiteSpace: 'nowrap',
       overflow: 'hidden',
@@ -1198,7 +1270,7 @@ function PromptField({
     style: {
       flex: 1
     }
-  }), trailing, hintKey ? /*#__PURE__*/React.createElement("span", {
+  })), children, trailing, hintKey ? /*#__PURE__*/React.createElement("span", {
     style: {
       fontFamily: 'var(--qm-font-mono)',
       fontSize: 'var(--qm-type-mono-chip)',
@@ -1208,6 +1280,57 @@ function PromptField({
 }
 Object.assign(__ds_scope, { PromptField });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/forms/PromptField.jsx", error: String((e && e.message) || e) }); }
+
+// components/forms/PromptTextField.jsx
+try { (() => {
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+const RESET = {
+  flex: 1,
+  minWidth: 0,
+  width: '100%',
+  appearance: 'none',
+  WebkitAppearance: 'none',
+  background: 'transparent',
+  border: 0,
+  outline: 'none',
+  padding: 0,
+  margin: 0,
+  fontFamily: 'inherit',
+  fontSize: 'inherit',
+  fontWeight: 'inherit',
+  lineHeight: 'inherit',
+  letterSpacing: 'inherit',
+  color: 'inherit'
+};
+
+/** An addressed line the author types into — a real `<input>` in PromptField's well. */
+const PromptTextField = React.forwardRef(function PromptTextField({
+  audience,
+  hintKey,
+  trailing,
+  focused,
+  className,
+  style,
+  controlStyle,
+  ...rest
+}, ref) {
+  return /*#__PURE__*/React.createElement(__ds_scope.PromptField, {
+    audience: audience,
+    hintKey: hintKey,
+    trailing: trailing,
+    focused: focused,
+    style: style
+  }, /*#__PURE__*/React.createElement("input", _extends({
+    ref: ref,
+    className: className ? `qm-control ${className}` : 'qm-control',
+    style: {
+      ...RESET,
+      ...controlStyle
+    }
+  }, rest)));
+});
+Object.assign(__ds_scope, { PromptTextField });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/forms/PromptTextField.jsx", error: String((e && e.message) || e) }); }
 
 // components/forms/SegmentedControl.jsx
 try { (() => {
@@ -1315,6 +1438,139 @@ function Tabs({
 }
 Object.assign(__ds_scope, { Tabs });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/forms/Tabs.jsx", error: String((e && e.message) || e) }); }
+
+// components/forms/TextArea.jsx
+try { (() => {
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+const RESET = {
+  flex: 1,
+  minWidth: 0,
+  width: '100%',
+  display: 'block',
+  appearance: 'none',
+  WebkitAppearance: 'none',
+  background: 'transparent',
+  border: 0,
+  outline: 'none',
+  padding: 0,
+  margin: 0,
+  fontFamily: 'inherit',
+  fontSize: 'inherit',
+  fontWeight: 'inherit',
+  lineHeight: 'inherit',
+  letterSpacing: 'inherit',
+  color: 'inherit'
+};
+
+/** Many lines the author types into. `kind="serif"` for anything read as prose. */
+const TextArea = React.forwardRef(function TextArea({
+  label,
+  hint,
+  kind = 'text',
+  size = 'md',
+  width,
+  focused,
+  rows = 3,
+  resize = 'none',
+  disabled,
+  id,
+  className,
+  style,
+  controlStyle,
+  ...rest
+}, ref) {
+  const auto = React.useId();
+  const inputId = id || auto;
+  return /*#__PURE__*/React.createElement(__ds_scope.Field, {
+    label: label,
+    hint: hint,
+    labelFor: inputId,
+    multiline: true,
+    disabled: disabled,
+    kind: kind,
+    size: size,
+    width: width,
+    focused: focused,
+    style: style
+  }, /*#__PURE__*/React.createElement("textarea", _extends({
+    ref: ref,
+    id: inputId,
+    rows: rows,
+    disabled: disabled,
+    className: className ? `qm-control ${className}` : 'qm-control',
+    style: {
+      ...RESET,
+      resize,
+      ...controlStyle
+    }
+  }, rest)));
+});
+Object.assign(__ds_scope, { TextArea });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/forms/TextArea.jsx", error: String((e && e.message) || e) }); }
+
+// components/forms/TextField.jsx
+try { (() => {
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+const RESET = {
+  flex: 1,
+  minWidth: 0,
+  width: '100%',
+  appearance: 'none',
+  WebkitAppearance: 'none',
+  background: 'transparent',
+  border: 0,
+  outline: 'none',
+  padding: 0,
+  margin: 0,
+  fontFamily: 'inherit',
+  fontSize: 'inherit',
+  fontWeight: 'inherit',
+  lineHeight: 'inherit',
+  letterSpacing: 'inherit',
+  color: 'inherit'
+};
+
+/** A single line the author types into — a real `<input>` in Field's inset well. */
+const TextField = React.forwardRef(function TextField({
+  label,
+  hint,
+  kind = 'text',
+  size = 'md',
+  width,
+  focused,
+  trailing,
+  disabled,
+  id,
+  className,
+  style,
+  controlStyle,
+  ...rest
+}, ref) {
+  const auto = React.useId();
+  const inputId = id || auto;
+  return /*#__PURE__*/React.createElement(__ds_scope.Field, {
+    label: label,
+    hint: hint,
+    labelFor: inputId,
+    disabled: disabled,
+    kind: kind,
+    size: size,
+    width: width,
+    focused: focused,
+    style: style
+  }, /*#__PURE__*/React.createElement("input", _extends({
+    ref: ref,
+    id: inputId,
+    disabled: disabled,
+    className: className ? `qm-control ${className}` : 'qm-control',
+    style: {
+      ...RESET,
+      ...controlStyle
+    }
+  }, rest)), trailing);
+});
+Object.assign(__ds_scope, { TextField });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/forms/TextField.jsx", error: String((e && e.message) || e) }); }
 
 // components/narrative/AnnotationMark.jsx
 try { (() => {
@@ -1505,6 +1761,19 @@ Object.assign(__ds_scope, { BeatCard });
 // components/narrative/BeatSpine.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+/* A beat's state is not always a glyph state: `ahead` is a position in the
+   draft, not a material state, so it borrows `unwritten`'s hollow grey ring.
+   Anything unrecognised lands there too — a beat list never invents canon. */
+const DOT_STATE = {
+  written: 'written',
+  canon: 'canon',
+  proposed: 'proposed',
+  suggested: 'suggested',
+  here: 'here',
+  ahead: 'unwritten',
+  unwritten: 'unwritten'
+};
+
 /**
  * The one beat list, at three depths of detail: the outline rail, the stage
  * rail and Compose's beat column are all this component.
@@ -1533,6 +1802,7 @@ function BeatSpine({
     }
   }) : null, beats.map((b, i) => {
     const here = b.state === 'here';
+    const dot = DOT_STATE[b.state] || 'unwritten';
     return /*#__PURE__*/React.createElement("div", {
       key: b.id ?? i,
       onClick: onSelect ? () => onSelect(b, i) : undefined,
@@ -1547,7 +1817,7 @@ function BeatSpine({
         cursor: onSelect ? 'pointer' : 'default'
       }
     }, showSpine ? /*#__PURE__*/React.createElement(__ds_scope.StateDot, {
-      state: b.state === 'here' ? 'here' : b.state || 'unwritten',
+      state: dot,
       size: 7,
       style: {
         position: 'absolute',
@@ -1555,7 +1825,7 @@ function BeatSpine({
         top: 14
       }
     }) : /*#__PURE__*/React.createElement(__ds_scope.StateDot, {
-      state: b.state === 'here' ? 'here' : b.state || 'unwritten',
+      state: dot,
       size: 7,
       style: {
         marginTop: 6
@@ -1577,7 +1847,7 @@ function BeatSpine({
       style: {
         fontSize: 'var(--qm-type-secondary)',
         lineHeight: 1.5,
-        color: here ? 'var(--qm-prose-2)' : b.state === 'ahead' || b.state === 'unwritten' ? 'var(--qm-text-6)' : 'var(--qm-text-emph)'
+        color: here ? 'var(--qm-prose-2)' : dot === 'unwritten' ? 'var(--qm-text-6)' : 'var(--qm-text-emph)'
       }
     }, b.text), b.meta ? /*#__PURE__*/React.createElement("div", {
       style: {
@@ -1846,6 +2116,17 @@ Object.assign(__ds_scope, { RouteChip });
 // components/narrative/TimelineRow.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+/* The selection rail carries the same state the dot does, so it follows the
+   dot's hue. `unlinked` is dimmed gold — attention, not fault. */
+const RAIL = {
+  canon: 'var(--qm-teal)',
+  proposed: 'var(--qm-gold)',
+  suggested: 'var(--qm-violet)',
+  here: 'var(--qm-coral)',
+  conflict: 'var(--qm-cinnabar)',
+  unlinked: 'var(--qm-gold-dim)'
+};
+
 /** A chronology row in the timeline rail. Selection is a surface; state is the dot. */
 function TimelineRow({
   title,
@@ -1881,7 +2162,7 @@ function TimelineRow({
       bottom: 6,
       width: 'var(--qm-rail-w-accent)',
       borderRadius: 2,
-      background: state === 'proposed' ? 'var(--qm-gold)' : state === 'here' ? 'var(--qm-coral)' : 'var(--qm-teal)',
+      background: RAIL[state] || 'var(--qm-text-6)',
       boxShadow: state === 'proposed' ? 'var(--qm-glow-gold-rail)' : 'none'
     }
   }) : null, /*#__PURE__*/React.createElement(__ds_scope.StateDot, {
@@ -1889,7 +2170,7 @@ function TimelineRow({
     size: 9,
     style: {
       marginTop: 5,
-      boxShadow: selected && state === 'proposed' ? '0 0 0 3px rgba(226,165,68,0.14)' : undefined
+      boxShadow: selected && state === 'proposed' ? '0 0 0 3px var(--qm-tint-gold)' : undefined
     }
   }), /*#__PURE__*/React.createElement("div", {
     style: {
@@ -5127,6 +5408,7 @@ function WritingRoom({
       size: 13
     })
   }, "Rename"), /*#__PURE__*/React.createElement(Button, {
+    variant: "destructive",
     size: "tiny",
     fullWidth: true,
     leadingIcon: /*#__PURE__*/React.createElement(Icon, {
@@ -6355,9 +6637,15 @@ __ds_ns.Picker = __ds_scope.Picker;
 
 __ds_ns.PromptField = __ds_scope.PromptField;
 
+__ds_ns.PromptTextField = __ds_scope.PromptTextField;
+
 __ds_ns.SegmentedControl = __ds_scope.SegmentedControl;
 
 __ds_ns.Tabs = __ds_scope.Tabs;
+
+__ds_ns.TextArea = __ds_scope.TextArea;
+
+__ds_ns.TextField = __ds_scope.TextField;
 
 __ds_ns.AnnotationMark = __ds_scope.AnnotationMark;
 

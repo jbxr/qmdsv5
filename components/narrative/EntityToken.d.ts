@@ -23,4 +23,4 @@ export interface EntityTokenProps
   onClick?: (e: React.MouseEvent) => void;
 }
 
-export declare function EntityToken(props: EntityTokenProps): JSX.Element;
+export declare function EntityToken(props: EntityTokenProps): React.JSX.Element;

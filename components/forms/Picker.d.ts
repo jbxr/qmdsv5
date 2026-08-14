@@ -29,4 +29,4 @@ export interface PickerProps extends React.HTMLAttributes<HTMLDivElement> {
   width?: number | string;
 }
 
-export declare function Picker(props: PickerProps): JSX.Element;
+export declare function Picker(props: PickerProps): React.JSX.Element;

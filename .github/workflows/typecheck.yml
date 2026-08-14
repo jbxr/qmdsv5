@@ -6,8 +6,16 @@ on:
 
 jobs:
   typecheck:
-    name: tsc --noEmit
+    # The shipped `.d.ts` files return `React.JSX.Element`, which resolves under
+    # both majors — `@types/react@19` dropped the global `JSX` namespace, so the
+    # bare `JSX.Element` these used to return broke every React 19 consumer.
+    # Both legs run so neither major can regress in favour of the other.
+    name: tsc --noEmit · @types/react ${{ matrix.types-react }}
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        types-react: ['18', '19']
     steps:
       - uses: actions/checkout@v4
 
@@ -18,4 +26,18 @@ jobs:
 
       - run: npm ci
 
+      # `--no-save` keeps the working tree clean, so the adherence diff below
+      # reports a stale config rather than this install.
+      - run: npm i --no-save @types/react@${{ matrix.types-react }}
+
       - run: npm run typecheck
+
+      # The adherence rules are derived from the `.d.ts` files, so a props change
+      # that is not reflected in the committed config fails here rather than
+      # shipping a lint rule that disagrees with the types. Generated in both legs
+      # because the config reads the props types through the checker: it must not
+      # depend on which `@types/react` is installed.
+      - name: adherence config matches the declarations
+        run: |
+          npm run adherence:build
+          git diff --exit-code -- _adherence.oxlintrc.json

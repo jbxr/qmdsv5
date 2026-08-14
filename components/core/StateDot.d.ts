@@ -4,7 +4,7 @@ import * as React from 'react';
  * Material-state glyph: filled dot = canonical/written, hollow ring = proposed,
  * violet diamond = suggested, coral = where you are, cinnabar = conflict.
  */
-export interface StateDotProps {
+export interface StateDotProps extends React.HTMLAttributes<HTMLSpanElement> {
   /**
    * A state outside this union degrades to `neutral` — grey, filled, claiming
    * nothing. It never falls back to `canon`: an unrecognised state must not be
@@ -21,4 +21,4 @@ export interface StateDotProps {
   style?: React.CSSProperties;
 }
 
-export declare function StateDot(props: StateDotProps): JSX.Element;
+export declare function StateDot(props: StateDotProps): React.JSX.Element;

@@ -10,4 +10,4 @@ export interface TabsProps
   onChange?: (value: string) => void;
 }
 
-export declare function Tabs(props: TabsProps): JSX.Element;
+export declare function Tabs(props: TabsProps): React.JSX.Element;

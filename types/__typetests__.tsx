@@ -29,6 +29,8 @@ import { TextArea } from '../components/forms/TextArea';
 import { TextField } from '../components/forms/TextField';
 import type { PickerItem } from '../components/forms/Picker';
 import { PromptField } from '../components/forms/PromptField';
+import type { PromptAudience } from '../components/forms/PromptField';
+import { PromptTextField } from '../components/forms/PromptTextField';
 import { SegmentedControl } from '../components/forms/SegmentedControl';
 import type { SegmentedOption } from '../components/forms/SegmentedControl';
 import { Tabs } from '../components/forms/Tabs';
@@ -65,6 +67,9 @@ const timelineRowStates: ReadonlyArray<TimelineRowState> = [
   'canon', 'proposed', 'suggested', 'here', 'conflict', 'unlinked',
 ];
 
+/** Exported so a consumer names the vocabulary; a widened audience lands here. */
+const audiences: ReadonlyArray<PromptAudience> = ['private', 'character', 'direction', 'scene'];
+
 const iconNames: ReadonlyArray<QMIconName> = [
   'play', 'grip', 'more', 'list', 'sliders', 'pencil', 'x', 'plus', 'check',
   'chevronRight', 'chevronLeft', 'chevronDown', 'chevronUp', 'chevronsUpDown',
@@ -77,7 +82,7 @@ const iconTable: Record<QMIconName, { fill: boolean; d: string }> = QM_ICONS;
  * core
  * ------------------------------------------------------------------ */
 
-export function CoreKit(): JSX.Element {
+export function CoreKit(): React.JSX.Element {
   return (
     <Card surface="beat" rail="gold" radius="card" padding="20px 24px 18px" hoverable className="qm-kit" id="core-kit">
       <Avatar initials="VN" kind="character" size={22} style={{ opacity: 0.9 }} />
@@ -110,7 +115,7 @@ export function CoreKit(): JSX.Element {
  * feedback
  * ------------------------------------------------------------------ */
 
-export function FeedbackKit(): JSX.Element {
+export function FeedbackKit(): React.JSX.Element {
   return (
     <>
       <Callout tone="conflict" glyph={null} action={<Button variant="quiet" size="xs">Why this matters</Button>}>
@@ -164,11 +169,13 @@ const segmentedOptions: Array<string | SegmentedOption> = [
   { value: 'focus', label: 'Focus', outline: true },
 ];
 
-export function FormsKit(): JSX.Element {
+export function FormsKit(): React.JSX.Element {
   const titleRef = React.useRef<HTMLInputElement>(null);
   const loglineRef = React.useRef<HTMLTextAreaElement>(null);
+  const askRef = React.useRef<HTMLInputElement>(null);
   const [title, setTitle] = React.useState('The letter arrives');
   const [logline, setLogline] = React.useState('A letter arrives forty years late.');
+  const [ask, setAsk] = React.useState('');
   return (
     <>
       <Field
@@ -261,6 +268,46 @@ export function FormsKit(): JSX.Element {
         hintKey={<Kbd>⏎</Kbd>}
         trailing={<Icon name="lock" size={13} />}
       />
+      {/* Wrapper mode: neither `value` nor `placeholder`, so `children` are the well. */}
+      <PromptField audience={audiences[3]} aria-label="to the room">
+        <EntityToken variant="inline" name="Vera Nakamura" />
+      </PromptField>
+
+      {/*
+        PromptTextField is that addressed well with a real `<input>` in it, so the
+        input's whole native surface stays reachable — the well claims only
+        `audience`, `hintKey`, `trailing`, `focused` and `controlStyle`. `caret` is
+        PromptField's stand-in for a control that is not there and must NOT be
+        accepted here; the `@ts-expect-error` below fails the build if it ever is.
+      */}
+      <PromptTextField
+        ref={askRef}
+        id="ask-vera"
+        audience="character"
+        aria-label="ask vera"
+        placeholder="ask vera…"
+        value={ask}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setAsk(e.target.value)}
+        onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => void e}
+        maxLength={240}
+        name="ask"
+        hintKey={<Kbd>⏎</Kbd>}
+        trailing={<Icon name="lock" size={13} />}
+        controlStyle={{ letterSpacing: '0.01em' }}
+        style={{ marginTop: 8 }}
+      />
+      <PromptTextField
+        audience="direction"
+        aria-label="stage-direct vera"
+        hintKey="stage-direct"
+        placeholder="private note for vera's next turn…"
+        defaultValue=""
+        data-qm-dock="composer"
+        readOnly
+        focused={false}
+      />
+      {/* @ts-expect-error `caret` belongs to PromptField, not to the control-bearing pair. */}
+      <PromptTextField audience="private" aria-label="a private line" caret />
       {/*
         SegmentedControl.onChange and Tabs.onChange report the chosen value, not
         a DOM form event — also absent from issue #1's inventory.
@@ -298,7 +345,7 @@ const versions: VersionEntry[] = [
   { id: 'v2', label: 'v2', origin: 'generated', score: '8·1', current: true },
 ];
 
-export function NarrativeKit(): JSX.Element {
+export function NarrativeKit(): React.JSX.Element {
   return (
     <>
       {/*
@@ -371,10 +418,59 @@ export function NarrativeKit(): JSX.Element {
 }
 
 /* ------------------------------------------------------------------ *
+ * issue #11 — the seven that spread `...rest` but declared no `extends`
+ *
+ * Each of these forwards every unclaimed prop onto its root element: a `<span>`
+ * for all but `NoteBlock`, which wraps a `<div>`. The types said otherwise, so
+ * a consumer passing a prop the component already forwarded got an error. One
+ * native attribute per component here fails the build if an interface stops
+ * extending its DOM interface, and the handler signatures pin the element type.
+ * ------------------------------------------------------------------ */
+
+export function ForwardedNativeProps(): React.JSX.Element {
+  return (
+    <>
+      <Avatar
+        initials="VN"
+        kind="character"
+        id="cast-vera"
+        title="Vera Nakamura"
+        onClick={(e: React.MouseEvent<HTMLSpanElement>) => void e}
+      />
+      <Kbd variant="key" aria-keyshortcuts="Meta+S" id="kbd-save">⌘S</Kbd>
+      {/* The glyph repeats a state already named in text, so it is hidden from AT. */}
+      <StateDot state="canon" size={8} aria-hidden id="dot-canon" />
+      <AnnotationMark tone="measure" title="lint score" lang="en">lint 7·5</AnnotationMark>
+      <EraChip
+        kind="time"
+        size="sm"
+        aria-label="story-time, minus forty"
+        onClick={(e: React.MouseEvent<HTMLSpanElement>) => void e}
+      >
+        Y−40
+      </EraChip>
+      <NoteBlock tone="scene" size="md" role="note" id="stage-direction">
+        She does not look up.
+      </NoteBlock>
+      {/* A `<span>` that acts as a button has to be given the role and the tab stop. */}
+      <RouteChip
+        state="count"
+        role="button"
+        tabIndex={0}
+        aria-label="open prose"
+        onKeyDown={(e: React.KeyboardEvent<HTMLSpanElement>) => void e}
+      >
+        prose · 377 words
+      </RouteChip>
+    </>
+  );
+}
+
+/* ------------------------------------------------------------------ *
  * navigation
  * ------------------------------------------------------------------ */
 
-export function NavigationKit(): JSX.Element {
+export function NavigationKit(): React.JSX.Element {
   return (
     <>
       <TopBar

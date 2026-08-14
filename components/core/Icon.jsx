@@ -18,7 +18,7 @@ export const QM_ICONS = {
   chevronRight: { fill: false, d: '<path d="m9 18 6-6-6-6"/>' },
   chevronLeft: { fill: false, d: '<path d="m15 18-6-6 6-6"/>' },
   chevronDown: { fill: false, d: '<path d="m6 9 6 6 6-6"/>' },
-  chevronUp: { fill: false, d: '<path d="m7 15 5-5 5 5"/>' }, // QM original — narrow, matches chevronsUpDown rather than lucide chevron-up
+  chevronUp: { fill: false, d: '<path d="m18 15-6-6-6 6"/>' },
   chevronsUpDown: { fill: false, d: '<path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/>' },
   unfold: { fill: false, d: '<path d="M3 10h14"/><path d="M3 14h14"/><path d="m21 5-3 3-3-3"/><path d="m15 19 3-3 3 3"/>' }, // QM original — outline rows plus a fold control; intentionally not lucide unfold-vertical
   arrowLeft: { fill: false, d: '<path d="M19 12H5"/><path d="m12 19-7-7 7-7"/>' },

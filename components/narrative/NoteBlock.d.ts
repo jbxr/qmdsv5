@@ -1,11 +1,11 @@
 import * as React from 'react';
 
 /** Italic serif aside behind a 2px rule — author notes, consult reads, stage directions. */
-export interface NoteBlockProps {
+export interface NoteBlockProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
   tone?: 'neutral' | 'consult' | 'scene';
   size?: 'sm' | 'md';
   style?: React.CSSProperties;
 }
 
-export declare function NoteBlock(props: NoteBlockProps): JSX.Element;
+export declare function NoteBlock(props: NoteBlockProps): React.JSX.Element;

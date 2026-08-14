@@ -12,4 +12,4 @@ export interface SegmentedControlProps
   onChange?: (value: string) => void;
 }
 
-export declare function SegmentedControl(props: SegmentedControlProps): JSX.Element;
+export declare function SegmentedControl(props: SegmentedControlProps): React.JSX.Element;

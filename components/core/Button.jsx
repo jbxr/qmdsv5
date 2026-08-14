@@ -44,13 +44,16 @@ const VARIANTS = {
  * One filled action per region. `primary` is the gold app action, `scene` the
  * parchment action that reaches the room; everything else is an outline —
  * `destructive` included, which carries cinnabar at rest and never on hover.
+ * The focus ring sits outside the border box, so it survives the filled
+ * variants, and only on keyboard focus — a pointer press leaves none behind.
  */
 export function Button({
   variant = 'secondary', size = 'sm', children, leadingIcon, trailingIcon,
-  hint, disabled, fullWidth, style, onClick, ...rest
+  hint, disabled, fullWidth, style, onClick, onFocus, onBlur, ...rest
 }) {
   const [hover, setHover] = React.useState(false);
   const [down, setDown] = React.useState(false);
+  const [ring, setRing] = React.useState(false);
   const v = VARIANTS[variant] || VARIANTS.secondary;
   const height = H[size] || H.sm;
   const base = {
@@ -74,7 +77,10 @@ export function Button({
   if (variant === 'canon' && hover && !disabled) { base.background = 'rgba(85,183,166,0.18)'; base.color = 'var(--qm-teal-text-strong)'; }
   if (variant === 'consult' && hover && !disabled) base.background = 'rgba(162,146,242,0.14)';
   if (variant === 'destructive' && hover && !disabled) { base.background = 'var(--qm-tint-cinnabar)'; base.color = 'var(--qm-cinnabar-text-strong)'; }
-  if (down && !disabled) base.boxShadow = 'var(--qm-inset-press)';
+  if (!disabled && (down || ring)) {
+    base.boxShadow = [down ? 'var(--qm-inset-press)' : null, ring ? 'var(--qm-focus-ring)' : null]
+      .filter(Boolean).join(', ');
+  }
   if (disabled) {
     base.color = 'var(--qm-text-9)'; base.background = 'transparent';
     base.border = '1px solid var(--qm-border-disabled)';
@@ -85,6 +91,11 @@ export function Button({
       onClick={disabled ? undefined : onClick}
       onMouseEnter={() => setHover(true)} onMouseLeave={() => { setHover(false); setDown(false); }}
       onMouseDown={() => setDown(true)} onMouseUp={() => setDown(false)}
+      onFocus={(e) => {
+        if (!disabled && e.target.matches(':focus-visible')) setRing(true);
+        if (onFocus) onFocus(e);
+      }}
+      onBlur={(e) => { setRing(false); setDown(false); if (onBlur) onBlur(e); }}
       style={{ ...base, ...style }} {...rest}
     >
       {leadingIcon}

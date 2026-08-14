@@ -10,4 +10,4 @@ export interface SaveStatusProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
 
-export declare function SaveStatus(props: SaveStatusProps): JSX.Element;
+export declare function SaveStatus(props: SaveStatusProps): React.JSX.Element;

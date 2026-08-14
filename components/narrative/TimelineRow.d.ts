@@ -24,4 +24,4 @@ export interface TimelineRowProps
   here?: boolean;
 }
 
-export declare function TimelineRow(props: TimelineRowProps): JSX.Element;
+export declare function TimelineRow(props: TimelineRowProps): React.JSX.Element;

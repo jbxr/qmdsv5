@@ -10,6 +10,7 @@ One-line: The QM action control — use `primary` (gold) for the single filled a
 
 Notes
 - Hover brightens the surface by ~6%; press adds an inset shadow and no travel.
+- Focus draws `--qm-focus-ring` outside the border box on every variant, so it reads over the filled ones too — and only on `:focus-visible`, so a click leaves nothing behind. Nothing to pass; pass `onFocus`/`onBlur` freely, they are called through.
 - Disabled drops to 38% text with no border — and QM always puts the reason next to the button, never in a tooltip.
 - `hint` renders a mono shortcut inside the button ("Highlight H").
 - `destructive` is outlined and tinted, never filled: cinnabar carries no legible label. Its warning is present at rest, so it survives keyboard and touch — hover only deepens the tint. Pair it with the `x` glyph and a verb that names what goes; confirmation is still the stronger pattern where the surface can afford one. See the Interaction states card.

@@ -22,4 +22,4 @@ export interface VersionStripProps
   onSelect?: (v: VersionEntry, index: number) => void;
 }
 
-export declare function VersionStrip(props: VersionStripProps): JSX.Element;
+export declare function VersionStrip(props: VersionStripProps): React.JSX.Element;

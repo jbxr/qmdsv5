@@ -7,3 +7,4 @@ One-line: A keyboard key rendered as a token — used inline in copy, in refusal
 Notes
 - QM writes real glyphs (⌘ ⌥ ⇧ ⏎ ⌫ ⇥), never spelled-out "Cmd+S".
 - Dashed `local` marks data that never reaches the server.
+- Every prop the token does not claim reaches the `<span>`, so `title`, `aria-*` and `data-*` behave natively.

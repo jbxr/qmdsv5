@@ -39,4 +39,4 @@ export interface FieldProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
 
-export declare function Field(props: FieldProps): JSX.Element;
+export declare function Field(props: FieldProps): React.JSX.Element;

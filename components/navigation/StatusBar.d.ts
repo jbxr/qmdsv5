@@ -6,4 +6,4 @@ export interface StatusBarProps extends React.HTMLAttributes<HTMLDivElement> {
   right?: React.ReactNode;
 }
 
-export declare function StatusBar(props: StatusBarProps): JSX.Element;
+export declare function StatusBar(props: StatusBarProps): React.JSX.Element;

@@ -7,4 +7,4 @@ export interface EmptyStateProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
 
-export declare function EmptyState(props: EmptyStateProps): JSX.Element;
+export declare function EmptyState(props: EmptyStateProps): React.JSX.Element;

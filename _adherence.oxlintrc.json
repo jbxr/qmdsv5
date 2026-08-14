@@ -43,40 +43,16 @@
         "message": "Font not provided by the design system. Available: Spectral, IBM Plex Sans, IBM Plex Mono."
       },
       {
-        "selector": "JSXOpeningElement[name.name='AnnotationMark'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|tone|glyph|style|key|ref|className|style|children)$/]",
-        "message": "<AnnotationMark> doesn't accept that prop. Declared props: children, tone, glyph, style."
-      },
-      {
         "selector": "JSXOpeningElement[name.name='AnnotationMark'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:measure|good|advisory|damaged|unparsed|provenance)$/]",
         "message": "<AnnotationMark> tone must be one of 'measure' | 'good' | 'advisory' | 'damaged' | 'unparsed' | 'provenance'."
-      },
-      {
-        "selector": "JSXOpeningElement[name.name='Avatar'] > JSXAttribute > JSXIdentifier[name!=/^(?:initials|kind|size|style|key|ref|className|style|children)$/]",
-        "message": "<Avatar> doesn't accept that prop. Declared props: initials, kind, size, style."
       },
       {
         "selector": "JSXOpeningElement[name.name='Avatar'] > JSXAttribute[name.name='kind'] > Literal[value!=/^(?:character|location|artifact|author|neutral)$/]",
         "message": "<Avatar> kind must be one of 'character' | 'location' | 'artifact' | 'author' | 'neutral'."
       },
       {
-        "selector": "JSXOpeningElement[name.name='BeatCard'] > JSXAttribute > JSXIdentifier[name!=/^(?:state|era|entity|title|directive|signals|actions|children|key|ref|className|style|children)$/]",
-        "message": "<BeatCard> doesn't accept that prop. Declared props: state, era, entity, title, directive, signals, actions, children."
-      },
-      {
         "selector": "JSXOpeningElement[name.name='BeatCard'] > JSXAttribute[name.name='state'] > Literal[value!=/^(?:proposed|canon|here|none)$/]",
         "message": "<BeatCard> state must be one of 'proposed' | 'canon' | 'here' | 'none'."
-      },
-      {
-        "selector": "JSXOpeningElement[name.name='BeatSpineItem'] > JSXAttribute > JSXIdentifier[name!=/^(?:id|n|text|state|meta|key|ref|className|style|children)$/]",
-        "message": "<BeatSpineItem> doesn't accept that prop. Declared props: id, n, text, state, meta."
-      },
-      {
-        "selector": "JSXOpeningElement[name.name='BeatSpineItem'] > JSXAttribute[name.name='state'] > Literal[value!=/^(?:written|canon|proposed|suggested|here|ahead|unwritten)$/]",
-        "message": "<BeatSpineItem> state must be one of 'written' | 'canon' | 'proposed' | 'suggested' | 'here' | 'ahead' | 'unwritten'."
-      },
-      {
-        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute > JSXIdentifier[name!=/^(?:variant|size|children|leadingIcon|trailingIcon|hint|disabled|fullWidth|style|key|ref|className|style|children)$/]",
-        "message": "<Button> doesn't accept that prop. Declared props: variant, size, children, leadingIcon, trailingIcon, hint, disabled, fullWidth, style."
       },
       {
         "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:primary|scene|sceneGhost|secondary|quiet|ghost|canon|consult|destructive)$/]",
@@ -87,16 +63,8 @@
         "message": "<Button> size must be one of 'lg' | 'md' | 'sm' | 'xs' | 'xxs' | 'tiny'."
       },
       {
-        "selector": "JSXOpeningElement[name.name='Callout'] > JSXAttribute > JSXIdentifier[name!=/^(?:tone|glyph|children|action|key|ref|className|style|children)$/]",
-        "message": "<Callout> doesn't accept that prop. Declared props: tone, glyph, children, action."
-      },
-      {
         "selector": "JSXOpeningElement[name.name='Callout'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:conflict|canon|proposed|consult|neutral)$/]",
         "message": "<Callout> tone must be one of 'conflict' | 'canon' | 'proposed' | 'consult' | 'neutral'."
-      },
-      {
-        "selector": "JSXOpeningElement[name.name='Card'] > JSXAttribute > JSXIdentifier[name!=/^(?:surface|rail|radius|padding|hoverable|children|key|ref|className|style|children)$/]",
-        "message": "<Card> doesn't accept that prop. Declared props: surface, rail, radius, padding, hoverable, children."
       },
       {
         "selector": "JSXOpeningElement[name.name='Card'] > JSXAttribute[name.name='surface'] > Literal[value!=/^(?:panel|raised|selected|beat|scene|quiet)$/]",
@@ -111,16 +79,8 @@
         "message": "<Card> radius must be one of 'card' | 'panel'."
       },
       {
-        "selector": "JSXOpeningElement[name.name='EmptyState'] > JSXAttribute > JSXIdentifier[name!=/^(?:kind|icon|children|key|ref|className|style|children)$/]",
-        "message": "<EmptyState> doesn't accept that prop. Declared props: kind, icon, children."
-      },
-      {
         "selector": "JSXOpeningElement[name.name='EmptyState'] > JSXAttribute[name.name='kind'] > Literal[value!=/^(?:empty|offline|unknown)$/]",
         "message": "<EmptyState> kind must be one of 'empty' | 'offline' | 'unknown'."
-      },
-      {
-        "selector": "JSXOpeningElement[name.name='EntityToken'] > JSXAttribute > JSXIdentifier[name!=/^(?:name|initials|role|kind|variant|onDismiss|onClick|style|key|ref|className|style|children)$/]",
-        "message": "<EntityToken> doesn't accept that prop. Declared props: name, initials, role, kind, variant, onDismiss, onClick, style."
       },
       {
         "selector": "JSXOpeningElement[name.name='EntityToken'] > JSXAttribute[name.name='kind'] > Literal[value!=/^(?:character|location|artifact)$/]",
@@ -131,20 +91,12 @@
         "message": "<EntityToken> variant must be one of 'chip' | 'inline'."
       },
       {
-        "selector": "JSXOpeningElement[name.name='EraChip'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|kind|size|style|key|ref|className|style|children)$/]",
-        "message": "<EraChip> doesn't accept that prop. Declared props: children, kind, size, style."
-      },
-      {
         "selector": "JSXOpeningElement[name.name='EraChip'] > JSXAttribute[name.name='kind'] > Literal[value!=/^(?:time|timeless|peek|teaching)$/]",
         "message": "<EraChip> kind must be one of 'time' | 'timeless' | 'peek' | 'teaching'."
       },
       {
         "selector": "JSXOpeningElement[name.name='EraChip'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:sm|md)$/]",
         "message": "<EraChip> size must be one of 'sm' | 'md'."
-      },
-      {
-        "selector": "JSXOpeningElement[name.name='Field'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|labelFor|hint|value|placeholder|kind|select|width|size|focused|multiline|disabled|children|key|ref|className|style|children)$/]",
-        "message": "<Field> doesn't accept that prop. Declared props: label, labelFor, hint, value, placeholder, kind, select, width, size, focused, multiline, disabled, children."
       },
       {
         "selector": "JSXOpeningElement[name.name='Field'] > JSXAttribute[name.name='kind'] > Literal[value!=/^(?:text|mono|serif)$/]",
@@ -155,28 +107,16 @@
         "message": "<Field> size must be one of 'sm' | 'md' | 'lg'."
       },
       {
-        "selector": "JSXOpeningElement[name.name='Icon'] > JSXAttribute > JSXIdentifier[name!=/^(?:name|size|strokeWidth|color|key|ref|className|style|children)$/]",
-        "message": "<Icon> doesn't accept that prop. Declared props: name, size, strokeWidth, color."
-      },
-      {
-        "selector": "JSXOpeningElement[name.name='Kbd'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|variant|style|key|ref|className|style|children)$/]",
-        "message": "<Kbd> doesn't accept that prop. Declared props: children, variant, style."
+        "selector": "JSXOpeningElement[name.name='Icon'] > JSXAttribute[name.name='name'] > Literal[value!=/^(?:play|grip|more|list|sliders|pencil|x|plus|check|chevronRight|chevronLeft|chevronDown|chevronUp|chevronsUpDown|unfold|arrowLeft|image|lock|message|maximize|highlighter|help)$/]",
+        "message": "<Icon> name must be one of 'play' | 'grip' | 'more' | 'list' | 'sliders' | 'pencil' | 'x' | 'plus' | 'check' | 'chevronRight' | 'chevronLeft' | 'chevronDown' | 'chevronUp' | 'chevronsUpDown' | 'unfold' | 'arrowLeft' | 'image' | 'lock' | 'message' | 'maximize' | 'highlighter' | 'help'."
       },
       {
         "selector": "JSXOpeningElement[name.name='Kbd'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:key|local)$/]",
         "message": "<Kbd> variant must be one of 'key' | 'local'."
       },
       {
-        "selector": "JSXOpeningElement[name.name='ModeBar'] > JSXAttribute > JSXIdentifier[name!=/^(?:mode|children|exitKey|key|ref|className|style|children)$/]",
-        "message": "<ModeBar> doesn't accept that prop. Declared props: mode, children, exitKey."
-      },
-      {
         "selector": "JSXOpeningElement[name.name='ModeBar'] > JSXAttribute[name.name='mode'] > Literal[value!=/^(?:linking|inspect|peek)$/]",
         "message": "<ModeBar> mode must be one of 'linking' | 'inspect' | 'peek'."
-      },
-      {
-        "selector": "JSXOpeningElement[name.name='NoteBlock'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|tone|size|style|key|ref|className|style|children)$/]",
-        "message": "<NoteBlock> doesn't accept that prop. Declared props: children, tone, size, style."
       },
       {
         "selector": "JSXOpeningElement[name.name='NoteBlock'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:neutral|consult|scene)$/]",
@@ -187,68 +127,28 @@
         "message": "<NoteBlock> size must be one of 'sm' | 'md'."
       },
       {
-        "selector": "JSXOpeningElement[name.name='Overlay'] > JSXAttribute > JSXIdentifier[name!=/^(?:title|onClose|footer|width|scrim|children|key|ref|className|style|children)$/]",
-        "message": "<Overlay> doesn't accept that prop. Declared props: title, onClose, footer, width, scrim, children."
-      },
-      {
-        "selector": "JSXOpeningElement[name.name='PanelHeader'] > JSXAttribute > JSXIdentifier[name!=/^(?:audience|label|note|children|key|ref|className|style|children)$/]",
-        "message": "<PanelHeader> doesn't accept that prop. Declared props: audience, label, note, children."
-      },
-      {
         "selector": "JSXOpeningElement[name.name='PanelHeader'] > JSXAttribute[name.name='audience'] > Literal[value!=/^(?:scene|private|plain)$/]",
         "message": "<PanelHeader> audience must be one of 'scene' | 'private' | 'plain'."
-      },
-      {
-        "selector": "JSXOpeningElement[name.name='PickerItem'] > JSXAttribute > JSXIdentifier[name!=/^(?:id|label|meta|leading|mono|color|active|trailingRight|separated|onSelect|key|ref|className|style|children)$/]",
-        "message": "<PickerItem> doesn't accept that prop. Declared props: id, label, meta, leading, mono, color, active, trailingRight, separated, onSelect."
-      },
-      {
-        "selector": "JSXOpeningElement[name.name='PromptField'] > JSXAttribute > JSXIdentifier[name!=/^(?:placeholder|value|audience|caret|hintKey|trailing|key|ref|className|style|children)$/]",
-        "message": "<PromptField> doesn't accept that prop. Declared props: placeholder, value, audience, caret, hintKey, trailing."
       },
       {
         "selector": "JSXOpeningElement[name.name='PromptField'] > JSXAttribute[name.name='audience'] > Literal[value!=/^(?:private|character|direction|scene)$/]",
         "message": "<PromptField> audience must be one of 'private' | 'character' | 'direction' | 'scene'."
       },
       {
-        "selector": "JSXOpeningElement[name.name='Refusal'] > JSXAttribute > JSXIdentifier[name!=/^(?:pressed|children|key|ref|className|style|children)$/]",
-        "message": "<Refusal> doesn't accept that prop. Declared props: pressed, children."
-      },
-      {
-        "selector": "JSXOpeningElement[name.name='RouteChip'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|state|icon|onClick|style|key|ref|className|style|children)$/]",
-        "message": "<RouteChip> doesn't accept that prop. Declared props: children, state, icon, onClick, style."
+        "selector": "JSXOpeningElement[name.name='PromptTextField'] > JSXAttribute[name.name='audience'] > Literal[value!=/^(?:private|character|direction|scene)$/]",
+        "message": "<PromptTextField> audience must be one of 'private' | 'character' | 'direction' | 'scene'."
       },
       {
         "selector": "JSXOpeningElement[name.name='RouteChip'] > JSXAttribute[name.name='state'] > Literal[value!=/^(?:count|invitation|unknown)$/]",
         "message": "<RouteChip> state must be one of 'count' | 'invitation' | 'unknown'."
       },
       {
-        "selector": "JSXOpeningElement[name.name='SaveStatus'] > JSXAttribute > JSXIdentifier[name!=/^(?:state|tag|inline|children|key|ref|className|style|children)$/]",
-        "message": "<SaveStatus> doesn't accept that prop. Declared props: state, tag, inline, children."
-      },
-      {
         "selector": "JSXOpeningElement[name.name='SaveStatus'] > JSXAttribute[name.name='state'] > Literal[value!=/^(?:local|saving|saved|offline)$/]",
         "message": "<SaveStatus> state must be one of 'local' | 'saving' | 'saved' | 'offline'."
       },
       {
-        "selector": "JSXOpeningElement[name.name='SegmentedOption'] > JSXAttribute > JSXIdentifier[name!=/^(?:value|label|outline|key|ref|className|style|children)$/]",
-        "message": "<SegmentedOption> doesn't accept that prop. Declared props: value, label, outline."
-      },
-      {
-        "selector": "JSXOpeningElement[name.name='StateDot'] > JSXAttribute > JSXIdentifier[name!=/^(?:state|size|glow|pulse|style|key|ref|className|style|children)$/]",
-        "message": "<StateDot> doesn't accept that prop. Declared props: state, size, glow, pulse, style."
-      },
-      {
         "selector": "JSXOpeningElement[name.name='StateDot'] > JSXAttribute[name.name='state'] > Literal[value!=/^(?:canon|written|proposed|suggested|here|conflict|unwritten|unlinked|entity|neutral|private|scene)$/]",
         "message": "<StateDot> state must be one of 'canon' | 'written' | 'proposed' | 'suggested' | 'here' | 'conflict' | 'unwritten' | 'unlinked' | 'entity' | 'neutral' | 'private' | 'scene'."
-      },
-      {
-        "selector": "JSXOpeningElement[name.name='StatusBar'] > JSXAttribute > JSXIdentifier[name!=/^(?:left|right|key|ref|className|style|children)$/]",
-        "message": "<StatusBar> doesn't accept that prop. Declared props: left, right."
-      },
-      {
-        "selector": "JSXOpeningElement[name.name='Tabs'] > JSXAttribute > JSXIdentifier[name!=/^(?:tabs|value|onChange|style|key|ref|className|style|children)$/]",
-        "message": "<Tabs> doesn't accept that prop. Declared props: tabs, value, onChange, style."
       },
       {
         "selector": "JSXOpeningElement[name.name='TextArea'] > JSXAttribute[name.name='kind'] > Literal[value!=/^(?:text|mono|serif)$/]",
@@ -271,24 +171,8 @@
         "message": "<TextField> size must be one of 'sm' | 'md' | 'lg'."
       },
       {
-        "selector": "JSXOpeningElement[name.name='TimelineRow'] > JSXAttribute > JSXIdentifier[name!=/^(?:title|meta|who|state|selected|here|key|ref|className|style|children)$/]",
-        "message": "<TimelineRow> doesn't accept that prop. Declared props: title, meta, who, state, selected, here."
-      },
-      {
         "selector": "JSXOpeningElement[name.name='TimelineRow'] > JSXAttribute[name.name='state'] > Literal[value!=/^(?:canon|proposed|suggested|here|conflict|unlinked)$/]",
         "message": "<TimelineRow> state must be one of 'canon' | 'proposed' | 'suggested' | 'here' | 'conflict' | 'unlinked'."
-      },
-      {
-        "selector": "JSXOpeningElement[name.name='TopBar'] > JSXAttribute > JSXIdentifier[name!=/^(?:tall|brand|breadcrumb|leading|center|children|key|ref|className|style|children)$/]",
-        "message": "<TopBar> doesn't accept that prop. Declared props: tall, brand, breadcrumb, leading, center, children."
-      },
-      {
-        "selector": "JSXOpeningElement[name.name='VersionEntry'] > JSXAttribute > JSXIdentifier[name!=/^(?:id|label|origin|score|current|key|ref|className|style|children)$/]",
-        "message": "<VersionEntry> doesn't accept that prop. Declared props: id, label, origin, score, current."
-      },
-      {
-        "selector": "JSXOpeningElement[name.name='VersionEntry'] > JSXAttribute[name.name='origin'] > Literal[value!=/^(?:written|generated)$/]",
-        "message": "<VersionEntry> origin must be one of 'written' | 'generated'."
       }
     ]
   },
@@ -311,6 +195,9 @@
         "replaces": []
       },
       "BeatCard": {
+        "replaces": []
+      },
+      "BeatSpine": {
         "replaces": []
       },
       "BeatSpineItem": {
@@ -355,10 +242,16 @@
       "PanelHeader": {
         "replaces": []
       },
+      "Picker": {
+        "replaces": []
+      },
       "PickerItem": {
         "replaces": []
       },
       "PromptField": {
+        "replaces": []
+      },
+      "PromptTextField": {
         "replaces": []
       },
       "Refusal": {
@@ -368,6 +261,9 @@
         "replaces": []
       },
       "SaveStatus": {
+        "replaces": []
+      },
+      "SegmentedControl": {
         "replaces": []
       },
       "SegmentedOption": {
@@ -395,6 +291,9 @@
         "replaces": []
       },
       "VersionEntry": {
+        "replaces": []
+      },
+      "VersionStrip": {
         "replaces": []
       }
     },

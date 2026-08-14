@@ -22,4 +22,4 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
 
-export declare function Card(props: CardProps): JSX.Element;
+export declare function Card(props: CardProps): React.JSX.Element;

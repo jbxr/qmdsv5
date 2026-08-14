@@ -9,4 +9,4 @@ export interface ModeBarProps extends React.HTMLAttributes<HTMLDivElement> {
   exitKey?: React.ReactNode;
 }
 
-export declare function ModeBar(props: ModeBarProps): JSX.Element;
+export declare function ModeBar(props: ModeBarProps): React.JSX.Element;

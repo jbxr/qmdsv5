@@ -175,11 +175,11 @@ no patterns, no noise, no decorative gradients.
 - The path data used by QM lives in `components/core/Icon.jsx` (`QM_ICONS`, 22
   glyphs: plus, list, check, x, pencil, sliders, image, lock, message, maximize,
   highlighter, help, arrowLeft, chevrons, unfold, play, grip, more). **Most are
-  copied from Lucide unchanged, but not all**: `play`, `message`, `chevronUp` and
-  `unfold` have no Lucide ancestor in any release, and `grip` and `more` are
-  Lucide shapes re-drawn filled. `guidelines/brand-iconography.card.html` carries
+  copied from Lucide unchanged, but not all**: `play`, `message` and `unfold` have
+  no Lucide ancestor in any release, and `grip` and `more` are Lucide shapes
+  re-drawn filled. `guidelines/brand-iconography.card.html` carries
   the full 22-row provenance table, key by key — read it before re-pointing
-  `Icon` at `lucide-react`, because those six will change appearance silently.
+  `Icon` at `lucide-react`, because those five will change appearance silently.
   No CDN is required at runtime. Three glyphs are filled — play, grip, more; the
   rest stroke.
 - **Sizes**: 16 in controls, 15 inline with text, 13 in dense rows, 11–12 inside
@@ -260,7 +260,7 @@ elevation, iconography, voice).
 **`components/narrative/`** — `EntityToken`, `EraChip`, `AnnotationMark`,
 `RouteChip`, `BeatSpine`, `BeatCard`, `NoteBlock`, `VersionStrip`, `TimelineRow`
 **`components/forms/`** — `Field`, `TextField`, `TextArea`, `PromptField`,
-`SegmentedControl`, `Tabs`, `Picker`
+`PromptTextField`, `SegmentedControl`, `Tabs`, `Picker`
 **`components/feedback/`** — `Callout`, `ModeBar`, `Refusal`, `SaveStatus`,
 `EmptyState`, `Overlay`
 **`components/navigation/`** — `TopBar`, `PanelHeader`, `StatusBar`
@@ -285,10 +285,11 @@ every screen):
   `BeatCard`, `TimelineRow`, `RouteChip`, `PromptField`, `Callout` — each
   appears verbatim across two or more surfaces in the source; they are extracted,
   not invented.
-- `TextField`, `TextArea` — the one exception to the line above, and invented on
-  purpose. `Field` is the inset well; these are that well with a real `<input>`
-  or `<textarea>` already inside it. Consumers were otherwise rebuilding the
-  control against `Field`'s ring by hand and getting it wrong.
+- `TextField`, `TextArea`, `PromptTextField` — the one exception to the line
+  above, and invented on purpose. `Field` and `PromptField` are wells; these are
+  those wells with a real `<input>` or `<textarea>` already inside. Consumers
+  were otherwise rebuilding the control against the well's ring by hand and
+  getting it wrong.
 
 ### Templates (`templates/qm-surface/`)
 
