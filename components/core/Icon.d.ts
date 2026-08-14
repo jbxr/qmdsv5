@@ -24,6 +24,12 @@ export type QMIconName =
   | 'highlighter'
   | 'help';
 
+/**
+ * Inlined path data, copied from lucide (ISC licence) so QM carries no runtime icon
+ * dependency. Two keys are renames — `sliders` is lucide `settings-2`, `help` is lucide
+ * `circle-question-mark` — and `play`, `message`, `chevronUp` and `unfold` are QM originals
+ * with no lucide equivalent. Full table: guidelines/brand-iconography.card.html.
+ */
 export declare const QM_ICONS: Record<QMIconName, { fill: boolean; d: string }>;
 
 export interface IconProps extends React.SVGAttributes<SVGSVGElement> {

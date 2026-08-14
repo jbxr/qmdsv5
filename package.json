@@ -1,0 +1,13 @@
+{
+  "name": "qmdsv5",
+  "version": "5.0.0",
+  "private": true,
+  "description": "QuantumMateria Story Engine design system — typecheck-only tooling. The design system itself ships as plain .jsx, .d.ts and .css; nothing here compiles or bundles it.",
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "typescript": "^5.6.3"
+  }
+}

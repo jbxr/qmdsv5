@@ -17,7 +17,7 @@ const STATES = {
 
 /** The state glyph. Colour never travels without this shape. */
 export function StateDot({ state = 'canon', size = 8, glow, pulse, style, ...rest }) {
-  const s = STATES[state] || STATES.canon;
+  const s = STATES[state] || STATES.neutral;
   const diamond = s.shape === 'diamond';
   const glows = {
     here: 'var(--qm-glow-here)', canon: 'var(--qm-glow-live)',

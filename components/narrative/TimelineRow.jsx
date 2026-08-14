@@ -2,6 +2,13 @@ import React from 'react';
 import { StateDot } from '../core/StateDot.jsx';
 import { Avatar } from '../core/Avatar.jsx';
 
+/* The selection rail carries the same state the dot does, so it follows the
+   dot's hue. `unlinked` is dimmed gold — attention, not fault. */
+const RAIL = {
+  canon: 'var(--qm-teal)', proposed: 'var(--qm-gold)', suggested: 'var(--qm-violet)',
+  here: 'var(--qm-coral)', conflict: 'var(--qm-cinnabar)', unlinked: 'var(--qm-gold-dim)'
+};
+
 /** A chronology row in the timeline rail. Selection is a surface; state is the dot. */
 export function TimelineRow({
   title, meta, who, state = 'canon', selected, here, onClick, style, ...rest
@@ -25,13 +32,13 @@ export function TimelineRow({
         <span style={{
           position: 'absolute', left: -11, top: 6, bottom: 6, width: 'var(--qm-rail-w-accent)',
           borderRadius: 2,
-          background: state === 'proposed' ? 'var(--qm-gold)' : state === 'here' ? 'var(--qm-coral)' : 'var(--qm-teal)',
+          background: RAIL[state] || 'var(--qm-text-6)',
           boxShadow: state === 'proposed' ? 'var(--qm-glow-gold-rail)' : 'none'
         }} />
       ) : null}
       <StateDot
         state={state} size={9}
-        style={{ marginTop: 5, boxShadow: selected && state === 'proposed' ? '0 0 0 3px rgba(226,165,68,0.14)' : undefined }}
+        style={{ marginTop: 5, boxShadow: selected && state === 'proposed' ? '0 0 0 3px var(--qm-tint-gold)' : undefined }}
       />
       <div style={{ flex: 1, minWidth: 0 }}>
         <div style={{ fontSize: 'var(--qm-type-row)', lineHeight: 'var(--qm-type-row-lh)', color: selected ? 'var(--qm-prose-2)' : 'var(--qm-text-3)' }}>{title}</div>

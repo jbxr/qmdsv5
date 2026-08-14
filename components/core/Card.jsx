@@ -30,7 +30,11 @@ export function Card({
       onMouseEnter={hoverable ? () => setHover(true) : undefined}
       onMouseLeave={hoverable ? () => setHover(false) : undefined}
       style={{
-        position: 'relative', overflow: 'hidden', padding,
+        // Only a railed card contains and clips its rail; a plain one leaves
+        // position and overflow to the consumer.
+        position: railBg ? 'relative' : undefined,
+        overflow: railBg ? 'hidden' : undefined,
+        padding,
         borderRadius: radius === 'panel' ? 'var(--qm-radius-panel)' : 'var(--qm-radius-card)',
         background: hover && surface === 'panel' ? '#171E26' : s.background,
         border: s.border,

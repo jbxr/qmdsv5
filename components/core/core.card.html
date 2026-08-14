@@ -21,12 +21,13 @@ function Demo() {
         <Button variant="quiet" leadingIcon={<Icon name="play" size={11} />}>prose · 377 words</Button>
         <Button variant="canon" leadingIcon={<StateDot state="canon" />}>Make canon</Button>
         <Button variant="consult" leadingIcon={<StateDot state="suggested" />}>Consult</Button>
+        <Button variant="destructive" size="tiny" leadingIcon={<Icon name="x" size={13} />}>Delete</Button>
         <Button disabled>Enter the room</Button>
       </div>
       <div className="row">
         <span className="lbl">STATE</span>
         <span className="row" style={{ gap: 14 }}>
-          {[['canon','canonical'],['proposed','proposed'],['suggested','suggested'],['here','here'],['unwritten','not written'],['conflict','orphaned']].map(([s,l]) => (
+          {[['canon','canonical'],['proposed','proposed'],['suggested','suggested'],['here','here'],['unwritten','not written'],['unlinked','not linked'],['conflict','in conflict']].map(([s,l]) => (
             <span key={s} className="row" style={{ gap: 7, fontSize: 13 }}><StateDot state={s} size={9} />{l}</span>
           ))}
         </span>

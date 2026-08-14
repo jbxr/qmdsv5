@@ -79,8 +79,8 @@
         "message": "<Button> doesn't accept that prop. Declared props: variant, size, children, leadingIcon, trailingIcon, hint, disabled, fullWidth, style."
       },
       {
-        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:primary|scene|sceneGhost|secondary|quiet|ghost|canon|consult)$/]",
-        "message": "<Button> variant must be one of 'primary' | 'scene' | 'sceneGhost' | 'secondary' | 'quiet' | 'ghost' | 'canon' | 'consult'."
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:primary|scene|sceneGhost|secondary|quiet|ghost|canon|consult|destructive)$/]",
+        "message": "<Button> variant must be one of 'primary' | 'scene' | 'sceneGhost' | 'secondary' | 'quiet' | 'ghost' | 'canon' | 'consult' | 'destructive'."
       },
       {
         "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:lg|md|sm|xs|xxs|tiny)$/]",
@@ -143,8 +143,8 @@
         "message": "<EraChip> size must be one of 'sm' | 'md'."
       },
       {
-        "selector": "JSXOpeningElement[name.name='Field'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|hint|value|placeholder|kind|select|width|size|focused|children|key|ref|className|style|children)$/]",
-        "message": "<Field> doesn't accept that prop. Declared props: label, hint, value, placeholder, kind, select, width, size, focused, children."
+        "selector": "JSXOpeningElement[name.name='Field'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|labelFor|hint|value|placeholder|kind|select|width|size|focused|multiline|disabled|children|key|ref|className|style|children)$/]",
+        "message": "<Field> doesn't accept that prop. Declared props: label, labelFor, hint, value, placeholder, kind, select, width, size, focused, multiline, disabled, children."
       },
       {
         "selector": "JSXOpeningElement[name.name='Field'] > JSXAttribute[name.name='kind'] > Literal[value!=/^(?:text|mono|serif)$/]",
@@ -251,12 +251,40 @@
         "message": "<Tabs> doesn't accept that prop. Declared props: tabs, value, onChange, style."
       },
       {
+        "selector": "JSXOpeningElement[name.name='TextArea'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|hint|kind|size|width|focused|resize|style|controlStyle|value|defaultValue|onChange|placeholder|name|id|disabled|readOnly|rows|key|ref|className|style|children)$/]",
+        "message": "<TextArea> doesn't accept that prop. Declared props: label, hint, kind, size, width, focused, resize, style, controlStyle — plus the native <textarea> props it forwards: value, defaultValue, onChange, placeholder, name, id, disabled, readOnly, rows."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TextArea'] > JSXAttribute[name.name='kind'] > Literal[value!=/^(?:text|mono|serif)$/]",
+        "message": "<TextArea> kind must be one of 'text' | 'mono' | 'serif'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TextArea'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:sm|md|lg)$/]",
+        "message": "<TextArea> size must be one of 'sm' | 'md' | 'lg'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TextArea'] > JSXAttribute[name.name='resize'] > Literal[value!=/^(?:none|vertical)$/]",
+        "message": "<TextArea> resize must be one of 'none' | 'vertical'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TextField'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|hint|kind|size|width|focused|trailing|style|controlStyle|value|defaultValue|onChange|placeholder|type|name|id|disabled|readOnly|key|ref|className|style|children)$/]",
+        "message": "<TextField> doesn't accept that prop. Declared props: label, hint, kind, size, width, focused, trailing, style, controlStyle — plus the native <input> props it forwards: value, defaultValue, onChange, placeholder, type, name, id, disabled, readOnly."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TextField'] > JSXAttribute[name.name='kind'] > Literal[value!=/^(?:text|mono|serif)$/]",
+        "message": "<TextField> kind must be one of 'text' | 'mono' | 'serif'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TextField'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:sm|md|lg)$/]",
+        "message": "<TextField> size must be one of 'sm' | 'md' | 'lg'."
+      },
+      {
         "selector": "JSXOpeningElement[name.name='TimelineRow'] > JSXAttribute > JSXIdentifier[name!=/^(?:title|meta|who|state|selected|here|key|ref|className|style|children)$/]",
         "message": "<TimelineRow> doesn't accept that prop. Declared props: title, meta, who, state, selected, here."
       },
       {
-        "selector": "JSXOpeningElement[name.name='TimelineRow'] > JSXAttribute[name.name='state'] > Literal[value!=/^(?:canon|proposed|suggested|here|conflict)$/]",
-        "message": "<TimelineRow> state must be one of 'canon' | 'proposed' | 'suggested' | 'here' | 'conflict'."
+        "selector": "JSXOpeningElement[name.name='TimelineRow'] > JSXAttribute[name.name='state'] > Literal[value!=/^(?:canon|proposed|suggested|here|conflict|unlinked)$/]",
+        "message": "<TimelineRow> state must be one of 'canon' | 'proposed' | 'suggested' | 'here' | 'conflict' | 'unlinked'."
       },
       {
         "selector": "JSXOpeningElement[name.name='TopBar'] > JSXAttribute > JSXIdentifier[name!=/^(?:tall|brand|breadcrumb|leading|center|children|key|ref|className|style|children)$/]",
@@ -360,6 +388,12 @@
         "replaces": []
       },
       "Tabs": {
+        "replaces": []
+      },
+      "TextArea": {
+        "replaces": []
+      },
+      "TextField": {
         "replaces": []
       },
       "TimelineRow": {

@@ -1,6 +1,14 @@
 import React from 'react';
 import { StateDot } from '../core/StateDot.jsx';
 
+/* A beat's state is not always a glyph state: `ahead` is a position in the
+   draft, not a material state, so it borrows `unwritten`'s hollow grey ring.
+   Anything unrecognised lands there too — a beat list never invents canon. */
+const DOT_STATE = {
+  written: 'written', canon: 'canon', proposed: 'proposed',
+  suggested: 'suggested', here: 'here', ahead: 'unwritten', unwritten: 'unwritten'
+};
+
 /**
  * The one beat list, at three depths of detail: the outline rail, the stage
  * rail and Compose's beat column are all this component.
@@ -13,6 +21,7 @@ export function BeatSpine({ beats = [], onSelect, showSpine = true, style, ...re
       ) : null}
       {beats.map((b, i) => {
         const here = b.state === 'here';
+        const dot = DOT_STATE[b.state] || 'unwritten';
         return (
           <div
             key={b.id ?? i}
@@ -26,9 +35,9 @@ export function BeatSpine({ beats = [], onSelect, showSpine = true, style, ...re
             }}
           >
             {showSpine ? (
-              <StateDot state={b.state === 'here' ? 'here' : b.state || 'unwritten'} size={7} style={{ position: 'absolute', left: -14, top: 14 }} />
+              <StateDot state={dot} size={7} style={{ position: 'absolute', left: -14, top: 14 }} />
             ) : (
-              <StateDot state={b.state === 'here' ? 'here' : b.state || 'unwritten'} size={7} style={{ marginTop: 6 }} />
+              <StateDot state={dot} size={7} style={{ marginTop: 6 }} />
             )}
             {b.n != null ? (
               <span style={{ fontFamily: 'var(--qm-font-mono)', fontSize: 'var(--qm-type-module)', width: 14, flex: 'none', color: here ? 'var(--qm-gold)' : 'var(--qm-text-8)' }}>{b.n}</span>
@@ -36,7 +45,7 @@ export function BeatSpine({ beats = [], onSelect, showSpine = true, style, ...re
             <div style={{ flex: 1, minWidth: 0 }}>
               <div style={{
                 fontSize: 'var(--qm-type-secondary)', lineHeight: 1.5,
-                color: here ? 'var(--qm-prose-2)' : b.state === 'ahead' || b.state === 'unwritten' ? 'var(--qm-text-6)' : 'var(--qm-text-emph)'
+                color: here ? 'var(--qm-prose-2)' : dot === 'unwritten' ? 'var(--qm-text-6)' : 'var(--qm-text-emph)'
               }}>{b.text}</div>
               {b.meta ? (
                 <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginTop: 7, fontFamily: 'var(--qm-font-mono)', fontSize: 'var(--qm-type-mono)', color: 'var(--qm-text-6)' }}>{b.meta}</div>
