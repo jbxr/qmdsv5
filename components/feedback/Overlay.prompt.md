@@ -29,7 +29,11 @@ Notes
   `document.body` while it renders.
 - Modals stack. Two of them behave as one stack: the second makes the first inert,
   Esc closes only the top one, Tab traps only in the top one, and closing the top
-  one hands the page back to the one beneath. They may close in any order.
+  one hands the page back to the one beneath. They may close in any order — close
+  an outer one first and the focus still ends up on whatever opened the first
+  modal, because the page's opener is remembered by the stack, not the instance.
+- The background stays inert for as long as a modal is up, including body children
+  appended after it opened — a late portal, a second app root, a toast.
 - Popovers still do not portal. A `Picker` opened inside a modal resolves its
   `--qm-z-popover` against the panel; one portalled to the body leaves that
   stacking context and lands behind the scrim.

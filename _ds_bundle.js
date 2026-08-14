@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"QuantumMateriaDesignSystem_488cde","components":[{"name":"Avatar","sourcePath":"components/core/Avatar.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"QM_ICONS","sourcePath":"components/core/Icon.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"Kbd","sourcePath":"components/core/Kbd.jsx"},{"name":"StateDot","sourcePath":"components/core/StateDot.jsx"},{"name":"Callout","sourcePath":"components/feedback/Callout.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"ModeBar","sourcePath":"components/feedback/ModeBar.jsx"},{"name":"Overlay","sourcePath":"components/feedback/Overlay.jsx"},{"name":"Refusal","sourcePath":"components/feedback/Refusal.jsx"},{"name":"SaveStatus","sourcePath":"components/feedback/SaveStatus.jsx"},{"name":"Field","sourcePath":"components/forms/Field.jsx"},{"name":"Picker","sourcePath":"components/forms/Picker.jsx"},{"name":"PromptField","sourcePath":"components/forms/PromptField.jsx"},{"name":"PromptTextField","sourcePath":"components/forms/PromptTextField.jsx"},{"name":"SegmentedControl","sourcePath":"components/forms/SegmentedControl.jsx"},{"name":"Tabs","sourcePath":"components/forms/Tabs.jsx"},{"name":"TextArea","sourcePath":"components/forms/TextArea.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"AnnotationMark","sourcePath":"components/narrative/AnnotationMark.jsx"},{"name":"BeatCard","sourcePath":"components/narrative/BeatCard.jsx"},{"name":"BeatSpine","sourcePath":"components/narrative/BeatSpine.jsx"},{"name":"EntityToken","sourcePath":"components/narrative/EntityToken.jsx"},{"name":"EraChip","sourcePath":"components/narrative/EraChip.jsx"},{"name":"NoteBlock","sourcePath":"components/narrative/NoteBlock.jsx"},{"name":"RouteChip","sourcePath":"components/narrative/RouteChip.jsx"},{"name":"TimelineRow","sourcePath":"components/narrative/TimelineRow.jsx"},{"name":"VersionStrip","sourcePath":"components/narrative/VersionStrip.jsx"},{"name":"PanelHeader","sourcePath":"components/navigation/PanelHeader.jsx"},{"name":"StatusBar","sourcePath":"components/navigation/StatusBar.jsx"},{"name":"TopBar","sourcePath":"components/navigation/TopBar.jsx"}],"sourceHashes":{"components/core/Avatar.jsx":"1bd5dba57b46","components/core/Button.jsx":"5e926a6ee4a3","components/core/Card.jsx":"6e48c8e7b24d","components/core/Icon.jsx":"0ad515408d9b","components/core/Kbd.jsx":"b3b34000dfb0","components/core/StateDot.jsx":"a3fd991e007b","components/feedback/Callout.jsx":"1b782dc94451","components/feedback/EmptyState.jsx":"f68b008bade2","components/feedback/ModeBar.jsx":"973602b22e38","components/feedback/Overlay.jsx":"5a21b5de54ff","components/feedback/Refusal.jsx":"3481c28f8b57","components/feedback/SaveStatus.jsx":"adee664c7518","components/forms/Field.jsx":"d11a07d68b44","components/forms/Picker.jsx":"9ccdeb4ca231","components/forms/PromptField.jsx":"3dd0c094d315","components/forms/PromptTextField.jsx":"e8fd47ff76e5","components/forms/SegmentedControl.jsx":"bc52e1dd5f4d","components/forms/Tabs.jsx":"5bf43d06301e","components/forms/TextArea.jsx":"40a2eb2b6a36","components/forms/TextField.jsx":"a034068c02e4","components/narrative/AnnotationMark.jsx":"ef3759352e5f","components/narrative/BeatCard.jsx":"e36949ac7061","components/narrative/BeatSpine.jsx":"b3bd113579eb","components/narrative/EntityToken.jsx":"cc0a0dc39c7d","components/narrative/EraChip.jsx":"d91dbb354539","components/narrative/NoteBlock.jsx":"4cfa653d454f","components/narrative/RouteChip.jsx":"46711e6c8608","components/narrative/TimelineRow.jsx":"5e20c52ebea7","components/narrative/VersionStrip.jsx":"3f584141487c","components/navigation/PanelHeader.jsx":"602869534413","components/navigation/StatusBar.jsx":"619e36242c19","components/navigation/TopBar.jsx":"2a8acc0da304","ui_kits/story-engine/Compose.jsx":"0ca07723dda3","ui_kits/story-engine/NewScene.jsx":"2892710023c1","ui_kits/story-engine/Outline.jsx":"de958cb1cff5","ui_kits/story-engine/SceneRoom.jsx":"36a53a8b96c0","ui_kits/story-engine/WritingRoom.jsx":"8f3ba0166dc7","ui_kits/story-engine/data.jsx":"9e2f348a9b25","ui_kits/story-engine/doc-page.js":"371bab66f42d"},"inlinedExternals":[],"unexposedExports":[]} */
+/* @ds-bundle: {"format":4,"namespace":"QuantumMateriaDesignSystem_488cde","components":[{"name":"Avatar","sourcePath":"components/core/Avatar.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"QM_ICONS","sourcePath":"components/core/Icon.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"Kbd","sourcePath":"components/core/Kbd.jsx"},{"name":"StateDot","sourcePath":"components/core/StateDot.jsx"},{"name":"Callout","sourcePath":"components/feedback/Callout.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"ModeBar","sourcePath":"components/feedback/ModeBar.jsx"},{"name":"Overlay","sourcePath":"components/feedback/Overlay.jsx"},{"name":"Refusal","sourcePath":"components/feedback/Refusal.jsx"},{"name":"SaveStatus","sourcePath":"components/feedback/SaveStatus.jsx"},{"name":"Field","sourcePath":"components/forms/Field.jsx"},{"name":"Picker","sourcePath":"components/forms/Picker.jsx"},{"name":"PromptField","sourcePath":"components/forms/PromptField.jsx"},{"name":"PromptTextField","sourcePath":"components/forms/PromptTextField.jsx"},{"name":"SegmentedControl","sourcePath":"components/forms/SegmentedControl.jsx"},{"name":"Tabs","sourcePath":"components/forms/Tabs.jsx"},{"name":"TextArea","sourcePath":"components/forms/TextArea.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"AnnotationMark","sourcePath":"components/narrative/AnnotationMark.jsx"},{"name":"BeatCard","sourcePath":"components/narrative/BeatCard.jsx"},{"name":"BeatSpine","sourcePath":"components/narrative/BeatSpine.jsx"},{"name":"EntityToken","sourcePath":"components/narrative/EntityToken.jsx"},{"name":"EraChip","sourcePath":"components/narrative/EraChip.jsx"},{"name":"NoteBlock","sourcePath":"components/narrative/NoteBlock.jsx"},{"name":"RouteChip","sourcePath":"components/narrative/RouteChip.jsx"},{"name":"TimelineRow","sourcePath":"components/narrative/TimelineRow.jsx"},{"name":"VersionStrip","sourcePath":"components/narrative/VersionStrip.jsx"},{"name":"PanelHeader","sourcePath":"components/navigation/PanelHeader.jsx"},{"name":"StatusBar","sourcePath":"components/navigation/StatusBar.jsx"},{"name":"TopBar","sourcePath":"components/navigation/TopBar.jsx"}],"sourceHashes":{"components/core/Avatar.jsx":"1bd5dba57b46","components/core/Button.jsx":"5e926a6ee4a3","components/core/Card.jsx":"6e48c8e7b24d","components/core/Icon.jsx":"0ad515408d9b","components/core/Kbd.jsx":"b3b34000dfb0","components/core/StateDot.jsx":"a3fd991e007b","components/feedback/Callout.jsx":"1b782dc94451","components/feedback/EmptyState.jsx":"f68b008bade2","components/feedback/ModeBar.jsx":"973602b22e38","components/feedback/Overlay.jsx":"ea3b2392f993","components/feedback/Refusal.jsx":"3481c28f8b57","components/feedback/SaveStatus.jsx":"adee664c7518","components/forms/Field.jsx":"d11a07d68b44","components/forms/Picker.jsx":"9ccdeb4ca231","components/forms/PromptField.jsx":"3dd0c094d315","components/forms/PromptTextField.jsx":"e8fd47ff76e5","components/forms/SegmentedControl.jsx":"bc52e1dd5f4d","components/forms/Tabs.jsx":"5bf43d06301e","components/forms/TextArea.jsx":"40a2eb2b6a36","components/forms/TextField.jsx":"a034068c02e4","components/narrative/AnnotationMark.jsx":"ef3759352e5f","components/narrative/BeatCard.jsx":"e36949ac7061","components/narrative/BeatSpine.jsx":"b3bd113579eb","components/narrative/EntityToken.jsx":"cc0a0dc39c7d","components/narrative/EraChip.jsx":"d91dbb354539","components/narrative/NoteBlock.jsx":"4cfa653d454f","components/narrative/RouteChip.jsx":"46711e6c8608","components/narrative/TimelineRow.jsx":"5e20c52ebea7","components/narrative/VersionStrip.jsx":"3f584141487c","components/navigation/PanelHeader.jsx":"602869534413","components/navigation/StatusBar.jsx":"619e36242c19","components/navigation/TopBar.jsx":"2a8acc0da304","ui_kits/story-engine/Compose.jsx":"0ca07723dda3","ui_kits/story-engine/NewScene.jsx":"2892710023c1","ui_kits/story-engine/Outline.jsx":"de958cb1cff5","ui_kits/story-engine/SceneRoom.jsx":"36a53a8b96c0","ui_kits/story-engine/WritingRoom.jsx":"8f3ba0166dc7","ui_kits/story-engine/data.jsx":"9e2f348a9b25","ui_kits/story-engine/doc-page.js":"371bab66f42d"},"inlinedExternals":[],"unexposedExports":[]} */
 
 (() => {
 
@@ -846,9 +846,16 @@ const FOCUSABLE = 'a[href],button:not([disabled]),input:not([disabled]),select:n
 /** Scrims currently up, oldest first. The last one owns the keyboard. */
 const OPEN = [];
 
-/** The page before the first modal: every `inert` overwritten since, and the
- *  body's own scrolling. Taken once on the way in, put back once on the way out. */
+/** The page before the first modal: every `inert` overwritten since, the body's
+ *  own scrolling, and who had the focus. Taken once on the way in, put back once
+ *  on the way out. The opener is held here as well as per-instance, because an
+ *  outer modal closing first leaves the inner one's opener inside a panel that
+ *  is about to be removed — and nothing else remembers where the page came from. */
 let held = null;
+
+/** `inert` is inherited, so an element deep inside a frozen subtree is frozen
+ *  too and cannot take the focus. */
+const frozen = el => !!(el.closest && el.closest('[inert]'));
 const owns = scrimEl => OPEN.length > 0 && OPEN[OPEN.length - 1] === scrimEl;
 const giveBack = el => {
   const previous = held.inert.get(el);
@@ -876,8 +883,18 @@ function hold(scrimEl) {
     held = {
       inert: new Map(),
       overflow: document.body.style.overflow,
-      paddingRight: document.body.style.paddingRight
+      paddingRight: document.body.style.paddingRight,
+      opener: document.activeElement,
+      // The background is not a fixed set: a late portal, a second app root or
+      // a toast can be appended to the body while the modal is up, and it would
+      // otherwise stay live and in the accessibility tree behind the scrim.
+      watching: new MutationObserver(() => {
+        if (OPEN.length) suppressBackground();
+      })
     };
+    held.watching.observe(document.body, {
+      childList: true
+    });
     // Hiding the overflow takes the scrollbar with it and the page slides
     // sideways under the scrim, so the gutter is paid back. Its width is
     // measured, never assumed: 0 on an overlay scrollbar, ~15px on a classic one.
@@ -890,18 +907,24 @@ function hold(scrimEl) {
   }
   suppressBackground();
 }
+
+/** Returns the page's original opener once the last modal is down, so the caller
+ *  can hand the focus back to it; null while any modal is still up. */
 function release(scrimEl) {
   const at = OPEN.indexOf(scrimEl);
   if (at > -1) OPEN.splice(at, 1);
-  if (!held) return;
+  if (!held) return null;
   if (OPEN.length) {
     suppressBackground();
-    return;
+    return null;
   }
+  const opener = held.opener;
+  held.watching.disconnect();
   for (const el of [...held.inert.keys()]) giveBack(el);
   document.body.style.overflow = held.overflow;
   document.body.style.paddingRight = held.paddingRight;
   held = null;
+  return opener;
 }
 
 /**
@@ -982,10 +1005,16 @@ function Overlay({
     document.addEventListener('keydown', onKey);
     return () => {
       document.removeEventListener('keydown', onKey);
-      release(scrimEl);
       // After the `inert` comes off, never before: an opener inside the
       // background cannot take the focus while the background is still frozen.
-      if (opener && opener.focus) opener.focus();
+      const pageOpener = release(scrimEl);
+      // Closing out of order breaks the usual answer twice over: an outer modal
+      // leaves its opener still frozen behind the inner one, and the inner one's
+      // opener was inside the outer panel that just went. Fall back to where the
+      // page had the focus before any of this, and only once they are all down.
+      const mine = opener && opener.isConnected && !frozen(opener) ? opener : null;
+      const target = mine || pageOpener;
+      if (target && target.focus) target.focus();
     };
   }, [scrim]);
   const panel = /*#__PURE__*/React.createElement("div", _extends({

@@ -16,9 +16,16 @@ const FOCUSABLE = 'a[href],button:not([disabled]),input:not([disabled]),select:n
 /** Scrims currently up, oldest first. The last one owns the keyboard. */
 const OPEN = [];
 
-/** The page before the first modal: every `inert` overwritten since, and the
- *  body's own scrolling. Taken once on the way in, put back once on the way out. */
+/** The page before the first modal: every `inert` overwritten since, the body's
+ *  own scrolling, and who had the focus. Taken once on the way in, put back once
+ *  on the way out. The opener is held here as well as per-instance, because an
+ *  outer modal closing first leaves the inner one's opener inside a panel that
+ *  is about to be removed — and nothing else remembers where the page came from. */
 let held = null;
+
+/** `inert` is inherited, so an element deep inside a frozen subtree is frozen
+ *  too and cannot take the focus. */
+const frozen = (el) => !!(el.closest && el.closest('[inert]'));
 
 const owns = (scrimEl) => OPEN.length > 0 && OPEN[OPEN.length - 1] === scrimEl;
 
@@ -51,7 +58,13 @@ function hold(scrimEl) {
       inert: new Map(),
       overflow: document.body.style.overflow,
       paddingRight: document.body.style.paddingRight,
+      opener: document.activeElement,
+      // The background is not a fixed set: a late portal, a second app root or
+      // a toast can be appended to the body while the modal is up, and it would
+      // otherwise stay live and in the accessibility tree behind the scrim.
+      watching: new MutationObserver(() => { if (OPEN.length) suppressBackground(); }),
     };
+    held.watching.observe(document.body, { childList: true });
     // Hiding the overflow takes the scrollbar with it and the page slides
     // sideways under the scrim, so the gutter is paid back. Its width is
     // measured, never assumed: 0 on an overlay scrollbar, ~15px on a classic one.
@@ -65,15 +78,20 @@ function hold(scrimEl) {
   suppressBackground();
 }
 
+/** Returns the page's original opener once the last modal is down, so the caller
+ *  can hand the focus back to it; null while any modal is still up. */
 function release(scrimEl) {
   const at = OPEN.indexOf(scrimEl);
   if (at > -1) OPEN.splice(at, 1);
-  if (!held) return;
-  if (OPEN.length) { suppressBackground(); return; }
+  if (!held) return null;
+  if (OPEN.length) { suppressBackground(); return null; }
+  const opener = held.opener;
+  held.watching.disconnect();
   for (const el of [...held.inert.keys()]) giveBack(el);
   document.body.style.overflow = held.overflow;
   document.body.style.paddingRight = held.paddingRight;
   held = null;
+  return opener;
 }
 
 /**
@@ -136,10 +154,16 @@ export function Overlay({ title, onClose, footer, children, width = 560, scrim, 
     document.addEventListener('keydown', onKey);
     return () => {
       document.removeEventListener('keydown', onKey);
-      release(scrimEl);
       // After the `inert` comes off, never before: an opener inside the
       // background cannot take the focus while the background is still frozen.
-      if (opener && opener.focus) opener.focus();
+      const pageOpener = release(scrimEl);
+      // Closing out of order breaks the usual answer twice over: an outer modal
+      // leaves its opener still frozen behind the inner one, and the inner one's
+      // opener was inside the outer panel that just went. Fall back to where the
+      // page had the focus before any of this, and only once they are all down.
+      const mine = opener && opener.isConnected && !frozen(opener) ? opener : null;
+      const target = mine || pageOpener;
+      if (target && target.focus) target.focus();
     };
   }, [scrim]);
 
