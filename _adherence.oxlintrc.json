@@ -245,6 +245,9 @@
       "PromptField": {
         "replaces": []
       },
+      "PromptTextField": {
+        "replaces": []
+      },
       "Refusal": {
         "replaces": []
       },
