@@ -8,4 +8,4 @@ One-line: The multi-line member of the family — a real `<textarea>` in a well 
 Notes
 - Anything read as prose takes `kind="serif"`; `size` sets the well's floor height, `rows` its resting height.
 - No drag handle by default — pass `resize="vertical"` where the author genuinely needs one.
-- The ring, the placeholder ramp and the prop split are `TextField`'s. Forwards a ref to the `<textarea>`.
+- The ring, the placeholder ramp and the prop split are `TextField`'s — including that every other `<textarea>` attribute is forwarded, so the adherence config carries no prop allowlist here either. Forwards a ref to the `<textarea>`.

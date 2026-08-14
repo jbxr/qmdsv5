@@ -11,6 +11,10 @@
 <script type="text/babel">
 const QM = window.QuantumMateriaDesignSystem_488cde;
 const { Field, TextField, TextArea, PromptField, SegmentedControl, Tabs, Picker, Avatar } = QM;
+// TextField and TextArea are newer than the compiled bundle this card loads.
+// Until _ds_bundle.js is regenerated they are undefined, and rendering them
+// would blank the whole card rather than just this section.
+const EDITABLE_READY = Boolean(TextField && TextArea);
 function Demo() {
   const [d, setD] = React.useState('Comfortable');
   const [t, setT] = React.useState('Details');
@@ -29,19 +33,29 @@ function Demo() {
         <Field label="Subject" placeholder="— none —" select style={{ flex: 1 }} />
       </div>
       <div className="lbl">EDITABLE — THE RING IS THE WELL'S OWN, NO FOCUS PROP</div>
-      <div style={{ display: 'grid', gridTemplateColumns: '1.4fr 92px 92px', gap: 12, alignItems: 'end' }}>
-        <TextField label="Title" kind="serif" value={title} onChange={(e) => setTitle(e.target.value)} />
-        <TextField label="Y" kind="mono" size="sm" placeholder="−6" />
-        <TextField label="D" kind="mono" size="sm" defaultValue="1" />
-      </div>
-      <div className="row" style={{ gap: 12, alignItems: 'flex-start' }}>
-        <TextArea label="Logline" kind="serif" hint={`${note.length} / 240`} rows={2}
-          placeholder="what this scene is really about…"
-          value={note} onChange={(e) => setNote(e.target.value)} style={{ flex: 1 }} />
-        <Field label="Search" style={{ flex: 1 }}>
-          <input className="qm-control" placeholder="any control, unaided" style={{ flex: 1, minWidth: 0, background: 'transparent', border: 0, outline: 'none', font: 'inherit', color: 'inherit' }} />
-        </Field>
-      </div>
+      {EDITABLE_READY ? (
+        <React.Fragment>
+          <div style={{ display: 'grid', gridTemplateColumns: '1.4fr 92px 92px', gap: 12, alignItems: 'end' }}>
+            <TextField label="Title" kind="serif" value={title} onChange={(e) => setTitle(e.target.value)} />
+            <TextField label="Y" kind="mono" size="sm" placeholder="−6" />
+            <TextField label="D" kind="mono" size="sm" defaultValue="1" />
+          </div>
+          <div className="row" style={{ gap: 12, alignItems: 'flex-start' }}>
+            <TextArea label="Logline" kind="serif" hint={`${note.length} / 240`} rows={2}
+              placeholder="what this scene is really about…"
+              value={note} onChange={(e) => setNote(e.target.value)} style={{ flex: 1 }} />
+            <Field label="Search" style={{ flex: 1 }}>
+              <input className="qm-control" placeholder="any control, unaided" style={{ flex: 1, minWidth: 0, background: 'transparent', border: 0, outline: 'none', font: 'inherit', color: 'inherit' }} />
+            </Field>
+          </div>
+        </React.Fragment>
+      ) : (
+        <div style={{ fontSize: 12.5, lineHeight: 1.55, color: 'var(--qm-text-6)', padding: '10px 12px', borderRadius: 'var(--qm-radius-control)', background: 'var(--qm-fill-quiet)', border: '1px dashed var(--qm-border-dashed)' }}>
+          <code style={{ fontFamily: 'var(--qm-font-mono)' }}>TextField</code>, <code style={{ fontFamily: 'var(--qm-font-mono)' }}>TextArea</code> and <code style={{ fontFamily: 'var(--qm-font-mono)' }}>Field</code>'s
+          self-lighting ring ship in <code style={{ fontFamily: 'var(--qm-font-mono)' }}>components/forms/</code> but are newer than this card's compiled bundle.
+          Regenerate <code style={{ fontFamily: 'var(--qm-font-mono)' }}>_ds_bundle.js</code> to see this section.
+        </div>
+      )}
       <div className="row" style={{ gap: 10 }}>
         <PromptField audience="character" placeholder="ask vera…" caret style={{ flex: 1 }} />
         <PromptField audience="direction" placeholder="private note for vera's next turn…" hintKey="stage-direct" style={{ flex: 1 }} />
