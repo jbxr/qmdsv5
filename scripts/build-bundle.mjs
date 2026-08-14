@@ -62,9 +62,16 @@ const sha12 = (bytes) => crypto.createHash('sha256').update(bytes).digest('hex')
 /* -------------------------------------------------------------- compiling -- */
 
 /**
- * Strips the module surface the bundle has no loader for. `react` is a global,
- * a sibling component is a `__ds_scope` member, and an export is a name we
- * collect here and republish once every file has run.
+ * Every module the cards load from a `<script>` rather than resolve, so an import
+ * of one is dropped and its local name left to find the UMD global. Both are peer
+ * dependencies for consumers and neither is ever inlined.
+ */
+const GLOBAL_MODULES = new Set(['react', 'react-dom']);
+
+/**
+ * Strips the module surface the bundle has no loader for. `react` and `react-dom`
+ * are globals, a sibling component is a `__ds_scope` member, and an export is a
+ * name we collect here and republish once every file has run.
  */
 function dsModulePlugin(exportedNames) {
   return {
@@ -74,7 +81,7 @@ function dsModulePlugin(exportedNames) {
           const t = babel.types;
           const imports = programPath.get('body').filter((s) => s.isImportDeclaration());
           for (const decl of imports) {
-            if (decl.node.source.value !== 'react') {
+            if (!GLOBAL_MODULES.has(decl.node.source.value)) {
               for (const spec of decl.node.specifiers) {
                 const local = spec.local.name;
                 const imported = spec.imported ? spec.imported.name : local;

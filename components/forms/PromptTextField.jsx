@@ -4,7 +4,7 @@ import { PromptField } from './PromptField.jsx';
 const RESET = {
   flex: 1, minWidth: 0, width: '100%',
   appearance: 'none', WebkitAppearance: 'none',
-  background: 'transparent', border: 0, outline: 'none', padding: 0, margin: 0,
+  background: 'transparent', border: 0, padding: 0, margin: 0,
   fontFamily: 'inherit', fontSize: 'inherit', fontWeight: 'inherit',
   lineHeight: 'inherit', letterSpacing: 'inherit', color: 'inherit'
 };

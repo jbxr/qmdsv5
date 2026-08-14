@@ -13,7 +13,7 @@ const SURFACES = {
 };
 
 const RAILS = {
-  parchment: 'linear-gradient(180deg,#E8DCC0,#A08E6A)',
+  parchment: 'var(--qm-parchment-rail)',
   gold: 'var(--qm-gold-rail)',
   teal: 'var(--qm-teal)',
   coral: 'var(--qm-coral)',
@@ -39,10 +39,10 @@ export function Card({
         overflow: railBg ? 'hidden' : undefined,
         padding,
         borderRadius: radius === 'panel' ? 'var(--qm-radius-panel)' : 'var(--qm-radius-card)',
-        background: hover && surface === 'panel' ? '#171E26' : s.background,
+        background: hover && surface === 'panel' ? 'var(--qm-surface-panel-hover)' : s.background,
         borderWidth: 1,
         borderStyle: s.edge,
-        borderColor: hover ? 'rgba(255,255,255,0.20)' : s.border,
+        borderColor: hover ? 'var(--qm-border-hover)' : s.border,
         boxShadow: s.shadow,
         cursor: hoverable ? 'pointer' : undefined,
         transition: 'background var(--qm-dur-hover) var(--qm-ease), border-color var(--qm-dur-hover) var(--qm-ease)',

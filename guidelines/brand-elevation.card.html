@@ -1,4 +1,4 @@
-<!-- @dsCard group="Brand" viewport="700x180" name="Elevation" subtitle="Long, low-opacity black shadows — never a glow, except live state" -->
+<!-- @dsCard group="Brand" viewport="700x570" name="Elevation" subtitle="Long, low-opacity black shadows — never a glow, except live state" -->
 <!DOCTYPE html>
 <html><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
 <style>html,body{margin:0;background:var(--qm-surface-app);font-family:var(--qm-font-sans);color:var(--qm-text-3);font-size:13.5px}*{box-sizing:border-box}.w{padding:16px 18px}.g{display:grid;gap:10px}.r{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.m{font-family:var(--qm-font-mono);font-size:12px;color:var(--qm-text-7)}.lbl{font-family:var(--qm-font-mono);font-size:11px;letter-spacing:.14em;color:var(--qm-text-7)}.sw{width:44px;height:44px;border-radius:8px;border:1px solid var(--qm-border-control-quiet);flex:none}.dot{width:9px;height:9px;flex:none;border-radius:50%}.chip{font-family:var(--qm-font-mono);font-size:12px;border-radius:4px;padding:3px 8px;display:inline-flex;align-items:center;gap:6px}</style>
@@ -14,4 +14,31 @@
 <span class="r" style="gap:8px"><span class="dot" style="width:7px;height:7px;background:#55B7A6;box-shadow:0 0 8px #55B7A6"></span><span class="m">live · teal glow</span></span>
 <span class="r" style="gap:8px"><span class="dot" style="width:8px;height:8px;background:#E8DCC0;box-shadow:0 0 10px rgba(232,220,192,.6)"></span><span class="m">in scene · parchment glow</span></span>
 <span class="r" style="gap:8px"><span class="dot" style="width:8px;height:8px;background:#F17B54;box-shadow:0 0 12px rgba(241,123,84,.5)"></span><span class="m">here · coral glow</span></span>
-</div></div></body></html>
+</div>
+
+<div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--qm-border-group)">
+<div class="lbl">STACKING ORDER</div>
+<div class="r" style="gap:20px;align-items:flex-start;margin-top:12px">
+
+<div class="g" style="flex:1;gap:10px">
+<div style="line-height:1.6">Stacking is elevation seen from the side, so the two live together. QM has exactly two layers and the scale names only those: nothing here is sticky, and “saved to QM” is a lock, not a toast. Every other absolute element wins on paint order alone.</div>
+<div style="line-height:1.9;color:var(--qm-text-5)"><span class="chip" style="background:var(--qm-tint-teal);color:var(--qm-teal-text)">--qm-z-popover<span style="color:var(--qm-text-6)">50</span></span> a panel floating over the content it is anchored to</div>
+<div style="line-height:1.9;color:var(--qm-text-5)"><span class="chip" style="background:var(--qm-tint-coral);color:var(--qm-coral-text)">--qm-z-scrim<span style="color:var(--qm-text-6)">100</span></span> the modal layer — Overlay’s scrim, over the page</div>
+<div style="line-height:1.6;color:var(--qm-text-5)">The 100 is not a bar a popover has to clear. The scrim is <span class="m">position:fixed</span> with a z-index, so it is a stacking context of its own: a Picker opened inside a modal resolves its 50 against the panel, never against the scrim. <span style="color:var(--qm-text-field)">Keep a popover inside the context that opened it</span> — one portalled to the body while a modal is up leaves that context and vanishes behind the scrim.</div>
+</div>
+
+<div style="flex:none;width:246px">
+<div style="position:relative;height:132px;border-radius:8px;border:1px solid var(--qm-border-panel);background:var(--qm-surface-canvas-glow);overflow:hidden">
+  <div style="padding:9px 11px;font-size:12px;color:var(--qm-text-7);line-height:1.7">page content<br>under the modal</div>
+  <div style="position:absolute;inset:0;z-index:var(--qm-z-scrim);background:var(--qm-fill-scrim);display:flex;align-items:center;justify-content:center">
+    <div style="position:relative;width:172px;border-radius:7px;background:var(--qm-surface-raised);border:1px solid var(--qm-border-panel);box-shadow:var(--qm-shadow-overlay);padding:11px 12px;font-size:12px;color:var(--qm-text-4)">
+      modal panel
+      <div style="position:absolute;left:26px;top:30px;z-index:var(--qm-z-popover);width:150px;border-radius:6px;background:var(--qm-surface-raised);border:1px solid var(--qm-border-violet);box-shadow:var(--qm-shadow-popover);padding:8px 10px;font-size:12px;color:var(--qm-violet-text)">popover · 50</div>
+    </div>
+  </div>
+</div>
+<div class="m" style="margin-top:7px;font-size:11px;line-height:1.5">50 inside 100 — the popover is a descendant, not a competitor</div>
+</div>
+
+</div></div>
+</div></body></html>

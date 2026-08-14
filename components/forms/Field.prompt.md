@@ -8,7 +8,7 @@ One-line: The QM input — a dark inset well with a quiet 13px label above it.
 ```
 
 Notes
-- Focus is a 2px teal ring outside the control; it never recolours the border.
+- Focus is a 2px teal ring outside the control; it never recolours the border. The well is `qm-well`, so whatever control you put in it loses the browser's own outline and takes `--qm-focus-outline` instead — the transparent one that carries the focus state into forced-colors, where the ring is not rendered. A consumer control needs no class of its own for that.
 - Story-time and ids always take `kind="mono"`; authored titles take `kind="serif"`.
 - Given `value` or `placeholder` the well shows that value and `children` trail it. Given neither, `children` *are* the well — put a control there and the ring lights on its own, with no focus state in the consumer. `focused` overrides the ring in both directions; use it only for a field holding no real control.
 - `disabled` drops the well to the disabled ramp and suppresses the ring — and QM puts the reason next to the field, never in a tooltip.
