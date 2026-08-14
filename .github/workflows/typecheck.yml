@@ -45,6 +45,26 @@ jobs:
       - name: adherence config matches the declarations
         run: npm run adherence:check
 
+  # `components/**` is the source of truth, and `_ds_bundle.js` is what every
+  # `*.card.html` and every UI kit actually renders. When they disagree the gallery
+  # shows code that is no longer in this repo, silently — three PRs in a row shipped
+  # fixes no card could display. This job is the only thing that notices.
+  bundle:
+    name: bundle matches the sources
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: compiled artifacts match components/** and ui_kits/**
+        run: npm run bundle:check
+
   # Every card carries a hand-written `@dsCard viewport="WxH"`, the gallery renders
   # it in exactly that box, and nothing used to check it — so an under-declared
   # height hid content and looked like a shorter card. `guidelines/brand-interaction`

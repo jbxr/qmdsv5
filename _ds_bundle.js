@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"QuantumMateriaDesignSystem_488cde","components":[{"name":"Avatar","sourcePath":"components/core/Avatar.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"QM_ICONS","sourcePath":"components/core/Icon.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"Kbd","sourcePath":"components/core/Kbd.jsx"},{"name":"StateDot","sourcePath":"components/core/StateDot.jsx"},{"name":"Callout","sourcePath":"components/feedback/Callout.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"ModeBar","sourcePath":"components/feedback/ModeBar.jsx"},{"name":"Overlay","sourcePath":"components/feedback/Overlay.jsx"},{"name":"Refusal","sourcePath":"components/feedback/Refusal.jsx"},{"name":"SaveStatus","sourcePath":"components/feedback/SaveStatus.jsx"},{"name":"Field","sourcePath":"components/forms/Field.jsx"},{"name":"Picker","sourcePath":"components/forms/Picker.jsx"},{"name":"PromptField","sourcePath":"components/forms/PromptField.jsx"},{"name":"PromptTextField","sourcePath":"components/forms/PromptTextField.jsx"},{"name":"SegmentedControl","sourcePath":"components/forms/SegmentedControl.jsx"},{"name":"Tabs","sourcePath":"components/forms/Tabs.jsx"},{"name":"TextArea","sourcePath":"components/forms/TextArea.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"AnnotationMark","sourcePath":"components/narrative/AnnotationMark.jsx"},{"name":"BeatCard","sourcePath":"components/narrative/BeatCard.jsx"},{"name":"BeatSpine","sourcePath":"components/narrative/BeatSpine.jsx"},{"name":"EntityToken","sourcePath":"components/narrative/EntityToken.jsx"},{"name":"EraChip","sourcePath":"components/narrative/EraChip.jsx"},{"name":"NoteBlock","sourcePath":"components/narrative/NoteBlock.jsx"},{"name":"RouteChip","sourcePath":"components/narrative/RouteChip.jsx"},{"name":"TimelineRow","sourcePath":"components/narrative/TimelineRow.jsx"},{"name":"VersionStrip","sourcePath":"components/narrative/VersionStrip.jsx"},{"name":"PanelHeader","sourcePath":"components/navigation/PanelHeader.jsx"},{"name":"StatusBar","sourcePath":"components/navigation/StatusBar.jsx"},{"name":"TopBar","sourcePath":"components/navigation/TopBar.jsx"}],"sourceHashes":{"components/core/Avatar.jsx":"1bd5dba57b46","components/core/Button.jsx":"555e9c4cf507","components/core/Card.jsx":"defc7b5cc5a4","components/core/Icon.jsx":"0ad515408d9b","components/core/Kbd.jsx":"b3b34000dfb0","components/core/StateDot.jsx":"a3fd991e007b","components/feedback/Callout.jsx":"1b782dc94451","components/feedback/EmptyState.jsx":"f68b008bade2","components/feedback/ModeBar.jsx":"973602b22e38","components/feedback/Overlay.jsx":"bedd480d669e","components/feedback/Refusal.jsx":"3481c28f8b57","components/feedback/SaveStatus.jsx":"adee664c7518","components/forms/Field.jsx":"ea5e62a7a0ac","components/forms/Picker.jsx":"9ccdeb4ca231","components/forms/PromptField.jsx":"3dd0c094d315","components/forms/PromptTextField.jsx":"0928aa9271ef","components/forms/SegmentedControl.jsx":"bc52e1dd5f4d","components/forms/Tabs.jsx":"5bf43d06301e","components/forms/TextArea.jsx":"f869a276de16","components/forms/TextField.jsx":"fe279d3a1d24","components/narrative/AnnotationMark.jsx":"ef3759352e5f","components/narrative/BeatCard.jsx":"e36949ac7061","components/narrative/BeatSpine.jsx":"b3bd113579eb","components/narrative/EntityToken.jsx":"cc0a0dc39c7d","components/narrative/EraChip.jsx":"d91dbb354539","components/narrative/NoteBlock.jsx":"4cfa653d454f","components/narrative/RouteChip.jsx":"46711e6c8608","components/narrative/TimelineRow.jsx":"5e20c52ebea7","components/narrative/VersionStrip.jsx":"3f584141487c","components/navigation/PanelHeader.jsx":"602869534413","components/navigation/StatusBar.jsx":"619e36242c19","components/navigation/TopBar.jsx":"2a8acc0da304","ui_kits/story-engine/Compose.jsx":"0ca07723dda3","ui_kits/story-engine/NewScene.jsx":"2892710023c1","ui_kits/story-engine/Outline.jsx":"5f6ff5685808","ui_kits/story-engine/SceneRoom.jsx":"36a53a8b96c0","ui_kits/story-engine/WritingRoom.jsx":"8f3ba0166dc7","ui_kits/story-engine/data.jsx":"9e2f348a9b25","ui_kits/story-engine/doc-page.js":"371bab66f42d"},"inlinedExternals":[],"unexposedExports":[]} */
+/* @ds-bundle: {"format":4,"namespace":"QuantumMateriaDesignSystem_488cde","components":[{"name":"Avatar","sourcePath":"components/core/Avatar.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"QM_ICONS","sourcePath":"components/core/Icon.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"Kbd","sourcePath":"components/core/Kbd.jsx"},{"name":"StateDot","sourcePath":"components/core/StateDot.jsx"},{"name":"Callout","sourcePath":"components/feedback/Callout.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"ModeBar","sourcePath":"components/feedback/ModeBar.jsx"},{"name":"Overlay","sourcePath":"components/feedback/Overlay.jsx"},{"name":"Refusal","sourcePath":"components/feedback/Refusal.jsx"},{"name":"SaveStatus","sourcePath":"components/feedback/SaveStatus.jsx"},{"name":"Field","sourcePath":"components/forms/Field.jsx"},{"name":"Picker","sourcePath":"components/forms/Picker.jsx"},{"name":"PromptField","sourcePath":"components/forms/PromptField.jsx"},{"name":"PromptTextField","sourcePath":"components/forms/PromptTextField.jsx"},{"name":"SegmentedControl","sourcePath":"components/forms/SegmentedControl.jsx"},{"name":"Tabs","sourcePath":"components/forms/Tabs.jsx"},{"name":"TextArea","sourcePath":"components/forms/TextArea.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"AnnotationMark","sourcePath":"components/narrative/AnnotationMark.jsx"},{"name":"BeatCard","sourcePath":"components/narrative/BeatCard.jsx"},{"name":"BeatSpine","sourcePath":"components/narrative/BeatSpine.jsx"},{"name":"EntityToken","sourcePath":"components/narrative/EntityToken.jsx"},{"name":"EraChip","sourcePath":"components/narrative/EraChip.jsx"},{"name":"NoteBlock","sourcePath":"components/narrative/NoteBlock.jsx"},{"name":"RouteChip","sourcePath":"components/narrative/RouteChip.jsx"},{"name":"TimelineRow","sourcePath":"components/narrative/TimelineRow.jsx"},{"name":"VersionStrip","sourcePath":"components/narrative/VersionStrip.jsx"},{"name":"PanelHeader","sourcePath":"components/navigation/PanelHeader.jsx"},{"name":"StatusBar","sourcePath":"components/navigation/StatusBar.jsx"},{"name":"TopBar","sourcePath":"components/navigation/TopBar.jsx"}],"sourceHashes":{"components/core/Avatar.jsx":"1bd5dba57b46","components/core/Button.jsx":"555e9c4cf507","components/core/Card.jsx":"facdf32752f3","components/core/Icon.jsx":"0ad515408d9b","components/core/Kbd.jsx":"b3b34000dfb0","components/core/StateDot.jsx":"a3fd991e007b","components/feedback/Callout.jsx":"1b782dc94451","components/feedback/EmptyState.jsx":"f68b008bade2","components/feedback/ModeBar.jsx":"973602b22e38","components/feedback/Overlay.jsx":"b615370fb7ed","components/feedback/Refusal.jsx":"3481c28f8b57","components/feedback/SaveStatus.jsx":"adee664c7518","components/forms/Field.jsx":"ea5e62a7a0ac","components/forms/Picker.jsx":"9ccdeb4ca231","components/forms/PromptField.jsx":"3dd0c094d315","components/forms/PromptTextField.jsx":"0928aa9271ef","components/forms/SegmentedControl.jsx":"bc52e1dd5f4d","components/forms/Tabs.jsx":"5bf43d06301e","components/forms/TextArea.jsx":"f869a276de16","components/forms/TextField.jsx":"fe279d3a1d24","components/narrative/AnnotationMark.jsx":"ef3759352e5f","components/narrative/BeatCard.jsx":"e36949ac7061","components/narrative/BeatSpine.jsx":"b3bd113579eb","components/narrative/EntityToken.jsx":"cc0a0dc39c7d","components/narrative/EraChip.jsx":"d91dbb354539","components/narrative/NoteBlock.jsx":"4cfa653d454f","components/narrative/RouteChip.jsx":"46711e6c8608","components/narrative/TimelineRow.jsx":"5e20c52ebea7","components/narrative/VersionStrip.jsx":"3f584141487c","components/navigation/PanelHeader.jsx":"602869534413","components/navigation/StatusBar.jsx":"619e36242c19","components/navigation/TopBar.jsx":"2a8acc0da304","ui_kits/story-engine/Compose.jsx":"0ca07723dda3","ui_kits/story-engine/NewScene.jsx":"2892710023c1","ui_kits/story-engine/Outline.jsx":"5f6ff5685808","ui_kits/story-engine/SceneRoom.jsx":"36a53a8b96c0","ui_kits/story-engine/WritingRoom.jsx":"8f3ba0166dc7","ui_kits/story-engine/data.jsx":"9e2f348a9b25","ui_kits/story-engine/doc-page.js":"371bab66f42d"},"inlinedExternals":[],"unexposedExports":[]} */
 
 (() => {
 
@@ -242,35 +242,44 @@ Object.assign(__ds_scope, { Button });
 // components/core/Card.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+// Edges are longhands, never the `border` shorthand: the hover colour has to be
+// swapped in and out, and a colour longhand removed next to a shorthand leaves
+// Chrome resolving border-color to currentColor — the hairline paints in text ink.
 const SURFACES = {
   panel: {
     background: 'var(--qm-surface-panel)',
-    border: '1px solid var(--qm-border-panel)',
+    edge: 'solid',
+    border: 'var(--qm-border-panel)',
     shadow: 'none'
   },
   raised: {
     background: 'var(--qm-surface-raised)',
-    border: '1px solid var(--qm-border-panel)',
+    edge: 'solid',
+    border: 'var(--qm-border-panel)',
     shadow: 'none'
   },
   selected: {
     background: 'var(--qm-card-raised)',
-    border: '1px solid var(--qm-border-structural)',
+    edge: 'solid',
+    border: 'var(--qm-border-structural)',
     shadow: 'var(--qm-shadow-card)'
   },
   beat: {
     background: 'var(--qm-beat-raised)',
-    border: '1px solid var(--qm-border-group)',
+    edge: 'solid',
+    border: 'var(--qm-border-group)',
     shadow: 'var(--qm-shadow-beat)'
   },
   scene: {
     background: 'var(--qm-scene-surface)',
-    border: '1px solid var(--qm-scene-border)',
+    edge: 'solid',
+    border: 'var(--qm-scene-border)',
     shadow: 'none'
   },
   quiet: {
     background: 'var(--qm-fill-quiet)',
-    border: '1px dashed var(--qm-border-dashed)',
+    edge: 'dashed',
+    border: 'var(--qm-border-dashed)',
     shadow: 'none'
   }
 };
@@ -307,8 +316,9 @@ function Card({
       padding,
       borderRadius: radius === 'panel' ? 'var(--qm-radius-panel)' : 'var(--qm-radius-card)',
       background: hover && surface === 'panel' ? '#171E26' : s.background,
-      border: s.border,
-      borderColor: hover ? 'rgba(255,255,255,0.20)' : undefined,
+      borderWidth: 1,
+      borderStyle: s.edge,
+      borderColor: hover ? 'rgba(255,255,255,0.20)' : s.border,
       boxShadow: s.shadow,
       cursor: hoverable ? 'pointer' : undefined,
       transition: 'background var(--qm-dur-hover) var(--qm-ease), border-color var(--qm-dur-hover) var(--qm-ease)',
@@ -808,7 +818,14 @@ Object.assign(__ds_scope, { ModeBar });
 // components/feedback/Overlay.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
-/** Transient surface: radius 12 on the raised surface, 60% scrim, 160ms enter. */
+const FOCUSABLE = 'a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])';
+
+/**
+ * Transient surface: radius 12 on the raised surface, 60% scrim.
+ * With `scrim` it is a real modal — pinned to the viewport, named, focus moved
+ * to the panel and Tab held inside it until it unmounts. Without one it is a
+ * popover: it closes on Esc and ✕ and claims nothing else.
+ */
 function Overlay({
   title,
   onClose,
@@ -819,7 +836,61 @@ function Overlay({
   style,
   ...rest
 }) {
+  const panelRef = React.useRef(null);
+  const headingId = React.useId();
+  const [ring, setRing] = React.useState(false);
+  const named = rest['aria-label'] != null || rest['aria-labelledby'] != null;
+  React.useEffect(() => {
+    if (!onClose) return undefined;
+    const onKey = e => {
+      if (e.key === 'Escape') onClose();
+    };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [onClose]);
+
+  // A modal owns the focus for as long as it is up: into the panel — never onto
+  // the first control, which would put a destructive action one ⏎ away — held
+  // there by Tab, and handed back to whatever opened it on the way out.
+  React.useEffect(() => {
+    if (!scrim) return undefined;
+    const opener = document.activeElement;
+    if (panelRef.current) panelRef.current.focus();
+    const onKey = e => {
+      const panelEl = panelRef.current;
+      if (e.key !== 'Tab' || !panelEl) return;
+      const stops = panelEl.querySelectorAll(FOCUSABLE);
+      const here = document.activeElement;
+      if (!stops.length) {
+        e.preventDefault();
+        panelEl.focus();
+        return;
+      }
+      const first = stops[0];
+      const last = stops[stops.length - 1];
+      if (!panelEl.contains(here)) {
+        e.preventDefault();
+        (e.shiftKey ? last : first).focus();
+      } else if (e.shiftKey && (here === first || here === panelEl)) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && here === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      if (opener && opener.focus) opener.focus();
+    };
+  }, [scrim]);
   const panel = /*#__PURE__*/React.createElement("div", _extends({
+    ref: panelRef,
+    role: scrim ? 'dialog' : undefined,
+    "aria-modal": scrim ? 'true' : undefined,
+    "aria-labelledby": scrim && !named && title != null ? headingId : undefined,
+    tabIndex: scrim ? -1 : undefined,
     style: {
       width,
       borderRadius: 'var(--qm-radius-panel)',
@@ -827,6 +898,7 @@ function Overlay({
       border: '1px solid rgba(255,255,255,0.12)',
       boxShadow: 'var(--qm-shadow-overlay)',
       overflow: 'hidden',
+      outline: 'none',
       ...style
     }
   }, rest), /*#__PURE__*/React.createElement("div", {
@@ -838,22 +910,36 @@ function Overlay({
       borderBottom: '1px solid var(--qm-border-panel)'
     }
   }, /*#__PURE__*/React.createElement("span", {
+    id: headingId,
     style: {
       fontSize: 15,
       color: 'var(--qm-prose-2)'
     }
-  }, title), /*#__PURE__*/React.createElement("span", {
+  }, title), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    "aria-label": "Close",
     onClick: onClose,
+    onFocus: e => {
+      if (e.target.matches(':focus-visible')) setRing(true);
+    },
+    onBlur: () => setRing(false),
     style: {
       width: 28,
       height: 28,
+      padding: 0,
+      margin: 0,
+      appearance: 'none',
+      background: 'transparent',
+      font: 'inherit',
       display: 'inline-flex',
       alignItems: 'center',
       justifyContent: 'center',
       borderRadius: 'var(--qm-radius-key)',
       color: 'var(--qm-text-6)',
       border: '1px solid var(--qm-border-control-quiet)',
-      cursor: 'pointer'
+      cursor: 'pointer',
+      boxShadow: ring ? 'var(--qm-focus-ring)' : undefined,
+      outline: 'none'
     }
   }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
     name: "x",
@@ -871,19 +957,30 @@ function Overlay({
     }
   }, footer) : null);
   if (!scrim) return panel;
-  return /*#__PURE__*/React.createElement("div", {
-    style: {
-      position: 'absolute',
-      inset: 0,
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      background: 'var(--qm-fill-scrim)'
-    },
-    onClick: onClose
-  }, /*#__PURE__*/React.createElement("div", {
-    onClick: e => e.stopPropagation()
-  }, panel));
+  return (
+    /*#__PURE__*/
+    // `fixed`, not `absolute`: a modal is anchored to what the user is looking
+    // at, not to the top of a document they may have scrolled far past.
+    React.createElement("div", {
+      style: {
+        position: 'fixed',
+        inset: 0,
+        zIndex: 100,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 'var(--qm-space-5)',
+        background: 'var(--qm-fill-scrim)'
+      },
+      onClick: onClose
+    }, /*#__PURE__*/React.createElement("div", {
+      onClick: e => e.stopPropagation(),
+      style: {
+        maxHeight: '100%',
+        overflowY: 'auto'
+      }
+    }, panel))
+  );
 }
 Object.assign(__ds_scope, { Overlay });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/feedback/Overlay.jsx", error: String((e && e.message) || e) }); }
