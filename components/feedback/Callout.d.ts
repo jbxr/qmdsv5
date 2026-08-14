@@ -13,4 +13,4 @@ export interface CalloutProps extends React.HTMLAttributes<HTMLDivElement> {
   action?: React.ReactNode;
 }
 
-export declare function Callout(props: CalloutProps): JSX.Element;
+export declare function Callout(props: CalloutProps): React.JSX.Element;

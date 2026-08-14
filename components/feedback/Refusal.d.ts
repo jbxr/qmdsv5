@@ -10,4 +10,4 @@ export interface RefusalProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
 
-export declare function Refusal(props: RefusalProps): JSX.Element;
+export declare function Refusal(props: RefusalProps): React.JSX.Element;

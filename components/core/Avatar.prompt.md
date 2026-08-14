@@ -9,3 +9,4 @@ One-line: The initials token that stands in for an entity anywhere a face would 
 Notes
 - Shape carries the entity type: circle = character, rounded square = location/artifact.
 - Stack overlapping avatars with `marginLeft: -7`, as the writing room does.
+- Every prop the token does not claim reaches the `<span>`, so `onClick`, `title`, `aria-*` and `data-*` behave natively.

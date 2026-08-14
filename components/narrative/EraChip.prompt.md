@@ -10,3 +10,4 @@ One-line: The mono chronology chip — story-time on a scene, a row, or inline i
 Notes
 - Use the minus sign − (U+2212) for negative years, as QM's own copy does.
 - `timeless` is grey on purpose: no story-time is a fact, not a warning.
+- Every prop the chip does not claim reaches the `<span>`, so `onClick`, `title`, `aria-*` and `data-*` behave natively.

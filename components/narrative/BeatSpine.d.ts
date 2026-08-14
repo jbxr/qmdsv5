@@ -31,4 +31,4 @@ export interface BeatSpineProps
   showSpine?: boolean;
 }
 
-export declare function BeatSpine(props: BeatSpineProps): JSX.Element;
+export declare function BeatSpine(props: BeatSpineProps): React.JSX.Element;

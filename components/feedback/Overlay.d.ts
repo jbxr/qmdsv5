@@ -16,4 +16,4 @@ export interface OverlayProps
   children?: React.ReactNode;
 }
 
-export declare function Overlay(props: OverlayProps): JSX.Element;
+export declare function Overlay(props: OverlayProps): React.JSX.Element;

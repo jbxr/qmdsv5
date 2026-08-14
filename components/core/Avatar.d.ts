@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 /** Initials token for an entity. Character = blue circle, location = teal square, artifact = violet square. */
-export interface AvatarProps {
+export interface AvatarProps extends React.HTMLAttributes<HTMLSpanElement> {
   /** Two letters, uppercase — QM never renders a photo here. */
   initials: string;
   kind?: 'character' | 'location' | 'artifact' | 'author' | 'neutral';
@@ -10,4 +10,4 @@ export interface AvatarProps {
   style?: React.CSSProperties;
 }
 
-export declare function Avatar(props: AvatarProps): JSX.Element;
+export declare function Avatar(props: AvatarProps): React.JSX.Element;

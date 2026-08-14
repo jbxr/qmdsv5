@@ -20,4 +20,4 @@ export interface BeatCardProps
   children?: React.ReactNode;
 }
 
-export declare function BeatCard(props: BeatCardProps): JSX.Element;
+export declare function BeatCard(props: BeatCardProps): React.JSX.Element;

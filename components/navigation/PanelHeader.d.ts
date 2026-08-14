@@ -14,4 +14,4 @@ export interface PanelHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
 
-export declare function PanelHeader(props: PanelHeaderProps): JSX.Element;
+export declare function PanelHeader(props: PanelHeaderProps): React.JSX.Element;

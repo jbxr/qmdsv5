@@ -12,3 +12,4 @@ Notes
 - Signals sit on the material, never in a rail, so they survive into any view.
 - `unparsed` must stay dashed: a signal that could not be read is never zero.
 - `provenance` is the quiet violet `soul` / grey `qm` tag — never a status colour.
+- Every prop the chip does not claim reaches the `<span>`, so `title`, `aria-*` and `data-*` behave natively.
