@@ -1,6 +1,11 @@
 import React from 'react';
 import { Icon } from '../core/Icon.jsx';
+import { warnUnknown } from '../core/warn.js';
 
+// `private` is the fallback as well as the default: it is the one audience that
+// promises nothing leaves, and the lock glyph below is unconditional, so it is
+// the only entry the rest of the component already agrees with. An audience we
+// cannot read must not widen who hears the line.
 const AUDIENCE = {
   private: { border: 'var(--qm-border-control-quiet)', dashed: false },
   character: { border: 'rgba(162,146,242,0.30)', dashed: false },
@@ -14,7 +19,8 @@ export function PromptField({
   focused, children, style, onFocus, onBlur, ...rest
 }) {
   const [inner, setInner] = React.useState(false);
-  const A = AUDIENCE[audience];
+  const A = AUDIENCE[audience] || AUDIENCE.private;
+  warnUnknown('PromptField', 'audience', audience, AUDIENCE, 'private');
   const wraps = value == null && placeholder == null;
   const ring = focused === undefined ? inner : focused;
   return (

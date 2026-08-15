@@ -1,4 +1,5 @@
 import React from 'react';
+import { warnUnknown } from './warn.js';
 
 const KINDS = {
   character: { color: 'var(--qm-blue-text)', bg: 'rgba(95,168,188,0.18)', border: 'var(--qm-border-blue-strong)', radius: '50%' },
@@ -11,6 +12,7 @@ const KINDS = {
 /** Initials token. Entity identity is blue-green at every scale. */
 export function Avatar({ initials, kind = 'character', size = 26, style, ...rest }) {
   const k = KINDS[kind] || KINDS.character;
+  warnUnknown('Avatar', 'kind', kind, KINDS, 'character');
   return (
     <span
       style={{

@@ -1,4 +1,16 @@
 import React from 'react';
+import { warnUnknown } from '../core/warn.js';
+
+// Hoisted so the fallback and the warning read the same table, and so it is not
+// rebuilt on every render. `unknown` is the fallback because it is already the
+// state that means the drafts could not be read — falling back to `count` would
+// print a chip claiming material nobody counted, and `invitation` is the gold
+// one that asks for attention.
+const STATES = {
+  count:      { color: 'var(--qm-text-3)', bg: 'var(--qm-fill-rest)', border: 'var(--qm-border-control-quiet)' },
+  invitation: { color: 'var(--qm-gold-text)', bg: 'var(--qm-fill-rest)', border: 'var(--qm-border-gold)' },
+  unknown:    { color: 'var(--qm-text-6)', bg: 'rgba(255,255,255,0.03)', border: 'var(--qm-border-panel)' }
+};
 
 /**
  * Three states, never two: a count, an invitation, or the bare surface name.
@@ -9,11 +21,8 @@ import React from 'react';
 export function RouteChip({ children, state = 'count', icon, onClick, style, ...rest }) {
   const [hover, setHover] = React.useState(false);
   const [ring, setRing] = React.useState(false);
-  const s = {
-    count:      { color: 'var(--qm-text-3)', bg: 'var(--qm-fill-rest)', border: 'var(--qm-border-control-quiet)' },
-    invitation: { color: 'var(--qm-gold-text)', bg: 'var(--qm-fill-rest)', border: 'var(--qm-border-gold)' },
-    unknown:    { color: 'var(--qm-text-6)', bg: 'rgba(255,255,255,0.03)', border: 'var(--qm-border-panel)' }
-  }[state];
+  const s = STATES[state] || STATES.unknown;
+  warnUnknown('RouteChip', 'state', state, STATES, 'unknown');
   const base = {
     height: 32, display: 'inline-flex', alignItems: 'center', gap: 9,
     padding: '0 12px', borderRadius: 'var(--qm-radius-control)',

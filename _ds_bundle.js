@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"QuantumMateriaDesignSystem_488cde","components":[{"name":"Avatar","sourcePath":"components/core/Avatar.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"QM_ICONS","sourcePath":"components/core/Icon.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"Kbd","sourcePath":"components/core/Kbd.jsx"},{"name":"StateDot","sourcePath":"components/core/StateDot.jsx"},{"name":"Callout","sourcePath":"components/feedback/Callout.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"ModeBar","sourcePath":"components/feedback/ModeBar.jsx"},{"name":"Overlay","sourcePath":"components/feedback/Overlay.jsx"},{"name":"Refusal","sourcePath":"components/feedback/Refusal.jsx"},{"name":"SaveStatus","sourcePath":"components/feedback/SaveStatus.jsx"},{"name":"Field","sourcePath":"components/forms/Field.jsx"},{"name":"Picker","sourcePath":"components/forms/Picker.jsx"},{"name":"PromptField","sourcePath":"components/forms/PromptField.jsx"},{"name":"PromptTextField","sourcePath":"components/forms/PromptTextField.jsx"},{"name":"SegmentedControl","sourcePath":"components/forms/SegmentedControl.jsx"},{"name":"Tabs","sourcePath":"components/forms/Tabs.jsx"},{"name":"TextArea","sourcePath":"components/forms/TextArea.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"AnnotationMark","sourcePath":"components/narrative/AnnotationMark.jsx"},{"name":"BeatCard","sourcePath":"components/narrative/BeatCard.jsx"},{"name":"BeatSpine","sourcePath":"components/narrative/BeatSpine.jsx"},{"name":"EntityToken","sourcePath":"components/narrative/EntityToken.jsx"},{"name":"EraChip","sourcePath":"components/narrative/EraChip.jsx"},{"name":"NoteBlock","sourcePath":"components/narrative/NoteBlock.jsx"},{"name":"RouteChip","sourcePath":"components/narrative/RouteChip.jsx"},{"name":"TimelineRow","sourcePath":"components/narrative/TimelineRow.jsx"},{"name":"VersionStrip","sourcePath":"components/narrative/VersionStrip.jsx"},{"name":"PanelHeader","sourcePath":"components/navigation/PanelHeader.jsx"},{"name":"StatusBar","sourcePath":"components/navigation/StatusBar.jsx"},{"name":"TopBar","sourcePath":"components/navigation/TopBar.jsx"}],"sourceHashes":{"components/core/Avatar.jsx":"1bd5dba57b46","components/core/Button.jsx":"5e926a6ee4a3","components/core/Card.jsx":"1e06f5b41015","components/core/Icon.jsx":"0ad515408d9b","components/core/Kbd.jsx":"b3b34000dfb0","components/core/StateDot.jsx":"a3fd991e007b","components/feedback/Callout.jsx":"b7108449465e","components/feedback/EmptyState.jsx":"f68b008bade2","components/feedback/ModeBar.jsx":"973602b22e38","components/feedback/Overlay.jsx":"71b10a92b89b","components/feedback/Refusal.jsx":"3481c28f8b57","components/feedback/SaveStatus.jsx":"adee664c7518","components/forms/Field.jsx":"9cb549d9f053","components/forms/Picker.jsx":"126f2bf00492","components/forms/PromptField.jsx":"3dd0c094d315","components/forms/PromptTextField.jsx":"e8fd47ff76e5","components/forms/SegmentedControl.jsx":"c4d676cb9dcb","components/forms/Tabs.jsx":"ed28a0138f72","components/forms/TextArea.jsx":"40a2eb2b6a36","components/forms/TextField.jsx":"a034068c02e4","components/narrative/AnnotationMark.jsx":"ef3759352e5f","components/narrative/BeatCard.jsx":"e36949ac7061","components/narrative/BeatSpine.jsx":"2177268509df","components/narrative/EntityToken.jsx":"fcc5f6b14e50","components/narrative/EraChip.jsx":"d91dbb354539","components/narrative/NoteBlock.jsx":"4cfa653d454f","components/narrative/RouteChip.jsx":"982e358d1278","components/narrative/TimelineRow.jsx":"1f9931a06feb","components/narrative/VersionStrip.jsx":"97d49d4641ab","components/navigation/PanelHeader.jsx":"602869534413","components/navigation/StatusBar.jsx":"619e36242c19","components/navigation/TopBar.jsx":"2a8acc0da304","ui_kits/story-engine/Compose.jsx":"0ca07723dda3","ui_kits/story-engine/NewScene.jsx":"91bbe441b5cd","ui_kits/story-engine/Outline.jsx":"de958cb1cff5","ui_kits/story-engine/SceneRoom.jsx":"137573633750","ui_kits/story-engine/WritingRoom.jsx":"a50f709e68ee","ui_kits/story-engine/data.jsx":"9e2f348a9b25","ui_kits/story-engine/doc-page.js":"371bab66f42d"},"inlinedExternals":[],"unexposedExports":[]} */
+/* @ds-bundle: {"format":4,"namespace":"QuantumMateriaDesignSystem_488cde","components":[{"name":"Avatar","sourcePath":"components/core/Avatar.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"QM_ICONS","sourcePath":"components/core/Icon.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"Kbd","sourcePath":"components/core/Kbd.jsx"},{"name":"StateDot","sourcePath":"components/core/StateDot.jsx"},{"name":"warnUnknown","sourcePath":"components/core/warn.js"},{"name":"Callout","sourcePath":"components/feedback/Callout.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"ModeBar","sourcePath":"components/feedback/ModeBar.jsx"},{"name":"Overlay","sourcePath":"components/feedback/Overlay.jsx"},{"name":"Refusal","sourcePath":"components/feedback/Refusal.jsx"},{"name":"SaveStatus","sourcePath":"components/feedback/SaveStatus.jsx"},{"name":"Field","sourcePath":"components/forms/Field.jsx"},{"name":"Picker","sourcePath":"components/forms/Picker.jsx"},{"name":"PromptField","sourcePath":"components/forms/PromptField.jsx"},{"name":"PromptTextField","sourcePath":"components/forms/PromptTextField.jsx"},{"name":"SegmentedControl","sourcePath":"components/forms/SegmentedControl.jsx"},{"name":"Tabs","sourcePath":"components/forms/Tabs.jsx"},{"name":"TextArea","sourcePath":"components/forms/TextArea.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"AnnotationMark","sourcePath":"components/narrative/AnnotationMark.jsx"},{"name":"BeatCard","sourcePath":"components/narrative/BeatCard.jsx"},{"name":"BeatSpine","sourcePath":"components/narrative/BeatSpine.jsx"},{"name":"EntityToken","sourcePath":"components/narrative/EntityToken.jsx"},{"name":"EraChip","sourcePath":"components/narrative/EraChip.jsx"},{"name":"NoteBlock","sourcePath":"components/narrative/NoteBlock.jsx"},{"name":"RouteChip","sourcePath":"components/narrative/RouteChip.jsx"},{"name":"TimelineRow","sourcePath":"components/narrative/TimelineRow.jsx"},{"name":"VersionStrip","sourcePath":"components/narrative/VersionStrip.jsx"},{"name":"PanelHeader","sourcePath":"components/navigation/PanelHeader.jsx"},{"name":"StatusBar","sourcePath":"components/navigation/StatusBar.jsx"},{"name":"TopBar","sourcePath":"components/navigation/TopBar.jsx"}],"sourceHashes":{"components/core/Avatar.jsx":"392386c9273b","components/core/Button.jsx":"36cef46b7d91","components/core/Card.jsx":"68bda8e48eb0","components/core/Icon.jsx":"1c03ecea39d7","components/core/Kbd.jsx":"b3b34000dfb0","components/core/StateDot.jsx":"d23edc751de1","components/core/warn.js":"5fe2ee611d65","components/feedback/Callout.jsx":"29f508a120e8","components/feedback/EmptyState.jsx":"f68b008bade2","components/feedback/ModeBar.jsx":"42d1a1524d3f","components/feedback/Overlay.jsx":"71b10a92b89b","components/feedback/Refusal.jsx":"3481c28f8b57","components/feedback/SaveStatus.jsx":"5c9a18ee0b06","components/forms/Field.jsx":"9cb549d9f053","components/forms/Picker.jsx":"126f2bf00492","components/forms/PromptField.jsx":"88363d42c9fc","components/forms/PromptTextField.jsx":"e8fd47ff76e5","components/forms/SegmentedControl.jsx":"c4d676cb9dcb","components/forms/Tabs.jsx":"ed28a0138f72","components/forms/TextArea.jsx":"349e95d2ed4f","components/forms/TextField.jsx":"a034068c02e4","components/narrative/AnnotationMark.jsx":"2cd938ed40e6","components/narrative/BeatCard.jsx":"c7ead7be393a","components/narrative/BeatSpine.jsx":"4eae9c3fb88e","components/narrative/EntityToken.jsx":"beb4fc6cc420","components/narrative/EraChip.jsx":"74a750d600a3","components/narrative/NoteBlock.jsx":"8943f7185d25","components/narrative/RouteChip.jsx":"7b84b258bea9","components/narrative/TimelineRow.jsx":"f52d5ce4a359","components/narrative/VersionStrip.jsx":"97d49d4641ab","components/navigation/PanelHeader.jsx":"b29a3735d61a","components/navigation/StatusBar.jsx":"619e36242c19","components/navigation/TopBar.jsx":"2a8acc0da304","ui_kits/story-engine/Compose.jsx":"0ca07723dda3","ui_kits/story-engine/NewScene.jsx":"91bbe441b5cd","ui_kits/story-engine/Outline.jsx":"de958cb1cff5","ui_kits/story-engine/SceneRoom.jsx":"137573633750","ui_kits/story-engine/WritingRoom.jsx":"a50f709e68ee","ui_kits/story-engine/data.jsx":"9e2f348a9b25","ui_kits/story-engine/doc-page.js":"371bab66f42d"},"inlinedExternals":[],"unexposedExports":[]} */
 
 (() => {
 
@@ -53,6 +53,7 @@ function Avatar({
   ...rest
 }) {
   const k = KINDS[kind] || KINDS.character;
+  __ds_scope.warnUnknown('Avatar', 'kind', kind, KINDS, 'character');
   return /*#__PURE__*/React.createElement("span", _extends({
     style: {
       width: size,
@@ -86,53 +87,108 @@ const H = {
   xxs: 30,
   tiny: 28
 };
+
+// Hover lives in the table beside the rest state, never in a branch on the
+// `variant` prop. A branch keys on the raw prop, so an unrecognised variant
+// used to resolve `secondary`'s colours and then match no branch at all — a
+// button that looked like a secondary and was dead under the pointer forever.
+// Every variant carries a `hover`, so the fallback reaches it too.
 const VARIANTS = {
   primary: {
-    color: 'var(--qm-on-gold)',
-    background: 'var(--qm-gold-fill)',
-    fontWeight: 'var(--qm-weight-medium)',
-    border: '1px solid transparent'
+    rest: {
+      color: 'var(--qm-on-gold)',
+      background: 'var(--qm-gold-fill)',
+      fontWeight: 'var(--qm-weight-medium)',
+      border: '1px solid transparent'
+    },
+    hover: {
+      background: 'var(--qm-gold-fill-hover)'
+    }
   },
   scene: {
-    color: 'var(--qm-scene-ink)',
-    background: 'var(--qm-parchment-fill)',
-    fontWeight: 'var(--qm-weight-medium)',
-    border: '1px solid transparent'
+    rest: {
+      color: 'var(--qm-scene-ink)',
+      background: 'var(--qm-parchment-fill)',
+      fontWeight: 'var(--qm-weight-medium)',
+      border: '1px solid transparent'
+    },
+    hover: {
+      background: 'var(--qm-parchment-fill-hover)'
+    }
   },
   sceneGhost: {
-    color: 'var(--qm-scene-text)',
-    background: 'transparent',
-    border: '1px solid var(--qm-border-parchment)'
+    rest: {
+      color: 'var(--qm-scene-text)',
+      background: 'transparent',
+      border: '1px solid var(--qm-border-parchment)'
+    },
+    hover: {
+      background: 'var(--qm-tint-parchment-strong)'
+    }
   },
   secondary: {
-    color: 'var(--qm-text-4)',
-    background: 'transparent',
-    border: '1px solid var(--qm-border-control)'
+    rest: {
+      color: 'var(--qm-text-4)',
+      background: 'transparent',
+      border: '1px solid var(--qm-border-control)'
+    },
+    hover: {
+      background: 'var(--qm-fill-hover)',
+      color: 'var(--qm-text-2)'
+    }
   },
   quiet: {
-    color: 'var(--qm-text-3)',
-    background: 'var(--qm-fill-rest)',
-    border: '1px solid var(--qm-border-control-quiet)'
+    rest: {
+      color: 'var(--qm-text-3)',
+      background: 'var(--qm-fill-rest)',
+      border: '1px solid var(--qm-border-control-quiet)'
+    },
+    hover: {
+      background: 'var(--qm-fill-hover-strong)'
+    }
   },
   ghost: {
-    color: 'var(--qm-text-4)',
-    background: 'transparent',
-    border: '1px solid transparent'
+    rest: {
+      color: 'var(--qm-text-4)',
+      background: 'transparent',
+      border: '1px solid transparent'
+    },
+    hover: {
+      background: 'var(--qm-fill-hover)',
+      color: 'var(--qm-text-2)'
+    }
   },
   canon: {
-    color: 'var(--qm-teal-text)',
-    background: 'transparent',
-    border: '1px solid var(--qm-border-teal-strong)'
+    rest: {
+      color: 'var(--qm-teal-text)',
+      background: 'transparent',
+      border: '1px solid var(--qm-border-teal-strong)'
+    },
+    hover: {
+      background: 'var(--qm-tint-teal-strong)',
+      color: 'var(--qm-teal-text-strong)'
+    }
   },
   consult: {
-    color: 'var(--qm-violet-text-alt)',
-    background: 'transparent',
-    border: '1px solid var(--qm-border-violet)'
+    rest: {
+      color: 'var(--qm-violet-text-alt)',
+      background: 'transparent',
+      border: '1px solid var(--qm-border-violet)'
+    },
+    hover: {
+      background: 'var(--qm-tint-violet-strong)'
+    }
   },
   destructive: {
-    color: 'var(--qm-cinnabar-text)',
-    background: 'var(--qm-tint-cinnabar-soft)',
-    border: '1px solid var(--qm-border-cinnabar)'
+    rest: {
+      color: 'var(--qm-cinnabar-text)',
+      background: 'var(--qm-tint-cinnabar-soft)',
+      border: '1px solid var(--qm-border-cinnabar)'
+    },
+    hover: {
+      background: 'var(--qm-tint-cinnabar)',
+      color: 'var(--qm-cinnabar-text-strong)'
+    }
   }
 };
 
@@ -169,6 +225,8 @@ function Button({
   const [ring, setRing] = React.useState(false);
   const v = VARIANTS[variant] || VARIANTS.secondary;
   const height = H[size] || H.sm;
+  __ds_scope.warnUnknown('Button', 'variant', variant, VARIANTS, 'secondary');
+  __ds_scope.warnUnknown('Button', 'size', size, H, 'sm');
   const base = {
     height,
     display: fullWidth ? 'flex' : 'inline-flex',
@@ -183,25 +241,9 @@ function Button({
     lineHeight: 1,
     cursor: disabled ? 'default' : 'pointer',
     transition: 'background var(--qm-dur-hover) var(--qm-ease), color var(--qm-dur-hover) var(--qm-ease)',
-    ...v
+    ...v.rest
   };
-  if (variant === 'primary' && hover && !disabled) base.background = 'var(--qm-gold-fill-hover)';
-  if (variant === 'scene' && hover && !disabled) base.background = 'var(--qm-parchment-fill-hover)';
-  if ((variant === 'secondary' || variant === 'ghost') && hover && !disabled) {
-    base.background = 'var(--qm-fill-hover)';
-    base.color = 'var(--qm-text-2)';
-  }
-  if (variant === 'quiet' && hover && !disabled) base.background = 'var(--qm-fill-hover-strong)';
-  if (variant === 'sceneGhost' && hover && !disabled) base.background = 'rgba(232,220,192,0.12)';
-  if (variant === 'canon' && hover && !disabled) {
-    base.background = 'rgba(85,183,166,0.18)';
-    base.color = 'var(--qm-teal-text-strong)';
-  }
-  if (variant === 'consult' && hover && !disabled) base.background = 'rgba(162,146,242,0.14)';
-  if (variant === 'destructive' && hover && !disabled) {
-    base.background = 'var(--qm-tint-cinnabar)';
-    base.color = 'var(--qm-cinnabar-text-strong)';
-  }
+  if (hover && !disabled) Object.assign(base, v.hover);
   if (!disabled && (down || ring)) {
     base.boxShadow = [down ? 'var(--qm-inset-press)' : null, ring ? 'var(--qm-focus-ring)' : null].filter(Boolean).join(', ');
   }
@@ -347,7 +389,11 @@ function Card({
   const [hover, setHover] = React.useState(false);
   const [ring, setRing] = React.useState(false);
   const s = SURFACES[surface] || SURFACES.panel;
-  const railBg = RAILS[rail];
+  // `none` is a real key carrying `null`, so membership decides here rather
+  // than truthiness — a `||` would read `rail="none"` as unrecognised.
+  const railBg = Object.prototype.hasOwnProperty.call(RAILS, rail) ? RAILS[rail] : RAILS.none;
+  __ds_scope.warnUnknown('Card', 'surface', surface, SURFACES, 'panel');
+  __ds_scope.warnUnknown('Card', 'rail', rail, RAILS, 'none');
   const interactive = Boolean(onClick);
   // A card holds other things, so every focus and key signal is read only when
   // the card itself is the target: focus bubbles, and a control nested inside
@@ -535,6 +581,10 @@ function Icon({
   ...rest
 }) {
   const g = QM_ICONS[name];
+  // The one lookup in the system with no default to fall back to: a substitute
+  // glyph would draw the wrong picture, so an unrecognised name renders nothing
+  // and says so rather than disappearing quietly.
+  __ds_scope.warnUnknown('Icon', 'name', name, QM_ICONS, 'nothing');
   if (!g) return null;
   return /*#__PURE__*/React.createElement("svg", _extends({
     width: size,
@@ -595,16 +645,21 @@ Object.assign(__ds_scope, { Kbd });
 // components/core/StateDot.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+// The glow is a column of this table rather than a second lookup on the raw
+// prop: two lookups can disagree, and the one keyed on the prop answered a
+// state the resolved one had already fallen back from.
 const STATES = {
   canon: {
     color: 'var(--qm-teal)',
     fill: 'var(--qm-teal)',
-    shape: 'circle'
+    shape: 'circle',
+    glow: 'var(--qm-glow-live)'
   },
   written: {
     color: 'var(--qm-teal)',
     fill: 'var(--qm-teal)',
-    shape: 'circle'
+    shape: 'circle',
+    glow: 'var(--qm-glow-live)'
   },
   proposed: {
     color: 'var(--qm-gold)',
@@ -619,7 +674,8 @@ const STATES = {
   here: {
     color: 'var(--qm-coral)',
     fill: 'var(--qm-coral)',
-    shape: 'circle'
+    shape: 'circle',
+    glow: 'var(--qm-glow-here)'
   },
   conflict: {
     color: 'var(--qm-cinnabar)',
@@ -655,7 +711,8 @@ const STATES = {
   scene: {
     color: 'var(--qm-parchment)',
     fill: 'var(--qm-parchment)',
-    shape: 'circle'
+    shape: 'circle',
+    glow: 'var(--qm-glow-scene)'
   }
 };
 
@@ -669,13 +726,8 @@ function StateDot({
   ...rest
 }) {
   const s = STATES[state] || STATES.neutral;
+  __ds_scope.warnUnknown('StateDot', 'state', state, STATES, 'neutral');
   const diamond = s.shape === 'diamond';
-  const glows = {
-    here: 'var(--qm-glow-here)',
-    canon: 'var(--qm-glow-live)',
-    written: 'var(--qm-glow-live)',
-    scene: 'var(--qm-glow-scene)'
-  };
   return /*#__PURE__*/React.createElement("span", _extends({
     style: {
       width: size,
@@ -686,7 +738,7 @@ function StateDot({
       border: `var(--qm-dot-w) ${s.dashed ? 'dashed' : 'solid'} ${s.color}`,
       borderRadius: diamond ? 1 : '50%',
       transform: diamond ? 'rotate(45deg)' : undefined,
-      boxShadow: glow ? glows[state] || 'none' : undefined,
+      boxShadow: glow ? s.glow || 'none' : undefined,
       animation: pulse ? 'qmBreathe var(--qm-breathe-fast) ease-in-out infinite' : undefined,
       ...style
     }
@@ -695,44 +747,93 @@ function StateDot({
 Object.assign(__ds_scope, { StateDot });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/core/StateDot.jsx", error: String((e && e.message) || e) }); }
 
+// components/core/warn.js
+try { (() => {
+/*
+ * `process` is read here and nowhere else, and never as a bare `process.env`.
+ * These files are consumed three ways: as `.jsx` by a consumer's bundler, which
+ * substitutes the literal below and folds the branch away; as `_ds_bundle.js` by
+ * the gallery cards, where `process` does not exist and reading it is a
+ * ReferenceError that takes the whole card down; and by Node. Only the
+ * try/catch answers all three. `typeof process === 'undefined'` survives the
+ * card but not the bundler: a build that defines `process.env.NODE_ENV` alone
+ * leaves `process` itself undefined at runtime, and production keeps warning.
+ */
+let DEV = true;
+try {
+  if (process.env.NODE_ENV === 'production') DEV = false;
+} catch (e) {/* a card: no `process` */}
+
+/** One entry per (component, prop, value), so a component in a list warns once. */
+const said = new Set();
+
+/**
+ * Says that a prop value fell outside its union, and what rendered instead.
+ * Every table lookup in the system falls back whole rather than throwing or
+ * half-rendering, which makes the mistake invisible — this is the only thing
+ * that reports it. The types and the adherence lint already reject every
+ * literal, so a value reaching here was computed.
+ *
+ * Silent in production, and silent for `undefined`: a prop left off is not a
+ * wrong value, and the destructuring default has already answered it.
+ */
+function warnUnknown(component, prop, value, table, fallback) {
+  if (!DEV || value === undefined) return;
+  if (Object.prototype.hasOwnProperty.call(table, value)) return;
+  const line = `${component}.${prop}=${String(value)}`;
+  if (said.has(line)) return;
+  said.add(line);
+  console.warn(`[QM] <${component}> ${prop}=${JSON.stringify(value)} is not one of ` + `${Object.keys(table).map(k => `'${k}'`).join(' | ')} — rendering '${fallback}'.`);
+}
+Object.assign(__ds_scope, { warnUnknown });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/core/warn.js", error: String((e && e.message) || e) }); }
+
 // components/feedback/Callout.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+// The shape is a column here too: `conflict` is the only tone that takes the
+// triangle, and the rest name the dot they carry. Reading the raw `tone` for
+// the glyph let an unrecognised tone pick a mark the resolved tone had not.
 const TONES = {
   conflict: {
     bg: 'var(--qm-tint-cinnabar-soft)',
     border: 'var(--qm-border-cinnabar)',
     text: 'var(--qm-cinnabar-text)',
     strong: 'var(--qm-cinnabar-text-strong)',
-    link: 'var(--qm-cinnabar-dim)'
+    link: 'var(--qm-cinnabar-dim)',
+    triangle: true
   },
   canon: {
     bg: 'var(--qm-tint-teal-soft)',
     border: 'var(--qm-border-teal)',
     text: 'var(--qm-teal-text)',
     strong: 'var(--qm-teal-text-strong)',
-    link: 'var(--qm-teal-deep)'
+    link: 'var(--qm-teal-deep)',
+    dot: 'canon'
   },
   proposed: {
     bg: 'var(--qm-tint-gold-soft)',
     border: 'var(--qm-border-gold)',
     text: 'var(--qm-gold-text)',
     strong: 'var(--qm-prose-2)',
-    link: 'var(--qm-gold-dim)'
+    link: 'var(--qm-gold-dim)',
+    dot: 'proposed'
   },
   consult: {
     bg: 'rgba(162,146,242,0.10)',
     border: 'rgba(162,146,242,0.26)',
     text: 'var(--qm-violet-text)',
     strong: 'var(--qm-violet-prose)',
-    link: 'var(--qm-violet-dim)'
+    link: 'var(--qm-violet-dim)',
+    dot: 'neutral'
   },
   neutral: {
     bg: 'var(--qm-fill-quiet)',
     border: 'transparent',
     text: 'var(--qm-text-6)',
     strong: 'var(--qm-text-emph)',
-    link: 'var(--qm-text-6)'
+    link: 'var(--qm-text-6)',
+    dot: 'neutral'
   }
 };
 
@@ -746,7 +847,8 @@ function Callout({
   ...rest
 }) {
   const t = TONES[tone] || TONES.neutral;
-  const mark = glyph !== undefined ? glyph : tone === 'conflict' ? /*#__PURE__*/React.createElement("span", {
+  __ds_scope.warnUnknown('Callout', 'tone', tone, TONES, 'neutral');
+  const mark = glyph !== undefined ? glyph : t.triangle ? /*#__PURE__*/React.createElement("span", {
     style: {
       flex: 'none',
       width: 0,
@@ -757,7 +859,7 @@ function Callout({
       borderBottom: '13px solid var(--qm-cinnabar)'
     }
   }) : /*#__PURE__*/React.createElement(__ds_scope.StateDot, {
-    state: tone === 'canon' ? 'canon' : tone === 'proposed' ? 'proposed' : 'neutral',
+    state: t.dot,
     size: 7,
     style: {
       marginTop: 6
@@ -868,6 +970,7 @@ function ModeBar({
   ...rest
 }) {
   const m = MODES[mode] || MODES.linking;
+  __ds_scope.warnUnknown('ModeBar', 'mode', mode, MODES, 'linking');
   return /*#__PURE__*/React.createElement("div", _extends({
     style: {
       display: 'flex',
@@ -1245,6 +1348,8 @@ Object.assign(__ds_scope, { Refusal });
 // components/feedback/SaveStatus.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+// `glow` sits beside `dot` and `pulse` rather than in a `state === 'saved'`
+// test, so all three of the dot's inputs come from the same resolved row.
 const S = {
   local: {
     dot: 'neutral',
@@ -1263,7 +1368,8 @@ const S = {
     dot: 'canon',
     border: 'rgba(85,183,166,0.30)',
     text: 'var(--qm-teal-text)',
-    tag: 'var(--qm-teal-deep)'
+    tag: 'var(--qm-teal-deep)',
+    glow: true
   },
   offline: {
     dot: 'private',
@@ -1283,6 +1389,7 @@ function SaveStatus({
   ...rest
 }) {
   const s = S[state] || S.local;
+  __ds_scope.warnUnknown('SaveStatus', 'state', state, S, 'local');
   if (inline) {
     return /*#__PURE__*/React.createElement("span", _extends({
       style: {
@@ -1296,7 +1403,7 @@ function SaveStatus({
     }, rest), /*#__PURE__*/React.createElement(__ds_scope.StateDot, {
       state: s.dot,
       size: 7,
-      glow: state === 'saved',
+      glow: s.glow,
       pulse: s.pulse
     }), children);
   }
@@ -1570,6 +1677,10 @@ Object.assign(__ds_scope, { Picker });
 // components/forms/PromptField.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+// `private` is the fallback as well as the default: it is the one audience that
+// promises nothing leaves, and the lock glyph below is unconditional, so it is
+// the only entry the rest of the component already agrees with. An audience we
+// cannot read must not widen who hears the line.
 const AUDIENCE = {
   private: {
     border: 'var(--qm-border-control-quiet)',
@@ -1605,7 +1716,8 @@ function PromptField({
   ...rest
 }) {
   const [inner, setInner] = React.useState(false);
-  const A = AUDIENCE[audience];
+  const A = AUDIENCE[audience] || AUDIENCE.private;
+  __ds_scope.warnUnknown('PromptField', 'audience', audience, AUDIENCE, 'private');
   const wraps = value == null && placeholder == null;
   const ring = focused === undefined ? inner : focused;
   return /*#__PURE__*/React.createElement("div", _extends({
@@ -1931,6 +2043,15 @@ Object.assign(__ds_scope, { Tabs });
 // components/forms/TextArea.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+// `resize` reached CSSOM as the declaration value itself, so an unrecognised one
+// was not a branch that missed but a declaration the browser dropped: the
+// textarea fell back to the UA's `resize: both` and grew the drag handle this
+// component exists to withhold. A table makes it fall back to `none` like
+// everything else.
+const RESIZE = {
+  none: 'none',
+  vertical: 'vertical'
+};
 const RESET = {
   flex: 1,
   minWidth: 0,
@@ -1969,6 +2090,8 @@ const TextArea = React.forwardRef(function TextArea({
 }, ref) {
   const auto = React.useId();
   const inputId = id || auto;
+  const grip = RESIZE[resize] || RESIZE.none;
+  __ds_scope.warnUnknown('TextArea', 'resize', resize, RESIZE, 'none');
   return /*#__PURE__*/React.createElement(__ds_scope.Field, {
     label: label,
     hint: hint,
@@ -1988,7 +2111,7 @@ const TextArea = React.forwardRef(function TextArea({
     className: className ? `qm-control ${className}` : 'qm-control',
     style: {
       ...RESET,
-      resize,
+      resize: grip,
       ...controlStyle
     }
   }, rest)));
@@ -2105,6 +2228,7 @@ function AnnotationMark({
   ...rest
 }) {
   const t = TONES[tone] || TONES.measure;
+  __ds_scope.warnUnknown('AnnotationMark', 'tone', tone, TONES, 'measure');
   return /*#__PURE__*/React.createElement("span", _extends({
     style: {
       display: 'inline-flex',
@@ -2128,11 +2252,44 @@ Object.assign(__ds_scope, { AnnotationMark });
 // components/narrative/BeatCard.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
-const RAIL = {
-  proposed: 'gold',
-  canon: 'teal',
-  here: 'coral',
-  none: 'none'
+// The chip's label, ink and dot were six separate `state === 'canon'` tests, so
+// the rail came from the table and everything beside it from the raw prop. They
+// are one row now. `none` is the fallback: it is the entry that claims no
+// material state, and it is what an unrecognised state already rendered.
+const STATES = {
+  proposed: {
+    rail: 'gold',
+    label: 'PROPOSED',
+    dot: 'proposed',
+    breathe: true,
+    ink: 'var(--qm-gold-text)',
+    tint: 'var(--qm-tint-gold)',
+    edge: 'var(--qm-border-gold)'
+  },
+  canon: {
+    rail: 'teal',
+    label: 'CANON',
+    dot: 'canon',
+    ink: 'var(--qm-teal-text-quiet)',
+    tint: 'var(--qm-tint-teal)',
+    edge: 'var(--qm-border-teal)'
+  },
+  here: {
+    rail: 'coral',
+    label: 'PROPOSED',
+    dot: 'proposed',
+    ink: 'var(--qm-gold-text)',
+    tint: 'var(--qm-tint-gold)',
+    edge: 'var(--qm-border-gold)'
+  },
+  none: {
+    rail: 'none',
+    label: 'PROPOSED',
+    dot: 'proposed',
+    ink: 'var(--qm-gold-text)',
+    tint: 'var(--qm-tint-gold)',
+    edge: 'var(--qm-border-gold)'
+  }
 };
 
 /** The selected beat, in the outline and in Compose. Material state owns the rail. */
@@ -2148,9 +2305,11 @@ function BeatCard({
   style,
   ...rest
 }) {
+  const s = STATES[state] || STATES.none;
+  __ds_scope.warnUnknown('BeatCard', 'state', state, STATES, 'none');
   return /*#__PURE__*/React.createElement(__ds_scope.Card, _extends({
     surface: "beat",
-    rail: RAIL[state] || 'none',
+    rail: s.rail,
     padding: "20px 24px 18px",
     style: {
       marginBottom: 'var(--qm-beat-gap,16px)',
@@ -2171,19 +2330,19 @@ function BeatCard({
       display: 'flex',
       alignItems: 'center',
       gap: 6,
-      color: state === 'canon' ? 'var(--qm-teal-text-quiet)' : 'var(--qm-gold-text)',
-      background: state === 'canon' ? 'var(--qm-tint-teal)' : 'var(--qm-tint-gold)',
-      border: `1px solid ${state === 'canon' ? 'var(--qm-border-teal)' : 'var(--qm-border-gold)'}`,
+      color: s.ink,
+      background: s.tint,
+      border: `1px solid ${s.edge}`,
       borderRadius: 'var(--qm-radius-key)',
       padding: '3px 8px'
     }
   }, /*#__PURE__*/React.createElement(__ds_scope.StateDot, {
-    state: state === 'canon' ? 'canon' : 'proposed',
+    state: s.dot,
     size: 7,
     style: {
-      animation: state === 'proposed' ? 'qmBreathe 3s ease-in-out infinite' : undefined
+      animation: s.breathe ? 'qmBreathe 3s ease-in-out infinite' : undefined
     }
-  }), state === 'canon' ? 'CANON' : 'PROPOSED'), era ? /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("span", {
+  }), s.label), era ? /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("span", {
     style: {
       color: 'var(--qm-text-9)'
     }
@@ -2278,7 +2437,7 @@ function BeatSpine({
   const refs = React.useRef([]);
   // The tab stop follows the draft — the `here` beat — and falls back to the
   // first, so a list with nothing marked is still reachable.
-  const at = beats.findIndex(b => b.state === 'here');
+  const at = beats.findIndex(b => DOT_STATE[b.state] === 'here');
   const stop = at < 0 ? 0 : at;
   const go = i => {
     const n = beats.length;
@@ -2302,8 +2461,11 @@ function BeatSpine({
       background: 'var(--qm-border-panel)'
     }
   }) : null, beats.map((b, i) => {
-    const here = b.state === 'here';
     const dot = DOT_STATE[b.state] || 'unwritten';
+    // Read off the resolved glyph, not off `b.state`: the selection, the
+    // number's ink and the HERE flag all have to agree with the dot.
+    const here = dot === 'here';
+    __ds_scope.warnUnknown('BeatSpine', 'beats[].state', b.state, DOT_STATE, 'unwritten');
     const base = {
       position: 'relative',
       display: 'flex',
@@ -2421,6 +2583,16 @@ Object.assign(__ds_scope, { BeatSpine });
 // components/narrative/EntityToken.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+// The chip's tint and the avatar's kind are one decision, so one table answers
+// both. They were two: the chip tested the raw prop and the avatar resolved its
+// own, so an unrecognised kind gave a grey chip around a blue character avatar.
+// The value is whether the chip takes the blue entity tint.
+const KINDS = {
+  character: true,
+  location: false,
+  artifact: false
+};
+
 /* The ring the whole system draws, on the two targets a token can carry. It is
    sampled on keydown as well as on focus for the reason `Button` gives: a token
    reached by mouse and then typed at becomes `:focus-visible` where it stands. */
@@ -2452,6 +2624,8 @@ function EntityToken({
 }) {
   const [ring, setRing] = React.useState(false);
   const [dismissRing, setDismissRing] = React.useState(false);
+  const k = Object.prototype.hasOwnProperty.call(KINDS, kind) ? kind : 'character';
+  __ds_scope.warnUnknown('EntityToken', 'kind', kind, KINDS, 'character');
   // `role` is the narrative rank, so the ARIA role is never a prop: a token
   // announces itself as a button exactly when it has something to do.
   const control = onClick ? {
@@ -2482,7 +2656,7 @@ function EntityToken({
       }
     }, rest), name);
   }
-  const tinted = kind === 'character';
+  const tinted = KINDS[k];
   return /*#__PURE__*/React.createElement("span", _extends({
     onClick: onClick
   }, control, {
@@ -2501,7 +2675,7 @@ function EntityToken({
     }
   }, rest), initials ? /*#__PURE__*/React.createElement(__ds_scope.Avatar, {
     initials: initials,
-    kind: kind,
+    kind: k,
     size: 22
   }) : null, /*#__PURE__*/React.createElement("span", {
     style: {
@@ -2584,6 +2758,7 @@ function EraChip({
   ...rest
 }) {
   const k = KINDS[kind] || KINDS.time;
+  __ds_scope.warnUnknown('EraChip', 'kind', kind, KINDS, 'time');
   return /*#__PURE__*/React.createElement("span", _extends({
     style: {
       fontFamily: 'var(--qm-font-mono)',
@@ -2605,6 +2780,27 @@ Object.assign(__ds_scope, { EraChip });
 // components/narrative/NoteBlock.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+// Hoisted out of the render, and the well and the ink join the rule in it: an
+// unrecognised tone used to take the neutral rule with a transparent well, so
+// it rendered as none of the three tones the component declares.
+const TONES = {
+  neutral: {
+    rule: 'rgba(255,255,255,0.16)',
+    well: 'var(--qm-fill-quiet)',
+    ink: 'var(--qm-text-4)'
+  },
+  consult: {
+    rule: 'rgba(162,146,242,0.5)',
+    well: 'transparent',
+    ink: 'var(--qm-violet-quiet)'
+  },
+  scene: {
+    rule: 'linear-gradient(180deg,#E8DCC0,rgba(232,220,192,0.2))',
+    well: 'transparent',
+    ink: 'var(--qm-text-4)'
+  }
+};
+
 /** Author note or aside: italic serif behind a 2px rule. Never prose, never a card. */
 function NoteBlock({
   children,
@@ -2613,18 +2809,15 @@ function NoteBlock({
   style,
   ...rest
 }) {
-  const rules = {
-    neutral: 'rgba(255,255,255,0.16)',
-    consult: 'rgba(162,146,242,0.5)',
-    scene: 'linear-gradient(180deg,#E8DCC0,rgba(232,220,192,0.2))'
-  };
+  const t = TONES[tone] || TONES.neutral;
+  __ds_scope.warnUnknown('NoteBlock', 'tone', tone, TONES, 'neutral');
   return /*#__PURE__*/React.createElement("div", _extends({
     style: {
       display: 'flex',
       gap: 12,
       padding: '10px 14px',
       borderRadius: 'var(--qm-radius-control)',
-      background: tone === 'neutral' ? 'var(--qm-fill-quiet)' : 'transparent',
+      background: t.well,
       ...style
     }
   }, rest), /*#__PURE__*/React.createElement("span", {
@@ -2632,7 +2825,7 @@ function NoteBlock({
       width: 2,
       flex: 'none',
       borderRadius: 2,
-      background: rules[tone] || rules.neutral
+      background: t.rule
     }
   }), /*#__PURE__*/React.createElement("span", {
     style: {
@@ -2640,7 +2833,7 @@ function NoteBlock({
       fontStyle: 'italic',
       fontSize: size === 'sm' ? 'var(--qm-type-secondary)' : 'var(--qm-type-note)',
       lineHeight: 'var(--qm-type-note-lh)',
-      color: tone === 'consult' ? 'var(--qm-violet-quiet)' : 'var(--qm-text-4)'
+      color: t.ink
     }
   }, children));
 }
@@ -2650,6 +2843,29 @@ Object.assign(__ds_scope, { NoteBlock });
 // components/narrative/RouteChip.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+// Hoisted so the fallback and the warning read the same table, and so it is not
+// rebuilt on every render. `unknown` is the fallback because it is already the
+// state that means the drafts could not be read — falling back to `count` would
+// print a chip claiming material nobody counted, and `invitation` is the gold
+// one that asks for attention.
+const STATES = {
+  count: {
+    color: 'var(--qm-text-3)',
+    bg: 'var(--qm-fill-rest)',
+    border: 'var(--qm-border-control-quiet)'
+  },
+  invitation: {
+    color: 'var(--qm-gold-text)',
+    bg: 'var(--qm-fill-rest)',
+    border: 'var(--qm-border-gold)'
+  },
+  unknown: {
+    color: 'var(--qm-text-6)',
+    bg: 'rgba(255,255,255,0.03)',
+    border: 'var(--qm-border-panel)'
+  }
+};
+
 /**
  * Three states, never two: a count, an invitation, or the bare surface name.
  * A chip that opens something is a button and answers Enter and Space; a chip
@@ -2666,23 +2882,8 @@ function RouteChip({
 }) {
   const [hover, setHover] = React.useState(false);
   const [ring, setRing] = React.useState(false);
-  const s = {
-    count: {
-      color: 'var(--qm-text-3)',
-      bg: 'var(--qm-fill-rest)',
-      border: 'var(--qm-border-control-quiet)'
-    },
-    invitation: {
-      color: 'var(--qm-gold-text)',
-      bg: 'var(--qm-fill-rest)',
-      border: 'var(--qm-border-gold)'
-    },
-    unknown: {
-      color: 'var(--qm-text-6)',
-      bg: 'rgba(255,255,255,0.03)',
-      border: 'var(--qm-border-panel)'
-    }
-  }[state];
+  const s = STATES[state] || STATES.unknown;
+  __ds_scope.warnUnknown('RouteChip', 'state', state, STATES, 'unknown');
   const base = {
     height: 32,
     display: 'inline-flex',
@@ -2737,14 +2938,48 @@ Object.assign(__ds_scope, { RouteChip });
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 /* The selection rail carries the same state the dot does, so it follows the
-   dot's hue. `unlinked` is dimmed gold — attention, not fault. */
-const RAIL = {
-  canon: 'var(--qm-teal)',
-  proposed: 'var(--qm-gold)',
-  suggested: 'var(--qm-violet)',
-  here: 'var(--qm-coral)',
-  conflict: 'var(--qm-cinnabar)',
-  unlinked: 'var(--qm-gold-dim)'
+   dot's hue. `unlinked` is dimmed gold — attention, not fault.
+
+   The rail's glow, the dot it hands to `StateDot` and the avatar's kind are all
+   in the row too. They were four separate reads of the raw `state`, so an
+   unrecognised one took the grey rail from the table and then the gold glow,
+   the halo and the character avatar from the prop. */
+const STATES = {
+  canon: {
+    rail: 'var(--qm-teal)',
+    dot: 'canon',
+    quietWho: true
+  },
+  proposed: {
+    rail: 'var(--qm-gold)',
+    dot: 'proposed',
+    glow: 'var(--qm-glow-gold-rail)',
+    halo: '0 0 0 3px var(--qm-tint-gold)'
+  },
+  suggested: {
+    rail: 'var(--qm-violet)',
+    dot: 'suggested'
+  },
+  here: {
+    rail: 'var(--qm-coral)',
+    dot: 'here'
+  },
+  conflict: {
+    rail: 'var(--qm-cinnabar)',
+    dot: 'conflict'
+  },
+  unlinked: {
+    rail: 'var(--qm-gold-dim)',
+    dot: 'unlinked'
+  }
+};
+
+/* A state we cannot read claims nothing: the grey the dot itself falls back to,
+   so rail and dot still agree. Never `canon` — a fallback must not be able to
+   assert canonicity — which is why this is not one of the six above. */
+const NEUTRAL = {
+  rail: 'var(--qm-text-6)',
+  dot: 'neutral'
 };
 
 /**
@@ -2765,6 +3000,8 @@ function TimelineRow({
 }) {
   const [hover, setHover] = React.useState(false);
   const [ring, setRing] = React.useState(false);
+  const s = STATES[state] || NEUTRAL;
+  __ds_scope.warnUnknown('TimelineRow', 'state', state, STATES, 'neutral');
   const base = {
     position: 'relative',
     display: 'flex',
@@ -2807,15 +3044,15 @@ function TimelineRow({
       bottom: 6,
       width: 'var(--qm-rail-w-accent)',
       borderRadius: 2,
-      background: RAIL[state] || 'var(--qm-text-6)',
-      boxShadow: state === 'proposed' ? 'var(--qm-glow-gold-rail)' : 'none'
+      background: s.rail,
+      boxShadow: s.glow || 'none'
     }
   }) : null, /*#__PURE__*/React.createElement(__ds_scope.StateDot, {
-    state: state,
+    state: s.dot,
     size: 9,
     style: {
       marginTop: 5,
-      boxShadow: selected && state === 'proposed' ? '0 0 0 3px var(--qm-tint-gold)' : undefined
+      boxShadow: selected ? s.halo : undefined
     }
   }), /*#__PURE__*/React.createElement("div", {
     style: {
@@ -2862,7 +3099,7 @@ function TimelineRow({
     }
   }, meta) : null), who ? /*#__PURE__*/React.createElement(__ds_scope.Avatar, {
     initials: who,
-    kind: state === 'canon' && !selected ? 'neutral' : 'character',
+    kind: s.quietWho && !selected ? 'neutral' : 'character',
     size: 24,
     style: {
       marginTop: 1
@@ -3012,6 +3249,35 @@ Object.assign(__ds_scope, { VersionStrip });
 // components/navigation/PanelHeader.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+// A table rather than three `audience === …` tests, for the reason `Card` gives:
+// the surface and the hairline fell through to `plain` for an unrecognised
+// audience while the dot below them still rendered — an unlit private glyph on
+// a header that was claiming to be neither.
+const AUDIENCES = {
+  scene: {
+    surface: 'var(--qm-scene-surface)',
+    edge: '1px solid var(--qm-scene-border-soft)',
+    dot: 'scene',
+    glow: true,
+    label: 'var(--qm-scene-label)',
+    note: 'var(--qm-scene-text-dim)'
+  },
+  private: {
+    surface: 'var(--qm-private-surface)',
+    edge: '1px dashed var(--qm-private-border)',
+    dot: 'private',
+    label: 'var(--qm-text-4)',
+    note: 'var(--qm-text-7)'
+  },
+  plain: {
+    surface: 'transparent',
+    edge: '1px solid var(--qm-border-group)',
+    dot: null,
+    label: 'var(--qm-text-row)',
+    note: 'var(--qm-text-7)'
+  }
+};
+
 /** Audience is a surface temperature, not an accent: lit warm room, unlit private. */
 function PanelHeader({
   audience = 'plain',
@@ -3021,33 +3287,33 @@ function PanelHeader({
   style,
   ...rest
 }) {
-  const scene = audience === 'scene';
-  const priv = audience === 'private';
+  const a = AUDIENCES[audience] || AUDIENCES.plain;
+  __ds_scope.warnUnknown('PanelHeader', 'audience', audience, AUDIENCES, 'plain');
   return /*#__PURE__*/React.createElement("div", _extends({
     style: {
       display: 'flex',
       alignItems: 'center',
       gap: 10,
       padding: '12px 18px',
-      background: scene ? 'var(--qm-scene-surface)' : priv ? 'var(--qm-private-surface)' : 'transparent',
-      borderBottom: scene ? '1px solid var(--qm-scene-border-soft)' : priv ? '1px dashed var(--qm-private-border)' : '1px solid var(--qm-border-group)',
+      background: a.surface,
+      borderBottom: a.edge,
       ...style
     }
-  }, rest), audience === 'plain' ? null : /*#__PURE__*/React.createElement(__ds_scope.StateDot, {
-    state: scene ? 'scene' : 'private',
+  }, rest), a.dot ? /*#__PURE__*/React.createElement(__ds_scope.StateDot, {
+    state: a.dot,
     size: 8,
-    glow: scene
-  }), /*#__PURE__*/React.createElement("span", {
+    glow: a.glow
+  }) : null, /*#__PURE__*/React.createElement("span", {
     style: {
       fontSize: 'var(--qm-type-module)',
       fontWeight: 'var(--qm-weight-semibold)',
       letterSpacing: 'var(--qm-ls-module)',
-      color: scene ? 'var(--qm-scene-label)' : priv ? 'var(--qm-text-4)' : 'var(--qm-text-row)'
+      color: a.label
     }
   }, label), note ? /*#__PURE__*/React.createElement("span", {
     style: {
       fontSize: 'var(--qm-type-label)',
-      color: scene ? 'var(--qm-scene-text-dim)' : 'var(--qm-text-7)'
+      color: a.note
     }
   }, note) : null, /*#__PURE__*/React.createElement("span", {
     style: {
@@ -7451,6 +7717,8 @@ __ds_ns.Icon = __ds_scope.Icon;
 __ds_ns.Kbd = __ds_scope.Kbd;
 
 __ds_ns.StateDot = __ds_scope.StateDot;
+
+__ds_ns.warnUnknown = __ds_scope.warnUnknown;
 
 __ds_ns.Callout = __ds_scope.Callout;
 

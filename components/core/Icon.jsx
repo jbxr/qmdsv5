@@ -1,4 +1,5 @@
 import React from 'react';
+import { warnUnknown } from './warn.js';
 
 /**
  * Path data is copied from lucide (ISC licence, same 24x24 / 2px / round-cap convention) and
@@ -33,6 +34,10 @@ export const QM_ICONS = {
 /** Inline 24x24 SVG glyph. QM has no icon font: glyphs are copied path data. */
 export function Icon({ name, size = 16, strokeWidth = 2, color = 'currentColor', style, ...rest }) {
   const g = QM_ICONS[name];
+  // The one lookup in the system with no default to fall back to: a substitute
+  // glyph would draw the wrong picture, so an unrecognised name renders nothing
+  // and says so rather than disappearing quietly.
+  warnUnknown('Icon', 'name', name, QM_ICONS, 'nothing');
   if (!g) return null;
   return (
     <svg

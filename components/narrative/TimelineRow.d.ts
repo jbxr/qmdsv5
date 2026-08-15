@@ -20,6 +20,11 @@ export interface TimelineRowProps
    * `unlinked` is a row with no canonical event behind it yet — dashed gold,
    * attention rather than fault. Never reach for `conflict` to say it: cinnabar
    * means two things disagree, not that one is unattached.
+   *
+   * The rail, its glow, the dot and the avatar's kind all come from the same
+   * row, so a state outside the union takes the grey `StateDot` itself falls
+   * back to — rail and dot together, never `canon`, since a fallback must not
+   * assert canonicity.
    */
   state?: 'canon' | 'proposed' | 'suggested' | 'here' | 'conflict' | 'unlinked';
   /** Raised surface plus a state-coloured rail. */

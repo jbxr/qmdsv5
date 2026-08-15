@@ -5,6 +5,10 @@ import * as React from 'react';
  * one character · `direction` = dashed stage-direct · `scene` = reaches the room.
  * Exported so a consuming app can name the vocabulary instead of copying it —
  * a widened or renamed audience then lands as a type error, not as a wrong border.
+ *
+ * An audience outside the union falls back to `private` and warns once in
+ * development. It used to throw. `private` is the fallback because an audience
+ * that cannot be read must not widen who hears the line.
  */
 export type PromptAudience = 'private' | 'character' | 'direction' | 'scene';
 

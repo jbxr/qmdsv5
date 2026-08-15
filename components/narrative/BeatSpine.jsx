@@ -1,5 +1,6 @@
 import React from 'react';
 import { StateDot } from '../core/StateDot.jsx';
+import { warnUnknown } from '../core/warn.js';
 
 /* A beat's state is not always a glyph state: `ahead` is a position in the
    draft, not a material state, so it borrows `unwritten`'s hollow grey ring.
@@ -20,7 +21,7 @@ export function BeatSpine({ beats = [], onSelect, showSpine = true, style, ...re
   const refs = React.useRef([]);
   // The tab stop follows the draft — the `here` beat — and falls back to the
   // first, so a list with nothing marked is still reachable.
-  const at = beats.findIndex((b) => b.state === 'here');
+  const at = beats.findIndex((b) => DOT_STATE[b.state] === 'here');
   const stop = at < 0 ? 0 : at;
 
   const go = (i) => {
@@ -39,8 +40,11 @@ export function BeatSpine({ beats = [], onSelect, showSpine = true, style, ...re
         <div style={{ position: 'absolute', left: 3, top: 8, bottom: 8, width: 1, background: 'var(--qm-border-panel)' }} />
       ) : null}
       {beats.map((b, i) => {
-        const here = b.state === 'here';
         const dot = DOT_STATE[b.state] || 'unwritten';
+        // Read off the resolved glyph, not off `b.state`: the selection, the
+        // number's ink and the HERE flag all have to agree with the dot.
+        const here = dot === 'here';
+        warnUnknown('BeatSpine', 'beats[].state', b.state, DOT_STATE, 'unwritten');
         const base = {
           position: 'relative', display: 'flex', gap: 10,
           padding: 'var(--qm-row-py,9px) 10px', marginBottom: 1,

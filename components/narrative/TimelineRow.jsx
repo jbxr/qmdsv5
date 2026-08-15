@@ -1,13 +1,28 @@
 import React from 'react';
 import { StateDot } from '../core/StateDot.jsx';
 import { Avatar } from '../core/Avatar.jsx';
+import { warnUnknown } from '../core/warn.js';
 
 /* The selection rail carries the same state the dot does, so it follows the
-   dot's hue. `unlinked` is dimmed gold — attention, not fault. */
-const RAIL = {
-  canon: 'var(--qm-teal)', proposed: 'var(--qm-gold)', suggested: 'var(--qm-violet)',
-  here: 'var(--qm-coral)', conflict: 'var(--qm-cinnabar)', unlinked: 'var(--qm-gold-dim)'
+   dot's hue. `unlinked` is dimmed gold — attention, not fault.
+
+   The rail's glow, the dot it hands to `StateDot` and the avatar's kind are all
+   in the row too. They were four separate reads of the raw `state`, so an
+   unrecognised one took the grey rail from the table and then the gold glow,
+   the halo and the character avatar from the prop. */
+const STATES = {
+  canon:     { rail: 'var(--qm-teal)', dot: 'canon', quietWho: true },
+  proposed:  { rail: 'var(--qm-gold)', dot: 'proposed', glow: 'var(--qm-glow-gold-rail)', halo: '0 0 0 3px var(--qm-tint-gold)' },
+  suggested: { rail: 'var(--qm-violet)', dot: 'suggested' },
+  here:      { rail: 'var(--qm-coral)', dot: 'here' },
+  conflict:  { rail: 'var(--qm-cinnabar)', dot: 'conflict' },
+  unlinked:  { rail: 'var(--qm-gold-dim)', dot: 'unlinked' }
 };
+
+/* A state we cannot read claims nothing: the grey the dot itself falls back to,
+   so rail and dot still agree. Never `canon` — a fallback must not be able to
+   assert canonicity — which is why this is not one of the six above. */
+const NEUTRAL = { rail: 'var(--qm-text-6)', dot: 'neutral' };
 
 /**
  * A chronology row in the timeline rail. Selection is a surface; state is the
@@ -19,6 +34,8 @@ export function TimelineRow({
 }) {
   const [hover, setHover] = React.useState(false);
   const [ring, setRing] = React.useState(false);
+  const s = STATES[state] || NEUTRAL;
+  warnUnknown('TimelineRow', 'state', state, STATES, 'neutral');
   const base = {
     position: 'relative', display: 'flex', gap: 10,
     padding: 'var(--qm-row-py,12px) 12px', borderRadius: 'var(--qm-radius-control)',
@@ -52,13 +69,13 @@ export function TimelineRow({
         <span style={{
           position: 'absolute', left: -11, top: 6, bottom: 6, width: 'var(--qm-rail-w-accent)',
           borderRadius: 2,
-          background: RAIL[state] || 'var(--qm-text-6)',
-          boxShadow: state === 'proposed' ? 'var(--qm-glow-gold-rail)' : 'none'
+          background: s.rail,
+          boxShadow: s.glow || 'none'
         }} />
       ) : null}
       <StateDot
-        state={state} size={9}
-        style={{ marginTop: 5, boxShadow: selected && state === 'proposed' ? '0 0 0 3px var(--qm-tint-gold)' : undefined }}
+        state={s.dot} size={9}
+        style={{ marginTop: 5, boxShadow: selected ? s.halo : undefined }}
       />
       <div style={{ flex: 1, minWidth: 0 }}>
         <div style={{ fontSize: 'var(--qm-type-row)', lineHeight: 'var(--qm-type-row-lh)', color: selected ? 'var(--qm-prose-2)' : 'var(--qm-text-3)' }}>{title}</div>
@@ -75,7 +92,7 @@ export function TimelineRow({
           <div style={{ marginTop: 5, fontFamily: 'var(--qm-font-mono)', fontSize: 'var(--qm-type-module)', color: 'var(--qm-text-6)', display: 'var(--qm-meta,block)' }}>{meta}</div>
         ) : null}
       </div>
-      {who ? <Avatar initials={who} kind={state === 'canon' && !selected ? 'neutral' : 'character'} size={24} style={{ marginTop: 1 }} /> : null}
+      {who ? <Avatar initials={who} kind={s.quietWho && !selected ? 'neutral' : 'character'} size={24} style={{ marginTop: 1 }} /> : null}
     </div>
   );
 }

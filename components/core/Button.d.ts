@@ -6,6 +6,11 @@ import * as React from 'react';
  * outside its border box on `:focus-visible`, over a transparent
  * `--qm-focus-outline` that survives forced-colors; `onFocus`/`onBlur`/
  * `onKeyDown` are called through.
+ *
+ * Hover is a column of the variant table, not a branch on the prop, so a
+ * `variant` outside the union — only reachable from a computed value, since the
+ * type and the adherence lint both reject a literal — renders as `secondary`
+ * in full, hover included, and warns once in development.
  */
 export interface ButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'style'> {
   /** primary = gold app action; scene = parchment in-scene action; canon/consult inherit a destination state's accent; destructive is tinted cinnabar at rest, never filled. */

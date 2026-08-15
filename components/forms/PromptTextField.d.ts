@@ -12,6 +12,7 @@ import { PromptAudience } from './PromptField';
  * names the recipient to the eye but not to a screen reader.
  */
 export interface PromptTextFieldProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  /** Handed to the well, which falls back to `private` on anything outside the union. */
   audience?: PromptAudience;
   /** Mono key hint pinned to the right of the well. Defaults to `⏎`; pass `null` to drop it. */
   hintKey?: React.ReactNode;

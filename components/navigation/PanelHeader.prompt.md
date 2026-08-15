@@ -11,3 +11,4 @@ One-line: The header that tells the author who can hear what is inside a panel.
 Notes
 - Audience never becomes another accent colour: warm surface = room, cool + dashed = private.
 - The note is written in plain language, lower case, no jargon.
+- The surface, the hairline, the label ink and the dot are one row, so an `audience` outside the union renders as `plain` whole. It used to take `plain`'s surface and still show a private dot on it.

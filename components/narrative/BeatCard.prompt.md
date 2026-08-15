@@ -12,3 +12,4 @@ One-line: The opened beat — the largest serif line on the page, with its state
 Notes
 - Nothing on a beat card is a filled button — the region's one gold action lives in the top bar or the inspector.
 - `Make canon` may take teal because teal is where it lands, but it stays a rectangle.
+- The rail, the chip's ink, its label and its dot are one row of the state table, so a `state` outside the union renders as `none` whole rather than as a railless card still labelled PROPOSED.
