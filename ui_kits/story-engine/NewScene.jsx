@@ -1,5 +1,31 @@
 const { Button, Icon, Avatar, Card, EraChip, Field, AnnotationMark, TopBar } = window.QuantumMateriaDesignSystem_488cde;
 
+/**
+ * The same control element `SceneRoom` uses: a real `<button>` under whatever
+ * the surface wants it to look like, carrying QM's ring and no UA chrome.
+ */
+function Pressable({ label, onClick, style, children, ...rest }) {
+  const [ring, setRing] = React.useState(false);
+  return (
+    <button
+      type="button" aria-label={label} onClick={onClick} {...rest}
+      onFocus={(e) => { if (e.target.matches(':focus-visible')) setRing(true); }}
+      onKeyDown={(e) => { if (e.target.matches(':focus-visible')) setRing(true); }}
+      onBlur={() => setRing(false)}
+      style={{
+        margin: 0, padding: 0, font: 'inherit', color: 'inherit',
+        background: 'transparent', border: 'none', cursor: 'pointer',
+        ...style,
+        ...(ring ? {
+          boxShadow: 'var(--qm-focus-ring)',
+          outline: 'var(--qm-focus-outline,2px solid transparent)',
+          outlineOffset: 'var(--qm-focus-outline-offset,1px)'
+        } : null)
+      }}
+    >{children}</button>
+  );
+}
+
 function NewScene({ onBack, onEnter }) {
   const [cast, setCast] = React.useState(['vera', 'cade-briggs']);
   const chosen = window.QM_ROSTER.filter((r) => cast.includes(r.id));
@@ -14,9 +40,9 @@ function NewScene({ onBack, onEnter }) {
           <div>
             <div style={{ display: 'flex', alignItems: 'baseline', gap: 14, marginBottom: 28 }}>
               <span style={{ fontFamily: 'var(--qm-font-serif)', fontSize: 30, color: 'var(--qm-prose-1)' }}>New scene</span>
-              <span onClick={onBack} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13.5, color: 'var(--qm-text-6)', cursor: 'pointer' }}>
+              <Pressable onClick={onBack} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13.5, color: 'var(--qm-text-6)' }}>
                 <Icon name="arrowLeft" size={13} />back to the writing room
-              </span>
+              </Pressable>
             </div>
 
             <Field label="Title" kind="serif" value="Vera & Cade — the corridor" style={{ marginBottom: 24 }} />
@@ -33,8 +59,8 @@ function NewScene({ onBack, onEnter }) {
                 {window.QM_ROSTER.map((r) => {
                   const on = cast.includes(r.id);
                   return (
-                    <div key={r.id} onClick={() => toggle(r.id)}
-                      style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '11px 14px', borderBottom: '1px solid var(--qm-border-list)', cursor: 'pointer', background: on ? 'rgba(85,183,166,0.05)' : 'transparent' }}>
+                    <Pressable key={r.id} role="checkbox" aria-checked={on} onClick={() => toggle(r.id)}
+                      style={{ width: '100%', textAlign: 'left', display: 'flex', alignItems: 'center', gap: 12, padding: '11px 14px', border: 'none', borderBottom: '1px solid var(--qm-border-list)', background: on ? 'rgba(85,183,166,0.05)' : 'transparent' }}>
                       <span style={{
                         width: 20, height: 20, flex: 'none', borderRadius: 5, display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
                         color: on ? 'var(--qm-teal-text)' : 'var(--qm-text-6)',
@@ -47,7 +73,7 @@ function NewScene({ onBack, onEnter }) {
                       <span style={{ fontSize: 13, color: 'var(--qm-text-7)' }}>{r.rank}</span>
                       <span style={{ flex: 1 }} />
                       <AnnotationMark tone={r.src === 'soul' ? 'provenance' : 'measure'}>{r.src}</AnnotationMark>
-                    </div>
+                    </Pressable>
                   );
                 })}
               </div>

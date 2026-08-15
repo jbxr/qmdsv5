@@ -175,8 +175,13 @@ export function Overlay({ title, onClose, footer, children, width = 560, scrim, 
       aria-labelledby={scrim && !named && title != null ? headingId : undefined}
       tabIndex={scrim ? -1 : undefined}
       style={{
-        width, borderRadius: 'var(--qm-radius-panel)', background: 'var(--qm-surface-raised)',
-        border: '1px solid rgba(255,255,255,0.12)', boxShadow: 'var(--qm-shadow-overlay)',
+        // `width` is a ceiling, never a floor. Unclamped it overflows the scrim
+        // on any viewport narrower than it, and a fixed scrim does not scroll the
+        // document: the ✕ and the confirm end up off-screen behind a sideways
+        // scroll on an unmarked wrapper that draws no scrollbar to find it by.
+        width, maxWidth: '100%',
+        borderRadius: 'var(--qm-radius-panel)', background: 'var(--qm-surface-raised)',
+        border: '1px solid var(--qm-border-raised)', boxShadow: 'var(--qm-shadow-overlay)',
         overflow: 'hidden', outline: 'none', ...style
       }}
       {...rest}

@@ -9,4 +9,4 @@ One-line: The chip on a scene row that opens one of its surfaces — and teaches
 Notes
 - Never hide the chip when a surface is empty — that is what `invitation` is for.
 - `unknown` shows the bare surface name and still opens it; it never claims the scene holds nothing.
-- The chip is a `<span>`, so a clickable one needs `role="button"` and `tabIndex` from the consumer — those, and every other native attribute, reach the element.
+- The chip is still a `<span>`, but it no longer asks the consumer for its semantics: given `onClick` it takes `role="button"`, a tab stop, ⏎/Space and the ring on its own. Given none it takes none of them — a chip that opens nothing is not a control. Both, and every other native attribute, remain overridable through the spread.

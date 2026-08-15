@@ -10,3 +10,6 @@ Notes
 - The rail and glyph carry material state; the raised surface carries selection. They never swap.
 - `unlinked` — a row with nothing canonical behind it — is dashed gold. It is attention, not fault: use it wherever you would otherwise borrow `conflict`, whose cinnabar says two things disagree.
 - `meta` hides itself in compact density through `--qm-meta`.
+- With `onClick` the row is a button — its own tab stop, ⏎ and Space, and `aria-current` while
+  `selected`. Without one it is a caption and never enters the tab order, so do not pass an empty
+  handler to a row that only reports.

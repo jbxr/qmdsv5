@@ -9,23 +9,43 @@ const RAIL = {
   here: 'var(--qm-coral)', conflict: 'var(--qm-cinnabar)', unlinked: 'var(--qm-gold-dim)'
 };
 
-/** A chronology row in the timeline rail. Selection is a surface; state is the dot. */
+/**
+ * A chronology row in the timeline rail. Selection is a surface; state is the
+ * dot. A row owns no list, so a clickable one is a button rather than an
+ * option — and a row with no `onClick` stays out of the tab order entirely.
+ */
 export function TimelineRow({
   title, meta, who, state = 'canon', selected, here, onClick, style, ...rest
 }) {
   const [hover, setHover] = React.useState(false);
+  const [ring, setRing] = React.useState(false);
+  const base = {
+    position: 'relative', display: 'flex', gap: 10,
+    padding: 'var(--qm-row-py,12px) 12px', borderRadius: 'var(--qm-radius-control)',
+    background: selected
+      ? 'linear-gradient(90deg, #232C38, rgba(35,44,56,0.30))'
+      : hover ? 'var(--qm-fill-hover)' : 'transparent',
+    cursor: onClick ? 'pointer' : 'default', ...style
+  };
+  if (ring) {
+    base.boxShadow = 'var(--qm-focus-ring)';
+    base.outline = 'var(--qm-focus-outline,2px solid transparent)';
+    base.outlineOffset = 'var(--qm-focus-outline-offset,1px)';
+  }
   return (
     <div
       onClick={onClick}
+      role={onClick ? 'button' : undefined}
+      tabIndex={onClick ? 0 : undefined}
+      aria-current={onClick && selected ? 'true' : undefined}
+      onFocus={onClick ? (e) => { if (e.target.matches(':focus-visible')) setRing(true); } : undefined}
+      onBlur={onClick ? () => setRing(false) : undefined}
+      onKeyDown={onClick ? (e) => {
+        if (e.target.matches(':focus-visible')) setRing(true);
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onClick(e); }
+      } : undefined}
       onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}
-      style={{
-        position: 'relative', display: 'flex', gap: 10,
-        padding: 'var(--qm-row-py,12px) 12px', borderRadius: 'var(--qm-radius-control)',
-        background: selected
-          ? 'linear-gradient(90deg, #232C38, rgba(35,44,56,0.30))'
-          : hover ? 'var(--qm-fill-hover)' : 'transparent',
-        cursor: onClick ? 'pointer' : 'default', ...style
-      }}
+      style={base}
       {...rest}
     >
       {selected ? (

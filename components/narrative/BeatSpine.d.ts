@@ -20,6 +20,11 @@ export interface BeatSpineItem {
 /**
  * The single beat list used by the outline rail, the scene-room stage rail and
  * Compose's beat column.
+ *
+ * `onSelect` is what makes it a control: with it the list is a `listbox` of
+ * `option`s — one tab stop on the `here` beat, ↑↓ through the rest, ⏎ or Space
+ * to select, `--qm-focus-ring` on the focused row. Without it the list is
+ * read-only and takes no place in the tab order.
  */
 export interface BeatSpineProps
   // `onSelect` reports the chosen beat, so the DOM `onSelect` text-selection

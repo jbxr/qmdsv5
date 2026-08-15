@@ -24,9 +24,13 @@ export interface FieldProps extends React.HTMLAttributes<HTMLDivElement> {
   width?: number | string;
   size?: 'sm' | 'md' | 'lg';
   /**
-   * Overrides the ring in both directions. Leave unset and the well lights its
-   * own 2px teal ring on `focus`; set it only for the presentational case, where
-   * a focused-looking field holds no real control.
+   * Specimens and gallery cards only — never a product surface. A QM focus ring
+   * means keyboard focus and nothing else, and this overrides it in both
+   * directions: `true` shows a focus nobody has, `false` hides a real one. It is
+   * honest in exactly one case, the presentational well that holds no control to
+   * focus, which is what a specimen picturing a focused field needs. Anywhere a
+   * real control sits in the well, leave it unset: the well lights its own ring
+   * on focus, with no focus state lifted into the consumer.
    */
   focused?: boolean;
   /** Grows the well downward from `size` instead of pinning it — for `<textarea>`. */

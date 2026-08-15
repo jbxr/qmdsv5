@@ -2,6 +2,10 @@ import * as React from 'react';
 
 /**
  * One event in the chronology rail.
+ *
+ * A row owns no list, so a row given `onClick` becomes a `button` — its own tab
+ * stop, ⏎ and Space, `--qm-focus-ring`, and `aria-current` while `selected`.
+ * A row without `onClick` is a caption and stays out of the tab order.
  */
 export interface TimelineRowProps
   // `title` is the event's own title, so the DOM `title` tooltip attribute is

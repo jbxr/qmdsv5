@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"QuantumMateriaDesignSystem_488cde","components":[{"name":"Avatar","sourcePath":"components/core/Avatar.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"QM_ICONS","sourcePath":"components/core/Icon.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"Kbd","sourcePath":"components/core/Kbd.jsx"},{"name":"StateDot","sourcePath":"components/core/StateDot.jsx"},{"name":"Callout","sourcePath":"components/feedback/Callout.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"ModeBar","sourcePath":"components/feedback/ModeBar.jsx"},{"name":"Overlay","sourcePath":"components/feedback/Overlay.jsx"},{"name":"Refusal","sourcePath":"components/feedback/Refusal.jsx"},{"name":"SaveStatus","sourcePath":"components/feedback/SaveStatus.jsx"},{"name":"Field","sourcePath":"components/forms/Field.jsx"},{"name":"Picker","sourcePath":"components/forms/Picker.jsx"},{"name":"PromptField","sourcePath":"components/forms/PromptField.jsx"},{"name":"PromptTextField","sourcePath":"components/forms/PromptTextField.jsx"},{"name":"SegmentedControl","sourcePath":"components/forms/SegmentedControl.jsx"},{"name":"Tabs","sourcePath":"components/forms/Tabs.jsx"},{"name":"TextArea","sourcePath":"components/forms/TextArea.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"AnnotationMark","sourcePath":"components/narrative/AnnotationMark.jsx"},{"name":"BeatCard","sourcePath":"components/narrative/BeatCard.jsx"},{"name":"BeatSpine","sourcePath":"components/narrative/BeatSpine.jsx"},{"name":"EntityToken","sourcePath":"components/narrative/EntityToken.jsx"},{"name":"EraChip","sourcePath":"components/narrative/EraChip.jsx"},{"name":"NoteBlock","sourcePath":"components/narrative/NoteBlock.jsx"},{"name":"RouteChip","sourcePath":"components/narrative/RouteChip.jsx"},{"name":"TimelineRow","sourcePath":"components/narrative/TimelineRow.jsx"},{"name":"VersionStrip","sourcePath":"components/narrative/VersionStrip.jsx"},{"name":"PanelHeader","sourcePath":"components/navigation/PanelHeader.jsx"},{"name":"StatusBar","sourcePath":"components/navigation/StatusBar.jsx"},{"name":"TopBar","sourcePath":"components/navigation/TopBar.jsx"}],"sourceHashes":{"components/core/Avatar.jsx":"1bd5dba57b46","components/core/Button.jsx":"5e926a6ee4a3","components/core/Card.jsx":"6e48c8e7b24d","components/core/Icon.jsx":"0ad515408d9b","components/core/Kbd.jsx":"b3b34000dfb0","components/core/StateDot.jsx":"a3fd991e007b","components/feedback/Callout.jsx":"1b782dc94451","components/feedback/EmptyState.jsx":"f68b008bade2","components/feedback/ModeBar.jsx":"973602b22e38","components/feedback/Overlay.jsx":"ea3b2392f993","components/feedback/Refusal.jsx":"3481c28f8b57","components/feedback/SaveStatus.jsx":"adee664c7518","components/forms/Field.jsx":"d11a07d68b44","components/forms/Picker.jsx":"9ccdeb4ca231","components/forms/PromptField.jsx":"3dd0c094d315","components/forms/PromptTextField.jsx":"e8fd47ff76e5","components/forms/SegmentedControl.jsx":"bc52e1dd5f4d","components/forms/Tabs.jsx":"5bf43d06301e","components/forms/TextArea.jsx":"40a2eb2b6a36","components/forms/TextField.jsx":"a034068c02e4","components/narrative/AnnotationMark.jsx":"ef3759352e5f","components/narrative/BeatCard.jsx":"e36949ac7061","components/narrative/BeatSpine.jsx":"b3bd113579eb","components/narrative/EntityToken.jsx":"cc0a0dc39c7d","components/narrative/EraChip.jsx":"d91dbb354539","components/narrative/NoteBlock.jsx":"4cfa653d454f","components/narrative/RouteChip.jsx":"46711e6c8608","components/narrative/TimelineRow.jsx":"5e20c52ebea7","components/narrative/VersionStrip.jsx":"3f584141487c","components/navigation/PanelHeader.jsx":"602869534413","components/navigation/StatusBar.jsx":"619e36242c19","components/navigation/TopBar.jsx":"2a8acc0da304","ui_kits/story-engine/Compose.jsx":"0ca07723dda3","ui_kits/story-engine/NewScene.jsx":"2892710023c1","ui_kits/story-engine/Outline.jsx":"de958cb1cff5","ui_kits/story-engine/SceneRoom.jsx":"36a53a8b96c0","ui_kits/story-engine/WritingRoom.jsx":"8f3ba0166dc7","ui_kits/story-engine/data.jsx":"9e2f348a9b25","ui_kits/story-engine/doc-page.js":"371bab66f42d"},"inlinedExternals":[],"unexposedExports":[]} */
+/* @ds-bundle: {"format":4,"namespace":"QuantumMateriaDesignSystem_488cde","components":[{"name":"Avatar","sourcePath":"components/core/Avatar.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"QM_ICONS","sourcePath":"components/core/Icon.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"Kbd","sourcePath":"components/core/Kbd.jsx"},{"name":"StateDot","sourcePath":"components/core/StateDot.jsx"},{"name":"Callout","sourcePath":"components/feedback/Callout.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"ModeBar","sourcePath":"components/feedback/ModeBar.jsx"},{"name":"Overlay","sourcePath":"components/feedback/Overlay.jsx"},{"name":"Refusal","sourcePath":"components/feedback/Refusal.jsx"},{"name":"SaveStatus","sourcePath":"components/feedback/SaveStatus.jsx"},{"name":"Field","sourcePath":"components/forms/Field.jsx"},{"name":"Picker","sourcePath":"components/forms/Picker.jsx"},{"name":"PromptField","sourcePath":"components/forms/PromptField.jsx"},{"name":"PromptTextField","sourcePath":"components/forms/PromptTextField.jsx"},{"name":"SegmentedControl","sourcePath":"components/forms/SegmentedControl.jsx"},{"name":"Tabs","sourcePath":"components/forms/Tabs.jsx"},{"name":"TextArea","sourcePath":"components/forms/TextArea.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"AnnotationMark","sourcePath":"components/narrative/AnnotationMark.jsx"},{"name":"BeatCard","sourcePath":"components/narrative/BeatCard.jsx"},{"name":"BeatSpine","sourcePath":"components/narrative/BeatSpine.jsx"},{"name":"EntityToken","sourcePath":"components/narrative/EntityToken.jsx"},{"name":"EraChip","sourcePath":"components/narrative/EraChip.jsx"},{"name":"NoteBlock","sourcePath":"components/narrative/NoteBlock.jsx"},{"name":"RouteChip","sourcePath":"components/narrative/RouteChip.jsx"},{"name":"TimelineRow","sourcePath":"components/narrative/TimelineRow.jsx"},{"name":"VersionStrip","sourcePath":"components/narrative/VersionStrip.jsx"},{"name":"PanelHeader","sourcePath":"components/navigation/PanelHeader.jsx"},{"name":"StatusBar","sourcePath":"components/navigation/StatusBar.jsx"},{"name":"TopBar","sourcePath":"components/navigation/TopBar.jsx"}],"sourceHashes":{"components/core/Avatar.jsx":"1bd5dba57b46","components/core/Button.jsx":"5e926a6ee4a3","components/core/Card.jsx":"14114b3dfca4","components/core/Icon.jsx":"0ad515408d9b","components/core/Kbd.jsx":"b3b34000dfb0","components/core/StateDot.jsx":"a3fd991e007b","components/feedback/Callout.jsx":"1b782dc94451","components/feedback/EmptyState.jsx":"f68b008bade2","components/feedback/ModeBar.jsx":"973602b22e38","components/feedback/Overlay.jsx":"71b10a92b89b","components/feedback/Refusal.jsx":"3481c28f8b57","components/feedback/SaveStatus.jsx":"adee664c7518","components/forms/Field.jsx":"d11a07d68b44","components/forms/Picker.jsx":"126f2bf00492","components/forms/PromptField.jsx":"3dd0c094d315","components/forms/PromptTextField.jsx":"e8fd47ff76e5","components/forms/SegmentedControl.jsx":"c4d676cb9dcb","components/forms/Tabs.jsx":"ed28a0138f72","components/forms/TextArea.jsx":"40a2eb2b6a36","components/forms/TextField.jsx":"a034068c02e4","components/narrative/AnnotationMark.jsx":"ef3759352e5f","components/narrative/BeatCard.jsx":"e36949ac7061","components/narrative/BeatSpine.jsx":"2177268509df","components/narrative/EntityToken.jsx":"fcc5f6b14e50","components/narrative/EraChip.jsx":"d91dbb354539","components/narrative/NoteBlock.jsx":"4cfa653d454f","components/narrative/RouteChip.jsx":"982e358d1278","components/narrative/TimelineRow.jsx":"1f9931a06feb","components/narrative/VersionStrip.jsx":"97d49d4641ab","components/navigation/PanelHeader.jsx":"602869534413","components/navigation/StatusBar.jsx":"619e36242c19","components/navigation/TopBar.jsx":"2a8acc0da304","ui_kits/story-engine/Compose.jsx":"0ca07723dda3","ui_kits/story-engine/NewScene.jsx":"91bbe441b5cd","ui_kits/story-engine/Outline.jsx":"de958cb1cff5","ui_kits/story-engine/SceneRoom.jsx":"137573633750","ui_kits/story-engine/WritingRoom.jsx":"8f3ba0166dc7","ui_kits/story-engine/data.jsx":"9e2f348a9b25","ui_kits/story-engine/doc-page.js":"371bab66f42d"},"inlinedExternals":[],"unexposedExports":[]} */
 
 (() => {
 
@@ -259,41 +259,57 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
 // Edges are longhands, never the `border` shorthand: the hover colour has to be
 // swapped in and out, and a colour longhand removed next to a shorthand leaves
 // Chrome resolving border-color to currentColor — the hairline paints in text ink.
+// Hover is in the table rather than in a branch on the `surface` prop, so an
+// unrecognised surface falls back to `panel` whole instead of to a panel that
+// never brightens. `scene` is the one warm material: its edge lifts along the
+// parchment ramp, never to cold white.
 const SURFACES = {
   panel: {
     background: 'var(--qm-surface-panel)',
+    backgroundHover: 'var(--qm-surface-panel-hover)',
     edge: 'solid',
     border: 'var(--qm-border-panel)',
+    borderHover: 'var(--qm-border-hover)',
     shadow: 'none'
   },
   raised: {
     background: 'var(--qm-surface-raised)',
+    backgroundHover: null,
     edge: 'solid',
     border: 'var(--qm-border-panel)',
+    borderHover: 'var(--qm-border-hover)',
     shadow: 'none'
   },
   selected: {
     background: 'var(--qm-card-raised)',
+    backgroundHover: null,
     edge: 'solid',
     border: 'var(--qm-border-structural)',
+    borderHover: 'var(--qm-border-hover)',
     shadow: 'var(--qm-shadow-card)'
   },
   beat: {
     background: 'var(--qm-beat-raised)',
+    backgroundHover: null,
     edge: 'solid',
     border: 'var(--qm-border-group)',
+    borderHover: 'var(--qm-border-hover)',
     shadow: 'var(--qm-shadow-beat)'
   },
   scene: {
     background: 'var(--qm-scene-surface)',
+    backgroundHover: null,
     edge: 'solid',
     border: 'var(--qm-scene-border)',
+    borderHover: 'var(--qm-border-parchment)',
     shadow: 'none'
   },
   quiet: {
     background: 'var(--qm-fill-quiet)',
+    backgroundHover: null,
     edge: 'dashed',
     border: 'var(--qm-border-dashed)',
+    borderHover: 'var(--qm-border-hover)',
     shadow: 'none'
   }
 };
@@ -329,10 +345,10 @@ function Card({
       overflow: railBg ? 'hidden' : undefined,
       padding,
       borderRadius: radius === 'panel' ? 'var(--qm-radius-panel)' : 'var(--qm-radius-card)',
-      background: hover && surface === 'panel' ? 'var(--qm-surface-panel-hover)' : s.background,
+      background: hover && s.backgroundHover ? s.backgroundHover : s.background,
       borderWidth: 1,
       borderStyle: s.edge,
-      borderColor: hover ? 'var(--qm-border-hover)' : s.border,
+      borderColor: hover ? s.borderHover : s.border,
       boxShadow: s.shadow,
       cursor: hoverable ? 'pointer' : undefined,
       transition: 'background var(--qm-dur-hover) var(--qm-ease), border-color var(--qm-dur-hover) var(--qm-ease)',
@@ -1024,10 +1040,15 @@ function Overlay({
     "aria-labelledby": scrim && !named && title != null ? headingId : undefined,
     tabIndex: scrim ? -1 : undefined,
     style: {
+      // `width` is a ceiling, never a floor. Unclamped it overflows the scrim
+      // on any viewport narrower than it, and a fixed scrim does not scroll the
+      // document: the ✕ and the confirm end up off-screen behind a sideways
+      // scroll on an unmarked wrapper that draws no scrollbar to find it by.
       width,
+      maxWidth: '100%',
       borderRadius: 'var(--qm-radius-panel)',
       background: 'var(--qm-surface-raised)',
-      border: '1px solid rgba(255,255,255,0.12)',
+      border: '1px solid var(--qm-border-raised)',
       boxShadow: 'var(--qm-shadow-overlay)',
       overflow: 'hidden',
       outline: 'none',
@@ -1356,7 +1377,12 @@ Object.assign(__ds_scope, { Field });
 // components/forms/Picker.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
-/** One popover for [ story-time and @ entities: same keymap, same selection model. */
+/**
+ * One popover for [ story-time and @ entities: same keymap, same selection
+ * model. The candidates are a listbox — one tab stop, ↑↓ wrap, ⏎ accepts — and
+ * the popover clips its own rounded corners, so the ring is drawn on an inset
+ * layer rather than outside a row that `overflow: hidden` would cut in half.
+ */
 function Picker({
   query,
   items = [],
@@ -1366,12 +1392,23 @@ function Picker({
   style,
   ...rest
 }) {
+  const [ring, setRing] = React.useState(-1);
+  const refs = React.useRef([]);
+  // The tab stop follows the active candidate — the one ⏎ would accept — and
+  // falls back to the first, so a picker with nothing marked is still reachable.
+  const active = items.findIndex(it => it.active);
+  const stop = active < 0 ? 0 : active;
+  const go = i => {
+    const n = items.length;
+    if (!n) return;
+    refs.current[(i % n + n) % n]?.focus();
+  };
   return /*#__PURE__*/React.createElement("div", _extends({
     style: {
       width,
       borderRadius: 'var(--qm-radius-card)',
       background: 'var(--qm-surface-raised)',
-      border: '1px solid rgba(255,255,255,0.12)',
+      border: '1px solid var(--qm-border-raised)',
       boxShadow: 'var(--qm-shadow-popover)',
       overflow: 'hidden',
       ...style
@@ -1395,10 +1432,42 @@ function Picker({
       lineHeight: 1.55,
       color: 'var(--qm-text-4)'
     }
-  }, teaching) : null, items.map((it, i) => /*#__PURE__*/React.createElement("div", {
+  }, teaching) : null, /*#__PURE__*/React.createElement("div", {
+    role: "listbox"
+  }, items.map((it, i) => /*#__PURE__*/React.createElement("div", {
     key: it.id ?? i,
+    ref: el => {
+      refs.current[i] = el;
+    },
+    role: "option",
+    "aria-selected": !!it.active,
+    tabIndex: i === stop ? 0 : -1,
     onClick: it.onSelect,
+    onFocus: e => {
+      if (e.target.matches(':focus-visible')) setRing(i);
+    },
+    onBlur: () => setRing(-1),
+    onKeyDown: e => {
+      if (e.target.matches(':focus-visible')) setRing(i);
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        go(i + 1);
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        go(i - 1);
+      } else if (e.key === 'Home') {
+        e.preventDefault();
+        go(0);
+      } else if (e.key === 'End') {
+        e.preventDefault();
+        go(items.length - 1);
+      } else if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        if (it.onSelect) it.onSelect();
+      }
+    },
     style: {
+      position: 'relative',
       display: 'flex',
       alignItems: 'center',
       gap: 10,
@@ -1407,7 +1476,17 @@ function Picker({
       borderTop: it.separated ? '1px solid var(--qm-border-group)' : undefined,
       cursor: 'pointer'
     }
-  }, it.leading, /*#__PURE__*/React.createElement("span", {
+  }, ring === i ? /*#__PURE__*/React.createElement("span", {
+    style: {
+      position: 'absolute',
+      inset: 3,
+      borderRadius: 'var(--qm-radius-key)',
+      boxShadow: 'var(--qm-focus-ring)',
+      outline: 'var(--qm-focus-outline,2px solid transparent)',
+      outlineOffset: 'var(--qm-focus-outline-offset,1px)',
+      pointerEvents: 'none'
+    }
+  }) : null, it.leading, /*#__PURE__*/React.createElement("span", {
     style: {
       fontFamily: it.mono ? 'var(--qm-font-mono)' : 'var(--qm-font-sans)',
       fontSize: it.mono ? 'var(--qm-type-label)' : 'var(--qm-type-row)',
@@ -1419,7 +1498,7 @@ function Picker({
       color: 'var(--qm-text-6)',
       marginLeft: it.trailingRight ? 'auto' : undefined
     }
-  }, it.meta))), footer ? /*#__PURE__*/React.createElement("div", {
+  }, it.meta)))), footer ? /*#__PURE__*/React.createElement("div", {
     style: {
       padding: '10px 14px',
       borderTop: '1px solid var(--qm-border-group)',
@@ -1578,7 +1657,11 @@ Object.assign(__ds_scope, { PromptTextField });
 // components/forms/SegmentedControl.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
-/** Density and mode switch. Selection is a raised inner surface, never colour. */
+/**
+ * Density and mode switch. Selection is a raised inner surface, never colour.
+ * One value out of several is a radio group, not a row of buttons: the strip
+ * takes a single tab stop and arrows move — and select — inside it.
+ */
 function SegmentedControl({
   options = [],
   value,
@@ -1586,7 +1669,22 @@ function SegmentedControl({
   style,
   ...rest
 }) {
+  const [ring, setRing] = React.useState(-1);
+  const refs = React.useRef([]);
+  const values = options.map(o => typeof o === 'string' ? o : o.value);
+  // As in `Tabs`: the checked option owns the tab stop, and a `value` matching
+  // nothing hands it to the first rather than leaving the group unreachable.
+  const checked = values.indexOf(value);
+  const stop = checked < 0 ? 0 : checked;
+  const go = i => {
+    const n = values.length;
+    if (!n) return;
+    const next = (i % n + n) % n;
+    refs.current[next]?.focus();
+    if (onChange) onChange(values[next]);
+  };
   return /*#__PURE__*/React.createElement("div", _extends({
+    role: "radiogroup",
     style: {
       display: 'flex',
       alignItems: 'center',
@@ -1598,25 +1696,60 @@ function SegmentedControl({
       border: '1px solid var(--qm-border-group)',
       ...style
     }
-  }, rest), options.map(o => {
-    const v = typeof o === 'string' ? o : o.value;
+  }, rest), options.map((o, i) => {
+    const v = values[i];
     const label = typeof o === 'string' ? o : o.label;
     const active = v === value;
     const outline = typeof o !== 'string' && o.outline;
+    const base = {
+      position: 'relative',
+      height: 28,
+      display: 'flex',
+      alignItems: 'center',
+      padding: '0 11px',
+      borderRadius: 'var(--qm-radius-key)',
+      fontSize: 'var(--qm-type-module)',
+      color: 'var(--qm-text-row)',
+      cursor: 'pointer'
+    };
+    if (ring === i) {
+      base.boxShadow = 'var(--qm-focus-ring)';
+      base.outline = 'var(--qm-focus-outline,2px solid transparent)';
+      base.outlineOffset = 'var(--qm-focus-outline-offset,1px)';
+    }
     return /*#__PURE__*/React.createElement("div", {
       key: v,
+      ref: el => {
+        refs.current[i] = el;
+      },
+      role: "radio",
+      "aria-checked": active,
+      tabIndex: i === stop ? 0 : -1,
       onClick: () => onChange && onChange(v),
-      style: {
-        position: 'relative',
-        height: 28,
-        display: 'flex',
-        alignItems: 'center',
-        padding: '0 11px',
-        borderRadius: 'var(--qm-radius-key)',
-        fontSize: 'var(--qm-type-module)',
-        color: 'var(--qm-text-row)',
-        cursor: 'pointer'
-      }
+      onFocus: e => {
+        if (e.target.matches(':focus-visible')) setRing(i);
+      },
+      onBlur: () => setRing(-1),
+      onKeyDown: e => {
+        if (e.target.matches(':focus-visible')) setRing(i);
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+          e.preventDefault();
+          go(i + 1);
+        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+          e.preventDefault();
+          go(i - 1);
+        } else if (e.key === 'Home') {
+          e.preventDefault();
+          go(0);
+        } else if (e.key === 'End') {
+          e.preventDefault();
+          go(values.length - 1);
+        } else if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          if (onChange) onChange(v);
+        }
+      },
+      style: base
     }, active ? /*#__PURE__*/React.createElement("span", {
       style: {
         position: 'absolute',
@@ -1638,7 +1771,11 @@ Object.assign(__ds_scope, { SegmentedControl });
 // components/forms/Tabs.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
-/** Inspector tabs. A 2px neutral underline marks the active one. */
+/**
+ * Inspector tabs. A 2px neutral underline marks the active one. The group is a
+ * real tablist: one tab stop for the whole strip, arrows move within it, and
+ * moving selects — the panel a tab reveals is the consumer's, and always cheap.
+ */
 function Tabs({
   tabs = [],
   value,
@@ -1646,26 +1783,78 @@ function Tabs({
   style,
   ...rest
 }) {
+  const [ring, setRing] = React.useState(-1);
+  const refs = React.useRef([]);
+  const values = tabs.map(t => typeof t === 'string' ? t : t.value);
+  // The tab stop belongs to the selected tab. A `value` matching nothing would
+  // otherwise leave the strip with no stop at all and drop it out of the tab
+  // order entirely, so the first tab takes it.
+  const selected = values.indexOf(value);
+  const stop = selected < 0 ? 0 : selected;
+  const go = i => {
+    const n = values.length;
+    if (!n) return;
+    const next = (i % n + n) % n;
+    refs.current[next]?.focus();
+    if (onChange) onChange(values[next]);
+  };
   return /*#__PURE__*/React.createElement("div", _extends({
+    role: "tablist",
     style: {
       display: 'flex',
       gap: 20,
       ...style
     }
-  }, rest), tabs.map(t => {
-    const v = typeof t === 'string' ? t : t.value;
+  }, rest), tabs.map((t, i) => {
+    const v = values[i];
     const label = typeof t === 'string' ? t : t.label;
     const active = v === value;
+    const base = {
+      position: 'relative',
+      paddingBottom: 11,
+      fontSize: 'var(--qm-type-row)',
+      borderRadius: 'var(--qm-radius-key)',
+      color: active ? 'var(--qm-text-2)' : 'var(--qm-text-5)',
+      cursor: 'pointer'
+    };
+    if (ring === i) {
+      base.boxShadow = 'var(--qm-focus-ring)';
+      base.outline = 'var(--qm-focus-outline,2px solid transparent)';
+      base.outlineOffset = 'var(--qm-focus-outline-offset,1px)';
+    }
     return /*#__PURE__*/React.createElement("div", {
       key: v,
+      ref: el => {
+        refs.current[i] = el;
+      },
+      role: "tab",
+      "aria-selected": active,
+      tabIndex: i === stop ? 0 : -1,
       onClick: () => onChange && onChange(v),
-      style: {
-        position: 'relative',
-        paddingBottom: 11,
-        fontSize: 'var(--qm-type-row)',
-        color: active ? 'var(--qm-text-2)' : 'var(--qm-text-5)',
-        cursor: 'pointer'
-      }
+      onFocus: e => {
+        if (e.target.matches(':focus-visible')) setRing(i);
+      },
+      onBlur: () => setRing(-1),
+      onKeyDown: e => {
+        if (e.target.matches(':focus-visible')) setRing(i);
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+          e.preventDefault();
+          go(i + 1);
+        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+          e.preventDefault();
+          go(i - 1);
+        } else if (e.key === 'Home') {
+          e.preventDefault();
+          go(0);
+        } else if (e.key === 'End') {
+          e.preventDefault();
+          go(values.length - 1);
+        } else if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          if (onChange) onChange(v);
+        }
+      },
+      style: base
     }, label, active ? /*#__PURE__*/React.createElement("span", {
       style: {
         position: 'absolute',
@@ -2017,7 +2206,9 @@ const DOT_STATE = {
 
 /**
  * The one beat list, at three depths of detail: the outline rail, the stage
- * rail and Compose's beat column are all this component.
+ * rail and Compose's beat column are all this component. With `onSelect` it is
+ * a listbox — one tab stop, ↑↓ through the beats, ⏎ jumps the draft; without
+ * one it is a read-only list and takes no place in the tab order.
  */
 function BeatSpine({
   beats = [],
@@ -2026,7 +2217,19 @@ function BeatSpine({
   style,
   ...rest
 }) {
+  const [ring, setRing] = React.useState(-1);
+  const refs = React.useRef([]);
+  // The tab stop follows the draft — the `here` beat — and falls back to the
+  // first, so a list with nothing marked is still reachable.
+  const at = beats.findIndex(b => b.state === 'here');
+  const stop = at < 0 ? 0 : at;
+  const go = i => {
+    const n = beats.length;
+    if (!n) return;
+    refs.current[(i % n + n) % n]?.focus();
+  };
   return /*#__PURE__*/React.createElement("div", _extends({
+    role: onSelect ? 'listbox' : undefined,
     style: {
       position: 'relative',
       paddingLeft: showSpine ? 14 : 0,
@@ -2044,19 +2247,54 @@ function BeatSpine({
   }) : null, beats.map((b, i) => {
     const here = b.state === 'here';
     const dot = DOT_STATE[b.state] || 'unwritten';
+    const base = {
+      position: 'relative',
+      display: 'flex',
+      gap: 10,
+      padding: 'var(--qm-row-py,9px) 10px',
+      marginBottom: 1,
+      borderRadius: 'var(--qm-radius-control)',
+      background: here ? 'var(--qm-surface-selected)' : 'transparent',
+      cursor: onSelect ? 'pointer' : 'default'
+    };
+    if (ring === i) {
+      base.boxShadow = 'var(--qm-focus-ring)';
+      base.outline = 'var(--qm-focus-outline,2px solid transparent)';
+      base.outlineOffset = 'var(--qm-focus-outline-offset,1px)';
+    }
     return /*#__PURE__*/React.createElement("div", {
       key: b.id ?? i,
+      ref: el => {
+        refs.current[i] = el;
+      },
       onClick: onSelect ? () => onSelect(b, i) : undefined,
-      style: {
-        position: 'relative',
-        display: 'flex',
-        gap: 10,
-        padding: 'var(--qm-row-py,9px) 10px',
-        marginBottom: 1,
-        borderRadius: 'var(--qm-radius-control)',
-        background: here ? 'var(--qm-surface-selected)' : 'transparent',
-        cursor: onSelect ? 'pointer' : 'default'
-      }
+      role: onSelect ? 'option' : undefined,
+      "aria-selected": onSelect ? here : undefined,
+      tabIndex: onSelect ? i === stop ? 0 : -1 : undefined,
+      onFocus: onSelect ? e => {
+        if (e.target.matches(':focus-visible')) setRing(i);
+      } : undefined,
+      onBlur: onSelect ? () => setRing(-1) : undefined,
+      onKeyDown: onSelect ? e => {
+        if (e.target.matches(':focus-visible')) setRing(i);
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          go(i + 1);
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          go(i - 1);
+        } else if (e.key === 'Home') {
+          e.preventDefault();
+          go(0);
+        } else if (e.key === 'End') {
+          e.preventDefault();
+          go(beats.length - 1);
+        } else if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onSelect(b, i);
+        }
+      } : undefined,
+      style: base
     }, showSpine ? /*#__PURE__*/React.createElement(__ds_scope.StateDot, {
       state: dot,
       size: 7,
@@ -2126,7 +2364,24 @@ Object.assign(__ds_scope, { BeatSpine });
 // components/narrative/EntityToken.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
-/** One blue-green for entities at every scale: inline name, chip, or avatar+chip. */
+/* The ring the whole system draws, on the two targets a token can carry. It is
+   sampled on keydown as well as on focus for the reason `Button` gives: a token
+   reached by mouse and then typed at becomes `:focus-visible` where it stands. */
+function ringStyle(on) {
+  return on ? {
+    boxShadow: 'var(--qm-focus-ring)',
+    outline: 'var(--qm-focus-outline,2px solid transparent)',
+    outlineOffset: 'var(--qm-focus-outline-offset,1px)'
+  } : null;
+}
+
+/**
+ * One blue-green for entities at every scale: inline name, chip, or
+ * avatar+chip. A token is a control only when it is given `onClick`, and its
+ * dismiss ✕ is a second control that the keyboard reaches on its own — Enter
+ * there dismisses without also firing the token, the way the pointer already
+ * did.
+ */
 function EntityToken({
   name,
   initials,
@@ -2138,20 +2393,42 @@ function EntityToken({
   style,
   ...rest
 }) {
+  const [ring, setRing] = React.useState(false);
+  const [dismissRing, setDismissRing] = React.useState(false);
+  // `role` is the narrative rank, so the ARIA role is never a prop: a token
+  // announces itself as a button exactly when it has something to do.
+  const control = onClick ? {
+    role: 'button',
+    tabIndex: 0,
+    onFocus: e => {
+      if (e.target.matches(':focus-visible')) setRing(true);
+    },
+    onBlur: () => setRing(false),
+    onKeyDown: e => {
+      if (e.target.matches(':focus-visible')) setRing(true);
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        onClick(e);
+      }
+    }
+  } : null;
   if (variant === 'inline') {
     return /*#__PURE__*/React.createElement("span", _extends({
-      onClick: onClick,
+      onClick: onClick
+    }, control, {
       style: {
         color: 'var(--qm-blue-text)',
         borderBottom: '1px solid rgba(95,168,188,0.35)',
         cursor: onClick ? 'pointer' : 'inherit',
+        ...ringStyle(ring),
         ...style
       }
     }, rest), name);
   }
   const tinted = kind === 'character';
   return /*#__PURE__*/React.createElement("span", _extends({
-    onClick: onClick,
+    onClick: onClick
+  }, control, {
     style: {
       display: 'inline-flex',
       alignItems: 'center',
@@ -2162,6 +2439,7 @@ function EntityToken({
       background: tinted ? 'var(--qm-tint-blue-soft)' : 'var(--qm-fill-chip)',
       border: `1px solid ${tinted ? 'var(--qm-border-blue)' : 'var(--qm-border-control-quiet)'}`,
       cursor: onClick ? 'pointer' : 'default',
+      ...ringStyle(ring),
       ...style
     }
   }, rest), initials ? /*#__PURE__*/React.createElement(__ds_scope.Avatar, {
@@ -2179,14 +2457,31 @@ function EntityToken({
       color: 'var(--qm-text-7)'
     }
   }, role) : null, onDismiss ? /*#__PURE__*/React.createElement("span", {
+    role: "button",
+    tabIndex: 0,
+    "aria-label": `Dismiss ${name}`,
     onClick: e => {
       e.stopPropagation();
       onDismiss(e);
     },
+    onFocus: e => {
+      if (e.target.matches(':focus-visible')) setDismissRing(true);
+    },
+    onBlur: () => setDismissRing(false),
+    onKeyDown: e => {
+      if (e.target.matches(':focus-visible')) setDismissRing(true);
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        e.stopPropagation();
+        onDismiss(e);
+      }
+    },
     style: {
       display: 'inline-flex',
+      borderRadius: 'var(--qm-radius-chip)',
       color: 'var(--qm-text-6)',
-      cursor: 'pointer'
+      cursor: 'pointer',
+      ...ringStyle(dismissRing)
     }
   }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
     name: "x",
@@ -2298,7 +2593,12 @@ Object.assign(__ds_scope, { NoteBlock });
 // components/narrative/RouteChip.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
-/** Three states, never two: a count, an invitation, or the bare surface name. */
+/**
+ * Three states, never two: a count, an invitation, or the bare surface name.
+ * A chip that opens something is a button and answers Enter and Space; a chip
+ * given no `onClick` opens nothing, so it stays out of the tab order and is
+ * never announced as a control.
+ */
 function RouteChip({
   children,
   state = 'count',
@@ -2308,6 +2608,7 @@ function RouteChip({
   ...rest
 }) {
   const [hover, setHover] = React.useState(false);
+  const [ring, setRing] = React.useState(false);
   const s = {
     count: {
       color: 'var(--qm-text-3)',
@@ -2325,23 +2626,44 @@ function RouteChip({
       border: 'var(--qm-border-panel)'
     }
   }[state];
+  const base = {
+    height: 32,
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: 9,
+    padding: '0 12px',
+    borderRadius: 'var(--qm-radius-control)',
+    fontSize: 'var(--qm-type-secondary)',
+    color: s.color,
+    background: hover ? 'var(--qm-fill-hover)' : s.bg,
+    border: `1px solid ${s.border}`,
+    cursor: onClick ? 'pointer' : 'default',
+    whiteSpace: 'nowrap'
+  };
+  if (ring) {
+    base.boxShadow = 'var(--qm-focus-ring)';
+    base.outline = 'var(--qm-focus-outline,2px solid transparent)';
+    base.outlineOffset = 'var(--qm-focus-outline-offset,1px)';
+  }
   return /*#__PURE__*/React.createElement("span", _extends({
     onClick: onClick,
+    role: onClick ? 'button' : undefined,
+    tabIndex: onClick ? 0 : undefined,
+    onFocus: onClick ? e => {
+      if (e.target.matches(':focus-visible')) setRing(true);
+    } : undefined,
+    onBlur: onClick ? () => setRing(false) : undefined,
+    onKeyDown: onClick ? e => {
+      if (e.target.matches(':focus-visible')) setRing(true);
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        onClick(e);
+      }
+    } : undefined,
     onMouseEnter: () => setHover(true),
     onMouseLeave: () => setHover(false),
     style: {
-      height: 32,
-      display: 'inline-flex',
-      alignItems: 'center',
-      gap: 9,
-      padding: '0 12px',
-      borderRadius: 'var(--qm-radius-control)',
-      fontSize: 'var(--qm-type-secondary)',
-      color: s.color,
-      background: hover ? 'var(--qm-fill-hover)' : s.bg,
-      border: `1px solid ${s.border}`,
-      cursor: onClick ? 'pointer' : 'default',
-      whiteSpace: 'nowrap',
+      ...base,
       ...style
     }
   }, rest), icon ? /*#__PURE__*/React.createElement("span", {
@@ -2368,7 +2690,11 @@ const RAIL = {
   unlinked: 'var(--qm-gold-dim)'
 };
 
-/** A chronology row in the timeline rail. Selection is a surface; state is the dot. */
+/**
+ * A chronology row in the timeline rail. Selection is a surface; state is the
+ * dot. A row owns no list, so a clickable one is a button rather than an
+ * option — and a row with no `onClick` stays out of the tab order entirely.
+ */
 function TimelineRow({
   title,
   meta,
@@ -2381,20 +2707,41 @@ function TimelineRow({
   ...rest
 }) {
   const [hover, setHover] = React.useState(false);
+  const [ring, setRing] = React.useState(false);
+  const base = {
+    position: 'relative',
+    display: 'flex',
+    gap: 10,
+    padding: 'var(--qm-row-py,12px) 12px',
+    borderRadius: 'var(--qm-radius-control)',
+    background: selected ? 'linear-gradient(90deg, #232C38, rgba(35,44,56,0.30))' : hover ? 'var(--qm-fill-hover)' : 'transparent',
+    cursor: onClick ? 'pointer' : 'default',
+    ...style
+  };
+  if (ring) {
+    base.boxShadow = 'var(--qm-focus-ring)';
+    base.outline = 'var(--qm-focus-outline,2px solid transparent)';
+    base.outlineOffset = 'var(--qm-focus-outline-offset,1px)';
+  }
   return /*#__PURE__*/React.createElement("div", _extends({
     onClick: onClick,
+    role: onClick ? 'button' : undefined,
+    tabIndex: onClick ? 0 : undefined,
+    "aria-current": onClick && selected ? 'true' : undefined,
+    onFocus: onClick ? e => {
+      if (e.target.matches(':focus-visible')) setRing(true);
+    } : undefined,
+    onBlur: onClick ? () => setRing(false) : undefined,
+    onKeyDown: onClick ? e => {
+      if (e.target.matches(':focus-visible')) setRing(true);
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        onClick(e);
+      }
+    } : undefined,
     onMouseEnter: () => setHover(true),
     onMouseLeave: () => setHover(false),
-    style: {
-      position: 'relative',
-      display: 'flex',
-      gap: 10,
-      padding: 'var(--qm-row-py,12px) 12px',
-      borderRadius: 'var(--qm-radius-control)',
-      background: selected ? 'linear-gradient(90deg, #232C38, rgba(35,44,56,0.30))' : hover ? 'var(--qm-fill-hover)' : 'transparent',
-      cursor: onClick ? 'pointer' : 'default',
-      ...style
-    }
+    style: base
   }, rest), selected ? /*#__PURE__*/React.createElement("span", {
     style: {
       position: 'absolute',
@@ -2471,7 +2818,12 @@ Object.assign(__ds_scope, { TimelineRow });
 // components/narrative/VersionStrip.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
-/** One axis, two origins: written revisions and generated candidates. */
+/**
+ * One axis, two origins: written revisions and generated candidates. With
+ * `onSelect` the versions themselves are a listbox — one tab stop, ←→ through
+ * them, ⏎ reads one — and the label and the note stay outside it, so neither is
+ * announced as a candidate.
+ */
 function VersionStrip({
   versions = [],
   label = 'VERSION',
@@ -2480,6 +2832,16 @@ function VersionStrip({
   style,
   ...rest
 }) {
+  const [ring, setRing] = React.useState(-1);
+  const refs = React.useRef([]);
+  // The tab stop follows the version being read, and falls back to the first.
+  const at = versions.findIndex(v => v.current);
+  const stop = at < 0 ? 0 : at;
+  const go = i => {
+    const n = versions.length;
+    if (!n) return;
+    refs.current[(i % n + n) % n]?.focus();
+  };
   return /*#__PURE__*/React.createElement("div", _extends({
     style: {
       display: 'flex',
@@ -2497,26 +2859,70 @@ function VersionStrip({
       letterSpacing: 'var(--qm-ls-mono)',
       color: 'var(--qm-text-6)'
     }
-  }, label), versions.map((v, i) => {
+  }, label), /*#__PURE__*/React.createElement("span", {
+    role: onSelect ? 'listbox' : undefined,
+    "aria-label": onSelect ? label : undefined,
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 8,
+      flex: 'none'
+    }
+  }, versions.map((v, i) => {
     const generated = v.origin === 'generated';
+    const base = {
+      display: 'inline-flex',
+      alignItems: 'center',
+      gap: 8,
+      height: 28,
+      flex: 'none',
+      whiteSpace: 'nowrap',
+      padding: '0 10px',
+      borderRadius: 'var(--qm-radius-key)',
+      fontSize: 'var(--qm-type-module)',
+      color: v.current ? 'var(--qm-text-1)' : generated ? 'var(--qm-violet-text)' : 'var(--qm-text-4)',
+      background: v.current ? 'var(--qm-surface-selected)' : 'transparent',
+      border: `1px solid ${v.current ? 'rgba(255,255,255,0.14)' : generated ? 'var(--qm-border-violet)' : 'var(--qm-border-control-quiet)'}`,
+      cursor: onSelect ? 'pointer' : 'default'
+    };
+    if (ring === i) {
+      base.boxShadow = 'var(--qm-focus-ring)';
+      base.outline = 'var(--qm-focus-outline,2px solid transparent)';
+      base.outlineOffset = 'var(--qm-focus-outline-offset,1px)';
+    }
     return /*#__PURE__*/React.createElement("span", {
       key: v.id ?? i,
+      ref: el => {
+        refs.current[i] = el;
+      },
       onClick: onSelect ? () => onSelect(v, i) : undefined,
-      style: {
-        display: 'inline-flex',
-        alignItems: 'center',
-        gap: 8,
-        height: 28,
-        flex: 'none',
-        whiteSpace: 'nowrap',
-        padding: '0 10px',
-        borderRadius: 'var(--qm-radius-key)',
-        fontSize: 'var(--qm-type-module)',
-        color: v.current ? 'var(--qm-text-1)' : generated ? 'var(--qm-violet-text)' : 'var(--qm-text-4)',
-        background: v.current ? 'var(--qm-surface-selected)' : 'transparent',
-        border: `1px solid ${v.current ? 'rgba(255,255,255,0.14)' : generated ? 'var(--qm-border-violet)' : 'var(--qm-border-control-quiet)'}`,
-        cursor: onSelect ? 'pointer' : 'default'
-      }
+      role: onSelect ? 'option' : undefined,
+      "aria-selected": onSelect ? !!v.current : undefined,
+      tabIndex: onSelect ? i === stop ? 0 : -1 : undefined,
+      onFocus: onSelect ? e => {
+        if (e.target.matches(':focus-visible')) setRing(i);
+      } : undefined,
+      onBlur: onSelect ? () => setRing(-1) : undefined,
+      onKeyDown: onSelect ? e => {
+        if (e.target.matches(':focus-visible')) setRing(i);
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+          e.preventDefault();
+          go(i + 1);
+        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+          e.preventDefault();
+          go(i - 1);
+        } else if (e.key === 'Home') {
+          e.preventDefault();
+          go(0);
+        } else if (e.key === 'End') {
+          e.preventDefault();
+          go(versions.length - 1);
+        } else if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onSelect(v, i);
+        }
+      } : undefined,
+      style: base
     }, generated ? /*#__PURE__*/React.createElement(__ds_scope.StateDot, {
       state: "suggested",
       size: 6
@@ -2527,7 +2933,7 @@ function VersionStrip({
         color: v.current ? 'var(--qm-teal-text)' : generated ? 'var(--qm-violet-dim)' : 'var(--qm-text-7)'
       }
     }, v.score) : null);
-  }), /*#__PURE__*/React.createElement("span", {
+  })), /*#__PURE__*/React.createElement("span", {
     style: {
       flex: 1
     }
@@ -3065,6 +3471,7 @@ Object.assign(window, {
 
 // ui_kits/story-engine/NewScene.jsx
 try { (() => {
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 const {
   Button,
   Icon,
@@ -3075,6 +3482,48 @@ const {
   AnnotationMark,
   TopBar
 } = window.QuantumMateriaDesignSystem_488cde;
+
+/**
+ * The same control element `SceneRoom` uses: a real `<button>` under whatever
+ * the surface wants it to look like, carrying QM's ring and no UA chrome.
+ */
+function Pressable({
+  label,
+  onClick,
+  style,
+  children,
+  ...rest
+}) {
+  const [ring, setRing] = React.useState(false);
+  return /*#__PURE__*/React.createElement("button", _extends({
+    type: "button",
+    "aria-label": label,
+    onClick: onClick
+  }, rest, {
+    onFocus: e => {
+      if (e.target.matches(':focus-visible')) setRing(true);
+    },
+    onKeyDown: e => {
+      if (e.target.matches(':focus-visible')) setRing(true);
+    },
+    onBlur: () => setRing(false),
+    style: {
+      margin: 0,
+      padding: 0,
+      font: 'inherit',
+      color: 'inherit',
+      background: 'transparent',
+      border: 'none',
+      cursor: 'pointer',
+      ...style,
+      ...(ring ? {
+        boxShadow: 'var(--qm-focus-ring)',
+        outline: 'var(--qm-focus-outline,2px solid transparent)',
+        outlineOffset: 'var(--qm-focus-outline-offset,1px)'
+      } : null)
+    }
+  }), children);
+}
 function NewScene({
   onBack,
   onEnter
@@ -3121,15 +3570,14 @@ function NewScene({
       fontSize: 30,
       color: 'var(--qm-prose-1)'
     }
-  }, "New scene"), /*#__PURE__*/React.createElement("span", {
+  }, "New scene"), /*#__PURE__*/React.createElement(Pressable, {
     onClick: onBack,
     style: {
       display: 'inline-flex',
       alignItems: 'center',
       gap: 6,
       fontSize: 13.5,
-      color: 'var(--qm-text-6)',
-      cursor: 'pointer'
+      color: 'var(--qm-text-6)'
     }
   }, /*#__PURE__*/React.createElement(Icon, {
     name: "arrowLeft",
@@ -3192,16 +3640,20 @@ function NewScene({
     }
   }, "18")), window.QM_ROSTER.map(r => {
     const on = cast.includes(r.id);
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React.createElement(Pressable, {
       key: r.id,
+      role: "checkbox",
+      "aria-checked": on,
       onClick: () => toggle(r.id),
       style: {
+        width: '100%',
+        textAlign: 'left',
         display: 'flex',
         alignItems: 'center',
         gap: 12,
         padding: '11px 14px',
+        border: 'none',
         borderBottom: '1px solid var(--qm-border-list)',
-        cursor: 'pointer',
         background: on ? 'rgba(85,183,166,0.05)' : 'transparent'
       }
     }, /*#__PURE__*/React.createElement("span", {
@@ -4260,6 +4712,7 @@ Object.assign(window, {
 
 // ui_kits/story-engine/SceneRoom.jsx
 try { (() => {
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 const {
   Button,
   Icon,
@@ -4302,6 +4755,50 @@ function Slot({
     name: "image",
     size: 14
   }), label);
+}
+
+/**
+ * Every collapse, dismiss and reveal in this room is a control, so each one is
+ * a real `<button>` — reachable by Tab, activated by Enter and Space for free.
+ * It carries QM's ring the way `Button` does, and nothing else: the styling
+ * stays at the call site, where the surface it sits on decides it.
+ */
+function Pressable({
+  label,
+  onClick,
+  style,
+  children,
+  ...rest
+}) {
+  const [ring, setRing] = React.useState(false);
+  return /*#__PURE__*/React.createElement("button", _extends({
+    type: "button",
+    "aria-label": label,
+    onClick: onClick
+  }, rest, {
+    onFocus: e => {
+      if (e.target.matches(':focus-visible')) setRing(true);
+    },
+    onKeyDown: e => {
+      if (e.target.matches(':focus-visible')) setRing(true);
+    },
+    onBlur: () => setRing(false),
+    style: {
+      margin: 0,
+      padding: 0,
+      font: 'inherit',
+      color: 'inherit',
+      background: 'transparent',
+      border: 'none',
+      cursor: 'pointer',
+      ...style,
+      ...(ring ? {
+        boxShadow: 'var(--qm-focus-ring)',
+        outline: 'var(--qm-focus-outline,2px solid transparent)',
+        outlineOffset: 'var(--qm-focus-outline-offset,1px)'
+      } : null)
+    }
+  }), children);
 }
 function SceneRoom({
   onExit
@@ -4368,7 +4865,8 @@ function SceneRoom({
     }
   }, /*#__PURE__*/React.createElement(PanelHeader, {
     label: "STAGE"
-  }, /*#__PURE__*/React.createElement("span", {
+  }, /*#__PURE__*/React.createElement(Pressable, {
+    label: "Collapse the stage rail",
     onClick: () => setStage(false),
     style: {
       width: 28,
@@ -4377,8 +4875,7 @@ function SceneRoom({
       alignItems: 'center',
       justifyContent: 'center',
       borderRadius: 6,
-      border: '1px solid var(--qm-border-control)',
-      cursor: 'pointer'
+      border: '1px solid var(--qm-border-control)'
     }
   }, /*#__PURE__*/React.createElement(Icon, {
     name: "chevronLeft",
@@ -4496,7 +4993,8 @@ function SceneRoom({
       color: 'var(--qm-text-7)',
       marginTop: 6
     }
-  }, "answers as of Y\u22126 D1") : /*#__PURE__*/React.createElement("div", {
+  }, "answers as of Y\u22126 D1") : /*#__PURE__*/React.createElement(Pressable, {
+    label: "Show vera's reply",
     onClick: () => setReply(true),
     style: {
       display: 'inline-flex',
@@ -4508,8 +5006,7 @@ function SceneRoom({
       fontSize: 12.5,
       color: 'var(--qm-violet-text)',
       background: 'var(--qm-tint-violet)',
-      border: '1px solid var(--qm-border-violet)',
-      cursor: 'pointer'
+      border: '1px solid var(--qm-border-violet)'
     }
   }, /*#__PURE__*/React.createElement(StateDot, {
     state: "suggested",
@@ -4624,7 +5121,8 @@ function SceneRoom({
       background: 'var(--qm-surface-panel)',
       borderRight: '1px solid var(--qm-border-panel)'
     }
-  }, /*#__PURE__*/React.createElement("span", {
+  }, /*#__PURE__*/React.createElement(Pressable, {
+    label: "Open the stage rail",
     onClick: () => setStage(true),
     style: {
       width: 32,
@@ -4633,8 +5131,7 @@ function SceneRoom({
       alignItems: 'center',
       justifyContent: 'center',
       borderRadius: 7,
-      border: '1px solid var(--qm-border-control)',
-      cursor: 'pointer'
+      border: '1px solid var(--qm-border-control)'
     }
   }, /*#__PURE__*/React.createElement(Icon, {
     name: "chevronRight",
@@ -4719,7 +5216,8 @@ function SceneRoom({
     style: {
       flex: 1
     }
-  }), /*#__PURE__*/React.createElement("span", {
+  }), /*#__PURE__*/React.createElement(Pressable, {
+    label: "Dismiss vera's reply",
     onClick: () => setReply(false),
     style: {
       width: 24,
@@ -4727,8 +5225,7 @@ function SceneRoom({
       display: 'inline-flex',
       alignItems: 'center',
       justifyContent: 'center',
-      borderRadius: 5,
-      cursor: 'pointer'
+      borderRadius: 5
     }
   }, /*#__PURE__*/React.createElement(Icon, {
     name: "x",
@@ -5051,7 +5548,8 @@ function SceneRoom({
       fontSize: 12,
       color: 'var(--qm-scene-meta)'
     }
-  }, "turn 4 \xB7 vera to act"), /*#__PURE__*/React.createElement("span", {
+  }, "turn 4 \xB7 vera to act"), /*#__PURE__*/React.createElement(Pressable, {
+    label: "Hide the in-scene controls",
     onClick: () => setBar(false),
     style: {
       width: 26,
@@ -5061,8 +5559,7 @@ function SceneRoom({
       alignItems: 'center',
       justifyContent: 'center',
       borderRadius: 6,
-      border: '1px solid rgba(232,220,192,0.24)',
-      cursor: 'pointer'
+      border: '1px solid rgba(232,220,192,0.24)'
     }
   }, /*#__PURE__*/React.createElement(Icon, {
     name: "chevronDown",
@@ -5121,7 +5618,8 @@ function SceneRoom({
     style: {
       color: 'var(--qm-scene-text)'
     }
-  }, "high"))))) : /*#__PURE__*/React.createElement("div", {
+  }, "high"))))) : /*#__PURE__*/React.createElement(Pressable, {
+    label: "Show the in-scene controls",
     onClick: () => setBar(true),
     style: {
       flex: 'none',
@@ -5129,9 +5627,10 @@ function SceneRoom({
       alignItems: 'center',
       gap: 10,
       padding: '10px 22px',
+      textAlign: 'left',
       background: 'var(--qm-scene-surface)',
-      borderTop: '1px solid var(--qm-scene-border)',
-      cursor: 'pointer'
+      border: 'none',
+      borderTop: '1px solid var(--qm-scene-border)'
     }
   }, /*#__PURE__*/React.createElement(StateDot, {
     state: "scene",
@@ -5176,7 +5675,8 @@ function SceneRoom({
     audience: "private",
     label: "PRIVATE",
     note: "nothing here is witnessed until you send it"
-  }, /*#__PURE__*/React.createElement("span", {
+  }, /*#__PURE__*/React.createElement(Pressable, {
+    label: "Collapse the assistant rail",
     onClick: () => setChat(false),
     style: {
       width: 28,
@@ -5185,8 +5685,7 @@ function SceneRoom({
       alignItems: 'center',
       justifyContent: 'center',
       borderRadius: 6,
-      border: '1px solid var(--qm-border-control-quiet)',
-      cursor: 'pointer'
+      border: '1px solid var(--qm-border-control-quiet)'
     }
   }, /*#__PURE__*/React.createElement(Icon, {
     name: "chevronRight",
@@ -5391,7 +5890,8 @@ function SceneRoom({
       background: 'var(--qm-surface-rail)',
       borderLeft: '1px solid var(--qm-border-panel)'
     }
-  }, /*#__PURE__*/React.createElement("span", {
+  }, /*#__PURE__*/React.createElement(Pressable, {
+    label: "Open the assistant rail",
     onClick: () => setChat(true),
     style: {
       width: 32,
@@ -5400,8 +5900,7 @@ function SceneRoom({
       alignItems: 'center',
       justifyContent: 'center',
       borderRadius: 7,
-      border: '1px solid var(--qm-border-control)',
-      cursor: 'pointer'
+      border: '1px solid var(--qm-border-control)'
     }
   }, /*#__PURE__*/React.createElement(Icon, {
     name: "chevronLeft",

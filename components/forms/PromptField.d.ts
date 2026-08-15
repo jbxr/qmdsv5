@@ -27,9 +27,11 @@ export interface PromptFieldProps extends React.HTMLAttributes<HTMLDivElement> {
   hintKey?: React.ReactNode;
   trailing?: React.ReactNode;
   /**
-   * Overrides the ring in both directions. Leave unset and the well lights its
-   * own 2px teal ring on `focus`; set it only for the presentational case, where
-   * an addressed field holds no real control.
+   * Overrides the ring in both directions: `true` shows a focus nobody has,
+   * `false` hides a real one. It is honest in exactly one case, the presentational
+   * well that holds no control to focus, which is what a specimen picturing an
+   * addressed field needs. Anywhere a real control sits in the well, leave it
+   * unset: the well lights its own ring on focus.
    */
   focused?: boolean;
   children?: React.ReactNode;

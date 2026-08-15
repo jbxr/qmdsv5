@@ -41,6 +41,14 @@ Notes
   pass yourself always wins over the heading.
 - The scrim sits at `--qm-z-scrim` (100), the top of the two-rung scale in
   `tokens/elevation.css`. If it lands under something, that thing is off the scale.
+- `width` is a ceiling, not a fixed size: the panel is clamped to `100%` of what
+  holds it, so a 560 default still fits a 375 phone — 327 wide, both 24px gutters
+  intact — and is still exactly 560 and centred once there is room. Without the
+  clamp the panel overflows a fixed scrim, which does not scroll the document: the
+  ✕ and the confirm sit off-screen behind a sideways scroll on an unmarked wrapper
+  that draws no scrollbar, so on a delete confirmation the only control still under
+  the thumb is "Keep it". Height needs no clamp of its own — a panel taller than
+  the viewport scrolls inside the scrim, keeping its 24px gutters.
 - Overlays never carry an accent border.
 - `title` is the heading, not a tooltip. The props omit the DOM `title` attribute,
   so you cannot pass one through to the panel.
