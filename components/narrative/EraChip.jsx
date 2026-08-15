@@ -1,5 +1,5 @@
 import React from 'react';
-import { warnUnknown } from '../core/warn.js';
+import { warnUnknown, pick } from '../core/warn.js';
 
 const KINDS = {
   time:     { color: 'var(--qm-blue-text)', bg: 'var(--qm-tint-blue)', border: 'var(--qm-border-blue)' },
@@ -10,7 +10,7 @@ const KINDS = {
 
 /** Story-time marker. Chronology is always mono. */
 export function EraChip({ children, kind = 'time', size = 'md', style, ...rest }) {
-  const k = KINDS[kind] || KINDS.time;
+  const k = pick(KINDS, kind, KINDS.time);
   warnUnknown('EraChip', 'kind', kind, KINDS, 'time');
   return (
     <span

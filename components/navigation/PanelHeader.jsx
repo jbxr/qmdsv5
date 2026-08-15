@@ -1,6 +1,6 @@
 import React from 'react';
 import { StateDot } from '../core/StateDot.jsx';
-import { warnUnknown } from '../core/warn.js';
+import { warnUnknown, pick } from '../core/warn.js';
 
 // A table rather than three `audience === …` tests, for the reason `Card` gives:
 // the surface and the hairline fell through to `plain` for an unrecognised
@@ -14,7 +14,7 @@ const AUDIENCES = {
 
 /** Audience is a surface temperature, not an accent: lit warm room, unlit private. */
 export function PanelHeader({ audience = 'plain', label, note, children, style, ...rest }) {
-  const a = AUDIENCES[audience] || AUDIENCES.plain;
+  const a = pick(AUDIENCES, audience, AUDIENCES.plain);
   warnUnknown('PanelHeader', 'audience', audience, AUDIENCES, 'plain');
   return (
     <div

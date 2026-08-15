@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"QuantumMateriaDesignSystem_488cde","components":[{"name":"Avatar","sourcePath":"components/core/Avatar.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"QM_ICONS","sourcePath":"components/core/Icon.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"Kbd","sourcePath":"components/core/Kbd.jsx"},{"name":"StateDot","sourcePath":"components/core/StateDot.jsx"},{"name":"warnUnknown","sourcePath":"components/core/warn.js"},{"name":"Callout","sourcePath":"components/feedback/Callout.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"ModeBar","sourcePath":"components/feedback/ModeBar.jsx"},{"name":"Overlay","sourcePath":"components/feedback/Overlay.jsx"},{"name":"Refusal","sourcePath":"components/feedback/Refusal.jsx"},{"name":"SaveStatus","sourcePath":"components/feedback/SaveStatus.jsx"},{"name":"Field","sourcePath":"components/forms/Field.jsx"},{"name":"Picker","sourcePath":"components/forms/Picker.jsx"},{"name":"PromptField","sourcePath":"components/forms/PromptField.jsx"},{"name":"PromptTextField","sourcePath":"components/forms/PromptTextField.jsx"},{"name":"SegmentedControl","sourcePath":"components/forms/SegmentedControl.jsx"},{"name":"Tabs","sourcePath":"components/forms/Tabs.jsx"},{"name":"TextArea","sourcePath":"components/forms/TextArea.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"AnnotationMark","sourcePath":"components/narrative/AnnotationMark.jsx"},{"name":"BeatCard","sourcePath":"components/narrative/BeatCard.jsx"},{"name":"BeatSpine","sourcePath":"components/narrative/BeatSpine.jsx"},{"name":"EntityToken","sourcePath":"components/narrative/EntityToken.jsx"},{"name":"EraChip","sourcePath":"components/narrative/EraChip.jsx"},{"name":"NoteBlock","sourcePath":"components/narrative/NoteBlock.jsx"},{"name":"RouteChip","sourcePath":"components/narrative/RouteChip.jsx"},{"name":"TimelineRow","sourcePath":"components/narrative/TimelineRow.jsx"},{"name":"VersionStrip","sourcePath":"components/narrative/VersionStrip.jsx"},{"name":"PanelHeader","sourcePath":"components/navigation/PanelHeader.jsx"},{"name":"StatusBar","sourcePath":"components/navigation/StatusBar.jsx"},{"name":"TopBar","sourcePath":"components/navigation/TopBar.jsx"}],"sourceHashes":{"components/core/Avatar.jsx":"392386c9273b","components/core/Button.jsx":"36cef46b7d91","components/core/Card.jsx":"68bda8e48eb0","components/core/Icon.jsx":"1c03ecea39d7","components/core/Kbd.jsx":"b3b34000dfb0","components/core/StateDot.jsx":"d23edc751de1","components/core/warn.js":"5fe2ee611d65","components/feedback/Callout.jsx":"29f508a120e8","components/feedback/EmptyState.jsx":"f68b008bade2","components/feedback/ModeBar.jsx":"42d1a1524d3f","components/feedback/Overlay.jsx":"71b10a92b89b","components/feedback/Refusal.jsx":"3481c28f8b57","components/feedback/SaveStatus.jsx":"5c9a18ee0b06","components/forms/Field.jsx":"9cb549d9f053","components/forms/Picker.jsx":"126f2bf00492","components/forms/PromptField.jsx":"88363d42c9fc","components/forms/PromptTextField.jsx":"e8fd47ff76e5","components/forms/SegmentedControl.jsx":"c4d676cb9dcb","components/forms/Tabs.jsx":"ed28a0138f72","components/forms/TextArea.jsx":"349e95d2ed4f","components/forms/TextField.jsx":"a034068c02e4","components/narrative/AnnotationMark.jsx":"2cd938ed40e6","components/narrative/BeatCard.jsx":"c7ead7be393a","components/narrative/BeatSpine.jsx":"4eae9c3fb88e","components/narrative/EntityToken.jsx":"beb4fc6cc420","components/narrative/EraChip.jsx":"74a750d600a3","components/narrative/NoteBlock.jsx":"8943f7185d25","components/narrative/RouteChip.jsx":"7b84b258bea9","components/narrative/TimelineRow.jsx":"f52d5ce4a359","components/narrative/VersionStrip.jsx":"97d49d4641ab","components/navigation/PanelHeader.jsx":"b29a3735d61a","components/navigation/StatusBar.jsx":"619e36242c19","components/navigation/TopBar.jsx":"2a8acc0da304","ui_kits/story-engine/Compose.jsx":"0ca07723dda3","ui_kits/story-engine/NewScene.jsx":"91bbe441b5cd","ui_kits/story-engine/Outline.jsx":"de958cb1cff5","ui_kits/story-engine/SceneRoom.jsx":"137573633750","ui_kits/story-engine/WritingRoom.jsx":"a50f709e68ee","ui_kits/story-engine/data.jsx":"9e2f348a9b25","ui_kits/story-engine/doc-page.js":"371bab66f42d"},"inlinedExternals":[],"unexposedExports":[]} */
+/* @ds-bundle: {"format":4,"namespace":"QuantumMateriaDesignSystem_488cde","components":[{"name":"Avatar","sourcePath":"components/core/Avatar.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"QM_ICONS","sourcePath":"components/core/Icon.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"Kbd","sourcePath":"components/core/Kbd.jsx"},{"name":"StateDot","sourcePath":"components/core/StateDot.jsx"},{"name":"pick","sourcePath":"components/core/warn.js"},{"name":"warnUnknown","sourcePath":"components/core/warn.js"},{"name":"Callout","sourcePath":"components/feedback/Callout.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"ModeBar","sourcePath":"components/feedback/ModeBar.jsx"},{"name":"Overlay","sourcePath":"components/feedback/Overlay.jsx"},{"name":"Refusal","sourcePath":"components/feedback/Refusal.jsx"},{"name":"SaveStatus","sourcePath":"components/feedback/SaveStatus.jsx"},{"name":"Field","sourcePath":"components/forms/Field.jsx"},{"name":"Picker","sourcePath":"components/forms/Picker.jsx"},{"name":"PromptField","sourcePath":"components/forms/PromptField.jsx"},{"name":"PromptTextField","sourcePath":"components/forms/PromptTextField.jsx"},{"name":"SegmentedControl","sourcePath":"components/forms/SegmentedControl.jsx"},{"name":"Tabs","sourcePath":"components/forms/Tabs.jsx"},{"name":"TextArea","sourcePath":"components/forms/TextArea.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"AnnotationMark","sourcePath":"components/narrative/AnnotationMark.jsx"},{"name":"BeatCard","sourcePath":"components/narrative/BeatCard.jsx"},{"name":"BeatSpine","sourcePath":"components/narrative/BeatSpine.jsx"},{"name":"EntityToken","sourcePath":"components/narrative/EntityToken.jsx"},{"name":"EraChip","sourcePath":"components/narrative/EraChip.jsx"},{"name":"NoteBlock","sourcePath":"components/narrative/NoteBlock.jsx"},{"name":"RouteChip","sourcePath":"components/narrative/RouteChip.jsx"},{"name":"TimelineRow","sourcePath":"components/narrative/TimelineRow.jsx"},{"name":"VersionStrip","sourcePath":"components/narrative/VersionStrip.jsx"},{"name":"PanelHeader","sourcePath":"components/navigation/PanelHeader.jsx"},{"name":"StatusBar","sourcePath":"components/navigation/StatusBar.jsx"},{"name":"TopBar","sourcePath":"components/navigation/TopBar.jsx"}],"sourceHashes":{"components/core/Avatar.jsx":"2dbb9452f00e","components/core/Button.jsx":"07ada9fc8e50","components/core/Card.jsx":"2d6c50d0261c","components/core/Icon.jsx":"0e2cb607db3e","components/core/Kbd.jsx":"b3b34000dfb0","components/core/StateDot.jsx":"9b8264123149","components/core/warn.js":"556671148d3f","components/feedback/Callout.jsx":"fe7f997758b7","components/feedback/EmptyState.jsx":"f68b008bade2","components/feedback/ModeBar.jsx":"e9b978189170","components/feedback/Overlay.jsx":"71b10a92b89b","components/feedback/Refusal.jsx":"3481c28f8b57","components/feedback/SaveStatus.jsx":"d1ad18f00ed6","components/forms/Field.jsx":"9cb549d9f053","components/forms/Picker.jsx":"126f2bf00492","components/forms/PromptField.jsx":"a5c47ea18c9d","components/forms/PromptTextField.jsx":"e8fd47ff76e5","components/forms/SegmentedControl.jsx":"c4d676cb9dcb","components/forms/Tabs.jsx":"ed28a0138f72","components/forms/TextArea.jsx":"28b82660e314","components/forms/TextField.jsx":"a034068c02e4","components/narrative/AnnotationMark.jsx":"5f9b6b7e564f","components/narrative/BeatCard.jsx":"1a98804467b8","components/narrative/BeatSpine.jsx":"611219bba33d","components/narrative/EntityToken.jsx":"beb4fc6cc420","components/narrative/EraChip.jsx":"7dc9e0889a6d","components/narrative/NoteBlock.jsx":"abed6f5334ce","components/narrative/RouteChip.jsx":"0fc7f044c40e","components/narrative/TimelineRow.jsx":"e04ca8128103","components/narrative/VersionStrip.jsx":"97d49d4641ab","components/navigation/PanelHeader.jsx":"2d8b32de00a0","components/navigation/StatusBar.jsx":"619e36242c19","components/navigation/TopBar.jsx":"2a8acc0da304","ui_kits/story-engine/Compose.jsx":"0ca07723dda3","ui_kits/story-engine/NewScene.jsx":"91bbe441b5cd","ui_kits/story-engine/Outline.jsx":"de958cb1cff5","ui_kits/story-engine/SceneRoom.jsx":"137573633750","ui_kits/story-engine/WritingRoom.jsx":"a50f709e68ee","ui_kits/story-engine/data.jsx":"9e2f348a9b25","ui_kits/story-engine/doc-page.js":"371bab66f42d"},"inlinedExternals":[],"unexposedExports":[]} */
 
 (() => {
 
@@ -52,7 +52,7 @@ function Avatar({
   style,
   ...rest
 }) {
-  const k = KINDS[kind] || KINDS.character;
+  const k = __ds_scope.pick(KINDS, kind, KINDS.character);
   __ds_scope.warnUnknown('Avatar', 'kind', kind, KINDS, 'character');
   return /*#__PURE__*/React.createElement("span", _extends({
     style: {
@@ -223,8 +223,8 @@ function Button({
   // mouse and then typed at becomes `:focus-visible` where it stands, and a
   // focus-time sample alone would leave that user the browser's ring, not QM's.
   const [ring, setRing] = React.useState(false);
-  const v = VARIANTS[variant] || VARIANTS.secondary;
-  const height = H[size] || H.sm;
+  const v = __ds_scope.pick(VARIANTS, variant, VARIANTS.secondary);
+  const height = __ds_scope.pick(H, size, H.sm);
   __ds_scope.warnUnknown('Button', 'variant', variant, VARIANTS, 'secondary');
   __ds_scope.warnUnknown('Button', 'size', size, H, 'sm');
   const base = {
@@ -388,7 +388,7 @@ function Card({
 }) {
   const [hover, setHover] = React.useState(false);
   const [ring, setRing] = React.useState(false);
-  const s = SURFACES[surface] || SURFACES.panel;
+  const s = __ds_scope.pick(SURFACES, surface, SURFACES.panel);
   // `none` is a real key carrying `null`, so membership decides here rather
   // than truthiness — a `||` would read `rail="none"` as unrecognised.
   const railBg = Object.prototype.hasOwnProperty.call(RAILS, rail) ? RAILS[rail] : RAILS.none;
@@ -580,7 +580,7 @@ function Icon({
   style,
   ...rest
 }) {
-  const g = QM_ICONS[name];
+  const g = __ds_scope.pick(QM_ICONS, name, undefined);
   // The one lookup in the system with no default to fall back to: a substitute
   // glyph would draw the wrong picture, so an unrecognised name renders nothing
   // and says so rather than disappearing quietly.
@@ -725,7 +725,7 @@ function StateDot({
   style,
   ...rest
 }) {
-  const s = STATES[state] || STATES.neutral;
+  const s = __ds_scope.pick(STATES, state, STATES.neutral);
   __ds_scope.warnUnknown('StateDot', 'state', state, STATES, 'neutral');
   const diamond = s.shape === 'diamond';
   return /*#__PURE__*/React.createElement("span", _extends({
@@ -768,6 +768,19 @@ try {
 const said = new Set();
 
 /**
+ * Resolves a prop against its table by own key only. `TABLE[key] || TABLE.default`
+ * looks equivalent and is not: `state="constructor"` reaches `Object.prototype`
+ * and returns a truthy function, so the fallback never fires and the row's fields
+ * are all undefined — a `StateDot` handed `undefined` renders its own default, so
+ * an unreadable value shows up as a *material state* the caller never asked for.
+ * That is the failure this whole policy exists to remove, so the lookup has to
+ * agree with `warnUnknown`, which has always checked own keys.
+ */
+function pick(table, key, fallback) {
+  return Object.prototype.hasOwnProperty.call(table, key) ? table[key] : fallback;
+}
+
+/**
  * Says that a prop value fell outside its union, and what rendered instead.
  * Every table lookup in the system falls back whole rather than throwing or
  * half-rendering, which makes the mistake invisible — this is the only thing
@@ -780,12 +793,15 @@ const said = new Set();
 function warnUnknown(component, prop, value, table, fallback) {
   if (!DEV || value === undefined) return;
   if (Object.prototype.hasOwnProperty.call(table, value)) return;
-  const line = `${component}.${prop}=${String(value)}`;
-  if (said.has(line)) return;
-  said.add(line);
-  console.warn(`[QM] <${component}> ${prop}=${JSON.stringify(value)} is not one of ` + `${Object.keys(table).map(k => `'${k}'`).join(' | ')} — rendering '${fallback}'.`);
+  // `String()`, not `JSON.stringify()`: a bigint or a circular object throws
+  // there, so reporting the bad value would fail the render the fallback just
+  // rescued. The dedupe key below has always used the safe form.
+  const shown = String(value);
+  if (said.has(`${component}.${prop}=${shown}`)) return;
+  said.add(`${component}.${prop}=${shown}`);
+  console.warn(`[QM] <${component}> ${prop}="${shown}" is not one of ` + `${Object.keys(table).map(k => `'${k}'`).join(' | ')} — rendering '${fallback}'.`);
 }
-Object.assign(__ds_scope, { warnUnknown });
+Object.assign(__ds_scope, { pick, warnUnknown });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/core/warn.js", error: String((e && e.message) || e) }); }
 
 // components/feedback/Callout.jsx
@@ -846,7 +862,7 @@ function Callout({
   style,
   ...rest
 }) {
-  const t = TONES[tone] || TONES.neutral;
+  const t = __ds_scope.pick(TONES, tone, TONES.neutral);
   __ds_scope.warnUnknown('Callout', 'tone', tone, TONES, 'neutral');
   const mark = glyph !== undefined ? glyph : t.triangle ? /*#__PURE__*/React.createElement("span", {
     style: {
@@ -969,7 +985,7 @@ function ModeBar({
   style,
   ...rest
 }) {
-  const m = MODES[mode] || MODES.linking;
+  const m = __ds_scope.pick(MODES, mode, MODES.linking);
   __ds_scope.warnUnknown('ModeBar', 'mode', mode, MODES, 'linking');
   return /*#__PURE__*/React.createElement("div", _extends({
     style: {
@@ -1388,7 +1404,7 @@ function SaveStatus({
   style,
   ...rest
 }) {
-  const s = S[state] || S.local;
+  const s = __ds_scope.pick(S, state, S.local);
   __ds_scope.warnUnknown('SaveStatus', 'state', state, S, 'local');
   if (inline) {
     return /*#__PURE__*/React.createElement("span", _extends({
@@ -1716,7 +1732,7 @@ function PromptField({
   ...rest
 }) {
   const [inner, setInner] = React.useState(false);
-  const A = AUDIENCE[audience] || AUDIENCE.private;
+  const A = __ds_scope.pick(AUDIENCE, audience, AUDIENCE.private);
   __ds_scope.warnUnknown('PromptField', 'audience', audience, AUDIENCE, 'private');
   const wraps = value == null && placeholder == null;
   const ring = focused === undefined ? inner : focused;
@@ -2090,7 +2106,7 @@ const TextArea = React.forwardRef(function TextArea({
 }, ref) {
   const auto = React.useId();
   const inputId = id || auto;
-  const grip = RESIZE[resize] || RESIZE.none;
+  const grip = __ds_scope.pick(RESIZE, resize, RESIZE.none);
   __ds_scope.warnUnknown('TextArea', 'resize', resize, RESIZE, 'none');
   return /*#__PURE__*/React.createElement(__ds_scope.Field, {
     label: label,
@@ -2227,7 +2243,7 @@ function AnnotationMark({
   style,
   ...rest
 }) {
-  const t = TONES[tone] || TONES.measure;
+  const t = __ds_scope.pick(TONES, tone, TONES.measure);
   __ds_scope.warnUnknown('AnnotationMark', 'tone', tone, TONES, 'measure');
   return /*#__PURE__*/React.createElement("span", _extends({
     style: {
@@ -2282,13 +2298,15 @@ const STATES = {
     tint: 'var(--qm-tint-gold)',
     edge: 'var(--qm-border-gold)'
   },
+  // Claims nothing, and so carries no chip at all: a gold dot reading PROPOSED
+  // over a beat nobody proposed is the assertion this entry exists to withhold.
   none: {
     rail: 'none',
-    label: 'PROPOSED',
-    dot: 'proposed',
-    ink: 'var(--qm-gold-text)',
-    tint: 'var(--qm-tint-gold)',
-    edge: 'var(--qm-border-gold)'
+    label: null,
+    dot: null,
+    ink: null,
+    tint: null,
+    edge: null
   }
 };
 
@@ -2305,7 +2323,7 @@ function BeatCard({
   style,
   ...rest
 }) {
-  const s = STATES[state] || STATES.none;
+  const s = __ds_scope.pick(STATES, state, STATES.none);
   __ds_scope.warnUnknown('BeatCard', 'state', state, STATES, 'none');
   return /*#__PURE__*/React.createElement(__ds_scope.Card, _extends({
     surface: "beat",
@@ -2325,7 +2343,7 @@ function BeatCard({
       fontSize: 'var(--qm-type-mono-chip)',
       letterSpacing: 'var(--qm-ls-mono-tight)'
     }
-  }, /*#__PURE__*/React.createElement("span", {
+  }, s.label ? /*#__PURE__*/React.createElement("span", {
     style: {
       display: 'flex',
       alignItems: 'center',
@@ -2342,7 +2360,7 @@ function BeatCard({
     style: {
       animation: s.breathe ? 'qmBreathe 3s ease-in-out infinite' : undefined
     }
-  }), s.label), era ? /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("span", {
+  }), s.label) : null, era ? /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("span", {
     style: {
       color: 'var(--qm-text-9)'
     }
@@ -2461,7 +2479,7 @@ function BeatSpine({
       background: 'var(--qm-border-panel)'
     }
   }) : null, beats.map((b, i) => {
-    const dot = DOT_STATE[b.state] || 'unwritten';
+    const dot = __ds_scope.pick(DOT_STATE, b.state, 'unwritten');
     // Read off the resolved glyph, not off `b.state`: the selection, the
     // number's ink and the HERE flag all have to agree with the dot.
     const here = dot === 'here';
@@ -2757,7 +2775,7 @@ function EraChip({
   style,
   ...rest
 }) {
-  const k = KINDS[kind] || KINDS.time;
+  const k = __ds_scope.pick(KINDS, kind, KINDS.time);
   __ds_scope.warnUnknown('EraChip', 'kind', kind, KINDS, 'time');
   return /*#__PURE__*/React.createElement("span", _extends({
     style: {
@@ -2809,7 +2827,7 @@ function NoteBlock({
   style,
   ...rest
 }) {
-  const t = TONES[tone] || TONES.neutral;
+  const t = __ds_scope.pick(TONES, tone, TONES.neutral);
   __ds_scope.warnUnknown('NoteBlock', 'tone', tone, TONES, 'neutral');
   return /*#__PURE__*/React.createElement("div", _extends({
     style: {
@@ -2882,7 +2900,7 @@ function RouteChip({
 }) {
   const [hover, setHover] = React.useState(false);
   const [ring, setRing] = React.useState(false);
-  const s = STATES[state] || STATES.unknown;
+  const s = __ds_scope.pick(STATES, state, STATES.unknown);
   __ds_scope.warnUnknown('RouteChip', 'state', state, STATES, 'unknown');
   const base = {
     height: 32,
@@ -3000,7 +3018,7 @@ function TimelineRow({
 }) {
   const [hover, setHover] = React.useState(false);
   const [ring, setRing] = React.useState(false);
-  const s = STATES[state] || NEUTRAL;
+  const s = __ds_scope.pick(STATES, state, NEUTRAL);
   __ds_scope.warnUnknown('TimelineRow', 'state', state, STATES, 'neutral');
   const base = {
     position: 'relative',
@@ -3287,7 +3305,7 @@ function PanelHeader({
   style,
   ...rest
 }) {
-  const a = AUDIENCES[audience] || AUDIENCES.plain;
+  const a = __ds_scope.pick(AUDIENCES, audience, AUDIENCES.plain);
   __ds_scope.warnUnknown('PanelHeader', 'audience', audience, AUDIENCES, 'plain');
   return /*#__PURE__*/React.createElement("div", _extends({
     style: {
@@ -7717,6 +7735,8 @@ __ds_ns.Icon = __ds_scope.Icon;
 __ds_ns.Kbd = __ds_scope.Kbd;
 
 __ds_ns.StateDot = __ds_scope.StateDot;
+
+__ds_ns.pick = __ds_scope.pick;
 
 __ds_ns.warnUnknown = __ds_scope.warnUnknown;
 

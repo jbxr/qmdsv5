@@ -1,6 +1,6 @@
 import React from 'react';
 import { StateDot } from '../core/StateDot.jsx';
-import { warnUnknown } from '../core/warn.js';
+import { warnUnknown, pick } from '../core/warn.js';
 
 /* A beat's state is not always a glyph state: `ahead` is a position in the
    draft, not a material state, so it borrows `unwritten`'s hollow grey ring.
@@ -40,7 +40,7 @@ export function BeatSpine({ beats = [], onSelect, showSpine = true, style, ...re
         <div style={{ position: 'absolute', left: 3, top: 8, bottom: 8, width: 1, background: 'var(--qm-border-panel)' }} />
       ) : null}
       {beats.map((b, i) => {
-        const dot = DOT_STATE[b.state] || 'unwritten';
+        const dot = pick(DOT_STATE, b.state, 'unwritten');
         // Read off the resolved glyph, not off `b.state`: the selection, the
         // number's ink and the HERE flag all have to agree with the dot.
         const here = dot === 'here';

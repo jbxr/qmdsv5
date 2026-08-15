@@ -1,6 +1,6 @@
 import React from 'react';
 import { Field } from './Field.jsx';
-import { warnUnknown } from '../core/warn.js';
+import { warnUnknown, pick } from '../core/warn.js';
 
 // `resize` reached CSSOM as the declaration value itself, so an unrecognised one
 // was not a branch that missed but a declaration the browser dropped: the
@@ -24,7 +24,7 @@ export const TextArea = React.forwardRef(function TextArea({
 }, ref) {
   const auto = React.useId();
   const inputId = id || auto;
-  const grip = RESIZE[resize] || RESIZE.none;
+  const grip = pick(RESIZE, resize, RESIZE.none);
   warnUnknown('TextArea', 'resize', resize, RESIZE, 'none');
   return (
     <Field

@@ -1,6 +1,6 @@
 import React from 'react';
 import { StateDot } from '../core/StateDot.jsx';
-import { warnUnknown } from '../core/warn.js';
+import { warnUnknown, pick } from '../core/warn.js';
 
 // `glow` sits beside `dot` and `pulse` rather than in a `state === 'saved'`
 // test, so all three of the dot's inputs come from the same resolved row.
@@ -13,7 +13,7 @@ const S = {
 
 /** Local drafting and the fan-out to QM are different promises, so different indicators. */
 export function SaveStatus({ state = 'local', children, tag, inline, style, ...rest }) {
-  const s = S[state] || S.local;
+  const s = pick(S, state, S.local);
   warnUnknown('SaveStatus', 'state', state, S, 'local');
   if (inline) {
     return (

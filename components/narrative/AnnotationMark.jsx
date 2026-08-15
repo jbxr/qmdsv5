@@ -1,5 +1,5 @@
 import React from 'react';
-import { warnUnknown } from '../core/warn.js';
+import { warnUnknown, pick } from '../core/warn.js';
 
 const TONES = {
   measure:  { color: 'var(--qm-text-6)', bg: 'var(--qm-fill-chip)', border: 'transparent' },
@@ -12,7 +12,7 @@ const TONES = {
 
 /** Deterministic signal on a beat: a measurement, an advisory, or damage. */
 export function AnnotationMark({ children, tone = 'measure', glyph, style, ...rest }) {
-  const t = TONES[tone] || TONES.measure;
+  const t = pick(TONES, tone, TONES.measure);
   warnUnknown('AnnotationMark', 'tone', tone, TONES, 'measure');
   return (
     <span

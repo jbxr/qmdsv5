@@ -1,7 +1,7 @@
 import React from 'react';
 import { StateDot } from '../core/StateDot.jsx';
 import { Avatar } from '../core/Avatar.jsx';
-import { warnUnknown } from '../core/warn.js';
+import { warnUnknown, pick } from '../core/warn.js';
 
 /* The selection rail carries the same state the dot does, so it follows the
    dot's hue. `unlinked` is dimmed gold — attention, not fault.
@@ -34,7 +34,7 @@ export function TimelineRow({
 }) {
   const [hover, setHover] = React.useState(false);
   const [ring, setRing] = React.useState(false);
-  const s = STATES[state] || NEUTRAL;
+  const s = pick(STATES, state, NEUTRAL);
   warnUnknown('TimelineRow', 'state', state, STATES, 'neutral');
   const base = {
     position: 'relative', display: 'flex', gap: 10,

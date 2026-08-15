@@ -1,6 +1,6 @@
 import React from 'react';
 import { StateDot } from '../core/StateDot.jsx';
-import { warnUnknown } from '../core/warn.js';
+import { warnUnknown, pick } from '../core/warn.js';
 
 // The shape is a column here too: `conflict` is the only tone that takes the
 // triangle, and the rest name the dot they carry. Reading the raw `tone` for
@@ -15,7 +15,7 @@ const TONES = {
 
 /** Advisory or blocking surface. Cinnabar is reserved for material that is wrong. */
 export function Callout({ tone = 'neutral', glyph, children, action, style, ...rest }) {
-  const t = TONES[tone] || TONES.neutral;
+  const t = pick(TONES, tone, TONES.neutral);
   warnUnknown('Callout', 'tone', tone, TONES, 'neutral');
   const mark = glyph !== undefined ? glyph
     : t.triangle

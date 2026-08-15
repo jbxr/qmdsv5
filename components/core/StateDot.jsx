@@ -1,5 +1,5 @@
 import React from 'react';
-import { warnUnknown } from './warn.js';
+import { warnUnknown, pick } from './warn.js';
 
 // The glow is a column of this table rather than a second lookup on the raw
 // prop: two lookups can disagree, and the one keyed on the prop answered a
@@ -21,7 +21,7 @@ const STATES = {
 
 /** The state glyph. Colour never travels without this shape. */
 export function StateDot({ state = 'canon', size = 8, glow, pulse, style, ...rest }) {
-  const s = STATES[state] || STATES.neutral;
+  const s = pick(STATES, state, STATES.neutral);
   warnUnknown('StateDot', 'state', state, STATES, 'neutral');
   const diamond = s.shape === 'diamond';
   return (

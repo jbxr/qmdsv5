@@ -1,5 +1,5 @@
 import React from 'react';
-import { warnUnknown } from '../core/warn.js';
+import { warnUnknown, pick } from '../core/warn.js';
 
 // Hoisted so the fallback and the warning read the same table, and so it is not
 // rebuilt on every render. `unknown` is the fallback because it is already the
@@ -21,7 +21,7 @@ const STATES = {
 export function RouteChip({ children, state = 'count', icon, onClick, style, ...rest }) {
   const [hover, setHover] = React.useState(false);
   const [ring, setRing] = React.useState(false);
-  const s = STATES[state] || STATES.unknown;
+  const s = pick(STATES, state, STATES.unknown);
   warnUnknown('RouteChip', 'state', state, STATES, 'unknown');
   const base = {
     height: 32, display: 'inline-flex', alignItems: 'center', gap: 9,

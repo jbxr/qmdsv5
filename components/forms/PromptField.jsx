@@ -1,6 +1,6 @@
 import React from 'react';
 import { Icon } from '../core/Icon.jsx';
-import { warnUnknown } from '../core/warn.js';
+import { warnUnknown, pick } from '../core/warn.js';
 
 // `private` is the fallback as well as the default: it is the one audience that
 // promises nothing leaves, and the lock glyph below is unconditional, so it is
@@ -19,7 +19,7 @@ export function PromptField({
   focused, children, style, onFocus, onBlur, ...rest
 }) {
   const [inner, setInner] = React.useState(false);
-  const A = AUDIENCE[audience] || AUDIENCE.private;
+  const A = pick(AUDIENCE, audience, AUDIENCE.private);
   warnUnknown('PromptField', 'audience', audience, AUDIENCE, 'private');
   const wraps = value == null && placeholder == null;
   const ring = focused === undefined ? inner : focused;

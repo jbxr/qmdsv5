@@ -1,5 +1,5 @@
 import React from 'react';
-import { warnUnknown } from '../core/warn.js';
+import { warnUnknown, pick } from '../core/warn.js';
 
 // Hoisted out of the render, and the well and the ink join the rule in it: an
 // unrecognised tone used to take the neutral rule with a transparent well, so
@@ -12,7 +12,7 @@ const TONES = {
 
 /** Author note or aside: italic serif behind a 2px rule. Never prose, never a card. */
 export function NoteBlock({ children, tone = 'neutral', size = 'md', style, ...rest }) {
-  const t = TONES[tone] || TONES.neutral;
+  const t = pick(TONES, tone, TONES.neutral);
   warnUnknown('NoteBlock', 'tone', tone, TONES, 'neutral');
   return (
     <div

@@ -1,5 +1,5 @@
 import React from 'react';
-import { warnUnknown } from './warn.js';
+import { warnUnknown, pick } from './warn.js';
 
 const H = { lg: 44, md: 36, sm: 34, xs: 32, xxs: 30, tiny: 28 };
 
@@ -92,8 +92,8 @@ export function Button({
   // mouse and then typed at becomes `:focus-visible` where it stands, and a
   // focus-time sample alone would leave that user the browser's ring, not QM's.
   const [ring, setRing] = React.useState(false);
-  const v = VARIANTS[variant] || VARIANTS.secondary;
-  const height = H[size] || H.sm;
+  const v = pick(VARIANTS, variant, VARIANTS.secondary);
+  const height = pick(H, size, H.sm);
   warnUnknown('Button', 'variant', variant, VARIANTS, 'secondary');
   warnUnknown('Button', 'size', size, H, 'sm');
   const base = {
