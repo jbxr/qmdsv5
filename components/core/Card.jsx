@@ -24,34 +24,80 @@ const RAILS = {
   none: null
 };
 
-/** Surface container. `rail` is material state; the surface itself is selection. */
+/**
+ * Surface container. `rail` is material state; the surface itself is selection.
+ * A card given an `onClick` is a control and ships as one — tab stop, button
+ * role, Enter and Space, QM's ring — and a card given none stays a plain `div`
+ * outside the tab order. The role stands in for a real `<button>` because the
+ * element has to keep taking flow content and controls, which a button may not
+ * hold, and because a button's box only matches this one after seven UA
+ * overrides — `display` and `width` among them, which a card does not set.
+ */
 export function Card({
   surface = 'panel', rail = 'none', radius = 'card', padding = 22,
-  hoverable, children, style, ...rest
+  hoverable, children, style, onClick, onFocus, onBlur, onKeyDown, ...rest
 }) {
   const [hover, setHover] = React.useState(false);
+  const [ring, setRing] = React.useState(false);
   const s = SURFACES[surface] || SURFACES.panel;
   const railBg = RAILS[rail];
+  const interactive = Boolean(onClick);
+  // A card holds other things, so every focus and key signal is read only when
+  // the card itself is the target: focus bubbles, and a control nested inside
+  // would otherwise ring the card and answer Enter twice.
+  const self = (e) => e.target === e.currentTarget;
+  const box = {
+    // Only a railed card contains and clips its rail; a plain one leaves
+    // position and overflow to the consumer.
+    position: railBg ? 'relative' : undefined,
+    overflow: railBg ? 'hidden' : undefined,
+    padding,
+    borderRadius: radius === 'panel' ? 'var(--qm-radius-panel)' : 'var(--qm-radius-card)',
+    background: hover && s.backgroundHover ? s.backgroundHover : s.background,
+    borderWidth: 1,
+    borderStyle: s.edge,
+    borderColor: hover ? s.borderHover : s.border,
+    boxShadow: s.shadow,
+    cursor: hoverable || interactive ? 'pointer' : undefined,
+    transition: 'background var(--qm-dur-hover) var(--qm-ease), border-color var(--qm-dur-hover) var(--qm-ease)',
+    ...style
+  };
+  // The ring is the one value a consumer `style` does not outrank, because the
+  // direction of that override that hides a real focus indicator cannot be the
+  // right one. It layers over whatever shadow is already there rather than
+  // replacing it, so a focused `selected` or `beat` card keeps its elevation.
+  if (ring) {
+    box.boxShadow = box.boxShadow && box.boxShadow !== 'none'
+      ? `var(--qm-focus-ring), ${box.boxShadow}`
+      : 'var(--qm-focus-ring)';
+    box.outline = 'var(--qm-focus-outline,2px solid transparent)';
+    box.outlineOffset = 'var(--qm-focus-outline-offset,1px)';
+  }
   return (
     <div
+      onClick={onClick}
+      role={interactive ? 'button' : undefined}
+      tabIndex={interactive ? 0 : undefined}
       onMouseEnter={hoverable ? () => setHover(true) : undefined}
       onMouseLeave={hoverable ? () => setHover(false) : undefined}
-      style={{
-        // Only a railed card contains and clips its rail; a plain one leaves
-        // position and overflow to the consumer.
-        position: railBg ? 'relative' : undefined,
-        overflow: railBg ? 'hidden' : undefined,
-        padding,
-        borderRadius: radius === 'panel' ? 'var(--qm-radius-panel)' : 'var(--qm-radius-card)',
-        background: hover && s.backgroundHover ? s.backgroundHover : s.background,
-        borderWidth: 1,
-        borderStyle: s.edge,
-        borderColor: hover ? s.borderHover : s.border,
-        boxShadow: s.shadow,
-        cursor: hoverable ? 'pointer' : undefined,
-        transition: 'background var(--qm-dur-hover) var(--qm-ease), border-color var(--qm-dur-hover) var(--qm-ease)',
-        ...style
+      onFocus={(e) => {
+        if (interactive && self(e) && e.target.matches(':focus-visible')) setRing(true);
+        if (onFocus) onFocus(e);
       }}
+      onBlur={(e) => {
+        if (self(e)) setRing(false);
+        if (onBlur) onBlur(e);
+      }}
+      // Sampled again on keydown, not only on focus: a card reached by pointer
+      // and then typed at becomes `:focus-visible` where it stands.
+      onKeyDown={(e) => {
+        if (interactive && self(e)) {
+          if (e.target.matches(':focus-visible')) setRing(true);
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onClick(e); }
+        }
+        if (onKeyDown) onKeyDown(e);
+      }}
+      style={box}
       {...rest}
     >
       {railBg ? (

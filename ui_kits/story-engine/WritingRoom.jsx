@@ -1,14 +1,40 @@
 const { Button, Icon, StateDot, Avatar, Card, EraChip, RouteChip, EntityToken, TopBar, EmptyState, SaveStatus } = window.QuantumMateriaDesignSystem_488cde;
 
+/**
+ * The same control element `SceneRoom` uses: a real `<button>` under whatever
+ * the surface wants it to look like, carrying QM's ring and no UA chrome.
+ */
+function Pressable({ label, onClick, style, children, ...rest }) {
+  const [ring, setRing] = React.useState(false);
+  return (
+    <button
+      type="button" aria-label={label} onClick={onClick} {...rest}
+      onFocus={(e) => { if (e.target.matches(':focus-visible')) setRing(true); }}
+      onKeyDown={(e) => { if (e.target.matches(':focus-visible')) setRing(true); }}
+      onBlur={() => setRing(false)}
+      style={{
+        margin: 0, padding: 0, font: 'inherit', color: 'inherit',
+        background: 'transparent', border: 'none', cursor: 'pointer',
+        ...style,
+        ...(ring ? {
+          boxShadow: 'var(--qm-focus-ring)',
+          outline: 'var(--qm-focus-outline,2px solid transparent)',
+          outlineOffset: 'var(--qm-focus-outline-offset,1px)'
+        } : null)
+      }}
+    >{children}</button>
+  );
+}
+
 function WritingRoom({ onOpenScene, onNewScene, onNewOutline, onCompose, onOpenOutline }) {
   const [resume, earlier] = [window.QM_SCENES[0], window.QM_SCENES.slice(1)];
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100%', background: 'var(--qm-surface-shell)' }}>
       <TopBar breadcrumb={false}>
         <SaveStatus inline state="saved">Room live</SaveStatus>
-        <span style={{ width: 30, height: 30, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', borderRadius: 7, border: '1px solid var(--qm-border-control)', cursor: 'pointer' }}>
+        <Pressable label="Room settings" style={{ width: 30, height: 30, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', borderRadius: 7, border: '1px solid var(--qm-border-control)' }}>
           <Icon name="sliders" size={15} color="var(--qm-text-4)" />
-        </span>
+        </Pressable>
       </TopBar>
 
       <div className="qm-scroll" style={{ flex: 1, overflowY: 'auto', background: 'var(--qm-surface-app-glow)' }}>

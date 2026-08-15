@@ -87,3 +87,25 @@ jobs:
       # the gallery lays out. A card whose fonts did not arrive is reported as
       # not measured, so a CDN blip cannot turn into a red build.
       - run: npm run cards:viewports
+
+  # Eight components shipped with ZERO tab stops between them — `Tabs`, the
+  # product's own navigation, could not be operated by keyboard at all, and had
+  # been that way since the initial commit (#35). Every job above was green for
+  # every one of those days: none of it is a type error, a config drift, a stale
+  # artifact or a layout overflow. It is a behaviour, and a behaviour only exists
+  # in a browser. So this one presses Tab.
+  keyboard:
+    name: every control is reachable and shows focus
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # 22 for the global `WebSocket` the CDP client drives Chrome over, as above.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # A card whose scripts did not arrive rendered nothing, so it has no tab
+      # order to walk and is reported as skipped rather than failed — the same
+      # refusal to invent a verdict that `cards:viewports` makes about fonts.
+      - run: npm run keyboard:check

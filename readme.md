@@ -210,6 +210,29 @@ The design system ships as the `.jsx`, `.d.ts` and `.css` you can read. Three
 generated files sit alongside it, and all three are now built from those sources
 by scripts in this repo.
 
+### The five checks, and what each one catches
+
+Each exists because something shipped past the others. They do not overlap, and
+the last one is the reason the list is five long rather than four.
+
+| Check | Catches | Blind to |
+| --- | --- | --- |
+| `npm run typecheck` | A declaration that does not compile, under `@types/react` 18 **and** 19 | Anything the types allow |
+| `npm run adherence:check` | `_adherence.oxlintrc.json` disagreeing with the shipped `.d.ts` | Anything not expressed as a prop |
+| `npm run bundle:check` | `_ds_bundle.js` / `_ds_manifest.json` stale against `components/**` and `ui_kits/**` | Whether the code they carry is correct |
+| `npm run cards:viewports` | A `@dsCard` viewport shorter than the card's own content | Anything that fits |
+| `npm run keyboard:check` | A control no Tab press can reach, or one that can be reached and shows no focus | Anything not rendered on a card |
+
+**Read that last row as a warning about the other four.** Eight components —
+`Tabs`, `SegmentedControl`, `Picker`, `BeatSpine`, `VersionStrip`, `TimelineRow`,
+`RouteChip`, `EntityToken` — shipped with **zero tab stops between them**, from
+the initial commit until #35. `Tabs` is the product's own navigation and could
+not be operated by keyboard at all. The four checks above it were green for every
+one of those days, and they were right to be: none of it is a type error, a
+config drift, a stale artifact or a layout overflow. It is a behaviour, and a
+behaviour only exists in a browser. Nothing here noticed until a person opened a
+card and pressed Tab.
+
 ### The bundle — `npm run bundle:build`
 
 `components/**/*.jsx` is the source of truth. It is also not what anything
@@ -273,6 +296,54 @@ Two things it will tell you rather than guess at: cards whose fonts did not load
 are reported as **not measured**, because Spectral and IBM Plex do not have the
 metrics of the local fallbacks; and `_ds_manifest.json` carries its own copy of
 every viewport, so run `npm run bundle:build` after `--fix` to finish the job.
+
+### Keyboard reachability — `npm run keyboard:check`
+
+`scripts/check-keyboard.mjs` opens every `@dsCard` page in headless Chrome and
+**presses Tab**, then asks the browser what it did. It reads no source. There is
+no rule in it about what `tabIndex` ought to be; there is only the tab order
+Chrome actually built.
+
+```
+npm run keyboard:check              # walk every card (runs in CI)
+npm run keyboard:check -- --verbose # print every tab stop and every composite
+npm run keyboard:check -- forms     # walk only the cards matching "forms"
+```
+
+It asserts three things.
+
+- **Everything interactive is reachable.** Interactive means a native control, an
+  interactive ARIA role, or `cursor: pointer` — the last of which is the one that
+  earns the check its keep, because React attaches its listeners at the document
+  root and a `<div onClick>` carries nothing in the DOM to find it by. In QM a
+  clickable thing shows the pointer cursor, so the cursor is the house signature
+  of a handler. What that misses is written down at the top of the script.
+- **A roving composite is validated as a group, not as members.** A `tablist`,
+  `radiogroup` or `listbox` takes *one* tab stop and arrows between — so its
+  members at `tabIndex="-1"` are correct, not broken, and flagging them would
+  flag every correct ARIA widget in the repo. The group passes when exactly one
+  member is a real tab stop **and an arrow key pressed on it actually moves
+  focus**. One way in and no way on is #35 wearing the right attributes.
+- **Every tab stop shows a focus indicator**, where an indicator is what *changes*
+  between focused and blurred — measured on the element, on its ancestors and on
+  its descendants, because this repo paints the ring in all three places: `Tabs`
+  rings itself, `Field` rings the well above the input, `Picker` rings a span it
+  inserts below the option. A ring that is always there is not a focus indicator
+  and is not counted, which is exactly what `focused` on a specimen `Field` is.
+  A stop whose only change is a `box-shadow` **fails**: box-shadow is dropped
+  under forced-colors, so answering the browser's outline with `none` leaves a
+  high-contrast user nothing at all (#27).
+
+Two things it will tell you rather than guess at, in the house manner: a card
+whose scripts did not load rendered nothing and has no tab order, so it is
+reported as **skipped**, not passed and not failed; and the deliberate exceptions
+live in one `EXEMPT` table at the top of the script, each naming its card, its
+selector and its reason, so `grep EXEMPT scripts/check-keyboard.mjs` is the whole
+list rather than a special case buried in the detector.
+
+It walks every `@dsCard` page, not every `*.card.html` — `ui_kits/story-engine/index.html`
+is an annotated card that is not named like one, and it is the largest interactive
+surface in the repo.
 
 ## Index
 

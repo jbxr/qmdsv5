@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"QuantumMateriaDesignSystem_488cde","components":[{"name":"Avatar","sourcePath":"components/core/Avatar.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"QM_ICONS","sourcePath":"components/core/Icon.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"Kbd","sourcePath":"components/core/Kbd.jsx"},{"name":"StateDot","sourcePath":"components/core/StateDot.jsx"},{"name":"Callout","sourcePath":"components/feedback/Callout.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"ModeBar","sourcePath":"components/feedback/ModeBar.jsx"},{"name":"Overlay","sourcePath":"components/feedback/Overlay.jsx"},{"name":"Refusal","sourcePath":"components/feedback/Refusal.jsx"},{"name":"SaveStatus","sourcePath":"components/feedback/SaveStatus.jsx"},{"name":"Field","sourcePath":"components/forms/Field.jsx"},{"name":"Picker","sourcePath":"components/forms/Picker.jsx"},{"name":"PromptField","sourcePath":"components/forms/PromptField.jsx"},{"name":"PromptTextField","sourcePath":"components/forms/PromptTextField.jsx"},{"name":"SegmentedControl","sourcePath":"components/forms/SegmentedControl.jsx"},{"name":"Tabs","sourcePath":"components/forms/Tabs.jsx"},{"name":"TextArea","sourcePath":"components/forms/TextArea.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"AnnotationMark","sourcePath":"components/narrative/AnnotationMark.jsx"},{"name":"BeatCard","sourcePath":"components/narrative/BeatCard.jsx"},{"name":"BeatSpine","sourcePath":"components/narrative/BeatSpine.jsx"},{"name":"EntityToken","sourcePath":"components/narrative/EntityToken.jsx"},{"name":"EraChip","sourcePath":"components/narrative/EraChip.jsx"},{"name":"NoteBlock","sourcePath":"components/narrative/NoteBlock.jsx"},{"name":"RouteChip","sourcePath":"components/narrative/RouteChip.jsx"},{"name":"TimelineRow","sourcePath":"components/narrative/TimelineRow.jsx"},{"name":"VersionStrip","sourcePath":"components/narrative/VersionStrip.jsx"},{"name":"PanelHeader","sourcePath":"components/navigation/PanelHeader.jsx"},{"name":"StatusBar","sourcePath":"components/navigation/StatusBar.jsx"},{"name":"TopBar","sourcePath":"components/navigation/TopBar.jsx"}],"sourceHashes":{"components/core/Avatar.jsx":"1bd5dba57b46","components/core/Button.jsx":"5e926a6ee4a3","components/core/Card.jsx":"14114b3dfca4","components/core/Icon.jsx":"0ad515408d9b","components/core/Kbd.jsx":"b3b34000dfb0","components/core/StateDot.jsx":"a3fd991e007b","components/feedback/Callout.jsx":"1b782dc94451","components/feedback/EmptyState.jsx":"f68b008bade2","components/feedback/ModeBar.jsx":"973602b22e38","components/feedback/Overlay.jsx":"71b10a92b89b","components/feedback/Refusal.jsx":"3481c28f8b57","components/feedback/SaveStatus.jsx":"adee664c7518","components/forms/Field.jsx":"d11a07d68b44","components/forms/Picker.jsx":"126f2bf00492","components/forms/PromptField.jsx":"3dd0c094d315","components/forms/PromptTextField.jsx":"e8fd47ff76e5","components/forms/SegmentedControl.jsx":"c4d676cb9dcb","components/forms/Tabs.jsx":"ed28a0138f72","components/forms/TextArea.jsx":"40a2eb2b6a36","components/forms/TextField.jsx":"a034068c02e4","components/narrative/AnnotationMark.jsx":"ef3759352e5f","components/narrative/BeatCard.jsx":"e36949ac7061","components/narrative/BeatSpine.jsx":"2177268509df","components/narrative/EntityToken.jsx":"fcc5f6b14e50","components/narrative/EraChip.jsx":"d91dbb354539","components/narrative/NoteBlock.jsx":"4cfa653d454f","components/narrative/RouteChip.jsx":"982e358d1278","components/narrative/TimelineRow.jsx":"1f9931a06feb","components/narrative/VersionStrip.jsx":"97d49d4641ab","components/navigation/PanelHeader.jsx":"602869534413","components/navigation/StatusBar.jsx":"619e36242c19","components/navigation/TopBar.jsx":"2a8acc0da304","ui_kits/story-engine/Compose.jsx":"0ca07723dda3","ui_kits/story-engine/NewScene.jsx":"91bbe441b5cd","ui_kits/story-engine/Outline.jsx":"de958cb1cff5","ui_kits/story-engine/SceneRoom.jsx":"137573633750","ui_kits/story-engine/WritingRoom.jsx":"8f3ba0166dc7","ui_kits/story-engine/data.jsx":"9e2f348a9b25","ui_kits/story-engine/doc-page.js":"371bab66f42d"},"inlinedExternals":[],"unexposedExports":[]} */
+/* @ds-bundle: {"format":4,"namespace":"QuantumMateriaDesignSystem_488cde","components":[{"name":"Avatar","sourcePath":"components/core/Avatar.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"QM_ICONS","sourcePath":"components/core/Icon.jsx"},{"name":"Icon","sourcePath":"components/core/Icon.jsx"},{"name":"Kbd","sourcePath":"components/core/Kbd.jsx"},{"name":"StateDot","sourcePath":"components/core/StateDot.jsx"},{"name":"Callout","sourcePath":"components/feedback/Callout.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"ModeBar","sourcePath":"components/feedback/ModeBar.jsx"},{"name":"Overlay","sourcePath":"components/feedback/Overlay.jsx"},{"name":"Refusal","sourcePath":"components/feedback/Refusal.jsx"},{"name":"SaveStatus","sourcePath":"components/feedback/SaveStatus.jsx"},{"name":"Field","sourcePath":"components/forms/Field.jsx"},{"name":"Picker","sourcePath":"components/forms/Picker.jsx"},{"name":"PromptField","sourcePath":"components/forms/PromptField.jsx"},{"name":"PromptTextField","sourcePath":"components/forms/PromptTextField.jsx"},{"name":"SegmentedControl","sourcePath":"components/forms/SegmentedControl.jsx"},{"name":"Tabs","sourcePath":"components/forms/Tabs.jsx"},{"name":"TextArea","sourcePath":"components/forms/TextArea.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"AnnotationMark","sourcePath":"components/narrative/AnnotationMark.jsx"},{"name":"BeatCard","sourcePath":"components/narrative/BeatCard.jsx"},{"name":"BeatSpine","sourcePath":"components/narrative/BeatSpine.jsx"},{"name":"EntityToken","sourcePath":"components/narrative/EntityToken.jsx"},{"name":"EraChip","sourcePath":"components/narrative/EraChip.jsx"},{"name":"NoteBlock","sourcePath":"components/narrative/NoteBlock.jsx"},{"name":"RouteChip","sourcePath":"components/narrative/RouteChip.jsx"},{"name":"TimelineRow","sourcePath":"components/narrative/TimelineRow.jsx"},{"name":"VersionStrip","sourcePath":"components/narrative/VersionStrip.jsx"},{"name":"PanelHeader","sourcePath":"components/navigation/PanelHeader.jsx"},{"name":"StatusBar","sourcePath":"components/navigation/StatusBar.jsx"},{"name":"TopBar","sourcePath":"components/navigation/TopBar.jsx"}],"sourceHashes":{"components/core/Avatar.jsx":"1bd5dba57b46","components/core/Button.jsx":"5e926a6ee4a3","components/core/Card.jsx":"1e06f5b41015","components/core/Icon.jsx":"0ad515408d9b","components/core/Kbd.jsx":"b3b34000dfb0","components/core/StateDot.jsx":"a3fd991e007b","components/feedback/Callout.jsx":"b7108449465e","components/feedback/EmptyState.jsx":"f68b008bade2","components/feedback/ModeBar.jsx":"973602b22e38","components/feedback/Overlay.jsx":"71b10a92b89b","components/feedback/Refusal.jsx":"3481c28f8b57","components/feedback/SaveStatus.jsx":"adee664c7518","components/forms/Field.jsx":"9cb549d9f053","components/forms/Picker.jsx":"126f2bf00492","components/forms/PromptField.jsx":"3dd0c094d315","components/forms/PromptTextField.jsx":"e8fd47ff76e5","components/forms/SegmentedControl.jsx":"c4d676cb9dcb","components/forms/Tabs.jsx":"ed28a0138f72","components/forms/TextArea.jsx":"40a2eb2b6a36","components/forms/TextField.jsx":"a034068c02e4","components/narrative/AnnotationMark.jsx":"ef3759352e5f","components/narrative/BeatCard.jsx":"e36949ac7061","components/narrative/BeatSpine.jsx":"2177268509df","components/narrative/EntityToken.jsx":"fcc5f6b14e50","components/narrative/EraChip.jsx":"d91dbb354539","components/narrative/NoteBlock.jsx":"4cfa653d454f","components/narrative/RouteChip.jsx":"982e358d1278","components/narrative/TimelineRow.jsx":"1f9931a06feb","components/narrative/VersionStrip.jsx":"97d49d4641ab","components/navigation/PanelHeader.jsx":"602869534413","components/navigation/StatusBar.jsx":"619e36242c19","components/navigation/TopBar.jsx":"2a8acc0da304","ui_kits/story-engine/Compose.jsx":"0ca07723dda3","ui_kits/story-engine/NewScene.jsx":"91bbe441b5cd","ui_kits/story-engine/Outline.jsx":"de958cb1cff5","ui_kits/story-engine/SceneRoom.jsx":"137573633750","ui_kits/story-engine/WritingRoom.jsx":"a50f709e68ee","ui_kits/story-engine/data.jsx":"9e2f348a9b25","ui_kits/story-engine/doc-page.js":"371bab66f42d"},"inlinedExternals":[],"unexposedExports":[]} */
 
 (() => {
 
@@ -321,7 +321,15 @@ const RAILS = {
   none: null
 };
 
-/** Surface container. `rail` is material state; the surface itself is selection. */
+/**
+ * Surface container. `rail` is material state; the surface itself is selection.
+ * A card given an `onClick` is a control and ships as one — tab stop, button
+ * role, Enter and Space, QM's ring — and a card given none stays a plain `div`
+ * outside the tab order. The role stands in for a real `<button>` because the
+ * element has to keep taking flow content and controls, which a button may not
+ * hold, and because a button's box only matches this one after seven UA
+ * overrides — `display` and `width` among them, which a card does not set.
+ */
 function Card({
   surface = 'panel',
   rail = 'none',
@@ -330,30 +338,74 @@ function Card({
   hoverable,
   children,
   style,
+  onClick,
+  onFocus,
+  onBlur,
+  onKeyDown,
   ...rest
 }) {
   const [hover, setHover] = React.useState(false);
+  const [ring, setRing] = React.useState(false);
   const s = SURFACES[surface] || SURFACES.panel;
   const railBg = RAILS[rail];
+  const interactive = Boolean(onClick);
+  // A card holds other things, so every focus and key signal is read only when
+  // the card itself is the target: focus bubbles, and a control nested inside
+  // would otherwise ring the card and answer Enter twice.
+  const self = e => e.target === e.currentTarget;
+  const box = {
+    // Only a railed card contains and clips its rail; a plain one leaves
+    // position and overflow to the consumer.
+    position: railBg ? 'relative' : undefined,
+    overflow: railBg ? 'hidden' : undefined,
+    padding,
+    borderRadius: radius === 'panel' ? 'var(--qm-radius-panel)' : 'var(--qm-radius-card)',
+    background: hover && s.backgroundHover ? s.backgroundHover : s.background,
+    borderWidth: 1,
+    borderStyle: s.edge,
+    borderColor: hover ? s.borderHover : s.border,
+    boxShadow: s.shadow,
+    cursor: hoverable || interactive ? 'pointer' : undefined,
+    transition: 'background var(--qm-dur-hover) var(--qm-ease), border-color var(--qm-dur-hover) var(--qm-ease)',
+    ...style
+  };
+  // The ring is the one value a consumer `style` does not outrank, because the
+  // direction of that override that hides a real focus indicator cannot be the
+  // right one. It layers over whatever shadow is already there rather than
+  // replacing it, so a focused `selected` or `beat` card keeps its elevation.
+  if (ring) {
+    box.boxShadow = box.boxShadow && box.boxShadow !== 'none' ? `var(--qm-focus-ring), ${box.boxShadow}` : 'var(--qm-focus-ring)';
+    box.outline = 'var(--qm-focus-outline,2px solid transparent)';
+    box.outlineOffset = 'var(--qm-focus-outline-offset,1px)';
+  }
   return /*#__PURE__*/React.createElement("div", _extends({
+    onClick: onClick,
+    role: interactive ? 'button' : undefined,
+    tabIndex: interactive ? 0 : undefined,
     onMouseEnter: hoverable ? () => setHover(true) : undefined,
     onMouseLeave: hoverable ? () => setHover(false) : undefined,
-    style: {
-      // Only a railed card contains and clips its rail; a plain one leaves
-      // position and overflow to the consumer.
-      position: railBg ? 'relative' : undefined,
-      overflow: railBg ? 'hidden' : undefined,
-      padding,
-      borderRadius: radius === 'panel' ? 'var(--qm-radius-panel)' : 'var(--qm-radius-card)',
-      background: hover && s.backgroundHover ? s.backgroundHover : s.background,
-      borderWidth: 1,
-      borderStyle: s.edge,
-      borderColor: hover ? s.borderHover : s.border,
-      boxShadow: s.shadow,
-      cursor: hoverable ? 'pointer' : undefined,
-      transition: 'background var(--qm-dur-hover) var(--qm-ease), border-color var(--qm-dur-hover) var(--qm-ease)',
-      ...style
+    onFocus: e => {
+      if (interactive && self(e) && e.target.matches(':focus-visible')) setRing(true);
+      if (onFocus) onFocus(e);
+    },
+    onBlur: e => {
+      if (self(e)) setRing(false);
+      if (onBlur) onBlur(e);
     }
+    // Sampled again on keydown, not only on focus: a card reached by pointer
+    // and then typed at becomes `:focus-visible` where it stands.
+    ,
+    onKeyDown: e => {
+      if (interactive && self(e)) {
+        if (e.target.matches(':focus-visible')) setRing(true);
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onClick(e);
+        }
+      }
+      if (onKeyDown) onKeyDown(e);
+    },
+    style: box
   }, rest), railBg ? /*#__PURE__*/React.createElement("span", {
     style: {
       position: 'absolute',
@@ -728,12 +780,15 @@ function Callout({
       lineHeight: 1.55,
       color: t.text
     }
-  }, children, action ? /*#__PURE__*/React.createElement("div", {
+  }, children, action ?
+  /*#__PURE__*/
+  // No cursor and no handler here: the wrapper only places the action.
+  // Anything clickable is the caller's, and has to be a real control.
+  React.createElement("div", {
     style: {
       fontSize: 'var(--qm-type-secondary)',
       color: t.link,
-      marginTop: 6,
-      cursor: 'pointer'
+      marginTop: 6
     }
   }, action) : null));
 }
@@ -1355,7 +1410,9 @@ function Field({
       fontSize: serif ? 'var(--qm-type-body)' : 'var(--qm-field-size,14.5px)',
       lineHeight: multiline ? 'var(--qm-type-body-lh)' : undefined,
       color: disabled ? 'var(--qm-text-9)' : empty && !wraps ? 'var(--qm-text-7)' : 'var(--qm-text-field)',
-      cursor: disabled ? 'not-allowed' : select ? 'pointer' : 'text'
+      // A pointer promises a click, so only a field that has one gets it. A
+      // presentational `select` well holds no control and answers to nothing.
+      cursor: disabled ? 'not-allowed' : select && rest.onClick ? 'pointer' : 'text'
     }
   }, wraps ? null : /*#__PURE__*/React.createElement("span", {
     style: {
@@ -5950,6 +6007,7 @@ Object.assign(window, {
 
 // ui_kits/story-engine/WritingRoom.jsx
 try { (() => {
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 const {
   Button,
   Icon,
@@ -5963,6 +6021,48 @@ const {
   EmptyState,
   SaveStatus
 } = window.QuantumMateriaDesignSystem_488cde;
+
+/**
+ * The same control element `SceneRoom` uses: a real `<button>` under whatever
+ * the surface wants it to look like, carrying QM's ring and no UA chrome.
+ */
+function Pressable({
+  label,
+  onClick,
+  style,
+  children,
+  ...rest
+}) {
+  const [ring, setRing] = React.useState(false);
+  return /*#__PURE__*/React.createElement("button", _extends({
+    type: "button",
+    "aria-label": label,
+    onClick: onClick
+  }, rest, {
+    onFocus: e => {
+      if (e.target.matches(':focus-visible')) setRing(true);
+    },
+    onKeyDown: e => {
+      if (e.target.matches(':focus-visible')) setRing(true);
+    },
+    onBlur: () => setRing(false),
+    style: {
+      margin: 0,
+      padding: 0,
+      font: 'inherit',
+      color: 'inherit',
+      background: 'transparent',
+      border: 'none',
+      cursor: 'pointer',
+      ...style,
+      ...(ring ? {
+        boxShadow: 'var(--qm-focus-ring)',
+        outline: 'var(--qm-focus-outline,2px solid transparent)',
+        outlineOffset: 'var(--qm-focus-outline-offset,1px)'
+      } : null)
+    }
+  }), children);
+}
 function WritingRoom({
   onOpenScene,
   onNewScene,
@@ -5983,7 +6083,8 @@ function WritingRoom({
   }, /*#__PURE__*/React.createElement(SaveStatus, {
     inline: true,
     state: "saved"
-  }, "Room live"), /*#__PURE__*/React.createElement("span", {
+  }, "Room live"), /*#__PURE__*/React.createElement(Pressable, {
+    label: "Room settings",
     style: {
       width: 30,
       height: 30,
@@ -5991,8 +6092,7 @@ function WritingRoom({
       alignItems: 'center',
       justifyContent: 'center',
       borderRadius: 7,
-      border: '1px solid var(--qm-border-control)',
-      cursor: 'pointer'
+      border: '1px solid var(--qm-border-control)'
     }
   }, /*#__PURE__*/React.createElement(Icon, {
     name: "sliders",
