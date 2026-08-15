@@ -9,7 +9,8 @@
     "bundle:check": "node scripts/build-bundle.mjs --check",
     "adherence:build": "node scripts/build-adherence.mjs",
     "adherence:check": "node scripts/build-adherence.mjs --check",
-    "cards:viewports": "node scripts/check-card-viewports.mjs"
+    "cards:viewports": "node scripts/check-card-viewports.mjs",
+    "keyboard:check": "node scripts/check-keyboard.mjs"
   },
   "devDependencies": {
     "@babel/core": "7.29.7",

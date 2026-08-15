@@ -29,7 +29,9 @@ export function Callout({ tone = 'neutral', glyph, children, action, style, ...r
       <div style={{ flex: 1, fontSize: 'var(--qm-type-row)', lineHeight: 1.55, color: t.text }}>
         {children}
         {action ? (
-          <div style={{ fontSize: 'var(--qm-type-secondary)', color: t.link, marginTop: 6, cursor: 'pointer' }}>{action}</div>
+          // No cursor and no handler here: the wrapper only places the action.
+          // Anything clickable is the caller's, and has to be a real control.
+          <div style={{ fontSize: 'var(--qm-type-secondary)', color: t.link, marginTop: 6 }}>{action}</div>
         ) : null}
       </div>
     </div>

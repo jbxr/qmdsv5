@@ -46,7 +46,9 @@ export function Field({
           fontSize: serif ? 'var(--qm-type-body)' : 'var(--qm-field-size,14.5px)',
           lineHeight: multiline ? 'var(--qm-type-body-lh)' : undefined,
           color: disabled ? 'var(--qm-text-9)' : empty && !wraps ? 'var(--qm-text-7)' : 'var(--qm-text-field)',
-          cursor: disabled ? 'not-allowed' : select ? 'pointer' : 'text'
+          // A pointer promises a click, so only a field that has one gets it. A
+          // presentational `select` well holds no control and answers to nothing.
+          cursor: disabled ? 'not-allowed' : select && rest.onClick ? 'pointer' : 'text'
         }}
       >
         {wraps ? null : (

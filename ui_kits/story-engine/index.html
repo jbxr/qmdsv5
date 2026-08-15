@@ -14,9 +14,6 @@ html,body{margin:0;height:100%;background:var(--qm-surface-app);font-family:var(
 .qm-scroll::-webkit-scrollbar-track{background:transparent}
 .nav{flex:none;display:flex;align-items:center;gap:8px;padding:10px 18px;background:var(--qm-surface-status);border-bottom:1px solid var(--qm-border-structural)}
 .nav b{font-family:var(--qm-font-mono);font-size:11px;letter-spacing:.16em;color:var(--qm-text-7);font-weight:400;margin-right:6px}
-.nav a{height:30px;display:inline-flex;align-items:center;padding:0 12px;border-radius:7px;font-size:13px;color:var(--qm-text-4);border:1px solid var(--qm-border-control-quiet);cursor:pointer;text-decoration:none}
-.nav a:hover{background:var(--qm-fill-hover);color:var(--qm-text-2)}
-.nav a.on{background:var(--qm-surface-selected);color:var(--qm-text-1);border-color:rgba(255,255,255,.14)}
 .stage{flex:1;min-height:0}
 </style>
 </head><body><div id="root"></div>
@@ -36,20 +33,49 @@ const ROUTES = [
   ['outline', 'Outline']
 ];
 
+/**
+ * A route swaps the stage in place and moves no document, so it is a button and
+ * never an anchor — an `<a>` with no `href` is not a link at all: no tab stop,
+ * no role, nothing to press. `Pressable` is the kit's own control element and
+ * carries the ring; the rest is the pill the stylesheet used to draw.
+ */
+function RouteButton({ label, current, onClick }) {
+  const [hover, setHover] = React.useState(false);
+  return (
+    <Pressable
+      onClick={onClick}
+      aria-current={current ? 'page' : undefined}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+      style={{
+        // `Pressable` drops the UA font, colour and background but not these
+        // two, and a pill drawn by the stylesheet had neither.
+        textAlign: 'start', appearance: 'none', WebkitAppearance: 'none',
+        height: 30, display: 'inline-flex', alignItems: 'center', padding: '0 12px',
+        borderRadius: 'var(--qm-radius-control)', fontSize: 'var(--qm-type-label)',
+        color: current ? 'var(--qm-text-1)' : hover ? 'var(--qm-text-2)' : 'var(--qm-text-4)',
+        background: current ? 'var(--qm-surface-selected)' : hover ? 'var(--qm-fill-hover)' : 'transparent',
+        borderWidth: 1, borderStyle: 'solid',
+        borderColor: current ? 'rgba(255,255,255,.14)' : 'var(--qm-border-control-quiet)'
+      }}
+    >{label}</Pressable>
+  );
+}
+
 function App() {
   const [route, setRoute] = React.useState('writing');
   const go = (r) => () => setRoute(r);
   const { WritingRoom, NewScene, SceneRoom, Compose, Outline } = window;
   return (
     <>
-      <div className="nav">
+      <nav className="nav" aria-label="Story Engine routes">
         <b>QM STORY ENGINE</b>
         {ROUTES.map(([id, label]) => (
-          <a key={id} className={route === id ? 'on' : ''} onClick={go(id)}>{label}</a>
+          <RouteButton key={id} label={label} current={route === id} onClick={go(id)} />
         ))}
         <span style={{ flex: 1 }} />
         <span style={{ fontSize: 12.5, color: 'var(--qm-text-7)' }}>Recreation of the v5 kit — every surface built from the design system's own components.</span>
-      </div>
+      </nav>
       <div className="stage">
         {route === 'writing' ? <WritingRoom onOpenScene={go('room')} onNewScene={go('new')} onNewOutline={go('outline')} onCompose={go('compose')} onOpenOutline={go('outline')} /> : null}
         {route === 'new' ? <NewScene onBack={go('writing')} onEnter={go('room')} /> : null}
@@ -62,7 +88,9 @@ function App() {
 }
 
 function boot() {
-  if (!window.WritingRoom || !window.Outline) return setTimeout(boot, 60);
+  // `Pressable` is declared by the route files and shared, not redeclared here;
+  // wait for it too, so the nav is never rendered without its control element.
+  if (!window.WritingRoom || !window.Outline || !window.Pressable) return setTimeout(boot, 60);
   ReactDOM.createRoot(document.getElementById('root')).render(<App />);
 }
 boot();
