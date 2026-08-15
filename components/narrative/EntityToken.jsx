@@ -1,6 +1,13 @@
 import React from 'react';
 import { Avatar } from '../core/Avatar.jsx';
 import { Icon } from '../core/Icon.jsx';
+import { warnUnknown } from '../core/warn.js';
+
+// The chip's tint and the avatar's kind are one decision, so one table answers
+// both. They were two: the chip tested the raw prop and the avatar resolved its
+// own, so an unrecognised kind gave a grey chip around a blue character avatar.
+// The value is whether the chip takes the blue entity tint.
+const KINDS = { character: true, location: false, artifact: false };
 
 /* The ring the whole system draws, on the two targets a token can carry. It is
    sampled on keydown as well as on focus for the reason `Button` gives: a token
@@ -26,6 +33,8 @@ export function EntityToken({
 }) {
   const [ring, setRing] = React.useState(false);
   const [dismissRing, setDismissRing] = React.useState(false);
+  const k = Object.prototype.hasOwnProperty.call(KINDS, kind) ? kind : 'character';
+  warnUnknown('EntityToken', 'kind', kind, KINDS, 'character');
   // `role` is the narrative rank, so the ARIA role is never a prop: a token
   // announces itself as a button exactly when it has something to do.
   const control = onClick ? {
@@ -53,7 +62,7 @@ export function EntityToken({
       >{name}</span>
     );
   }
-  const tinted = kind === 'character';
+  const tinted = KINDS[k];
   return (
     <span
       onClick={onClick}
@@ -69,7 +78,7 @@ export function EntityToken({
       }}
       {...rest}
     >
-      {initials ? <Avatar initials={initials} kind={kind} size={22} /> : null}
+      {initials ? <Avatar initials={initials} kind={k} size={22} /> : null}
       <span style={{ fontSize: 'var(--qm-type-secondary)', color: 'var(--qm-text-3)' }}>{name}</span>
       {role ? <span style={{ fontSize: 'var(--qm-type-module)', color: 'var(--qm-text-7)' }}>{role}</span> : null}
       {onDismiss ? (

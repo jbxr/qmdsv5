@@ -1,4 +1,5 @@
 import React from 'react';
+import { warnUnknown, pick } from './warn.js';
 
 // Edges are longhands, never the `border` shorthand: the hover colour has to be
 // swapped in and out, and a colour longhand removed next to a shorthand leaves
@@ -39,8 +40,12 @@ export function Card({
 }) {
   const [hover, setHover] = React.useState(false);
   const [ring, setRing] = React.useState(false);
-  const s = SURFACES[surface] || SURFACES.panel;
-  const railBg = RAILS[rail];
+  const s = pick(SURFACES, surface, SURFACES.panel);
+  // `none` is a real key carrying `null`, so membership decides here rather
+  // than truthiness — a `||` would read `rail="none"` as unrecognised.
+  const railBg = Object.prototype.hasOwnProperty.call(RAILS, rail) ? RAILS[rail] : RAILS.none;
+  warnUnknown('Card', 'surface', surface, SURFACES, 'panel');
+  warnUnknown('Card', 'rail', rail, RAILS, 'none');
   const interactive = Boolean(onClick);
   // A card holds other things, so every focus and key signal is read only when
   // the card itself is the target: focus bubbles, and a control nested inside

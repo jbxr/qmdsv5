@@ -16,6 +16,11 @@ export interface EntityTokenProps
   initials?: string;
   /** Rank or role, shown quiet after the name ("Ensign") — NOT the ARIA role. */
   role?: string;
+  /**
+   * The chip's tint and the avatar inside it read the same resolved kind, so a
+   * kind outside the union renders as `character` in both. It used to give a
+   * grey chip around a blue character avatar.
+   */
   kind?: 'character' | 'location' | 'artifact';
   /** `inline` = underlined mention inside serif prose; `chip` = a cast chip. */
   variant?: 'chip' | 'inline';

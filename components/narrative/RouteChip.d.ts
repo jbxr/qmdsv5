@@ -8,7 +8,14 @@ import * as React from 'react';
  */
 export interface RouteChipProps extends React.HTMLAttributes<HTMLSpanElement> {
   children?: React.ReactNode;
-  /** count = the surface has material · invitation = empty, so ask · unknown = drafts unreadable. */
+  /**
+   * count = the surface has material · invitation = empty, so ask · unknown =
+   * drafts unreadable.
+   *
+   * A state outside the union falls back to `unknown` rather than to the
+   * declared default: `unknown` already means the drafts could not be read, and
+   * a chip must not print a count nobody took. It used to throw.
+   */
   state?: 'count' | 'invitation' | 'unknown';
   icon?: React.ReactNode;
   onClick?: (e: React.MouseEvent) => void;

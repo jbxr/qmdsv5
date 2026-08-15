@@ -33,7 +33,12 @@ export type QMIconName =
 export declare const QM_ICONS: Record<QMIconName, { fill: boolean; d: string }>;
 
 export interface IconProps extends React.SVGAttributes<SVGSVGElement> {
-  /** Glyph name from QM_ICONS. */
+  /**
+   * Glyph name from QM_ICONS. The one lookup in the system with no default to
+   * fall back to — a substitute glyph would draw the wrong picture — so an
+   * unrecognised name renders nothing and warns once in development rather
+   * than disappearing quietly.
+   */
   name: QMIconName;
   /** Box size in px. 16 in controls, 13-15 inline, 11-12 in chips. */
   size?: number;

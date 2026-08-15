@@ -14,3 +14,5 @@ Notes
   wrap it or use `aria-label`, which is still accepted.
 - The token is a control only with `onClick`, and the ✕ is always one of its own: it has its own
   tab stop and its own ring, and ⏎ on it dismisses without also firing the token.
+- The chip's tint and the avatar inside it read the same resolved `kind`, so one outside the union
+  renders as `character` in both. It used to give a grey chip around a blue character avatar.

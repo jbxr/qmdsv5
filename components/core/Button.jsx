@@ -1,42 +1,75 @@
 import React from 'react';
+import { warnUnknown, pick } from './warn.js';
 
 const H = { lg: 44, md: 36, sm: 34, xs: 32, xxs: 30, tiny: 28 };
 
+// Hover lives in the table beside the rest state, never in a branch on the
+// `variant` prop. A branch keys on the raw prop, so an unrecognised variant
+// used to resolve `secondary`'s colours and then match no branch at all — a
+// button that looked like a secondary and was dead under the pointer forever.
+// Every variant carries a `hover`, so the fallback reaches it too.
 const VARIANTS = {
   primary: {
-    color: 'var(--qm-on-gold)', background: 'var(--qm-gold-fill)',
-    fontWeight: 'var(--qm-weight-medium)', border: '1px solid transparent'
+    rest: {
+      color: 'var(--qm-on-gold)', background: 'var(--qm-gold-fill)',
+      fontWeight: 'var(--qm-weight-medium)', border: '1px solid transparent'
+    },
+    hover: { background: 'var(--qm-gold-fill-hover)' }
   },
   scene: {
-    color: 'var(--qm-scene-ink)', background: 'var(--qm-parchment-fill)',
-    fontWeight: 'var(--qm-weight-medium)', border: '1px solid transparent'
+    rest: {
+      color: 'var(--qm-scene-ink)', background: 'var(--qm-parchment-fill)',
+      fontWeight: 'var(--qm-weight-medium)', border: '1px solid transparent'
+    },
+    hover: { background: 'var(--qm-parchment-fill-hover)' }
   },
   sceneGhost: {
-    color: 'var(--qm-scene-text)', background: 'transparent',
-    border: '1px solid var(--qm-border-parchment)'
+    rest: {
+      color: 'var(--qm-scene-text)', background: 'transparent',
+      border: '1px solid var(--qm-border-parchment)'
+    },
+    hover: { background: 'var(--qm-tint-parchment-strong)' }
   },
   secondary: {
-    color: 'var(--qm-text-4)', background: 'transparent',
-    border: '1px solid var(--qm-border-control)'
+    rest: {
+      color: 'var(--qm-text-4)', background: 'transparent',
+      border: '1px solid var(--qm-border-control)'
+    },
+    hover: { background: 'var(--qm-fill-hover)', color: 'var(--qm-text-2)' }
   },
   quiet: {
-    color: 'var(--qm-text-3)', background: 'var(--qm-fill-rest)',
-    border: '1px solid var(--qm-border-control-quiet)'
+    rest: {
+      color: 'var(--qm-text-3)', background: 'var(--qm-fill-rest)',
+      border: '1px solid var(--qm-border-control-quiet)'
+    },
+    hover: { background: 'var(--qm-fill-hover-strong)' }
   },
   ghost: {
-    color: 'var(--qm-text-4)', background: 'transparent', border: '1px solid transparent'
+    rest: {
+      color: 'var(--qm-text-4)', background: 'transparent', border: '1px solid transparent'
+    },
+    hover: { background: 'var(--qm-fill-hover)', color: 'var(--qm-text-2)' }
   },
   canon: {
-    color: 'var(--qm-teal-text)', background: 'transparent',
-    border: '1px solid var(--qm-border-teal-strong)'
+    rest: {
+      color: 'var(--qm-teal-text)', background: 'transparent',
+      border: '1px solid var(--qm-border-teal-strong)'
+    },
+    hover: { background: 'var(--qm-tint-teal-strong)', color: 'var(--qm-teal-text-strong)' }
   },
   consult: {
-    color: 'var(--qm-violet-text-alt)', background: 'transparent',
-    border: '1px solid var(--qm-border-violet)'
+    rest: {
+      color: 'var(--qm-violet-text-alt)', background: 'transparent',
+      border: '1px solid var(--qm-border-violet)'
+    },
+    hover: { background: 'var(--qm-tint-violet-strong)' }
   },
   destructive: {
-    color: 'var(--qm-cinnabar-text)', background: 'var(--qm-tint-cinnabar-soft)',
-    border: '1px solid var(--qm-border-cinnabar)'
+    rest: {
+      color: 'var(--qm-cinnabar-text)', background: 'var(--qm-tint-cinnabar-soft)',
+      border: '1px solid var(--qm-border-cinnabar)'
+    },
+    hover: { background: 'var(--qm-tint-cinnabar)', color: 'var(--qm-cinnabar-text-strong)' }
   }
 };
 
@@ -59,8 +92,10 @@ export function Button({
   // mouse and then typed at becomes `:focus-visible` where it stands, and a
   // focus-time sample alone would leave that user the browser's ring, not QM's.
   const [ring, setRing] = React.useState(false);
-  const v = VARIANTS[variant] || VARIANTS.secondary;
-  const height = H[size] || H.sm;
+  const v = pick(VARIANTS, variant, VARIANTS.secondary);
+  const height = pick(H, size, H.sm);
+  warnUnknown('Button', 'variant', variant, VARIANTS, 'secondary');
+  warnUnknown('Button', 'size', size, H, 'sm');
   const base = {
     height, display: fullWidth ? 'flex' : 'inline-flex', alignItems: 'center',
     justifyContent: 'center', gap: 8, width: fullWidth ? '100%' : undefined,
@@ -70,18 +105,9 @@ export function Button({
     fontSize: height >= 44 ? 'var(--qm-type-body)' : 'var(--qm-type-secondary)',
     lineHeight: 1, cursor: disabled ? 'default' : 'pointer',
     transition: 'background var(--qm-dur-hover) var(--qm-ease), color var(--qm-dur-hover) var(--qm-ease)',
-    ...v
+    ...v.rest
   };
-  if (variant === 'primary' && hover && !disabled) base.background = 'var(--qm-gold-fill-hover)';
-  if (variant === 'scene' && hover && !disabled) base.background = 'var(--qm-parchment-fill-hover)';
-  if ((variant === 'secondary' || variant === 'ghost') && hover && !disabled) {
-    base.background = 'var(--qm-fill-hover)'; base.color = 'var(--qm-text-2)';
-  }
-  if (variant === 'quiet' && hover && !disabled) base.background = 'var(--qm-fill-hover-strong)';
-  if (variant === 'sceneGhost' && hover && !disabled) base.background = 'rgba(232,220,192,0.12)';
-  if (variant === 'canon' && hover && !disabled) { base.background = 'rgba(85,183,166,0.18)'; base.color = 'var(--qm-teal-text-strong)'; }
-  if (variant === 'consult' && hover && !disabled) base.background = 'rgba(162,146,242,0.14)';
-  if (variant === 'destructive' && hover && !disabled) { base.background = 'var(--qm-tint-cinnabar)'; base.color = 'var(--qm-cinnabar-text-strong)'; }
+  if (hover && !disabled) Object.assign(base, v.hover);
   if (!disabled && (down || ring)) {
     base.boxShadow = [down ? 'var(--qm-inset-press)' : null, ring ? 'var(--qm-focus-ring)' : null]
       .filter(Boolean).join(', ');

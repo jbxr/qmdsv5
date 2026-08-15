@@ -13,3 +13,4 @@ Notes
 - Everything `PromptField` does not claim goes to the input, so `value`, `onChange`, `name`, `disabled`, `readOnly`, `maxLength` and `onKeyDown` behave natively — as does any other `<input>` attribute, including `aria-*` and `data-*`. `controlStyle` reaches the input; `style` stays on the wrapper.
 - The well has no label row, so pass `aria-label`. The border and the lock say who will hear it to the eye, not to a screen reader.
 - Forwards a ref to the `<input>`.
+- `audience` is handed to the well, so an unrecognised one lands on `PromptField`'s `private` fallback rather than throwing.

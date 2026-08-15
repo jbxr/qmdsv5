@@ -15,3 +15,4 @@ Notes
 - Disabled drops to 38% text with no border — and QM always puts the reason next to the button, never in a tooltip.
 - `hint` renders a mono shortcut inside the button ("Highlight H").
 - `destructive` is outlined and tinted, never filled: cinnabar carries no legible label. Its warning is present at rest, so it survives keyboard and touch — hover only deepens the tint. Pair it with the `x` glyph and a verb that names what goes; confirmation is still the stronger pattern where the surface can afford one. See the Interaction states card.
+- A `variant` your code computed to something outside the union renders as `secondary` **including its hover** — hover is a column of the variant table, not a branch on the prop, which is what an unrecognised variant used to miss. Development logs one line per distinct value; production says nothing. The same holds for `size`.

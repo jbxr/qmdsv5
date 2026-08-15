@@ -13,3 +13,6 @@ Notes
 - With `onClick` the row is a button — its own tab stop, ⏎ and Space, and `aria-current` while
   `selected`. Without one it is a caption and never enters the tab order, so do not pass an empty
   handler to a row that only reports.
+- The rail, its glow, the dot and the avatar's kind all come from one row, so a `state` outside
+  the union takes the grey `StateDot` itself falls back to — rail and dot together, never
+  `canon`. A fallback may not assert canonicity.

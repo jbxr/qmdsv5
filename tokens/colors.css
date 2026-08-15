@@ -27,14 +27,17 @@
 --qm-live:#55B7A6;--qm-mark:linear-gradient(145deg,#4E8FA0,#2C4A5C); /* @kind color */
 /* Accent tints and borders — 12-20% tint, 28-42% border */
 --qm-tint-gold:rgba(226,165,68,0.14);--qm-tint-gold-soft:rgba(226,165,68,0.10);--qm-tint-gold-strong:rgba(226,165,68,0.20);--qm-border-gold:rgba(226,165,68,0.30);
---qm-tint-teal:rgba(85,183,166,0.14);--qm-tint-teal-soft:rgba(85,183,166,0.08);--qm-border-teal:rgba(85,183,166,0.32);--qm-border-teal-strong:rgba(85,183,166,0.45);
+--qm-tint-teal:rgba(85,183,166,0.14);--qm-tint-teal-soft:rgba(85,183,166,0.08);--qm-tint-teal-strong:rgba(85,183,166,0.18);--qm-border-teal:rgba(85,183,166,0.32);--qm-border-teal-strong:rgba(85,183,166,0.45);
 --qm-tint-blue:rgba(95,168,188,0.14);--qm-tint-blue-soft:rgba(95,168,188,0.12);--qm-border-blue:rgba(95,168,188,0.28);--qm-border-blue-strong:rgba(95,168,188,0.42);
---qm-tint-violet:rgba(162,146,242,0.12);--qm-tint-violet-soft:rgba(162,146,242,0.09);--qm-border-violet:rgba(162,146,242,0.28);
+--qm-tint-violet:rgba(162,146,242,0.12);--qm-tint-violet-soft:rgba(162,146,242,0.09);--qm-tint-violet-strong:rgba(162,146,242,0.14);--qm-border-violet:rgba(162,146,242,0.28);
 --qm-tint-coral:rgba(241,123,84,0.16);--qm-tint-coral-strong:rgba(241,123,84,0.20);--qm-border-coral:rgba(241,123,84,0.30);
 --qm-tint-cinnabar:rgba(196,85,58,0.14);--qm-tint-cinnabar-soft:rgba(196,85,58,0.10);--qm-border-cinnabar:rgba(196,85,58,0.30);
---qm-tint-parchment:rgba(232,220,192,0.055);--qm-border-parchment:rgba(232,220,192,0.30);
+--qm-tint-parchment:rgba(232,220,192,0.055);--qm-tint-parchment-strong:rgba(232,220,192,0.12);--qm-border-parchment:rgba(232,220,192,0.30);
 /* Divider hierarchy — four weights, no more */
---qm-border-structural:rgba(255,255,255,0.09);--qm-border-panel:rgba(255,255,255,0.08);--qm-border-group:rgba(255,255,255,0.07);--qm-border-list:rgba(255,255,255,0.05);--qm-border-ancestry:rgba(255,255,255,0.12);
+--qm-border-structural:rgba(255,255,255,0.09);--qm-border-panel:rgba(255,255,255,0.08);--qm-border-group:rgba(255,255,255,0.07);--qm-border-list:rgba(255,255,255,0.05);
+/* A connector, not a rung on that ramp: the line an outline draws between a
+   parent and its children. Shares a value with --qm-border-raised, not a job. */
+--qm-border-ancestry:rgba(255,255,255,0.12);
 /* The edge a raised surface carries against the page — overlays and popovers,
    not a divider inside one. Same value as --qm-border-ancestry, different job. */
 --qm-border-raised:rgba(255,255,255,0.12);

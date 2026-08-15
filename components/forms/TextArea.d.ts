@@ -22,7 +22,13 @@ export interface TextAreaProps
    * ring means keyboard focus, and the well lights its own.
    */
   focused?: boolean;
-  /** QM controls do not show a drag handle by default. */
+  /**
+   * QM controls do not show a drag handle by default. The value resolves
+   * through a table rather than reaching CSS directly: a value outside the
+   * union is not a wrong branch but a declaration the browser drops, which
+   * left the textarea on the UA's `resize: both` and the handle this prop
+   * exists to withhold. It falls back to `none` and warns in development.
+   */
   resize?: 'none' | 'vertical';
   /** Applied to the wrapper, matching `Field` — use `controlStyle` for the textarea. */
   style?: React.CSSProperties;

@@ -127,9 +127,17 @@ tracking. Italic Spectral is reserved for notes, directives and consult reads.
   controls, **16** between groups, **24** between sections, **40** between regions.
 - **Four radii only**: 4 chip · 7 control · 9 card · 12 panel (plus 5 for key
   tokens, 16 for cast pills, 50% for avatars). Nothing is rounder.
-- **Four divider weights**: structural `rgba(255,255,255,.09)`, group `.07`, list
-  `.05`, ancestry `.12`. A **dashed** hairline is never decorative — it means
-  unknown, unparsed, local-only or private.
+- **Five divider weights**: structural `rgba(255,255,255,.09)` for chrome edges —
+  the rule under a top bar, a selected card; panel `.08` for rail, inspector and
+  card edges, and for the timeline spine; group `.07` for section rules; list
+  `.05` for row separators; ancestry `.12` for tree rules — the left border
+  holding a nested subtree and the tick joining a child to its parent. A
+  **dashed** hairline is never decorative — it means unknown, unparsed,
+  local-only or private.
+- **A raised surface edges heavier than a panel.** `--qm-border-raised` (`.12`)
+  is not a divider — it is the edge a surface floating *over* the page carries
+  against it, and only `Overlay` and `Picker` have one. It shares ancestry's
+  value and does a different job.
 - **Left accent rails are 3px** and always mean material state; a raised surface
   always means selection. The two never swap.
 - Fixed chrome: 48px top bar (56 on the outline), 32px mono status line, 306px
