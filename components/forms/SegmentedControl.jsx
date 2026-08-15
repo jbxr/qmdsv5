@@ -1,9 +1,30 @@
 import React from 'react';
 
-/** Density and mode switch. Selection is a raised inner surface, never colour. */
+/**
+ * Density and mode switch. Selection is a raised inner surface, never colour.
+ * One value out of several is a radio group, not a row of buttons: the strip
+ * takes a single tab stop and arrows move — and select — inside it.
+ */
 export function SegmentedControl({ options = [], value, onChange, style, ...rest }) {
+  const [ring, setRing] = React.useState(-1);
+  const refs = React.useRef([]);
+  const values = options.map((o) => (typeof o === 'string' ? o : o.value));
+  // As in `Tabs`: the checked option owns the tab stop, and a `value` matching
+  // nothing hands it to the first rather than leaving the group unreachable.
+  const checked = values.indexOf(value);
+  const stop = checked < 0 ? 0 : checked;
+
+  const go = (i) => {
+    const n = values.length;
+    if (!n) return;
+    const next = ((i % n) + n) % n;
+    refs.current[next]?.focus();
+    if (onChange) onChange(values[next]);
+  };
+
   return (
     <div
+      role="radiogroup"
       style={{
         display: 'flex', alignItems: 'center', gap: 2, height: 34, padding: 3,
         borderRadius: 'var(--qm-radius-callout)', background: 'rgba(0,0,0,0.32)',
@@ -11,19 +32,38 @@ export function SegmentedControl({ options = [], value, onChange, style, ...rest
       }}
       {...rest}
     >
-      {options.map((o) => {
-        const v = typeof o === 'string' ? o : o.value;
+      {options.map((o, i) => {
+        const v = values[i];
         const label = typeof o === 'string' ? o : o.label;
         const active = v === value;
         const outline = typeof o !== 'string' && o.outline;
+        const base = {
+          position: 'relative', height: 28, display: 'flex', alignItems: 'center',
+          padding: '0 11px', borderRadius: 'var(--qm-radius-key)',
+          fontSize: 'var(--qm-type-module)', color: 'var(--qm-text-row)', cursor: 'pointer'
+        };
+        if (ring === i) {
+          base.boxShadow = 'var(--qm-focus-ring)';
+          base.outline = 'var(--qm-focus-outline,2px solid transparent)';
+          base.outlineOffset = 'var(--qm-focus-outline-offset,1px)';
+        }
         return (
           <div
-            key={v} onClick={() => onChange && onChange(v)}
-            style={{
-              position: 'relative', height: 28, display: 'flex', alignItems: 'center',
-              padding: '0 11px', borderRadius: 'var(--qm-radius-key)',
-              fontSize: 'var(--qm-type-module)', color: 'var(--qm-text-row)', cursor: 'pointer'
+            key={v}
+            ref={(el) => { refs.current[i] = el; }}
+            role="radio" aria-checked={active} tabIndex={i === stop ? 0 : -1}
+            onClick={() => onChange && onChange(v)}
+            onFocus={(e) => { if (e.target.matches(':focus-visible')) setRing(i); }}
+            onBlur={() => setRing(-1)}
+            onKeyDown={(e) => {
+              if (e.target.matches(':focus-visible')) setRing(i);
+              if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); go(i + 1); }
+              else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); go(i - 1); }
+              else if (e.key === 'Home') { e.preventDefault(); go(0); }
+              else if (e.key === 'End') { e.preventDefault(); go(values.length - 1); }
+              else if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); if (onChange) onChange(v); }
             }}
+            style={base}
           >
             {active ? (
               <span style={{

@@ -15,7 +15,12 @@ export interface TextFieldProps
   kind?: 'text' | 'mono' | 'serif';
   size?: 'sm' | 'md' | 'lg';
   width?: number | string;
-  /** Pins the ring on regardless of real focus. Leave unset — the well lights its own. */
+  /**
+   * Leave unset. `Field.focused` is for specimens whose well holds no control,
+   * and this component always holds a real `<input>` — so here it can only lie:
+   * `true` shows a focus nobody has, `false` hides a real one. A QM focus ring
+   * means keyboard focus, and the well lights its own.
+   */
   focused?: boolean;
   /** Sits after the input inside the well: a counter, a unit, a clear affordance. */
   trailing?: React.ReactNode;

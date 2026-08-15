@@ -27,6 +27,9 @@ function Demo() {
       <div style={{ display: 'grid', gridTemplateColumns: '1.4fr 92px 92px', gap: 12, alignItems: 'end' }}>
         <Field label="Title" kind="serif" value="Vera &amp; Cade — the corridor" />
         <Field label="Y" kind="mono" value="−6" size="sm" />
+        {/* The sanctioned use of `focused`, and the only one in the repo: a specimen
+            well with no control in it, picturing the ring for a reader. Never on a
+            product surface — see brand-interaction. */}
         <Field label="D" kind="mono" value="1" size="sm" focused />
       </div>
       <div className="row" style={{ gap: 12 }}>
@@ -46,7 +49,12 @@ function Demo() {
               placeholder="what this scene is really about…"
               value={note} onChange={(e) => setNote(e.target.value)} style={{ flex: 1 }} />
             <Field label="Search" style={{ flex: 1 }}>
-              <input className="qm-control" placeholder="any control, unaided" style={{ flex: 1, minWidth: 0, background: 'transparent', border: 0, outline: 'none', font: 'inherit', color: 'inherit' }} />
+              {/* No `outline: none` here on purpose: the well claims the outline through
+                  `.qm-well :focus-visible`, so an unaided control gets QM's transparent
+                  outline — the whole indicator under forced-colors, where the ring's
+                  box-shadow is dropped. Overriding it inline is what left this demo the
+                  one control in the gallery a high-contrast user could not follow. */}
+              <input className="qm-control" placeholder="any control, unaided" style={{ flex: 1, minWidth: 0, background: 'transparent', border: 0, font: 'inherit', color: 'inherit' }} />
             </Field>
           </div>
         </React.Fragment>

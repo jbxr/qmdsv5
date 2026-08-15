@@ -15,7 +15,12 @@ export interface TextAreaProps
   /** Sets the well's floor height, not the textarea's: 36 / 38 / 44. */
   size?: 'sm' | 'md' | 'lg';
   width?: number | string;
-  /** Pins the ring on regardless of real focus. Leave unset — the well lights its own. */
+  /**
+   * Leave unset. `Field.focused` is for specimens whose well holds no control,
+   * and this component always holds a real `<textarea>` — so here it can only
+   * lie: `true` shows a focus nobody has, `false` hides a real one. A QM focus
+   * ring means keyboard focus, and the well lights its own.
+   */
   focused?: boolean;
   /** QM controls do not show a drag handle by default. */
   resize?: 'none' | 'vertical';

@@ -18,7 +18,12 @@ export interface PickerItem {
   onSelect?: () => void;
 }
 
-/** The single popover behind `[` (story-time) and `@` (entity). */
+/**
+ * The single popover behind `[` (story-time) and `@` (entity). The candidates
+ * are a `listbox` of `option`s carrying `aria-selected` from `active`: one tab
+ * stop on the active candidate, ↑↓ wrap, ⏎ and Space call its `onSelect`.
+ * Name the popover with `aria-label`.
+ */
 export interface PickerProps extends React.HTMLAttributes<HTMLDivElement> {
   /** What the author has typed so far, including the trigger character. */
   query?: React.ReactNode;

@@ -14,6 +14,34 @@ function Slot({ label, height, radius = 9 }) {
   );
 }
 
+/**
+ * Every collapse, dismiss and reveal in this room is a control, so each one is
+ * a real `<button>` — reachable by Tab, activated by Enter and Space for free.
+ * It carries QM's ring the way `Button` does, and nothing else: the styling
+ * stays at the call site, where the surface it sits on decides it.
+ */
+function Pressable({ label, onClick, style, children, ...rest }) {
+  const [ring, setRing] = React.useState(false);
+  return (
+    <button
+      type="button" aria-label={label} onClick={onClick} {...rest}
+      onFocus={(e) => { if (e.target.matches(':focus-visible')) setRing(true); }}
+      onKeyDown={(e) => { if (e.target.matches(':focus-visible')) setRing(true); }}
+      onBlur={() => setRing(false)}
+      style={{
+        margin: 0, padding: 0, font: 'inherit', color: 'inherit',
+        background: 'transparent', border: 'none', cursor: 'pointer',
+        ...style,
+        ...(ring ? {
+          boxShadow: 'var(--qm-focus-ring)',
+          outline: 'var(--qm-focus-outline,2px solid transparent)',
+          outlineOffset: 'var(--qm-focus-outline-offset,1px)'
+        } : null)
+      }}
+    >{children}</button>
+  );
+}
+
 function SceneRoom({ onExit }) {
   const [focus, setFocus] = React.useState(false);
   const [stage, setStage] = React.useState(true);
@@ -42,9 +70,9 @@ function SceneRoom({ onExit }) {
         {stageOpen ? (
           <div style={{ width: 320, flex: 'none', display: 'flex', flexDirection: 'column', background: 'var(--qm-surface-panel)', borderRight: '1px solid var(--qm-border-panel)' }}>
             <PanelHeader label="STAGE">
-              <span onClick={() => setStage(false)} style={{ width: 28, height: 28, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', borderRadius: 6, border: '1px solid var(--qm-border-control)', cursor: 'pointer' }}>
+              <Pressable label="Collapse the stage rail" onClick={() => setStage(false)} style={{ width: 28, height: 28, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', borderRadius: 6, border: '1px solid var(--qm-border-control)' }}>
                 <Icon name="chevronLeft" size={15} color="var(--qm-text-4)" />
-              </span>
+              </Pressable>
             </PanelHeader>
             <div className="qm-scroll" style={{ flex: 1, overflowY: 'auto' }}>
               <div style={{ borderBottom: '1px solid var(--qm-border-group)' }}>
@@ -73,9 +101,9 @@ function SceneRoom({ onExit }) {
                         {reply ? (
                           <div style={{ fontSize: 12.5, color: 'var(--qm-text-7)', marginTop: 6 }}>answers as of Y−6 D1</div>
                         ) : (
-                          <div onClick={() => setReply(true)} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, marginTop: 7, padding: '3px 8px', borderRadius: 5, fontSize: 12.5, color: 'var(--qm-violet-text)', background: 'var(--qm-tint-violet)', border: '1px solid var(--qm-border-violet)', cursor: 'pointer' }}>
+                          <Pressable label="Show vera's reply" onClick={() => setReply(true)} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, marginTop: 7, padding: '3px 8px', borderRadius: 5, fontSize: 12.5, color: 'var(--qm-violet-text)', background: 'var(--qm-tint-violet)', border: '1px solid var(--qm-border-violet)' }}>
                             <StateDot state="suggested" size={6} />1 reply
-                          </div>
+                          </Pressable>
                         )}
                       </div>
                     </div>
@@ -109,9 +137,9 @@ function SceneRoom({ onExit }) {
           </div>
         ) : !focus ? (
           <div style={{ width: 56, flex: 'none', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 14, padding: '12px 0', background: 'var(--qm-surface-panel)', borderRight: '1px solid var(--qm-border-panel)' }}>
-            <span onClick={() => setStage(true)} style={{ width: 32, height: 32, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', borderRadius: 7, border: '1px solid var(--qm-border-control)', cursor: 'pointer' }}>
+            <Pressable label="Open the stage rail" onClick={() => setStage(true)} style={{ width: 32, height: 32, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', borderRadius: 7, border: '1px solid var(--qm-border-control)' }}>
               <Icon name="chevronRight" size={12} color="var(--qm-text-4)" />
-            </span>
+            </Pressable>
             <Avatar initials="VN" size={30} />
             <Avatar initials="CB" size={30} />
             <span style={{ width: 34, height: 34, borderRadius: 7, background: 'var(--qm-fill-chip)', border: '1px solid var(--qm-border-control-quiet)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--qm-font-mono)', fontSize: 12, color: 'var(--qm-text-6)' }}>3/7</span>
@@ -128,9 +156,9 @@ function SceneRoom({ onExit }) {
                   <StateDot state="suggested" size={6} />
                   <span style={{ fontFamily: 'var(--qm-font-mono)', fontSize: 11, letterSpacing: 'var(--qm-ls-mono)', color: 'var(--qm-violet-text)' }}>VERA · PRIVATE</span>
                   <span style={{ flex: 1 }} />
-                  <span onClick={() => setReply(false)} style={{ width: 24, height: 24, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', borderRadius: 5, cursor: 'pointer' }}>
+                  <Pressable label="Dismiss vera's reply" onClick={() => setReply(false)} style={{ width: 24, height: 24, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', borderRadius: 5 }}>
                     <Icon name="x" size={13} color="var(--qm-text-6)" />
-                  </span>
+                  </Pressable>
                 </div>
                 <div style={{ padding: '14px 16px', fontFamily: 'var(--qm-font-serif)', fontSize: 16, lineHeight: 1.7, color: 'var(--qm-violet-prose)' }}>Not in a breach corridor. And not in front of him — he is still deciding whether I am a person.</div>
                 <div style={{ padding: '11px 14px', borderTop: '1px solid rgba(162,146,242,0.16)', background: 'rgba(0,0,0,0.18)', display: 'flex', alignItems: 'center', gap: 8 }}>
@@ -216,9 +244,9 @@ function SceneRoom({ onExit }) {
             <div style={{ flex: 'none', background: 'var(--qm-scene-surface)', borderTop: '1px solid var(--qm-scene-border)' }}>
               <PanelHeader audience="scene" label="IN SCENE" note="everyone in the room hears this" style={{ padding: '11px 22px' }}>
                 <span style={{ fontFamily: 'var(--qm-font-mono)', fontSize: 12, color: 'var(--qm-scene-meta)' }}>turn 4 · vera to act</span>
-                <span onClick={() => setBar(false)} style={{ width: 26, height: 26, marginLeft: 10, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', borderRadius: 6, border: '1px solid rgba(232,220,192,0.24)', cursor: 'pointer' }}>
+                <Pressable label="Hide the in-scene controls" onClick={() => setBar(false)} style={{ width: 26, height: 26, marginLeft: 10, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', borderRadius: 6, border: '1px solid rgba(232,220,192,0.24)' }}>
                   <Icon name="chevronDown" size={14} color="var(--qm-parchment-text)" />
-                </span>
+                </Pressable>
               </PanelHeader>
               <div style={{ padding: '14px 22px 16px' }}>
                 <NoteBlock tone="scene" style={{ background: 'transparent', padding: 0, marginBottom: 14 }}>
@@ -234,14 +262,14 @@ function SceneRoom({ onExit }) {
               </div>
             </div>
           ) : (
-            <div onClick={() => setBar(true)} style={{ flex: 'none', display: 'flex', alignItems: 'center', gap: 10, padding: '10px 22px', background: 'var(--qm-scene-surface)', borderTop: '1px solid var(--qm-scene-border)', cursor: 'pointer' }}>
+            <Pressable label="Show the in-scene controls" onClick={() => setBar(true)} style={{ flex: 'none', display: 'flex', alignItems: 'center', gap: 10, padding: '10px 22px', textAlign: 'left', background: 'var(--qm-scene-surface)', border: 'none', borderTop: '1px solid var(--qm-scene-border)' }}>
               <StateDot state="scene" size={8} glow />
               <span style={{ fontSize: 12.5, fontWeight: 600, letterSpacing: 'var(--qm-ls-module)', color: 'var(--qm-scene-label)' }}>IN SCENE</span>
               <span style={{ fontFamily: 'var(--qm-font-mono)', fontSize: 12, color: 'var(--qm-scene-meta)' }}>turn 4 · vera to act</span>
               <span style={{ flex: 1 }} />
               <span style={{ fontSize: 13, color: 'var(--qm-scene-text-dim)' }}>show the controls</span>
               <Icon name="chevronUp" size={14} color="var(--qm-parchment-text)" />
-            </div>
+            </Pressable>
           )}
         </div>
 
@@ -249,9 +277,9 @@ function SceneRoom({ onExit }) {
         {chatOpen ? (
           <div style={{ width: 468, flex: 'none', display: 'flex', flexDirection: 'column', borderLeft: '1px solid var(--qm-border-panel)', background: 'var(--qm-surface-rail)' }}>
             <PanelHeader audience="private" label="PRIVATE" note="nothing here is witnessed until you send it">
-              <span onClick={() => setChat(false)} style={{ width: 28, height: 28, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', borderRadius: 6, border: '1px solid var(--qm-border-control-quiet)', cursor: 'pointer' }}>
+              <Pressable label="Collapse the assistant rail" onClick={() => setChat(false)} style={{ width: 28, height: 28, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', borderRadius: 6, border: '1px solid var(--qm-border-control-quiet)' }}>
                 <Icon name="chevronRight" size={15} color="var(--qm-text-4)" />
-              </span>
+              </Pressable>
             </PanelHeader>
             <div style={{ flex: 'none', display: 'flex', alignItems: 'center', gap: 8, padding: '10px 18px', borderBottom: '1px solid var(--qm-border-group)' }}>
               <span style={{ display: 'inline-flex', alignItems: 'center', gap: 7, height: 26, padding: '0 9px', borderRadius: 5, fontSize: 12.5, color: 'var(--qm-text-3)', background: 'var(--qm-fill-chip)', border: '1px solid var(--qm-border-control)' }}>
@@ -302,9 +330,9 @@ function SceneRoom({ onExit }) {
           </div>
         ) : !focus ? (
           <div style={{ width: 56, flex: 'none', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 14, padding: '12px 0', background: 'var(--qm-surface-rail)', borderLeft: '1px solid var(--qm-border-panel)' }}>
-            <span onClick={() => setChat(true)} style={{ width: 32, height: 32, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', borderRadius: 7, border: '1px solid var(--qm-border-control)', cursor: 'pointer' }}>
+            <Pressable label="Open the assistant rail" onClick={() => setChat(true)} style={{ width: 32, height: 32, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', borderRadius: 7, border: '1px solid var(--qm-border-control)' }}>
               <Icon name="chevronLeft" size={15} color="var(--qm-text-4)" />
-            </span>
+            </Pressable>
             <Icon name="message" size={15} color="var(--qm-text-6)" />
             <span style={{ fontFamily: 'var(--qm-font-mono)', fontSize: 11, color: 'var(--qm-text-8)', writingMode: 'vertical-rl' }}>assistant</span>
           </div>

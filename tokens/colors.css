@@ -35,6 +35,9 @@
 --qm-tint-parchment:rgba(232,220,192,0.055);--qm-border-parchment:rgba(232,220,192,0.30);
 /* Divider hierarchy — four weights, no more */
 --qm-border-structural:rgba(255,255,255,0.09);--qm-border-panel:rgba(255,255,255,0.08);--qm-border-group:rgba(255,255,255,0.07);--qm-border-list:rgba(255,255,255,0.05);--qm-border-ancestry:rgba(255,255,255,0.12);
+/* The edge a raised surface carries against the page — overlays and popovers,
+   not a divider inside one. Same value as --qm-border-ancestry, different job. */
+--qm-border-raised:rgba(255,255,255,0.12);
 --qm-border-control:rgba(255,255,255,0.11);--qm-border-control-quiet:rgba(255,255,255,0.10);--qm-border-key:rgba(255,255,255,0.13);--qm-border-dashed:rgba(255,255,255,0.16);--qm-border-disabled:rgba(255,255,255,0.06);--qm-border-hover:rgba(255,255,255,0.20);
 /* Fills */
 --qm-fill-rest:rgba(255,255,255,0.045);--qm-fill-hover:rgba(255,255,255,0.06);--qm-fill-hover-strong:rgba(255,255,255,0.09);--qm-fill-quiet:rgba(255,255,255,0.028);--qm-fill-chip:rgba(255,255,255,0.05);--qm-fill-inset:rgba(0,0,0,0.30);--qm-fill-inset-soft:rgba(0,0,0,0.28);--qm-fill-scrim:rgba(0,0,0,0.60);

@@ -19,7 +19,9 @@ export interface EntityTokenProps
   kind?: 'character' | 'location' | 'artifact';
   /** `inline` = underlined mention inside serif prose; `chip` = a cast chip. */
   variant?: 'chip' | 'inline';
+  /** Renders the ✕. It is a control of its own — its own tab stop, its own ring — and ⏎ there dismisses without also firing `onClick`. */
   onDismiss?: (e: React.MouseEvent) => void;
+  /** Makes the token itself a `button`: focusable, ⏎/Space, `--qm-focus-ring`. Without it a token is a label and stays out of the tab order. */
   onClick?: (e: React.MouseEvent) => void;
 }
 

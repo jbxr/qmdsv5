@@ -3,13 +3,17 @@ import React from 'react';
 // Edges are longhands, never the `border` shorthand: the hover colour has to be
 // swapped in and out, and a colour longhand removed next to a shorthand leaves
 // Chrome resolving border-color to currentColor — the hairline paints in text ink.
+// Hover is in the table rather than in a branch on the `surface` prop, so an
+// unrecognised surface falls back to `panel` whole instead of to a panel that
+// never brightens. `scene` is the one warm material: its edge lifts along the
+// parchment ramp, never to cold white.
 const SURFACES = {
-  panel:    { background: 'var(--qm-surface-panel)', edge: 'solid', border: 'var(--qm-border-panel)', shadow: 'none' },
-  raised:   { background: 'var(--qm-surface-raised)', edge: 'solid', border: 'var(--qm-border-panel)', shadow: 'none' },
-  selected: { background: 'var(--qm-card-raised)', edge: 'solid', border: 'var(--qm-border-structural)', shadow: 'var(--qm-shadow-card)' },
-  beat:     { background: 'var(--qm-beat-raised)', edge: 'solid', border: 'var(--qm-border-group)', shadow: 'var(--qm-shadow-beat)' },
-  scene:    { background: 'var(--qm-scene-surface)', edge: 'solid', border: 'var(--qm-scene-border)', shadow: 'none' },
-  quiet:    { background: 'var(--qm-fill-quiet)', edge: 'dashed', border: 'var(--qm-border-dashed)', shadow: 'none' }
+  panel:    { background: 'var(--qm-surface-panel)', backgroundHover: 'var(--qm-surface-panel-hover)', edge: 'solid', border: 'var(--qm-border-panel)', borderHover: 'var(--qm-border-hover)', shadow: 'none' },
+  raised:   { background: 'var(--qm-surface-raised)', backgroundHover: null, edge: 'solid', border: 'var(--qm-border-panel)', borderHover: 'var(--qm-border-hover)', shadow: 'none' },
+  selected: { background: 'var(--qm-card-raised)', backgroundHover: null, edge: 'solid', border: 'var(--qm-border-structural)', borderHover: 'var(--qm-border-hover)', shadow: 'var(--qm-shadow-card)' },
+  beat:     { background: 'var(--qm-beat-raised)', backgroundHover: null, edge: 'solid', border: 'var(--qm-border-group)', borderHover: 'var(--qm-border-hover)', shadow: 'var(--qm-shadow-beat)' },
+  scene:    { background: 'var(--qm-scene-surface)', backgroundHover: null, edge: 'solid', border: 'var(--qm-scene-border)', borderHover: 'var(--qm-border-parchment)', shadow: 'none' },
+  quiet:    { background: 'var(--qm-fill-quiet)', backgroundHover: null, edge: 'dashed', border: 'var(--qm-border-dashed)', borderHover: 'var(--qm-border-hover)', shadow: 'none' }
 };
 
 const RAILS = {
@@ -39,10 +43,10 @@ export function Card({
         overflow: railBg ? 'hidden' : undefined,
         padding,
         borderRadius: radius === 'panel' ? 'var(--qm-radius-panel)' : 'var(--qm-radius-card)',
-        background: hover && surface === 'panel' ? 'var(--qm-surface-panel-hover)' : s.background,
+        background: hover && s.backgroundHover ? s.backgroundHover : s.background,
         borderWidth: 1,
         borderStyle: s.edge,
-        borderColor: hover ? 'var(--qm-border-hover)' : s.border,
+        borderColor: hover ? s.borderHover : s.border,
         boxShadow: s.shadow,
         cursor: hoverable ? 'pointer' : undefined,
         transition: 'background var(--qm-dur-hover) var(--qm-ease), border-color var(--qm-dur-hover) var(--qm-ease)',

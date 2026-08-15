@@ -10,6 +10,10 @@ import * as React from 'react';
  * The edge is written as `border-width` / `border-style` / `border-color`
  * longhands rather than the `border` shorthand, so the `hoverable` colour swap
  * cannot leave `border-color` resolving to `currentColor`.
+ *
+ * A `surface` outside the union — only reachable from a computed value, since
+ * the type and the adherence lint both reject a literal — renders as `panel`
+ * in full, hover included.
  */
 export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   surface?: 'panel' | 'raised' | 'selected' | 'beat' | 'scene' | 'quiet';
@@ -22,9 +26,11 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   radius?: 'card' | 'panel';
   padding?: number | string;
   /**
-   * Brightens the surface on hover — never introduces semantic colour.
-   * The edge lifts to `--qm-border-hover` on every surface; only `panel`
-   * also lifts its background, to `--qm-surface-panel-hover`.
+   * Brightens the surface on hover — never introduces semantic colour, and
+   * never changes material: the cool surfaces lift their edge to
+   * `--qm-border-hover`, and the warm `scene` surface lifts along the
+   * parchment ramp to `--qm-border-parchment`. Only `panel` also lifts its
+   * background, to `--qm-surface-panel-hover`.
    */
   hoverable?: boolean;
   children?: React.ReactNode;

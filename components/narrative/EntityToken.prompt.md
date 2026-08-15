@@ -12,3 +12,5 @@ Notes
 - `role` is the narrative rank ("Ensign"), not the ARIA role. The props omit the DOM
   `role` attribute, so you cannot pass one through: when a token needs a semantic role,
   wrap it or use `aria-label`, which is still accepted.
+- The token is a control only with `onClick`, and the ✕ is always one of its own: it has its own
+  tab stop and its own ring, and ⏎ on it dismisses without also firing the token.

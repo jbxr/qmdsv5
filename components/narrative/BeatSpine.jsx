@@ -11,28 +11,67 @@ const DOT_STATE = {
 
 /**
  * The one beat list, at three depths of detail: the outline rail, the stage
- * rail and Compose's beat column are all this component.
+ * rail and Compose's beat column are all this component. With `onSelect` it is
+ * a listbox — one tab stop, ↑↓ through the beats, ⏎ jumps the draft; without
+ * one it is a read-only list and takes no place in the tab order.
  */
 export function BeatSpine({ beats = [], onSelect, showSpine = true, style, ...rest }) {
+  const [ring, setRing] = React.useState(-1);
+  const refs = React.useRef([]);
+  // The tab stop follows the draft — the `here` beat — and falls back to the
+  // first, so a list with nothing marked is still reachable.
+  const at = beats.findIndex((b) => b.state === 'here');
+  const stop = at < 0 ? 0 : at;
+
+  const go = (i) => {
+    const n = beats.length;
+    if (!n) return;
+    refs.current[((i % n) + n) % n]?.focus();
+  };
+
   return (
-    <div style={{ position: 'relative', paddingLeft: showSpine ? 14 : 0, ...style }} {...rest}>
+    <div
+      role={onSelect ? 'listbox' : undefined}
+      style={{ position: 'relative', paddingLeft: showSpine ? 14 : 0, ...style }}
+      {...rest}
+    >
       {showSpine ? (
         <div style={{ position: 'absolute', left: 3, top: 8, bottom: 8, width: 1, background: 'var(--qm-border-panel)' }} />
       ) : null}
       {beats.map((b, i) => {
         const here = b.state === 'here';
         const dot = DOT_STATE[b.state] || 'unwritten';
+        const base = {
+          position: 'relative', display: 'flex', gap: 10,
+          padding: 'var(--qm-row-py,9px) 10px', marginBottom: 1,
+          borderRadius: 'var(--qm-radius-control)',
+          background: here ? 'var(--qm-surface-selected)' : 'transparent',
+          cursor: onSelect ? 'pointer' : 'default'
+        };
+        if (ring === i) {
+          base.boxShadow = 'var(--qm-focus-ring)';
+          base.outline = 'var(--qm-focus-outline,2px solid transparent)';
+          base.outlineOffset = 'var(--qm-focus-outline-offset,1px)';
+        }
         return (
           <div
             key={b.id ?? i}
+            ref={(el) => { refs.current[i] = el; }}
             onClick={onSelect ? () => onSelect(b, i) : undefined}
-            style={{
-              position: 'relative', display: 'flex', gap: 10,
-              padding: 'var(--qm-row-py,9px) 10px', marginBottom: 1,
-              borderRadius: 'var(--qm-radius-control)',
-              background: here ? 'var(--qm-surface-selected)' : 'transparent',
-              cursor: onSelect ? 'pointer' : 'default'
-            }}
+            role={onSelect ? 'option' : undefined}
+            aria-selected={onSelect ? here : undefined}
+            tabIndex={onSelect ? (i === stop ? 0 : -1) : undefined}
+            onFocus={onSelect ? (e) => { if (e.target.matches(':focus-visible')) setRing(i); } : undefined}
+            onBlur={onSelect ? () => setRing(-1) : undefined}
+            onKeyDown={onSelect ? (e) => {
+              if (e.target.matches(':focus-visible')) setRing(i);
+              if (e.key === 'ArrowDown') { e.preventDefault(); go(i + 1); }
+              else if (e.key === 'ArrowUp') { e.preventDefault(); go(i - 1); }
+              else if (e.key === 'Home') { e.preventDefault(); go(0); }
+              else if (e.key === 'End') { e.preventDefault(); go(beats.length - 1); }
+              else if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onSelect(b, i); }
+            } : undefined}
+            style={base}
           >
             {showSpine ? (
               <StateDot state={dot} size={7} style={{ position: 'absolute', left: -14, top: 14 }} />

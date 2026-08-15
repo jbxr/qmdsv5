@@ -11,7 +11,13 @@ export interface VersionEntry {
   current?: boolean;
 }
 
-/** The version axis above the prose: revisions and candidates on one strip. */
+/**
+ * The version axis above the prose: revisions and candidates on one strip.
+ * With `onSelect` the versions are a `listbox` named by `label` — one tab stop
+ * on `current`, ←→ through the rest, ⏎ or Space to read one. The label and the
+ * note sit outside it, so neither is announced as a candidate. Without
+ * `onSelect` the strip is a read-only caption.
+ */
 export interface VersionStripProps
   // `onSelect` reports the chosen version, so the DOM `onSelect` text-selection
   // handler is traded away — it has no meaning on this strip.

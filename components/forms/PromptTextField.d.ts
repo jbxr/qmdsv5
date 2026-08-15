@@ -17,7 +17,12 @@ export interface PromptTextFieldProps extends React.InputHTMLAttributes<HTMLInpu
   hintKey?: React.ReactNode;
   /** Sits between the input and the key hint: a send affordance, a counter, a chip. */
   trailing?: React.ReactNode;
-  /** Pins the ring on regardless of real focus. Leave unset — the well lights its own. */
+  /**
+   * Leave unset. `PromptField.focused` is for specimens whose well holds no
+   * control, and this component always holds a real `<input>` — so here it can
+   * only lie: `true` shows a focus nobody has, `false` hides a real one. A QM
+   * focus ring means keyboard focus, and the well lights its own.
+   */
   focused?: boolean;
   /** Applied to the wrapper, matching `PromptField` — use `controlStyle` for the input. */
   style?: React.CSSProperties;
